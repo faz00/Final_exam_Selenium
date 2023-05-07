@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration advertiser="multicastdns">
+    <Properties>
+        <Property name="filename">./logs</Property>
+    </Properties>
+    <Appenders>
+        <RollingFile name="file"
+                     fileName="${filename}/test-logs.log"
+                     filePattern="${filename}/log-%d{HH:mm:ss.SSS}.log">
+            <PatternLayout>
+                <Pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</Pattern>
+            </PatternLayout>
+            <SizeBasedTriggeringPolicy size="10 KB"/>
+        </RollingFile>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="logs" level="info" additivity="false">
+            <AppenderRef ref="file"/>
+            <AppenderRef ref="Console"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="file"/>
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
