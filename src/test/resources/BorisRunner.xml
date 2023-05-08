@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Luma test">
-    <parameter name="useCloudEnv" value="false"></parameter>
-    <parameter name="envName" value="browserstack"></parameter>
-    <parameter name="os" value="windows"></parameter>
-    <parameter name="osVersion" value="10"></parameter>
-    <parameter name="browserVersion" value="110"></parameter>
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="envName" value="browserstack"/>
+    <parameter name="os" value="windows"/>
+    <parameter name="osVersion" value="10"/>
+    <parameter name="browserVersion" value="110"/>
 
-    <parameter name="browserName" value="chrome"></parameter>
-    <parameter name="url" value="https://magento.softwaretestingboard.com/"></parameter>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="url" value="https://magento.softwaretestingboard.com/"/>
+    <parameter name="Email" value="test002@gmail.com"/>
+    <parameter name="Password" value="qwerty@123"/>
     <test name="login test">
         <classes>
-            <class name="Boris.LoginTest"></class>
+            <class name="Boris.RegisterUser"/>
+            <class name="Boris.LoginTest"/>
+            <class name="Boris.AddToCart"/>
+            <class name="Boris.AddProductToWishList"/>
+            <class name="Boris.AddProductReview"/>
         </classes>
     </test>
 
