@@ -77,7 +77,7 @@ public class SetUp {
 
     // This method invoke and Open up the browser
     @Parameters({"useCloudEnv","envName","os","osVersion","browserName","browserVersion","url"})
-    @BeforeClass
+    @BeforeMethod
     public void setUp(@Optional("false") String useCloudEnv, @Optional("browserstack") String envName, @Optional("windows") String os,
                       @Optional("10") String osVersion, @Optional("chrome") String browserName, @Optional("110") String browserVersion,
                       @Optional("https://www.google.com") String url) throws MalformedURLException {
@@ -94,7 +94,7 @@ public class SetUp {
     }
 
     // This method quit the browser after each test case
-    @AfterClass
+    @AfterMethod
     public void tearDown(){
         //close browser
         driver.quit();
