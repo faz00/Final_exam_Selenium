@@ -1,4 +1,5 @@
-package com.ninjaTutorials;
+package Rezika;
+
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
