@@ -1,24 +1,25 @@
 package us.piit;
 
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-import net.bytebuddy.asm.Advice;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.*;
+import org.openqa.selenium.Beta;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
-import java.util.Random;
+import java.util.Date;
 
 public class SetUp {
     Logger log = LogManager.getLogger(SetUp.class.getName());
@@ -27,7 +28,6 @@ public class SetUp {
 
     protected WebDriver driver;
 
-    // This method is getting Cloud Browser
     public void getCloudDriver(String envName , String os , String osVersion , String browserName , String browserVersion,String userName,String password) throws MalformedURLException {
 
         //cardentials to access to the website
@@ -47,36 +47,27 @@ public class SetUp {
             cap.setCapability("resolution","1024x768");
             driver = new RemoteWebDriver(new URL("http://"+userName+":"+password+"@hub-cloud.browserstack.com:80/wd/hub"), cap);
 
+        }else if(envName.equalsIgnoreCase("saucelabs")) {
+            driver = new RemoteWebDriver(new URL("http://"+userName+":"+password+"@ondemand.saucelabs.com:80/wd/hub"), cap);
+
         }
 
     }
 
-    // This method is getting Browsers from Bonigracia repo and manage Browsers at run time
     public void getLocalDriver(String browserName){
-        // Setting Chrome browser
         if (browserName.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             log.info("chrome browser open success");
-
-          // Setting Firefox browser
         } else if (browserName.equalsIgnoreCase("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
             log.info("Firefox browser open success");
-
-         // Setting Edge browser
         }else if(browserName.equalsIgnoreCase("edge")){
-            WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
             log.info("Edge browser open success");
         }
     }
-
-
-    // This method invoke and Open up the browser
     @Parameters({"useCloudEnv","envName","os","osVersion","browserName","browserVersion","url"})
-    @BeforeClass
+    @BeforeMethod
     public void setUp(@Optional("false") String useCloudEnv, @Optional("browserstack") String envName, @Optional("windows") String os,
                       @Optional("10") String osVersion, @Optional("chrome") String browserName, @Optional("110") String browserVersion,
                       @Optional("https://www.google.com") String url) throws MalformedURLException {
@@ -89,12 +80,10 @@ public class SetUp {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.manage().window().maximize();
         driver.get(url);
-        PageFactory.initElements(driver, this);
     }
-
-    // This method quit the browser after each test case
-    @AfterClass
+    @AfterMethod
     public void tearDown(){
+
         //close browser
         driver.quit();
         log.info("browser close success");
@@ -130,12 +119,12 @@ public class SetUp {
 
         }
     }
-    public void hoverOver(WebElement locator){
+    public void hoverOver(String locator){
         Actions actions=new Actions(driver);
         try {
-            actions.moveToElement(locator).build().perform();
+            actions.moveToElement(driver.findElement(By.cssSelector(locator))).build().perform();
         }catch (Exception e){
-            actions.moveToElement(locator).build().perform();
+            actions.moveToElement(driver.findElement(By.xpath(locator))).build().perform();
 
         }
     }
@@ -147,11 +136,12 @@ public class SetUp {
         }
     }
 
-    public boolean isVisible(WebElement locator) {
+    public boolean isVisible(String locator) {
         try {
-            return locator.isDisplayed();
+            return  driver.findElement(By.cssSelector(locator)).isDisplayed();
         } catch (Exception e) {
-            return locator.isDisplayed();
+            return driver.findElement(By.xpath(locator)).isDisplayed();
+
         }
 
     }
@@ -176,16 +166,30 @@ public class SetUp {
         }
 
     }
+    public String generateTimeStamp() {
 
-    public String generateTestEmail(){
-        Random rn = new Random();
-        int ranNumber = rn.nextInt(100) + 2;
-        String TestEmail = "test"+ranNumber+"@gmail.com";
-        return TestEmail;
+        Date date=new Date();
+        return date.toString().replace(" ", " _").replace(":", " ");
+
+    }
+    public void linktext(String locator) {
+
+        driver.findElement(By.linkText(locator));
     }
 
-    public void clickOnRatingStar(){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("document.querySelector('#Rating_5').click()");
+    public void type(String locator) {
+        try {
+            driver.findElement(By.xpath(locator));
+        }catch(Exception e) {
+            driver.findElement(By.cssSelector(locator));
+
+        }
     }
+    public void linkclickOn(String locator) {
+
+        driver.findElement(By.linkText(locator)).click();
+    }
+
 }
+
+
