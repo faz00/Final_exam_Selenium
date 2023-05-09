@@ -21,71 +21,54 @@ import java.time.Duration;
 
 public class LogOutTest extends SetUp {
 
-        //LofOutTest the name of the class
+
         Logger log = LogManager.getLogger(LogOutTest.class.getName());
 
         @Test
         public  void logout() throws InterruptedException {
-            //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 
-            String expectedTitle = "Login | My Gumtree - Gumtree";
+
+            String expectedTitle = "OrangeHRM";
             String actualTitle = driver.getTitle();
             Assert.assertEquals(expectedTitle,actualTitle);
 
 
             //enter username,enter password, and click on login button
 
-            type("#email","fazia.si00@gmail.com");
+            type("input[placeholder='Username']","Admin");
             log.info("Enter username , success");
 
-            type("#fld-password","Qwerty789*");
+            type("input[placeholder='Password']","admin123");
             log.info("Enter password , success");
 
-            driver.findElement(By.cssSelector("#onetrust-accept-btn-handler")).click();
-
-
-
-            driver.findElement(By.cssSelector("button[data-analytics='gaEvent:LoginAttempt,userData:{lip:Email}']")).click();
-            //  clickOn(".btn-primary btn-full-width");
-            //driver.findElement(By.id("login-button")).click();
+            clickOn("button[type='submit']");
             log.info("click on button Login Success");
 
 
-
-            /*WebElement humbergr = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-q='user-menu-button']")));
-            humbergr.click();*/
-            //driver.findElement(By.cssSelector("button[data-q='user-menu-button']")).click();
-
-
             //check user is logged in
-/*            String expectedHomePage = "Products";
-            String actualHomePage = getElementText("//span[contains(text(),'Products')]");
-
+            String expectedHomePage = "Dashboard";
+            String actualHomePage =  getElementText("//h6[normalize-space()='Dashboard']");
             Assert.assertEquals(expectedHomePage,actualHomePage);
             log.info("user logged in success");
 
-            //click on humberger menu
 
-            clickOn("#react-burger-menu-btn");
-            log.info("click on hamburger menu success");
-            Thread.sleep(1000);
+            //Log Out
+            clickOn(".oxd-userdropdown-name");
+            log.info("click on the Menu Success");
 
-            //hover hover lougout link
-            hoverOver("#logout_sidebar_link");
-            log.info("click on logout link success");
+            clickOn("//a[normalize-space()='Logout']");
+            log.info("click on the logOut button Success");
+
+            waitFor(5);
 
 
-            //check user is landed to the login page
-            //WebElement loginPageHeader = driver.findElement(By.id(""));
-            //check user is landed to the login page
-            boolean loginPageHeaderIsDisplayed = isVisible("//div[contains(text(),'Swag Labs')]");
-            Assert.assertTrue(loginPageHeaderIsDisplayed);
-            log.info("login page header is displayed");
-            String expectedLoginPageHeaderText = "Swag Labs";
-            String actualLoginPageHeaderText = getElementText("//div[contains(text(),'Swag Labs')]");
-            Assert.assertEquals(expectedLoginPageHeaderText, actualLoginPageHeaderText);
-            log.info("login page header text validation success");
+            String expectedLoginPage = "OrangeHRM";
+            String actualLoginPage = driver.getTitle();
+            Assert.assertEquals(expectedLoginPage,actualLoginPage);
 
-*/        }
+            log.info("user logged out success");
+
+
+        }
     }
 

@@ -46,9 +46,6 @@ public class SetUp {
             cap.setCapability("resolution","1024x768");
             driver = new RemoteWebDriver(new URL("http://"+userName+":"+password+"@hub-cloud.browserstack.com:80/wd/hub"), cap);
 
-        }else if(envName.equalsIgnoreCase("saucelabs")) {
-            driver = new RemoteWebDriver(new URL("http://"+userName+":"+password+"@ondemand.saucelabs.com:80/wd/hub"), cap);
-
         }
 
     }
