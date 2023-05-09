@@ -180,7 +180,7 @@ public class SetUp {
     }
 
     public String generateTestEmail(){
-        Random rn = new Random(System.nanoTime());
+        Random rn = new Random();
         int ranNumber = rn.nextInt(100) + 2;
         String TestEmail = "test"+ranNumber+"@gmail.com";
         return TestEmail;
