@@ -1,4 +1,4 @@
-package com.ninjaTutorials;
+package Rezika;
 import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
