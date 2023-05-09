@@ -340,3 +340,1082 @@
 16:30:30.144 [main] INFO  Fazia.LoginTest2 - click on button Login Success
 16:30:30.980 [main] INFO  Fazia.LoginTest2 - user logged in success
 16:30:31.724 [main] INFO  us.piit.SetUp - browser close success
+20:17:48.008 [main] INFO  us.piit.SetUp - chrome browser open success
+20:17:52.262 [main] INFO  us.piit.SetUp - browser close success
+20:48:39.163 [main] INFO  Fazia.LoginTest2 - Enter username , success
+20:48:39.397 [main] INFO  Fazia.LoginTest2 - Enter password , success
+20:48:40.419 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+20:48:50.835 [main] INFO  Fazia.LoginTest2 - Validate error access
+20:48:51.533 [main] INFO  us.piit.SetUp - browser close success
+20:49:02.271 [main] INFO  Fazia.LoginTest2 - Enter username , success
+20:49:02.552 [main] INFO  Fazia.LoginTest2 - Enter password , success
+20:49:04.825 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+20:49:05.365 [main] INFO  Fazia.LoginTest2 - user logged in success
+20:49:06.325 [main] INFO  us.piit.SetUp - browser close success
+20:56:45.876 [main] INFO  Fazia.LogOutTest - Enter username , success
+20:56:46.271 [main] INFO  Fazia.LogOutTest - Enter password , success
+20:56:49.059 [main] INFO  Fazia.LogOutTest - click on button Login Success
+20:56:49.686 [main] INFO  Fazia.LogOutTest - user logged in success
+20:56:49.954 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+20:56:50.733 [main] INFO  us.piit.SetUp - browser close success
+20:58:09.570 [main] INFO  us.piit.SetUp - chrome browser open success
+20:58:12.594 [main] INFO  Fazia.LogOutTest - Enter username , success
+20:58:12.673 [main] INFO  Fazia.LogOutTest - Enter password , success
+20:58:12.743 [main] INFO  Fazia.LogOutTest - click on button Login Success
+20:58:14.186 [main] INFO  Fazia.LogOutTest - user logged in success
+20:58:14.250 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+20:58:15.754 [main] INFO  Fazia.LogOutTest - click on the logOut button Success
+20:58:16.999 [main] INFO  us.piit.SetUp - browser close success
+20:58:43.217 [main] INFO  us.piit.SetUp - chrome browser open success
+20:58:48.542 [main] INFO  Fazia.LogOutTest - Enter username , success
+20:58:48.651 [main] INFO  Fazia.LogOutTest - Enter password , success
+20:58:49.911 [main] INFO  Fazia.LogOutTest - click on button Login Success
+20:58:50.275 [main] INFO  Fazia.LogOutTest - user logged in success
+20:58:50.329 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+20:58:52.061 [main] INFO  Fazia.LogOutTest - click on the logOut button Success
+20:58:52.760 [main] INFO  us.piit.SetUp - browser close success
+21:03:11.561 [main] INFO  us.piit.SetUp - chrome browser open success
+21:03:15.091 [main] INFO  Fazia.LogOutTest - Enter username , success
+21:03:15.189 [main] INFO  Fazia.LogOutTest - Enter password , success
+21:03:16.332 [main] INFO  Fazia.LogOutTest - click on button Login Success
+21:03:16.695 [main] INFO  Fazia.LogOutTest - user logged in success
+21:03:16.750 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+21:03:18.394 [main] INFO  Fazia.LogOutTest - click on the logOut button Success
+21:03:23.421 [main] INFO  Fazia.LogOutTest - user logged in success
+21:03:24.100 [main] INFO  us.piit.SetUp - browser close success
+21:04:39.861 [main] INFO  us.piit.SetUp - chrome browser open success
+21:04:42.808 [main] INFO  Fazia.LogOutTest - Enter username , success
+21:04:42.908 [main] INFO  Fazia.LogOutTest - Enter password , success
+21:04:42.969 [main] INFO  Fazia.LogOutTest - click on button Login Success
+21:04:44.420 [main] INFO  Fazia.LogOutTest - user logged in success
+21:04:44.481 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+21:04:45.976 [main] INFO  Fazia.LogOutTest - click on the logOut button Success
+21:04:50.990 [main] INFO  Fazia.LogOutTest - user logged in success
+21:04:51.696 [main] INFO  us.piit.SetUp - browser close success
+21:10:48.363 [main] INFO  us.piit.SetUp - chrome browser open success
+21:10:53.866 [main] INFO  Fazia.LogOutTest - Enter username , success
+21:10:53.968 [main] INFO  Fazia.LogOutTest - Enter password , success
+21:10:55.125 [main] INFO  Fazia.LogOutTest - click on button Login Success
+21:10:55.477 [main] INFO  Fazia.LogOutTest - user logged in success
+21:10:55.530 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+21:10:56.438 [main] INFO  us.piit.SetUp - browser close success
+21:11:34.653 [main] INFO  us.piit.SetUp - chrome browser open success
+21:11:40.179 [main] INFO  Fazia.LogOutTest - Enter username , success
+21:11:40.274 [main] INFO  Fazia.LogOutTest - Enter password , success
+21:11:41.412 [main] INFO  Fazia.LogOutTest - click on button Login Success
+21:11:41.752 [main] INFO  Fazia.LogOutTest - user logged in success
+21:11:41.812 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+21:11:42.523 [main] INFO  Fazia.LogOutTest - click on change password button Success
+21:11:43.199 [main] INFO  us.piit.SetUp - browser close success
+21:13:51.949 [main] INFO  us.piit.SetUp - chrome browser open success
+21:13:57.511 [main] INFO  Fazia.LogOutTest - Enter username , success
+21:13:57.615 [main] INFO  Fazia.LogOutTest - Enter password , success
+21:13:58.746 [main] INFO  Fazia.LogOutTest - click on button Login Success
+21:13:59.088 [main] INFO  Fazia.LogOutTest - user logged in success
+21:13:59.141 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+21:13:59.896 [main] INFO  Fazia.LogOutTest - click on change password button Success
+21:14:06.160 [main] INFO  us.piit.SetUp - browser close success
+21:15:59.344 [main] INFO  us.piit.SetUp - chrome browser open success
+21:16:04.964 [main] INFO  Fazia.LogOutTest - Enter username , success
+21:16:05.082 [main] INFO  Fazia.LogOutTest - Enter password , success
+21:16:05.164 [main] INFO  Fazia.LogOutTest - click on button Login Success
+21:16:06.635 [main] INFO  Fazia.LogOutTest - user logged in success
+21:16:06.694 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+21:16:07.407 [main] INFO  Fazia.LogOutTest - click on change password button Success
+21:16:13.986 [main] INFO  us.piit.SetUp - browser close success
+21:17:37.724 [main] INFO  us.piit.SetUp - chrome browser open success
+21:17:45.948 [main] INFO  Fazia.LogOutTest - Enter username , success
+21:17:46.017 [main] INFO  Fazia.LogOutTest - Enter password , success
+21:17:47.204 [main] INFO  Fazia.LogOutTest - click on button Login Success
+21:17:47.558 [main] INFO  Fazia.LogOutTest - user logged in success
+21:17:47.622 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+21:17:48.379 [main] INFO  Fazia.LogOutTest - click on change password button Success
+21:17:54.757 [main] INFO  us.piit.SetUp - browser close success
+21:19:05.703 [main] INFO  us.piit.SetUp - chrome browser open success
+21:19:11.384 [main] INFO  Fazia.LogOutTest - Enter username , success
+21:19:11.488 [main] INFO  Fazia.LogOutTest - Enter password , success
+21:19:12.648 [main] INFO  Fazia.LogOutTest - click on button Login Success
+21:19:12.999 [main] INFO  Fazia.LogOutTest - user logged in success
+21:19:13.054 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+21:19:13.805 [main] INFO  Fazia.LogOutTest - click on change password button Success
+21:19:20.215 [main] INFO  us.piit.SetUp - browser close success
+21:20:40.422 [main] INFO  us.piit.SetUp - chrome browser open success
+21:20:45.844 [main] INFO  Fazia.LogOutTest - Enter username , success
+21:20:45.924 [main] INFO  Fazia.LogOutTest - Enter password , success
+21:20:47.065 [main] INFO  Fazia.LogOutTest - click on button Login Success
+21:20:47.428 [main] INFO  Fazia.LogOutTest - user logged in success
+21:20:47.483 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+21:20:48.203 [main] INFO  Fazia.LogOutTest - click on change password button Success
+21:20:54.656 [main] INFO  us.piit.SetUp - browser close success
+21:24:34.570 [main] INFO  us.piit.SetUp - chrome browser open success
+21:24:40.240 [main] INFO  Fazia.LogOutTest - Enter username , success
+21:24:40.336 [main] INFO  Fazia.LogOutTest - Enter password , success
+21:24:41.471 [main] INFO  Fazia.LogOutTest - click on button Login Success
+21:24:41.829 [main] INFO  Fazia.LogOutTest - user logged in success
+21:24:41.884 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+21:24:42.626 [main] INFO  Fazia.LogOutTest - click on change password button Success
+21:24:43.264 [main] INFO  Fazia.LogOutTest - Password entered in Current Password field
+21:24:43.365 [main] INFO  Fazia.LogOutTest - Password entered in New Password field
+21:24:43.438 [main] INFO  Fazia.LogOutTest - Password entered in Confirm Password field 
+21:24:49.182 [main] INFO  us.piit.SetUp - browser close success
+21:56:56.905 [main] INFO  us.piit.SetUp - chrome browser open success
+21:57:02.595 [main] INFO  Fazia.LogOutTest - Enter username , success
+21:57:02.694 [main] INFO  Fazia.LogOutTest - Enter password , success
+21:57:02.788 [main] INFO  Fazia.LogOutTest - click on button Login Success
+21:57:04.171 [main] INFO  Fazia.LogOutTest - user logged in success
+21:57:04.226 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+21:57:05.066 [main] INFO  Fazia.LogOutTest - click on change password button Success
+21:57:05.562 [main] INFO  Fazia.LogOutTest - Password entered in Current Password field
+21:57:05.678 [main] INFO  Fazia.LogOutTest - Password entered in New Password field
+21:57:05.753 [main] INFO  Fazia.LogOutTest - Password entered in Confirm Password field 
+21:57:05.806 [main] INFO  Fazia.LogOutTest - Password updated
+21:57:11.589 [main] INFO  us.piit.SetUp - browser close success
+22:23:43.340 [main] INFO  us.piit.SetUp - chrome browser open success
+22:23:47.899 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:23:47.975 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:23:49.159 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:23:49.516 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:23:50.986 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:23:51.520 [main] INFO  Fazia.LoginTest2 - Name set successfully
+22:23:51.600 [main] INFO  Fazia.LoginTest2 - Password set successfully
+22:23:52.411 [main] INFO  Fazia.LoginTest2 - Nickname set successfully
+22:23:53.082 [main] INFO  us.piit.SetUp - browser close success
+22:24:33.199 [main] INFO  us.piit.SetUp - chrome browser open success
+22:24:38.173 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:24:38.272 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:24:39.449 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:24:39.831 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:24:41.683 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:24:42.277 [main] INFO  Fazia.LoginTest2 - Name set successfully
+22:24:42.363 [main] INFO  Fazia.LoginTest2 - Password set successfully
+22:24:43.233 [main] INFO  Fazia.LoginTest2 - Nickname set successfully
+22:24:43.977 [main] INFO  us.piit.SetUp - browser close success
+22:25:04.904 [main] INFO  us.piit.SetUp - chrome browser open success
+22:25:09.906 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:25:10.006 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:25:10.072 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:25:11.507 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:25:12.860 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:25:13.460 [main] INFO  Fazia.LoginTest2 - Name set successfully
+22:25:13.533 [main] INFO  Fazia.LoginTest2 - Password set successfully
+22:25:14.323 [main] INFO  Fazia.LoginTest2 - Nickname set successfully
+22:25:20.029 [main] INFO  us.piit.SetUp - browser close success
+22:25:52.243 [main] INFO  us.piit.SetUp - chrome browser open success
+22:26:00.110 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:26:00.245 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:26:00.327 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:26:01.771 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:26:03.248 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:26:03.760 [main] INFO  Fazia.LoginTest2 - Name set successfully
+22:26:08.877 [main] INFO  Fazia.LoginTest2 - Password set successfully
+22:26:08.970 [main] INFO  Fazia.LoginTest2 - Nickname set successfully
+22:26:14.752 [main] INFO  us.piit.SetUp - browser close success
+22:27:16.132 [main] INFO  us.piit.SetUp - chrome browser open success
+22:27:20.745 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:27:20.841 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:27:20.900 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:27:22.300 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:27:23.621 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:27:24.215 [main] INFO  Fazia.LoginTest2 - Name set successfully
+22:27:29.350 [main] INFO  Fazia.LoginTest2 - Password set successfully
+22:27:29.445 [main] INFO  Fazia.LoginTest2 - Nickname set successfully
+22:27:35.236 [main] INFO  us.piit.SetUp - browser close success
+22:28:10.487 [main] INFO  us.piit.SetUp - chrome browser open success
+22:28:16.589 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:28:16.688 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:28:17.860 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:28:18.236 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:28:19.497 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:28:22.169 [main] INFO  Fazia.LoginTest2 - Name set successfully
+22:28:27.317 [main] INFO  Fazia.LoginTest2 - Password set successfully
+22:28:27.418 [main] INFO  Fazia.LoginTest2 - Nickname set successfully
+22:28:33.114 [main] INFO  us.piit.SetUp - browser close success
+22:29:06.407 [main] INFO  us.piit.SetUp - chrome browser open success
+22:29:11.725 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:29:11.829 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:29:12.987 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:29:13.351 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:29:14.999 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:29:19.172 [main] INFO  Fazia.LoginTest2 - Name set successfully
+22:29:24.346 [main] INFO  Fazia.LoginTest2 - Password set successfully
+22:29:24.426 [main] INFO  Fazia.LoginTest2 - Nickname set successfully
+22:29:30.154 [main] INFO  us.piit.SetUp - browser close success
+22:32:14.761 [main] INFO  us.piit.SetUp - chrome browser open success
+22:32:19.270 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:32:19.385 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:32:20.572 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:32:20.974 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:32:22.364 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:32:26.587 [main] INFO  Fazia.LoginTest2 - Name set successfully
+22:32:31.738 [main] INFO  Fazia.LoginTest2 - Password set successfully
+22:32:31.833 [main] INFO  Fazia.LoginTest2 - Nickname set successfully
+22:32:37.582 [main] INFO  us.piit.SetUp - browser close success
+22:32:59.462 [main] INFO  us.piit.SetUp - chrome browser open success
+22:33:04.070 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:33:04.175 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:33:05.304 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:33:05.659 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:33:06.966 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:33:13.190 [main] INFO  Fazia.LoginTest2 - Name set successfully
+22:33:18.339 [main] INFO  Fazia.LoginTest2 - Password set successfully
+22:33:18.423 [main] INFO  Fazia.LoginTest2 - Nickname set successfully
+22:33:24.146 [main] INFO  us.piit.SetUp - browser close success
+22:34:39.847 [main] INFO  us.piit.SetUp - chrome browser open success
+22:34:44.477 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:34:44.575 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:34:45.697 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:34:46.045 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:34:47.489 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:34:49.927 [main] INFO  Fazia.LoginTest2 - Name set successfully
+22:34:55.093 [main] INFO  Fazia.LoginTest2 - Password set successfully
+22:34:55.174 [main] INFO  Fazia.LoginTest2 - Nickname set successfully
+22:35:00.908 [main] INFO  us.piit.SetUp - browser close success
+22:35:24.191 [main] INFO  us.piit.SetUp - chrome browser open success
+22:35:32.251 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:35:32.337 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:35:33.519 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:35:33.906 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:35:35.586 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:35:45.849 [main] INFO  us.piit.SetUp - chrome browser open success
+22:35:51.396 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:35:51.509 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:35:53.236 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:35:53.639 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:35:55.439 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:36:03.517 [main] INFO  Fazia.LoginTest2 - Name set successfully
+22:36:08.675 [main] INFO  Fazia.LoginTest2 - Password set successfully
+22:36:08.777 [main] INFO  Fazia.LoginTest2 - Nickname set successfully
+22:36:14.483 [main] INFO  us.piit.SetUp - browser close success
+22:40:19.721 [main] INFO  us.piit.SetUp - chrome browser open success
+22:40:25.243 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:40:25.367 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:40:26.508 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:40:26.880 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:40:28.352 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:40:28.956 [main] INFO  Fazia.LoginTest2 - Middle name added successfully
+22:40:29.938 [main] INFO  Fazia.LoginTest2 - Nickname added successfully
+22:40:30.821 [main] INFO  us.piit.SetUp - browser close success
+22:40:54.660 [main] INFO  us.piit.SetUp - chrome browser open success
+22:40:59.278 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:40:59.377 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:41:00.579 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:41:00.956 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:41:02.942 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:41:03.456 [main] INFO  Fazia.LoginTest2 - Middle name added successfully
+22:41:04.415 [main] INFO  Fazia.LoginTest2 - Nickname added successfully
+22:41:04.536 [main] INFO  Fazia.LoginTest2 - ID added successfully
+22:41:10.290 [main] INFO  us.piit.SetUp - browser close success
+22:42:58.602 [main] INFO  us.piit.SetUp - chrome browser open success
+22:43:00.617 [main] INFO  us.piit.SetUp - browser close success
+22:43:01.412 [main] INFO  us.piit.SetUp - chrome browser open success
+22:43:05.801 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:43:05.898 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:43:07.181 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:43:07.540 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:43:09.725 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:43:10.302 [main] INFO  Fazia.LoginTest2 - Middle name added successfully
+22:43:11.244 [main] INFO  Fazia.LoginTest2 - Nickname added successfully
+22:43:11.357 [main] INFO  Fazia.LoginTest2 - ID added successfully
+22:43:12.184 [main] INFO  us.piit.SetUp - browser close success
+22:43:36.657 [main] INFO  us.piit.SetUp - chrome browser open success
+22:43:44.660 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:43:44.763 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:43:45.922 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:43:46.285 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:43:47.836 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:43:48.408 [main] INFO  Fazia.LoginTest2 - Middle name added successfully
+22:43:49.221 [main] INFO  Fazia.LoginTest2 - Nickname added successfully
+22:43:49.346 [main] INFO  Fazia.LoginTest2 - ID added successfully
+22:43:55.118 [main] INFO  us.piit.SetUp - browser close success
+22:45:32.827 [main] INFO  us.piit.SetUp - chrome browser open success
+22:45:36.997 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:45:37.099 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:45:38.254 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:45:38.623 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:45:40.137 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:45:40.815 [main] INFO  Fazia.LoginTest2 - Middle name added successfully
+22:45:41.942 [main] INFO  Fazia.LoginTest2 - Nickname added successfully
+22:45:42.051 [main] INFO  Fazia.LoginTest2 - ID added successfully
+22:45:42.128 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+22:45:42.191 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+22:45:47.923 [main] INFO  us.piit.SetUp - browser close success
+22:52:58.725 [main] INFO  us.piit.SetUp - chrome browser open success
+22:53:03.133 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:53:03.240 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:53:04.415 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:53:04.785 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:53:06.293 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:53:06.851 [main] INFO  Fazia.LoginTest2 - Middle name added successfully
+22:53:07.597 [main] INFO  Fazia.LoginTest2 - Nickname added successfully
+22:53:07.708 [main] INFO  Fazia.LoginTest2 - ID added successfully
+22:53:07.776 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+22:53:07.831 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+22:53:08.610 [main] INFO  us.piit.SetUp - browser close success
+22:54:09.715 [main] INFO  us.piit.SetUp - chrome browser open success
+22:54:14.181 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:54:14.281 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:54:15.505 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:54:15.863 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:54:17.607 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:54:18.105 [main] INFO  Fazia.LoginTest2 - Middle name added successfully
+22:54:18.965 [main] INFO  Fazia.LoginTest2 - Nickname added successfully
+22:54:19.070 [main] INFO  Fazia.LoginTest2 - ID added successfully
+22:54:19.136 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+22:54:19.212 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+22:54:25.016 [main] INFO  us.piit.SetUp - browser close success
+22:55:11.201 [main] INFO  us.piit.SetUp - chrome browser open success
+22:55:15.903 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:55:16.009 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:55:17.589 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:55:17.987 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:55:19.754 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:55:20.298 [main] INFO  Fazia.LoginTest2 - Middle name added successfully
+22:55:21.275 [main] INFO  Fazia.LoginTest2 - Nickname added successfully
+22:55:21.385 [main] INFO  Fazia.LoginTest2 - ID added successfully
+22:55:21.459 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+22:55:21.515 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+22:55:27.278 [main] INFO  us.piit.SetUp - browser close success
+22:56:17.174 [main] INFO  us.piit.SetUp - chrome browser open success
+22:56:19.132 [main] INFO  us.piit.SetUp - browser close success
+22:56:30.621 [main] INFO  us.piit.SetUp - chrome browser open success
+22:56:35.108 [main] INFO  Fazia.LoginTest2 - Enter username , success
+22:56:35.202 [main] INFO  Fazia.LoginTest2 - Enter password , success
+22:56:35.248 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+22:56:36.788 [main] INFO  Fazia.LoginTest2 - user logged in success
+22:56:38.200 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+22:56:38.708 [main] INFO  Fazia.LoginTest2 - Middle name added successfully
+22:56:39.655 [main] INFO  Fazia.LoginTest2 - Nickname added successfully
+22:56:39.766 [main] INFO  Fazia.LoginTest2 - ID added successfully
+22:56:41.580 [main] INFO  us.piit.SetUp - browser close success
+23:02:12.098 [main] INFO  us.piit.SetUp - chrome browser open success
+23:02:16.790 [main] INFO  Fazia.LoginTest2 - Enter username , success
+23:02:16.880 [main] INFO  Fazia.LoginTest2 - Enter password , success
+23:02:18.429 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+23:02:18.828 [main] INFO  Fazia.LoginTest2 - user logged in success
+23:02:20.739 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+23:02:21.417 [main] INFO  Fazia.LoginTest2 - Middle name added successfully
+23:02:22.613 [main] INFO  Fazia.LoginTest2 - Nickname added successfully
+23:02:22.712 [main] INFO  Fazia.LoginTest2 - ID added successfully
+23:02:22.777 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+23:02:22.847 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+23:03:13.654 [main] INFO  us.piit.SetUp - browser close success
+23:03:46.195 [main] INFO  us.piit.SetUp - chrome browser open success
+23:03:54.270 [main] INFO  Fazia.LoginTest2 - Enter username , success
+23:03:54.380 [main] INFO  Fazia.LoginTest2 - Enter password , success
+23:03:55.712 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+23:03:56.075 [main] INFO  Fazia.LoginTest2 - user logged in success
+23:03:57.882 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+23:03:58.543 [main] INFO  Fazia.LoginTest2 - Middle name added successfully
+23:03:59.677 [main] INFO  Fazia.LoginTest2 - Nickname added successfully
+23:03:59.788 [main] INFO  Fazia.LoginTest2 - ID added successfully
+23:03:59.860 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+23:03:59.919 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+23:04:50.005 [main] INFO  Fazia.LoginTest2 - The check box is checked successfully
+23:04:55.696 [main] INFO  us.piit.SetUp - browser close success
+23:06:10.721 [main] INFO  us.piit.SetUp - chrome browser open success
+23:06:12.655 [main] INFO  us.piit.SetUp - browser close success
+23:06:29.126 [main] INFO  us.piit.SetUp - chrome browser open success
+23:06:38.073 [main] INFO  Fazia.LoginTest2 - Enter username , success
+23:06:38.189 [main] INFO  Fazia.LoginTest2 - Enter password , success
+23:06:38.253 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+23:06:40.078 [main] INFO  Fazia.LoginTest2 - user logged in success
+23:06:42.137 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+23:06:42.723 [main] INFO  Fazia.LoginTest2 - Middle name added successfully
+23:06:43.980 [main] INFO  Fazia.LoginTest2 - Nickname added successfully
+23:06:44.100 [main] INFO  Fazia.LoginTest2 - ID added successfully
+23:06:44.170 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+23:06:44.250 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+23:06:55.059 [main] INFO  us.piit.SetUp - browser close success
+23:07:27.363 [main] INFO  us.piit.SetUp - chrome browser open success
+23:07:31.779 [main] INFO  Fazia.LoginTest2 - Enter username , success
+23:07:31.858 [main] INFO  Fazia.LoginTest2 - Enter password , success
+23:07:33.278 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+23:07:33.685 [main] INFO  Fazia.LoginTest2 - user logged in success
+23:07:35.356 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+23:07:35.950 [main] INFO  Fazia.LoginTest2 - Middle name added successfully
+23:07:37.132 [main] INFO  Fazia.LoginTest2 - Nickname added successfully
+23:07:37.232 [main] INFO  Fazia.LoginTest2 - ID added successfully
+23:07:37.296 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+23:07:37.353 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+23:07:37.397 [main] INFO  Fazia.LoginTest2 - The check box is checked successfully
+23:07:43.103 [main] INFO  us.piit.SetUp - browser close success
+23:12:29.460 [main] INFO  us.piit.SetUp - chrome browser open success
+23:12:33.949 [main] INFO  Fazia.LoginTest2 - Enter username , success
+23:12:34.056 [main] INFO  Fazia.LoginTest2 - Enter password , success
+23:12:35.188 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+23:12:35.549 [main] INFO  Fazia.LoginTest2 - user logged in success
+23:12:37.046 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+23:12:38.606 [main] INFO  Fazia.LoginTest2 - clicked on the icon successfully
+23:12:49.311 [main] INFO  Fazia.LoginTest2 - Nationality Set
+23:12:49.403 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+23:12:49.465 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+23:12:50.285 [main] INFO  us.piit.SetUp - browser close success
+23:13:33.033 [main] INFO  us.piit.SetUp - chrome browser open success
+23:13:37.465 [main] INFO  Fazia.LoginTest2 - Enter username , success
+23:13:37.567 [main] INFO  Fazia.LoginTest2 - Enter password , success
+23:13:38.744 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+23:13:39.117 [main] INFO  Fazia.LoginTest2 - user logged in success
+23:13:40.620 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+23:13:42.061 [main] INFO  Fazia.LoginTest2 - clicked on the icon successfully
+23:14:02.937 [main] INFO  us.piit.SetUp - browser close success
+23:14:50.874 [main] INFO  us.piit.SetUp - chrome browser open success
+23:14:52.804 [main] INFO  us.piit.SetUp - browser close success
+23:15:05.340 [main] INFO  us.piit.SetUp - chrome browser open success
+23:15:09.753 [main] INFO  Fazia.LoginTest2 - Enter username , success
+23:15:09.862 [main] INFO  Fazia.LoginTest2 - Enter password , success
+23:15:12.317 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+23:15:12.686 [main] INFO  Fazia.LoginTest2 - user logged in success
+23:15:14.183 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+23:15:15.693 [main] INFO  Fazia.LoginTest2 - clicked on the icon successfully
+23:15:30.058 [main] INFO  Fazia.LoginTest2 - Nationality Set
+23:15:30.141 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+23:15:30.195 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+23:15:30.995 [main] INFO  us.piit.SetUp - browser close success
+23:16:00.318 [main] INFO  us.piit.SetUp - chrome browser open success
+23:16:04.664 [main] INFO  Fazia.LoginTest2 - Enter username , success
+23:16:04.777 [main] INFO  Fazia.LoginTest2 - Enter password , success
+23:16:05.968 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+23:16:06.324 [main] INFO  Fazia.LoginTest2 - user logged in success
+23:16:07.582 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+23:16:09.514 [main] INFO  Fazia.LoginTest2 - clicked on the icon successfully
+23:16:09.601 [main] INFO  Fazia.LoginTest2 - Nationality Set
+23:16:09.671 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+23:16:09.735 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+23:16:09.841 [main] INFO  Fazia.LoginTest2 - The check box is checked successfully
+23:16:15.566 [main] INFO  us.piit.SetUp - browser close success
+09:54:20.041 [main] INFO  us.piit.SetUp - chrome browser open success
+09:54:31.263 [main] INFO  Fazia.LoginTest2 - Enter username , success
+09:54:31.335 [main] INFO  Fazia.LoginTest2 - Enter password , success
+09:54:32.512 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+09:54:32.858 [main] INFO  Fazia.LoginTest2 - user logged in success
+09:54:34.327 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+09:54:35.859 [main] INFO  Fazia.LoginTest2 - clicked on the icon successfully
+09:54:56.717 [main] INFO  us.piit.SetUp - browser close success
+09:55:39.774 [main] INFO  us.piit.SetUp - chrome browser open success
+09:55:47.838 [main] INFO  Fazia.LogOutTest - Enter username , success
+09:55:47.947 [main] INFO  Fazia.LogOutTest - Enter password , success
+09:55:49.071 [main] INFO  Fazia.LogOutTest - click on button Login Success
+09:55:49.426 [main] INFO  Fazia.LogOutTest - user logged in success
+09:55:49.484 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+09:55:50.173 [main] INFO  Fazia.LogOutTest - click on change password button Success
+09:55:50.745 [main] INFO  Fazia.LogOutTest - Password entered in Current Password field
+09:55:50.867 [main] INFO  Fazia.LogOutTest - Password entered in New Password field
+09:55:50.942 [main] INFO  Fazia.LogOutTest - Password entered in Confirm Password field 
+09:55:50.987 [main] INFO  Fazia.LogOutTest - Password updated
+09:55:51.024 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+09:55:52.004 [main] INFO  Fazia.LogOutTest - click on the logOut button Success
+09:55:57.083 [main] INFO  Fazia.LogOutTest - Enter username , success
+09:55:57.150 [main] INFO  Fazia.LogOutTest - Enter password , success
+09:55:58.088 [main] INFO  Fazia.LogOutTest - click on button Login Success
+09:56:18.887 [main] INFO  us.piit.SetUp - browser close success
+09:56:49.053 [main] INFO  us.piit.SetUp - chrome browser open success
+09:56:52.014 [main] INFO  Fazia.LogOutTest - Enter username , success
+09:56:52.085 [main] INFO  Fazia.LogOutTest - Enter password , success
+09:56:53.220 [main] INFO  Fazia.LogOutTest - click on button Login Success
+09:56:53.574 [main] INFO  Fazia.LogOutTest - user logged in success
+09:56:53.634 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+09:56:54.245 [main] INFO  Fazia.LogOutTest - click on change password button Success
+09:56:54.727 [main] INFO  Fazia.LogOutTest - Password entered in Current Password field
+09:56:54.840 [main] INFO  Fazia.LogOutTest - Password entered in New Password field
+09:56:54.913 [main] INFO  Fazia.LogOutTest - Password entered in Confirm Password field 
+09:56:54.956 [main] INFO  Fazia.LogOutTest - Password updated
+09:56:55.000 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+09:56:55.926 [main] INFO  Fazia.LogOutTest - click on the logOut button Success
+09:57:00.992 [main] INFO  Fazia.LogOutTest - Enter username , success
+09:57:01.065 [main] INFO  Fazia.LogOutTest - Enter password , success
+09:57:02.025 [main] INFO  Fazia.LogOutTest - click on button Login Success
+09:57:22.925 [main] INFO  us.piit.SetUp - browser close success
+10:02:30.924 [main] INFO  us.piit.SetUp - chrome browser open success
+10:02:39.431 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:02:39.525 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:02:40.642 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:02:40.982 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:02:42.442 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+10:02:43.841 [main] INFO  Fazia.LoginTest2 - clicked on the icon successfully
+10:03:04.604 [main] INFO  us.piit.SetUp - browser close success
+10:04:49.623 [main] INFO  us.piit.SetUp - chrome browser open success
+10:04:54.824 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:04:54.904 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:04:56.039 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:04:56.397 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:04:57.745 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+10:04:59.086 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+10:04:59.139 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+10:04:59.202 [main] INFO  Fazia.LoginTest2 - The check box is checked successfully
+10:05:04.928 [main] INFO  us.piit.SetUp - browser close success
+10:05:35.613 [main] INFO  us.piit.SetUp - chrome browser open success
+10:05:43.717 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:05:43.818 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:05:44.982 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:05:45.351 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:05:46.702 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+10:05:48.213 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+10:05:48.269 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+10:05:48.323 [main] INFO  Fazia.LoginTest2 - The check box is checked successfully
+10:05:54.010 [main] INFO  us.piit.SetUp - browser close success
+10:25:12.846 [main] INFO  us.piit.SetUp - chrome browser open success
+10:25:15.961 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:25:16.041 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:25:16.095 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:25:17.540 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:25:18.316 [main] INFO  Fazia.LoginTest2 - dmin clicked on success
+10:25:39.198 [main] INFO  us.piit.SetUp - browser close success
+10:27:48.220 [main] INFO  us.piit.SetUp - chrome browser open success
+10:27:51.574 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:27:51.672 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:27:51.738 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:27:53.145 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:27:54.280 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+10:27:55.210 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+10:27:56.056 [main] INFO  Fazia.LoginTest2 - Button add clicked on success
+10:27:56.442 [main] INFO  Fazia.LoginTest2 - Nationality added successfully
+10:27:56.808 [main] INFO  Fazia.LoginTest2 - Button Submit clicked on success
+10:28:17.577 [main] INFO  us.piit.SetUp - browser close success
+10:30:19.787 [main] INFO  us.piit.SetUp - chrome browser open success
+10:30:23.246 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:30:23.344 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:30:24.655 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:30:25.045 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:30:26.297 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+10:30:27.286 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+10:30:29.042 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+10:30:30.379 [main] INFO  Fazia.LoginTest2 - clicked on the icon successfully
+10:30:51.142 [main] INFO  us.piit.SetUp - browser close success
+10:34:02.672 [main] INFO  us.piit.SetUp - chrome browser open success
+10:34:06.116 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:34:06.215 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:34:06.278 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:34:07.815 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:34:09.369 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+10:34:10.471 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+10:34:12.051 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+10:34:13.429 [main] INFO  Fazia.LoginTest2 - clicked on the icon successfully
+10:34:14.254 [main] INFO  us.piit.SetUp - browser close success
+10:34:49.504 [main] INFO  us.piit.SetUp - chrome browser open success
+10:34:51.302 [main] INFO  us.piit.SetUp - browser close success
+10:35:02.851 [main] INFO  us.piit.SetUp - chrome browser open success
+10:35:10.985 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:35:11.091 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:35:12.268 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:35:12.641 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:35:14.027 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+10:35:14.912 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+10:35:16.761 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+10:35:18.246 [main] INFO  Fazia.LoginTest2 - clicked on the icon successfully
+10:35:18.326 [main] INFO  Fazia.LoginTest2 - Nationality Set
+10:35:18.403 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+10:35:18.464 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+10:35:37.369 [main] INFO  Fazia.LoginTest2 - The check box is checked successfully
+10:35:42.959 [main] INFO  us.piit.SetUp - browser close success
+10:36:09.688 [main] INFO  us.piit.SetUp - chrome browser open success
+10:36:14.939 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:36:15.034 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:36:15.097 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:36:16.509 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:36:17.737 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+10:36:18.579 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+10:36:20.157 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+10:36:21.475 [main] INFO  Fazia.LoginTest2 - clicked on the icon successfully
+10:36:21.553 [main] INFO  Fazia.LoginTest2 - Nationality Set
+10:36:21.618 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+10:36:21.672 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+10:36:42.384 [main] INFO  us.piit.SetUp - browser close success
+10:38:22.212 [main] INFO  us.piit.SetUp - chrome browser open success
+10:38:25.573 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:38:25.676 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:38:25.735 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:38:27.138 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:38:28.304 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+10:38:29.194 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+10:38:30.825 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+10:38:32.146 [main] INFO  Fazia.LoginTest2 - clicked on the icon successfully
+10:38:32.891 [main] INFO  us.piit.SetUp - browser close success
+10:39:13.408 [main] INFO  us.piit.SetUp - chrome browser open success
+10:39:16.826 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:39:16.919 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:39:18.131 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:39:18.493 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:39:19.724 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+10:39:20.717 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+10:39:22.377 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+10:39:23.821 [main] INFO  Fazia.LoginTest2 - clicked on the icon successfully
+10:39:29.692 [main] INFO  us.piit.SetUp - browser close success
+10:44:48.409 [main] INFO  us.piit.SetUp - chrome browser open success
+10:44:56.256 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:44:56.345 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:44:56.411 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:44:57.886 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:44:59.304 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+10:45:00.161 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+10:45:01.915 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+10:45:04.105 [main] INFO  us.piit.SetUp - browser close success
+10:47:34.733 [main] INFO  us.piit.SetUp - chrome browser open success
+10:47:38.126 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:47:38.221 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:47:38.282 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:47:39.688 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:47:40.957 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+10:47:41.768 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+10:47:43.464 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+10:47:45.076 [main] INFO  Fazia.LoginTest2 - Element selected
+10:47:45.801 [main] INFO  us.piit.SetUp - browser close success
+10:49:46.490 [main] INFO  us.piit.SetUp - chrome browser open success
+10:49:49.915 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:49:50.032 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:49:50.116 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:49:51.647 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:49:52.784 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+10:49:53.766 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+10:49:55.394 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+10:49:56.189 [main] INFO  us.piit.SetUp - browser close success
+10:51:23.743 [main] INFO  us.piit.SetUp - chrome browser open success
+10:51:29.102 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:51:29.212 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:51:30.341 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:51:30.694 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:51:32.127 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+10:51:33.121 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+10:51:34.735 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+10:51:35.946 [main] INFO  Fazia.LoginTest2 - Element selected
+10:51:36.767 [main] INFO  us.piit.SetUp - browser close success
+10:52:28.100 [main] INFO  us.piit.SetUp - chrome browser open success
+10:52:31.576 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:52:31.682 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:52:32.794 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:52:33.156 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:52:34.374 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+10:52:35.260 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+10:52:36.871 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+10:52:38.022 [main] INFO  Fazia.LoginTest2 - Element selected
+10:52:43.838 [main] INFO  us.piit.SetUp - browser close success
+10:55:33.521 [main] INFO  us.piit.SetUp - chrome browser open success
+10:55:36.835 [main] INFO  Fazia.LoginTest2 - Enter username , success
+10:55:36.915 [main] INFO  Fazia.LoginTest2 - Enter password , success
+10:55:38.080 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+10:55:38.445 [main] INFO  Fazia.LoginTest2 - user logged in success
+10:55:39.732 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+10:55:40.651 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+10:55:42.271 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+10:55:43.738 [main] INFO  Fazia.LoginTest2 - Element selected
+10:55:49.514 [main] INFO  us.piit.SetUp - browser close success
+11:00:09.295 [main] INFO  us.piit.SetUp - chrome browser open success
+11:00:13.803 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:00:13.873 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:00:14.881 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:00:25.483 [main] INFO  us.piit.SetUp - browser close success
+11:00:44.374 [main] INFO  us.piit.SetUp - chrome browser open success
+11:00:47.776 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:00:47.871 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:00:49.170 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:00:49.535 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:00:50.883 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+11:00:51.765 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+11:00:53.475 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+11:00:54.814 [main] INFO  Fazia.LoginTest2 - Element selected
+11:01:00.572 [main] INFO  us.piit.SetUp - browser close success
+11:04:29.639 [main] INFO  us.piit.SetUp - chrome browser open success
+11:04:34.932 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:04:35.029 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:04:36.270 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:04:36.638 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:04:37.886 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+11:04:38.931 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+11:04:40.592 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+11:05:01.365 [main] INFO  us.piit.SetUp - browser close success
+11:06:21.885 [main] INFO  us.piit.SetUp - chrome browser open success
+11:06:25.426 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:06:25.501 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:06:26.692 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:06:27.073 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:06:28.411 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+11:06:29.338 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+11:06:31.059 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+11:06:42.186 [main] INFO  us.piit.SetUp - browser close success
+11:07:26.905 [main] INFO  us.piit.SetUp - chrome browser open success
+11:07:30.257 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:07:30.378 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:07:30.448 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:07:31.871 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:07:33.079 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+11:07:34.075 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+11:07:36.013 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+11:07:58.513 [main] INFO  us.piit.SetUp - browser close success
+11:10:20.536 [main] INFO  us.piit.SetUp - chrome browser open success
+11:10:28.698 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:10:28.830 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:10:28.927 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:10:30.403 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:10:31.733 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+11:10:32.692 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+11:10:34.483 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+11:10:36.710 [main] INFO  us.piit.SetUp - browser close success
+11:12:43.561 [main] INFO  us.piit.SetUp - chrome browser open success
+11:12:51.907 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:12:52.013 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:12:53.248 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:12:53.607 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:12:55.030 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+11:12:55.978 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+11:13:16.718 [main] INFO  us.piit.SetUp - browser close success
+11:15:32.761 [main] INFO  us.piit.SetUp - chrome browser open success
+11:15:36.518 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:15:36.601 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:15:37.944 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:15:38.321 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:15:39.757 [main] INFO  Fazia.LoginTest2 - Admin clicked on success
+11:15:40.775 [main] INFO  Fazia.LoginTest2 - Nationalities clicked on success
+11:15:58.304 [main] INFO  us.piit.SetUp - browser close success
+11:17:06.918 [main] INFO  us.piit.SetUp - chrome browser open success
+11:17:10.369 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:17:10.479 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:17:11.663 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:17:12.037 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:17:32.937 [main] INFO  us.piit.SetUp - browser close success
+11:23:28.424 [main] INFO  us.piit.SetUp - chrome browser open success
+11:23:31.814 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:23:31.934 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:23:33.179 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:23:33.557 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:23:35.077 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+11:23:37.467 [main] INFO  us.piit.SetUp - browser close success
+11:25:25.669 [main] INFO  us.piit.SetUp - chrome browser open success
+11:25:29.168 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:25:29.276 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:25:29.381 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:25:30.855 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:25:32.960 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+11:25:35.293 [main] INFO  us.piit.SetUp - browser close success
+11:25:55.655 [main] INFO  us.piit.SetUp - chrome browser open success
+11:25:59.128 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:25:59.262 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:25:59.362 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:26:00.833 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:26:02.409 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+11:26:07.485 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+11:26:07.549 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+11:26:07.642 [main] INFO  Fazia.LoginTest2 - The check box is checked successfully
+11:26:13.355 [main] INFO  us.piit.SetUp - browser close success
+11:29:35.578 [main] INFO  us.piit.SetUp - chrome browser open success
+11:29:39.039 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:29:39.145 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:29:40.345 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:29:40.706 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:29:42.304 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+11:29:47.366 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+11:29:47.422 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+11:30:13.134 [main] INFO  us.piit.SetUp - browser close success
+11:31:55.956 [main] INFO  us.piit.SetUp - chrome browser open success
+11:32:03.953 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:32:04.087 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:32:05.337 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:32:05.697 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:32:06.954 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+11:32:12.034 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+11:32:12.113 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+11:32:15.472 [main] INFO  Fazia.LoginTest2 - The check box is checked successfully
+11:32:21.164 [main] INFO  us.piit.SetUp - browser close success
+11:35:14.425 [main] INFO  us.piit.SetUp - chrome browser open success
+11:35:20.695 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:35:20.781 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:35:21.893 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:35:22.246 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:35:23.812 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+11:35:30.376 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+11:35:30.443 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+11:35:34.068 [main] INFO  us.piit.SetUp - browser close success
+11:37:03.710 [main] INFO  us.piit.SetUp - chrome browser open success
+11:37:07.477 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:37:07.585 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:37:08.865 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:37:09.325 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:37:10.846 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+11:37:17.532 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+11:37:17.596 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+11:37:23.375 [main] INFO  us.piit.SetUp - browser close success
+11:40:09.044 [main] INFO  us.piit.SetUp - chrome browser open success
+11:40:12.703 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:40:12.822 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:40:14.120 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:40:14.516 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:40:16.101 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+11:40:22.784 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+11:40:22.890 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+11:40:28.669 [main] INFO  us.piit.SetUp - browser close success
+11:40:56.094 [main] INFO  us.piit.SetUp - chrome browser open success
+11:41:04.329 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:41:04.467 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:41:04.545 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:41:06.081 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:41:07.552 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+11:41:14.460 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+11:41:14.523 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+11:41:20.377 [main] INFO  us.piit.SetUp - browser close success
+11:42:46.112 [main] INFO  us.piit.SetUp - chrome browser open success
+11:42:49.496 [main] INFO  Fazia.LoginTest2 - Enter username , success
+11:42:49.589 [main] INFO  Fazia.LoginTest2 - Enter password , success
+11:42:50.737 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+11:42:51.145 [main] INFO  Fazia.LoginTest2 - user logged in success
+11:42:52.750 [main] INFO  Fazia.LoginTest2 - Click on My Info success
+11:42:59.312 [main] INFO  Fazia.LoginTest2 - Box Checked successfully
+11:42:59.372 [main] INFO  Fazia.LoginTest2 - Button clicked on success
+11:43:05.261 [main] INFO  us.piit.SetUp - browser close success
+11:46:55.174 [main] INFO  us.piit.SetUp - chrome browser open success
+11:47:03.339 [main] INFO  Fazia.LogOutTest - Enter username , success
+11:47:03.463 [main] INFO  Fazia.LogOutTest - Enter password , success
+11:47:04.695 [main] INFO  Fazia.LogOutTest - click on button Login Success
+11:47:05.056 [main] INFO  Fazia.LogOutTest - user logged in success
+11:47:05.116 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+11:47:05.825 [main] INFO  Fazia.LogOutTest - click on change password button Success
+11:47:06.310 [main] INFO  Fazia.LogOutTest - Password entered in Current Password field
+11:47:06.424 [main] INFO  Fazia.LogOutTest - Password entered in New Password field
+11:47:06.509 [main] INFO  Fazia.LogOutTest - Password entered in Confirm Password field 
+11:47:06.560 [main] INFO  Fazia.LogOutTest - Password updated
+11:47:06.603 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+11:47:07.571 [main] INFO  Fazia.LogOutTest - click on the logOut button Success
+11:47:12.632 [main] INFO  Fazia.LogOutTest - Enter username , success
+11:47:12.707 [main] INFO  Fazia.LogOutTest - Enter password , success
+11:47:13.726 [main] INFO  Fazia.LogOutTest - click on button Login Success
+11:47:14.045 [main] INFO  Fazia.LogOutTest - Password is not updated
+11:47:14.796 [main] INFO  us.piit.SetUp - browser close success
+13:17:11.815 [main] INFO  us.piit.SetUp - chrome browser open success
+13:17:55.478 [main] INFO  us.piit.SetUp - browser close success
+13:17:58.383 [main] INFO  us.piit.SetUp - chrome browser open success
+13:18:33.460 [main] INFO  us.piit.SetUp - browser close success
+13:22:59.438 [main] INFO  us.piit.SetUp - chrome browser open success
+13:23:45.586 [main] INFO  us.piit.SetUp - browser close success
+13:23:48.692 [main] INFO  us.piit.SetUp - chrome browser open success
+13:24:37.010 [main] INFO  us.piit.SetUp - browser close success
+13:31:35.856 [main] INFO  us.piit.SetUp - chrome browser open success
+13:31:38.901 [main] INFO  Fazia.LoginTest2 - Enter username , success
+13:31:39.005 [main] INFO  Fazia.LoginTest2 - Enter password , success
+13:31:39.704 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+13:31:40.036 [main] INFO  Fazia.LoginTest2 - Validate error access
+13:31:40.735 [main] INFO  us.piit.SetUp - browser close success
+13:31:41.854 [main] INFO  us.piit.SetUp - chrome browser open success
+13:31:48.440 [main] INFO  Fazia.LoginTest2 - Enter username , success
+13:31:48.509 [main] INFO  Fazia.LoginTest2 - Enter password , success
+13:31:48.585 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+13:31:48.614 [main] INFO  Fazia.LoginTest2 - Validate error access
+13:31:49.310 [main] INFO  us.piit.SetUp - browser close success
+13:31:50.349 [main] INFO  us.piit.SetUp - chrome browser open success
+13:31:53.303 [main] INFO  Fazia.LoginTest2 - Enter username , success
+13:31:53.393 [main] INFO  Fazia.LoginTest2 - Enter password , success
+13:31:54.571 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+13:31:54.911 [main] INFO  Fazia.LoginTest2 - user logged in success
+13:31:55.622 [main] INFO  us.piit.SetUp - browser close success
+13:36:59.735 [main] INFO  Fazia.LoginTest2 - Enter username , success
+13:37:00.220 [main] INFO  Fazia.LoginTest2 - Enter password , success
+13:37:01.747 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+13:37:02.265 [main] INFO  Fazia.LoginTest2 - Validate error access
+13:37:03.276 [main] INFO  us.piit.SetUp - browser close success
+13:37:11.245 [main] INFO  Fazia.LoginTest2 - Enter username , success
+13:37:11.582 [main] INFO  Fazia.LoginTest2 - Enter password , success
+13:37:11.938 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+13:37:12.316 [main] INFO  Fazia.LoginTest2 - Validate error access
+13:37:13.064 [main] INFO  us.piit.SetUp - browser close success
+13:37:23.584 [main] INFO  Fazia.LoginTest2 - Enter username , success
+13:37:24.076 [main] INFO  Fazia.LoginTest2 - Enter password , success
+13:37:25.769 [main] INFO  Fazia.LoginTest2 - click on button Login Success
+13:37:26.516 [main] INFO  Fazia.LoginTest2 - user logged in success
+13:37:27.548 [main] INFO  us.piit.SetUp - browser close success
+13:47:19.529 [main] INFO  Fazia.LoginTestOrange - Enter username , success
+13:47:19.918 [main] INFO  Fazia.LoginTestOrange - Enter password , success
+13:47:21.130 [main] INFO  Fazia.LoginTestOrange - click on button Login Success
+13:47:21.627 [main] INFO  Fazia.LoginTestOrange - Validate error access
+13:47:22.603 [main] INFO  us.piit.SetUp - browser close success
+13:47:30.469 [main] INFO  Fazia.LoginTestOrange - Enter username , success
+13:47:30.760 [main] INFO  Fazia.LoginTestOrange - Enter password , success
+13:47:31.008 [main] INFO  Fazia.LoginTestOrange - click on button Login Success
+13:47:31.214 [main] INFO  Fazia.LoginTestOrange - Validate error access
+13:47:32.108 [main] INFO  us.piit.SetUp - browser close success
+13:47:39.951 [main] INFO  Fazia.LoginTestOrange - Enter username , success
+13:47:40.187 [main] INFO  Fazia.LoginTestOrange - Enter password , success
+13:47:41.640 [main] INFO  Fazia.LoginTestOrange - click on button Login Success
+13:47:42.172 [main] INFO  Fazia.LoginTestOrange - user logged in success
+13:47:42.898 [main] INFO  us.piit.SetUp - browser close success
+13:48:14.718 [main] INFO  us.piit.SetUp - chrome browser open success
+13:48:17.708 [main] INFO  Fazia.LoginTestOrange - Enter username , success
+13:48:17.807 [main] INFO  Fazia.LoginTestOrange - Enter password , success
+13:48:17.884 [main] INFO  Fazia.LoginTestOrange - click on button Login Success
+13:48:18.852 [main] INFO  Fazia.LoginTestOrange - Validate error access
+13:48:19.588 [main] INFO  us.piit.SetUp - browser close success
+13:48:20.658 [main] INFO  us.piit.SetUp - chrome browser open success
+13:48:23.540 [main] INFO  Fazia.LoginTestOrange - Enter username , success
+13:48:23.597 [main] INFO  Fazia.LoginTestOrange - Enter password , success
+13:48:23.667 [main] INFO  Fazia.LoginTestOrange - click on button Login Success
+13:48:23.704 [main] INFO  Fazia.LoginTestOrange - Validate error access
+13:48:24.386 [main] INFO  us.piit.SetUp - browser close success
+13:48:25.407 [main] INFO  us.piit.SetUp - chrome browser open success
+13:48:28.350 [main] INFO  Fazia.LoginTestOrange - Enter username , success
+13:48:28.452 [main] INFO  Fazia.LoginTestOrange - Enter password , success
+13:48:29.523 [main] INFO  Fazia.LoginTestOrange - click on button Login Success
+13:48:29.877 [main] INFO  Fazia.LoginTestOrange - user logged in success
+13:48:30.542 [main] INFO  us.piit.SetUp - browser close success
+13:48:31.557 [main] INFO  us.piit.SetUp - chrome browser open success
+13:48:34.681 [main] INFO  Fazia.LogOutTest - Enter username , success
+13:48:34.822 [main] INFO  Fazia.LogOutTest - Enter password , success
+13:48:34.909 [main] INFO  Fazia.LogOutTest - click on button Login Success
+13:48:36.270 [main] INFO  Fazia.LogOutTest - user logged in success
+13:48:36.329 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+13:48:38.048 [main] INFO  Fazia.LogOutTest - click on the logOut button Success
+13:48:43.070 [main] INFO  Fazia.LogOutTest - user logged out success
+13:48:43.768 [main] INFO  us.piit.SetUp - browser close success
+13:48:45.563 [main] INFO  us.piit.SetUp - chrome browser open success
+13:48:53.468 [main] INFO  Fazia.LogOutTest - Enter username , success
+13:48:53.567 [main] INFO  Fazia.LogOutTest - Enter password , success
+13:48:54.702 [main] INFO  Fazia.LogOutTest - click on button Login Success
+13:48:55.038 [main] INFO  Fazia.LogOutTest - user logged in success
+13:48:55.096 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+13:48:55.739 [main] INFO  Fazia.LogOutTest - click on change password button Success
+13:48:56.451 [main] INFO  Fazia.LogOutTest - Password entered in Current Password field
+13:48:56.571 [main] INFO  Fazia.LogOutTest - Password entered in New Password field
+13:48:56.682 [main] INFO  Fazia.LogOutTest - Password entered in Confirm Password field 
+13:48:56.735 [main] INFO  Fazia.LogOutTest - Password updated
+13:48:56.773 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+13:48:57.723 [main] INFO  Fazia.LogOutTest - click on the logOut button Success
+13:49:02.785 [main] INFO  Fazia.LogOutTest - Enter username , success
+13:49:02.858 [main] INFO  Fazia.LogOutTest - Enter password , success
+13:49:03.807 [main] INFO  Fazia.LogOutTest - click on button Login Success
+13:49:04.126 [main] INFO  Fazia.LogOutTest - Password is not updated
+13:49:04.834 [main] INFO  us.piit.SetUp - browser close success
+13:50:01.823 [main] INFO  us.piit.SetUp - Firefox browser open success
+13:50:10.764 [main] INFO  Fazia.LoginTestOrange - Enter username , success
+13:50:10.808 [main] INFO  Fazia.LoginTestOrange - Enter password , success
+13:50:12.200 [main] INFO  Fazia.LoginTestOrange - click on button Login Success
+13:50:12.540 [main] INFO  Fazia.LoginTestOrange - Validate error access
+13:50:13.700 [main] INFO  us.piit.SetUp - browser close success
+13:50:16.335 [main] INFO  us.piit.SetUp - Firefox browser open success
+13:50:22.151 [main] INFO  Fazia.LoginTestOrange - Enter username , success
+13:50:22.164 [main] INFO  Fazia.LoginTestOrange - Enter password , success
+13:50:22.410 [main] INFO  Fazia.LoginTestOrange - click on button Login Success
+13:50:22.431 [main] INFO  Fazia.LoginTestOrange - Validate error access
+13:50:23.401 [main] INFO  us.piit.SetUp - browser close success
+13:50:26.222 [main] INFO  us.piit.SetUp - Firefox browser open success
+13:50:35.267 [main] INFO  Fazia.LoginTestOrange - Enter username , success
+13:50:35.290 [main] INFO  Fazia.LoginTestOrange - Enter password , success
+13:50:36.509 [main] INFO  Fazia.LoginTestOrange - click on button Login Success
+13:50:36.873 [main] INFO  Fazia.LoginTestOrange - user logged in success
+13:50:37.707 [main] INFO  us.piit.SetUp - browser close success
+13:50:40.269 [main] INFO  us.piit.SetUp - Firefox browser open success
+13:50:45.979 [main] INFO  Fazia.LogOutTest - Enter username , success
+13:50:46.003 [main] INFO  Fazia.LogOutTest - Enter password , success
+13:50:47.411 [main] INFO  Fazia.LogOutTest - click on button Login Success
+13:50:47.805 [main] INFO  Fazia.LogOutTest - user logged in success
+13:50:48.028 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+13:50:49.240 [main] INFO  Fazia.LogOutTest - click on the logOut button Success
+13:50:54.253 [main] INFO  Fazia.LogOutTest - user logged out success
+13:50:55.252 [main] INFO  us.piit.SetUp - browser close success
+13:50:57.852 [main] INFO  us.piit.SetUp - Firefox browser open success
+13:51:01.451 [main] INFO  Fazia.LogOutTest - Enter username , success
+13:51:01.477 [main] INFO  Fazia.LogOutTest - Enter password , success
+13:51:02.890 [main] INFO  Fazia.LogOutTest - click on button Login Success
+13:51:03.307 [main] INFO  Fazia.LogOutTest - user logged in success
+13:51:03.528 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+13:51:04.477 [main] INFO  Fazia.LogOutTest - click on change password button Success
+13:51:04.871 [main] INFO  Fazia.LogOutTest - Password entered in Current Password field
+13:51:04.906 [main] INFO  Fazia.LogOutTest - Password entered in New Password field
+13:51:04.931 [main] INFO  Fazia.LogOutTest - Password entered in Confirm Password field 
+13:51:05.158 [main] INFO  Fazia.LogOutTest - Password updated
+13:51:05.380 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+13:51:06.305 [main] INFO  Fazia.LogOutTest - click on the logOut button Success
+13:51:11.346 [main] INFO  Fazia.LogOutTest - Enter username , success
+13:51:11.370 [main] INFO  Fazia.LogOutTest - Enter password , success
+13:51:12.436 [main] INFO  Fazia.LogOutTest - click on button Login Success
+13:51:12.776 [main] INFO  Fazia.LogOutTest - Password is not updated
+13:51:13.784 [main] INFO  us.piit.SetUp - browser close success
+13:52:29.745 [main] INFO  us.piit.SetUp - chrome browser open success
+13:52:31.714 [main] INFO  us.piit.SetUp - browser close success
+13:52:33.650 [main] INFO  us.piit.SetUp - chrome browser open success
+13:52:35.483 [main] INFO  us.piit.SetUp - Firefox browser open success
+13:52:35.663 [main] INFO  us.piit.SetUp - browser close success
+13:52:37.698 [main] INFO  us.piit.SetUp - chrome browser open success
+13:52:39.494 [main] INFO  us.piit.SetUp - browser close success
+13:52:41.336 [main] INFO  Fazia.LoginTestOrange - Enter username , success
+13:52:41.356 [main] INFO  Fazia.LoginTestOrange - Enter password , success
+13:52:42.424 [main] INFO  Fazia.LoginTestOrange - click on button Login Success
+13:52:42.537 [main] INFO  Fazia.LoginTestOrange - Validate error access
+13:52:43.659 [main] INFO  us.piit.SetUp - browser close success
+13:52:46.552 [main] INFO  us.piit.SetUp - Firefox browser open success
+13:52:52.232 [main] INFO  Fazia.LoginTestOrange - Enter username , success
+13:52:52.249 [main] INFO  Fazia.LoginTestOrange - Enter password , success
+13:52:52.493 [main] INFO  Fazia.LoginTestOrange - click on button Login Success
+13:52:52.516 [main] INFO  Fazia.LoginTestOrange - Validate error access
+13:52:53.372 [main] INFO  us.piit.SetUp - browser close success
+13:52:55.989 [main] INFO  us.piit.SetUp - Firefox browser open success
+13:52:59.306 [main] INFO  Fazia.LoginTestOrange - Enter username , success
+13:52:59.325 [main] INFO  Fazia.LoginTestOrange - Enter password , success
+13:53:00.520 [main] INFO  Fazia.LoginTestOrange - click on button Login Success
+13:53:00.890 [main] INFO  Fazia.LoginTestOrange - user logged in success
+13:53:01.852 [main] INFO  us.piit.SetUp - browser close success
+13:53:05.005 [main] INFO  us.piit.SetUp - Firefox browser open success
+13:53:08.479 [main] INFO  Fazia.LogOutTest - Enter username , success
+13:53:08.515 [main] INFO  Fazia.LogOutTest - Enter password , success
+13:53:10.280 [main] INFO  Fazia.LogOutTest - click on button Login Success
+13:53:10.665 [main] INFO  Fazia.LogOutTest - user logged in success
+13:53:10.887 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+13:53:12.011 [main] INFO  Fazia.LogOutTest - click on the logOut button Success
+13:53:17.029 [main] INFO  Fazia.LogOutTest - user logged out success
+13:53:18.051 [main] INFO  us.piit.SetUp - browser close success
+13:53:20.573 [main] INFO  us.piit.SetUp - Firefox browser open success
+13:53:23.857 [main] INFO  Fazia.LogOutTest - Enter username , success
+13:53:23.880 [main] INFO  Fazia.LogOutTest - Enter password , success
+13:53:25.437 [main] INFO  Fazia.LogOutTest - click on button Login Success
+13:53:25.835 [main] INFO  Fazia.LogOutTest - user logged in success
+13:53:26.053 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+13:53:26.954 [main] INFO  Fazia.LogOutTest - click on change password button Success
+13:53:27.327 [main] INFO  Fazia.LogOutTest - Password entered in Current Password field
+13:53:27.367 [main] INFO  Fazia.LogOutTest - Password entered in New Password field
+13:53:27.392 [main] INFO  Fazia.LogOutTest - Password entered in Confirm Password field 
+13:53:27.616 [main] INFO  Fazia.LogOutTest - Password updated
+13:53:27.838 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+13:53:28.890 [main] INFO  Fazia.LogOutTest - click on the logOut button Success
+13:53:33.944 [main] INFO  Fazia.LogOutTest - Enter username , success
+13:53:33.967 [main] INFO  Fazia.LogOutTest - Enter password , success
+13:53:34.933 [main] INFO  Fazia.LogOutTest - click on button Login Success
+13:53:35.254 [main] INFO  Fazia.LogOutTest - Password is not updated
+13:53:36.096 [main] INFO  us.piit.SetUp - browser close success
+20:43:47.161 [main] INFO  us.piit.SetUp - Firefox browser open success
+20:43:57.044 [main] INFO  Fazia.LoginTestOrange - Enter username , success
+20:43:57.075 [main] INFO  Fazia.LoginTestOrange - Enter password , success
+20:44:01.049 [main] INFO  Fazia.LoginTestOrange - click on button Login Success
+20:44:01.132 [main] INFO  Fazia.LoginTestOrange - Validate error access
+20:44:02.515 [main] INFO  us.piit.SetUp - browser close success
+20:44:06.833 [main] INFO  us.piit.SetUp - Firefox browser open success
+20:44:15.340 [main] INFO  Fazia.LoginTestOrange - Enter username , success
+20:44:15.362 [main] INFO  Fazia.LoginTestOrange - Enter password , success
+20:44:15.616 [main] INFO  Fazia.LoginTestOrange - click on button Login Success
+20:44:15.648 [main] INFO  Fazia.LoginTestOrange - Validate error access
+20:44:16.866 [main] INFO  us.piit.SetUp - browser close success
+20:44:21.321 [main] INFO  us.piit.SetUp - Firefox browser open success
+20:44:29.826 [main] INFO  Fazia.LoginTestOrange - Enter username , success
+20:44:29.853 [main] INFO  Fazia.LoginTestOrange - Enter password , success
+20:44:32.788 [main] INFO  Fazia.LoginTestOrange - click on button Login Success
+20:44:32.906 [main] INFO  Fazia.LoginTestOrange - user logged in success
+20:44:33.943 [main] INFO  us.piit.SetUp - browser close success
+20:44:37.415 [main] INFO  us.piit.SetUp - Firefox browser open success
+20:44:46.082 [main] INFO  Fazia.LogOutTest - Enter username , success
+20:44:46.133 [main] INFO  Fazia.LogOutTest - Enter password , success
+20:44:50.805 [main] INFO  Fazia.LogOutTest - click on button Login Success
+20:44:50.867 [main] INFO  Fazia.LogOutTest - user logged in success
+20:44:51.088 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+20:44:51.972 [main] INFO  Fazia.LogOutTest - click on the logOut button Success
+20:44:56.979 [main] INFO  Fazia.LogOutTest - user logged out success
+20:44:58.124 [main] INFO  us.piit.SetUp - browser close success
+20:45:01.961 [main] INFO  us.piit.SetUp - Firefox browser open success
+20:45:13.263 [main] INFO  Fazia.LogOutTest - Enter username , success
+20:45:13.332 [main] INFO  Fazia.LogOutTest - Enter password , success
+20:45:15.656 [main] INFO  Fazia.LogOutTest - click on button Login Success
+20:45:16.402 [main] INFO  Fazia.LogOutTest - user logged in success
+20:45:16.671 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+20:45:18.023 [main] INFO  Fazia.LogOutTest - click on change password button Success
+20:45:18.521 [main] INFO  Fazia.LogOutTest - Password entered in Current Password field
+20:45:18.554 [main] INFO  Fazia.LogOutTest - Password entered in New Password field
+20:45:18.583 [main] INFO  Fazia.LogOutTest - Password entered in Confirm Password field 
+20:45:18.830 [main] INFO  Fazia.LogOutTest - Password updated
+20:45:19.074 [main] INFO  Fazia.LogOutTest - click on the Menu Success
+20:45:20.188 [main] INFO  Fazia.LogOutTest - click on the logOut button Success
+20:45:25.233 [main] INFO  Fazia.LogOutTest - Enter username , success
+20:45:25.257 [main] INFO  Fazia.LogOutTest - Enter password , success
+20:45:26.314 [main] INFO  Fazia.LogOutTest - click on button Login Success
+20:45:27.200 [main] INFO  Fazia.LogOutTest - Password is not updated
+20:45:28.688 [main] INFO  us.piit.SetUp - browser close success

@@ -1,11 +1,266 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-07T16:34:10 MDT" name="Qafox test" finished-at="2023-05-07T16:34:10 MDT" duration-ms="37">
+  <suite started-at="2023-05-08T20:43:35 MDT" name="Gumtree test" finished-at="2023-05-08T20:45:28 MDT" duration-ms="113477">
     <groups>
     </groups>
-    <test started-at="2023-05-07T16:34:10 MDT" name="login test" finished-at="2023-05-07T16:34:10 MDT" duration-ms="37">
+    <test started-at="2023-05-08T20:43:35 MDT" name="login test" finished-at="2023-05-08T20:44:33 MDT" duration-ms="58735">
+      <class name="Fazia.LoginTestOrange">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Fazia.LoginTestOrange@75390459]" started-at="2023-05-08T20:43:35 MDT" name="setUp" finished-at="2023-05-08T20:43:56 MDT" duration-ms="21045" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[110]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://opensource-demo.orangehrmlive.com/web/index.php/auth/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="InavlidCeredentials()[pri:0, instance:Fazia.LoginTestOrange@75390459]" started-at="2023-05-08T20:43:56 MDT" name="InavlidCeredentials" finished-at="2023-05-08T20:44:01 MDT" duration-ms="4781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InavlidCeredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Fazia.LoginTestOrange@75390459]" started-at="2023-05-08T20:44:01 MDT" name="tearDown" finished-at="2023-05-08T20:44:02 MDT" duration-ms="1378" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Fazia.LoginTestOrange@75390459]" started-at="2023-05-08T20:44:02 MDT" name="setUp" finished-at="2023-05-08T20:44:14 MDT" duration-ms="12217" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[110]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://opensource-demo.orangehrmlive.com/web/index.php/auth/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="noCred()[pri:0, instance:Fazia.LoginTestOrange@75390459]" started-at="2023-05-08T20:44:14 MDT" name="noCred" finished-at="2023-05-08T20:44:15 MDT" duration-ms="914" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noCred -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Fazia.LoginTestOrange@75390459]" started-at="2023-05-08T20:44:15 MDT" name="tearDown" finished-at="2023-05-08T20:44:16 MDT" duration-ms="1216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Fazia.LoginTestOrange@75390459]" started-at="2023-05-08T20:44:16 MDT" name="setUp" finished-at="2023-05-08T20:44:29 MDT" duration-ms="12417" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[110]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://opensource-demo.orangehrmlive.com/web/index.php/auth/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validCred()[pri:0, instance:Fazia.LoginTestOrange@75390459]" started-at="2023-05-08T20:44:29 MDT" name="validCred" finished-at="2023-05-08T20:44:32 MDT" duration-ms="3622" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validCred -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Fazia.LoginTestOrange@75390459]" started-at="2023-05-08T20:44:32 MDT" name="tearDown" finished-at="2023-05-08T20:44:33 MDT" duration-ms="1037" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Fazia.LoginTestOrange -->
     </test> <!-- login test -->
-  </suite> <!-- Qafox test -->
+    <test started-at="2023-05-08T20:44:33 MDT" name="logout test" finished-at="2023-05-08T20:44:58 MDT" duration-ms="24144">
+      <class name="Fazia.LogOutTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Fazia.LogOutTest@51cd7ffc]" started-at="2023-05-08T20:44:33 MDT" name="setUp" finished-at="2023-05-08T20:44:45 MDT" duration-ms="11361" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[110]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://opensource-demo.orangehrmlive.com/web/index.php/auth/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="logout()[pri:0, instance:Fazia.LogOutTest@51cd7ffc]" started-at="2023-05-08T20:44:45 MDT" name="logout" finished-at="2023-05-08T20:44:56 MDT" duration-ms="11635" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Fazia.LogOutTest@51cd7ffc]" started-at="2023-05-08T20:44:56 MDT" name="tearDown" finished-at="2023-05-08T20:44:58 MDT" duration-ms="1145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Fazia.LogOutTest -->
+    </test> <!-- logout test -->
+    <test started-at="2023-05-08T20:44:58 MDT" name="ChangePassword test" finished-at="2023-05-08T20:45:28 MDT" duration-ms="30557">
+      <class name="Fazia.ChangePassword">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Fazia.ChangePassword@6f2cb653]" started-at="2023-05-08T20:44:58 MDT" name="setUp" finished-at="2023-05-08T20:45:10 MDT" duration-ms="12064" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[110]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://opensource-demo.orangehrmlive.com/web/index.php/auth/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ChangePassword()[pri:0, instance:Fazia.ChangePassword@6f2cb653]" started-at="2023-05-08T20:45:10 MDT" name="ChangePassword" finished-at="2023-05-08T20:45:27 MDT" duration-ms="17002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangePassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Fazia.ChangePassword@6f2cb653]" started-at="2023-05-08T20:45:27 MDT" name="tearDown" finished-at="2023-05-08T20:45:28 MDT" duration-ms="1484" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Fazia.ChangePassword -->
+    </test> <!-- ChangePassword test -->
+  </suite> <!-- Gumtree test -->
 </testng-results>
