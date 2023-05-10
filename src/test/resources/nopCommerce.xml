@@ -13,11 +13,11 @@
     <parameter name="Password" value="qwerty@123"/>
     <test name="login test">
         <classes>
-            <class name="Laique.RegisterNewUser"/>
-            <class name="Laique.LoginTest"/>
-            <class name="Laique.AddProductToCart"/>
-            <class name="Laique.AddToWishList"/>
-            <class name="Laique.ForgotPassword"/>
+            <class name="nopCommerce.RegisterNewUser"/>
+            <class name="nopCommerce.LoginTest"/>
+            <class name="nopCommerce.AddProductToCart"/>
+            <class name="nopCommerce.AddToWishList"/>
+            <class name="nopCommerce.ForgotPassword"/>
         </classes>
     </test>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="saucedemo test">
+<suite name="Qafox test">
     <parameter name="useCloudEnv" value="true"></parameter>
     <parameter name="envName" value="browserstack"></parameter>
     <parameter name="os" value="windows"></parameter>
@@ -11,7 +11,7 @@
     <parameter name="url" value="https://tutorialsninja.com/demo/index.php?route=account/login"></parameter>
     <test name=" RegisterTest">
         <classes>
-            <class name="Rezika.RegisterTest"></class>
+            <class name="Qafox.RegisterTest"></class>
         </classes>
     </test>
 

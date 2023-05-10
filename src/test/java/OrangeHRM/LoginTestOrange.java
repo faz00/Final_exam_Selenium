@@ -1,23 +1,16 @@
-package Fazia;
+package OrangeHRM;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import us.piit.SetUp;
 
-import java.time.Duration;
-
-
 
 public class LoginTestOrange extends SetUp {
-    Logger log = LogManager.getLogger(Fazia.LoginTestOrange.class.getName());
+    Logger log = LogManager.getLogger(OrangeHRM.LoginTestOrange.class.getName());
 
     @Test
     public  void validCred()  {
@@ -59,7 +52,7 @@ public class LoginTestOrange extends SetUp {
 
         //enter username,enter password, and click on login button
 
-        type("input[placeholder='Username']","Fazia");
+        type("input[placeholder='Username']", "OrangeHRM");
         log.info("Enter username , success");
 
         type("input[placeholder='Password']","Wrong");

@@ -10,13 +10,13 @@
   <parameter name="url" value="https://magento.softwaretestingboard.com/"/>
   <test thread-count="5" name="login test(failed)">
     <classes>
-      <class name="Boris.LoginTest">
+      <class name="Luma.LoginTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="validCredential"/>
         </methods>
-      </class> <!-- Boris.LoginTest -->
+      </class> <!-- Luma.LoginTest -->
     </classes>
   </test> <!-- login test(failed) -->
 </suite> <!-- Failed suite [Luma test] -->

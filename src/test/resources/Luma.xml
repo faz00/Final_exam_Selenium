@@ -13,11 +13,11 @@
     <parameter name="Password" value="qwerty@123"/>
     <test name="login test">
         <classes>
-            <class name="Boris.RegisterUser"/>
-            <class name="Boris.LoginTest"/>
-            <class name="Boris.AddToCart"/>
-            <class name="Boris.AddProductToWishList"/>
-            <class name="Boris.AddProductReview"/>
+            <class name="Luma.RegisterUser"/>
+            <class name="Luma.LoginTest"/>
+            <class name="Luma.AddToCart"/>
+            <class name="Luma.AddProductToWishList"/>
+            <class name="Luma.AddProductReview"/>
         </classes>
     </test>
 

@@ -1,18 +1,12 @@
-package Fazia;
+package OrangeHRM;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import us.piit.SetUp;
-
-import java.time.Duration;
 
 public class ChangePassword extends SetUp{
 

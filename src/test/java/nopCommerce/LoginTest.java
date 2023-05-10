@@ -1,4 +1,4 @@
-package Laique;
+package nopCommerce;
 
 
 import org.openqa.selenium.WebElement;
