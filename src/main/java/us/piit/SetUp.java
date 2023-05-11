@@ -60,13 +60,13 @@ public class SetUp {
             driver = new ChromeDriver();
             log.info("chrome browser open success");
 
-          // Setting Firefox browser
+            // Setting Firefox browser
         } else if (browserName.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
             log.info("Firefox browser open success");
 
-         // Setting Edge browser
+            // Setting Edge browser
         }else if(browserName.equalsIgnoreCase("edge")){
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
@@ -94,8 +94,10 @@ public class SetUp {
     }
 
     // This method quit the browser after each test case
+
+
     @AfterMethod
-    public void tearDown(){
+    public void tearDownR(){
         //close browser
         driver.quit();
         log.info("browser close success");

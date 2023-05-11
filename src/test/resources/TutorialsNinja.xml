@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Qafox test">
-    <parameter name="useCloudEnv" value="true"></parameter>
+<suite name="TutorialsNinja test">
+    <parameter name="useCloudEnv" value="false"></parameter>
     <parameter name="envName" value="browserstack"></parameter>
     <parameter name="os" value="windows"></parameter>
     <parameter name="osVersion" value="11"></parameter>
@@ -11,7 +11,7 @@
     <parameter name="url" value="https://tutorialsninja.com/demo/index.php?route=account/login"></parameter>
     <test name=" RegisterTest">
         <classes>
-            <class name="Qafox.RegisterTest"></class>
+            <class name="TutorialsNinja.RegisterTest"></class>
         </classes>
     </test>
 
