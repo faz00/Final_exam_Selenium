@@ -1,4 +1,4 @@
-package TutorialsNinja;
+package tutorialsNinja;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -11,9 +11,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import us.piit.SetUp;
+import us.piit.base.CommonAPI;
 
-public class RegisterTest  extends SetUp {
+public class RegisterTest  extends CommonAPI {
 
     Logger log = LogManager.getLogger(RegisterTest.class.getName());
 //Register by filling up all the mandatory fields of the registration form

@@ -1,13 +1,13 @@
-package Luma;
+package luma;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import us.piit.SetUp;
+import us.piit.base.CommonAPI;
 
-public class AddProductReview extends SetUp {
+public class AddProductReview extends CommonAPI {
 
     @FindBy(id = "search")
     WebElement PrductSearchInput;
@@ -66,7 +66,7 @@ public class AddProductReview extends SetUp {
         clickOnRatingStar();
 
         // Type Review
-        NickName.sendKeys("Luma");
+        NickName.sendKeys("luma");
         Summary.sendKeys("Testing Review");
         Review.sendKeys("Testing the review ");
         waitFor(1);

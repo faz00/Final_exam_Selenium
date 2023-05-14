@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import us.piit.SetUp;
+import us.piit.base.CommonAPI;
 
-public class RegisterNewUser extends SetUp {
+public class RegisterNewUser extends CommonAPI {
 
 
     public static @FindBy(xpath = "//a[@href=\"/register?returnUrl=%2F\"]")

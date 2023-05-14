@@ -1,13 +1,13 @@
-package Luma;
+package luma;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import us.piit.SetUp;
+import us.piit.base.CommonAPI;
 
-public class RegisterUser extends SetUp {
+public class RegisterUser extends CommonAPI {
 
     @FindBy(xpath = "(//a[text()='Create an Account'])[1]")
     WebElement CreateAnAccountLink;
@@ -69,7 +69,7 @@ public class RegisterUser extends SetUp {
 
         Assert.assertTrue(FirstName.isDisplayed());
 
-        FirstName.sendKeys("Luma");
+        FirstName.sendKeys("luma");
         LastName.sendKeys(".");
         EmailInput.sendKeys(TestEmail);
         PasswordInput.sendKeys(Password);

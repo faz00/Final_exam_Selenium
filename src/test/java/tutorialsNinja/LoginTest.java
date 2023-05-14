@@ -1,4 +1,4 @@
-package TutorialsNinja;
+package tutorialsNinja;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
@@ -11,10 +11,10 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-import us.piit.SetUp;
+import us.piit.base.CommonAPI;
 
 
-public class LoginTest  extends SetUp {
+public class LoginTest  extends CommonAPI {
 
     Logger log = LogManager.getLogger(LoginTest.class.getName());
 

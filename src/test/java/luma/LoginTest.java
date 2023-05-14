@@ -1,13 +1,13 @@
-package Luma;
+package luma;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import us.piit.SetUp;
+import us.piit.base.CommonAPI;
 
-public class LoginTest extends SetUp {
+public class LoginTest extends CommonAPI {
 
     @FindBy(xpath = "(//li[@class='authorization-link']//a)[1]")
     WebElement SignInLink;

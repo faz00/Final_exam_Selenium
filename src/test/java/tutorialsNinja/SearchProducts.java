@@ -1,4 +1,4 @@
-package TutorialsNinja;
+package tutorialsNinja;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -11,9 +11,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
-import us.piit.SetUp;
+import us.piit.base.CommonAPI;
 
-public class SearchProducts  extends SetUp {
+public class SearchProducts  extends CommonAPI {
 
     Logger log = LogManager.getLogger( SearchProducts.class.getName());
 

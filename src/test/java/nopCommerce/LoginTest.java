@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import us.piit.SetUp;
+import us.piit.base.CommonAPI;
 
-public class LoginTest extends SetUp {
+public class LoginTest extends CommonAPI {
     String ValidationErrorMessage = "Login was unsuccessful. Please correct the errors and try again.\n" +
             "No customer account found";
 

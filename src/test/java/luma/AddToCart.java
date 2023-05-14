@@ -1,12 +1,12 @@
-package Luma;
+package luma;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import us.piit.SetUp;
+import us.piit.base.CommonAPI;
 
-public class AddToCart extends SetUp {
+public class AddToCart extends CommonAPI {
 
     @FindBy(css = "[id=\"ui-id-8\"]")
     WebElement SaleTab;

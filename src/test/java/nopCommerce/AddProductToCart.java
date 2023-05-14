@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import us.piit.SetUp;
+import us.piit.base.CommonAPI;
 
-public class AddProductToCart extends SetUp {
+public class AddProductToCart extends CommonAPI {
 
 
     @FindBy(xpath = "(//button[@class=\"button-2 product-box-add-to-cart-button\"])[2]")

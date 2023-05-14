@@ -1,4 +1,4 @@
-package OrangeHRM;
+package orangeHRM;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -6,17 +6,17 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import us.piit.SetUp;
+import us.piit.base.CommonAPI;
 
 
-public class LoginTestOrange extends SetUp {
-    Logger log = LogManager.getLogger(OrangeHRM.LoginTestOrange.class.getName());
+public class LoginTestOrange extends CommonAPI {
+    Logger log = LogManager.getLogger(orangeHRM.LoginTestOrange.class.getName());
 
     @Test
     public  void validCred()  {
 
 
-        String expectedTitle = "OrangeHRM";
+        String expectedTitle = "orangeHRM";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);
 
@@ -45,14 +45,14 @@ public class LoginTestOrange extends SetUp {
 
     public void InavlidCeredentials(){
 
-        String expectedTitle = "OrangeHRM";
+        String expectedTitle = "orangeHRM";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);
 
 
         //enter username,enter password, and click on login button
 
-        type("input[placeholder='Username']", "OrangeHRM");
+        type("input[placeholder='Username']", "orangeHRM");
         log.info("Enter username , success");
 
         type("input[placeholder='Password']","Wrong");
@@ -75,7 +75,7 @@ public class LoginTestOrange extends SetUp {
 
         //body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > form:nth-child(2) > div:nth-child(2) > div:nth-child(1) > span:nth-child(3
 
-        String expectedTitle = "OrangeHRM";
+        String expectedTitle = "orangeHRM";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="OrangeHRM test">
+<suite name="orangeHRM test">
     <parameter name="useCloudEnv" value="false"></parameter>
     <parameter name="envName" value="browserstack"></parameter>
     <parameter name="os" value="windows"></parameter>
@@ -11,17 +11,17 @@
     <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"></parameter>
     <test name="login test">
         <classes>
-            <class name="OrangeHRM.LoginTestOrange"></class>
+            <class name="orangeHRM.LoginTestOrange"></class>
         </classes>
     </test>
     <test name="logout test">
         <classes>
-            <class name="OrangeHRM.LogOutTest"></class>
+            <class name="orangeHRM.LogOutTest"></class>
         </classes>
     </test>
     <test name="ChangePassword test">
         <classes>
-            <class name="OrangeHRM.ChangePassword"></class>
+            <class name="orangeHRM.ChangePassword"></class>
         </classes>
     </test>
 

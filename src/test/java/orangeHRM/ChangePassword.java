@@ -1,4 +1,4 @@
-package OrangeHRM;
+package orangeHRM;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -6,16 +6,16 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import us.piit.SetUp;
+import us.piit.base.CommonAPI;
 
-public class ChangePassword extends SetUp{
+public class ChangePassword extends CommonAPI {
 
     Logger log = LogManager.getLogger(LogOutTest.class.getName());
     @Test
     public  void ChangePassword()  {
 
 
-        String expectedTitle = "OrangeHRM";
+        String expectedTitle = "orangeHRM";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);
 
@@ -67,7 +67,7 @@ public class ChangePassword extends SetUp{
 
         waitFor(5);
 
-        String expectedLoginPage = "OrangeHRM";
+        String expectedLoginPage = "orangeHRM";
         String actualLoginPage = driver.getTitle();
         Assert.assertEquals(expectedLoginPage,actualLoginPage);
 

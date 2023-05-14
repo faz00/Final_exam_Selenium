@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Luma test]" guice-stage="DEVELOPMENT">
+<suite name="Failed suite [luma test]" guice-stage="DEVELOPMENT">
   <parameter name="useCloudEnv" value="false"/>
   <parameter name="os" value="windows"/>
   <parameter name="osVersion" value="10"/>
@@ -10,13 +10,13 @@
   <parameter name="url" value="https://magento.softwaretestingboard.com/"/>
   <test thread-count="5" name="login test(failed)">
     <classes>
-      <class name="Luma.LoginTest">
+      <class name="luma.LoginTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="validCredential"/>
         </methods>
-      </class> <!-- Luma.LoginTest -->
+      </class> <!-- luma.LoginTest -->
     </classes>
   </test> <!-- login test(failed) -->
-</suite> <!-- Failed suite [Luma test] -->
+</suite> <!-- Failed suite [luma test] -->

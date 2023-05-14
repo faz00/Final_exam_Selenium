@@ -1,12 +1,12 @@
-package OrangeHRM;
+package orangeHRM;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import us.piit.SetUp;
+import us.piit.base.CommonAPI;
 
-public class LogOutTest extends SetUp {
+public class LogOutTest extends CommonAPI {
 
 
         Logger log = LogManager.getLogger(LogOutTest.class.getName());
@@ -15,7 +15,7 @@ public class LogOutTest extends SetUp {
         public  void logout() throws InterruptedException {
 
 
-            String expectedTitle = "OrangeHRM";
+            String expectedTitle = "orangeHRM";
             String actualTitle = driver.getTitle();
             Assert.assertEquals(expectedTitle,actualTitle);
 
@@ -49,7 +49,7 @@ public class LogOutTest extends SetUp {
             waitFor(5);
 
 
-            String expectedLoginPage = "OrangeHRM";
+            String expectedLoginPage = "orangeHRM";
             String actualLoginPage = driver.getTitle();
             Assert.assertEquals(expectedLoginPage,actualLoginPage);
 

@@ -1,4 +1,4 @@
-package TutorialsNinja;
+package tutorialsNinja;
 import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
@@ -8,9 +8,9 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-import us.piit.SetUp;
+import us.piit.base.CommonAPI;
 
-public class ForgottenPassword  extends SetUp {
+public class ForgottenPassword  extends CommonAPI {
 
 
     Logger log = LogManager.getLogger(ForgottenPassword.class.getName());

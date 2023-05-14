@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import us.piit.SetUp;
+import us.piit.base.CommonAPI;
 
-public class ForgotPassword extends SetUp {
+public class ForgotPassword extends CommonAPI {
 
     public @FindBy(xpath = "//a[@href=\"/login?returnUrl=%2F\"]")
     WebElement LoginLink;
