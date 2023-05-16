@@ -27,8 +27,8 @@ public class RegisterPage extends CommonAPI {
     }
 
     Properties prop = Utility.loadProperties();
-    String ValidEmail = prop.getProperty("nopCommerce.username");
-    String validPassword = prop.getProperty("nopCommerce.password");
+    String ValidEmail = Utility.decode(prop.getProperty("nopCommerce.username"));
+    String validPassword = Utility.decode(prop.getProperty("nopCommerce.password"));
 
     @FindBy(xpath = "//a[@href=\"/register?returnUrl=%2F\"]")
     WebElement RegisterLink;
