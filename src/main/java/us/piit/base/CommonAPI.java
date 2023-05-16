@@ -1,3 +1,4 @@
+
 package us.piit.base;
 
 
@@ -286,4 +287,58 @@ public class CommonAPI {
 
 }
 
+
+
+
+    //------------------------------------------------------------------------------------------------------------------
+    //                                              selenium methods
+    //------------------------------------------------------------------------------------------------------------------
+
+    public WebDriver getDriver() {
+        return driver;
+    }
+
+    public String getCurrentTitle(){
+        return driver.getTitle();
+    }
+    public String getElementText(WebElement element){
+        return element.getText();
+    }
+    public void clickOn(WebElement element){
+        element.click();
+    }
+    public void type(WebElement element, String text){
+        element.sendKeys(text);
+    }
+    public void hoverOver(WebElement element){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).build().perform();
+    }
+    public void hoverOverAndClickOn(WebElement element){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).click().build().perform();
+    }
+    public void waitFor(int seconds){
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public boolean isVisible(WebElement element){
+        return element.isDisplayed();
+    }
+    public boolean isInteractible(WebElement element){
+        return element.isEnabled();
+    }
+    public boolean isChecked(WebElement element){
+        return element.isSelected();
+    }
+    public String generateTestEmail(){
+        Random rn = new Random(System.nanoTime());
+        int ranNumber = rn.nextInt(1000) + 101;
+        String TestEmail = "test"+ranNumber+"@gmail.com";
+        return TestEmail;
+    }
+}
 

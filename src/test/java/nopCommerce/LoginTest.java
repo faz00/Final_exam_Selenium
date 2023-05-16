@@ -1,86 +1,81 @@
 package nopCommerce;
 
-
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;
+import us.piit.pages.nopCommerce.HomePage;
+import us.piit.pages.nopCommerce.LoginPage;
+import us.piit.utility.Utility;
 
-public class LoginTest extends CommonAPI {
-    String ValidationErrorMessage = "Login was unsuccessful. Please correct the errors and try again.\n" +
-            "No customer account found";
+import java.util.Properties;
 
-    public @FindBy(xpath = "//a[@href=\"/login?returnUrl=%2F\"]")
-    WebElement LoginLink;
+public class LoginTest extends CommonAPI{
+    Logger log = LogManager.getLogger(LoginTest.class.getName());
 
-    public @FindBy(xpath = "")
-    WebElement UserNameInputField;
-
-    public  @FindBy(id = "Email")
-    WebElement EmailInputField;
-
-    public  @FindBy(id = "Password")
-    WebElement PasswordInputField;
-
-    public static @FindBy(id = "RememberMe")
-    WebElement RememberMeCheckBox;
-
-    public static @FindBy(xpath = "//button[@class=\"button-1 login-button\"]")
-    WebElement LoginButton;
-
-    public  @FindBy(xpath = "")
-    WebElement HomePageText;
-
-    public  @FindBy(css = "span[id=\"Email-error\"]")
-    WebElement EmailError;
-
-    public  @FindBy(css = "div[class=\"message-error validation-summary-errors\"]")
-    WebElement ValidationError;
-
-    public  @FindBy(xpath = "")
-    WebElement PasswordError;
-
-    public  @FindBy(xpath = "//a[@href=\"/logout\"]")
-    WebElement LogOutButton;
-
+    Properties prop = Utility.loadProperties();
+    String ValidEmail = prop.getProperty("nopCommerce.username");
+    String validPassword = prop.getProperty("nopCommerce.password");
 
     @Test
-    public void LoginWithWrongCredentials(){
-        // Verifying Page title
-        Assert.assertEquals(getCurrentTitle(), "nopCommerce demo store");
+    public void validCredential() {
+        LoginPage loginPage = new LoginPage(getDriver());
+        HomePage homePage = new HomePage(getDriver());
+        String actualTitle = getCurrentTitle();
+        Assert.assertEquals(actualTitle, "nopCommerce demo store");
+        waitFor(3);
 
-        // Verify login link on home page
-        isVisible(LoginLink);
-        LoginLink.click();
+        //enter  username, password, and click on login button
+        loginPage.goToLoginPage();
+        loginPage.enterUsername(ValidEmail);
+        loginPage.enterPassword(validPassword);
+        loginPage.checkRememberMebox();
+        loginPage.clickOnLoginBtn();
 
-        Login("randomemail@gmail.com", "randomPassword");
-        isVisible(ValidationError);
-        Assert.assertEquals(ValidationError.getText(), ValidationErrorMessage);
+        //check user is logged in
+        waitFor(2);
+        Assert.assertTrue(loginPage.WelcomeGreetMessage());
+        waitFor(3);
     }
 
-    @Parameters({"Email", "Password"})
-    @Test(priority = 1)
-    public void LoginWithValidCredentials(String Email, String Password){
-        // Verifying Page title
-        Assert.assertEquals(getCurrentTitle(), "nopCommerce demo store. Login");
+    @Test
+    public void invalidEmail(){
+        LoginPage loginPage = new LoginPage(getDriver());
+        HomePage homePage = new HomePage(getDriver());
+        String actualTitle = getCurrentTitle();
+        Assert.assertEquals(actualTitle, "nopCommerce demo store");
+        waitFor(3);
 
-        isVisible(LoginLink);
-        LoginLink.click();
+        //enter  username, password, and click on login button
+        loginPage.goToLoginPage();
+        loginPage.enterUsername("invalid@gmail.com");
+        loginPage.enterPassword("invalidPassword");
+        loginPage.checkRememberMebox();
+        loginPage.clickOnLoginBtn();
 
-        // Method is called which actually logs in a user
-        Login(Email, Password);
-        isVisible(LogOutButton);
+        //validate the error message
+        String expectedError = "Login was unsuccessful. Please correct the errors and try again.\n" +
+                "No customer account found";
+        String actualError = loginPage.getErrorMessage();
+        Assert.assertEquals(actualError, expectedError);
     }
 
+    @Test
+    public void emptyCredentials(){
+        LoginPage loginPage = new LoginPage(getDriver());
+        String actualTitle = getCurrentTitle();
+        Assert.assertEquals(actualTitle, "nopCommerce demo store");
+        //enter  username, password, and click on login button
+        loginPage.goToLoginPage();
+        loginPage.enterUsername("");
+        loginPage.enterPassword("");
+        loginPage.checkRememberMebox();
+        loginPage.clickOnLoginBtn();
 
-    // This method actually login the user
-    public void Login(String Email, String Password){
-        EmailInputField.sendKeys(Email);
-        PasswordInputField.sendKeys(Password);
-        RememberMeCheckBox.click();
-        LoginButton.click();
+        //validate the error message
+        String expectedError = "Please enter your email";
+        String actualError = loginPage.emptyFieldsErrorMessage();
+        Assert.assertEquals(expectedError, actualError);
     }
-
 }
