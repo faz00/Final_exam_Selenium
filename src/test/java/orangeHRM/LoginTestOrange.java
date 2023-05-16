@@ -3,41 +3,46 @@ package orangeHRM;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import us.piit.utility.Utility;
 import us.piit.base.CommonAPI;
+import us.piit.pages.orangeHRM.DashbordPage;
+import us.piit.pages.orangeHRM.LoginPage;
+
+import java.util.Properties;
 
 
 public class LoginTestOrange extends CommonAPI {
     Logger log = LogManager.getLogger(orangeHRM.LoginTestOrange.class.getName());
 
+    Properties prop = Utility.loadProperties();
+    String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+    String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
     @Test
     public  void validCred()  {
 
+        LoginPage loginPage = new LoginPage(getDriver());
+        DashbordPage dashbordPage = new DashbordPage(getDriver());
 
-        String expectedTitle = "orangeHRM";
+        String expectedTitle = "OrangeHRM";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);
 
 
         //enter username,enter password, and click on login button
 
-        type("input[placeholder='Username']","Admin");
-        log.info("Enter username , success");
+       loginPage.enterUsername(validUsername);
 
-        type("input[placeholder='Password']","admin123");
-        log.info("Enter password , success");
 
-        driver.findElement(By.cssSelector("button[type='submit']")).click();
-        log.info("click on button Login Success");
+       loginPage.enterPassword(validPassword);
 
+       loginPage.clickOnLoginBtn();
 
         //check user is logged in
         String expectedHomePage = "Dashboard";
-        String actualHomePage =  getElementText("//h6[normalize-space()='Dashboard']");
+        String actualHomePage = dashbordPage.getHraderText();
         Assert.assertEquals(expectedHomePage,actualHomePage);
-        log.info("user logged in success");
 
     }
 
@@ -45,27 +50,26 @@ public class LoginTestOrange extends CommonAPI {
 
     public void InavlidCeredentials(){
 
-        String expectedTitle = "orangeHRM";
+        LoginPage loginPage = new LoginPage(getDriver());
+
+        String expectedTitle = "OrangeHRM";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);
 
 
         //enter username,enter password, and click on login button
 
-        type("input[placeholder='Username']", "orangeHRM");
-        log.info("Enter username , success");
+        loginPage.enterUsername(validUsername);
 
-        type("input[placeholder='Password']","Wrong");
-        log.info("Enter password , success");
 
-        driver.findElement(By.cssSelector("button[type='submit']")).click();
-        log.info("click on button Login Success");
+        loginPage.enterPassword("WrongPswrd");
 
+        loginPage.clickOnLoginBtn();
 
         String expectedError = "Invalid credentials";
-        String actualError = getElementText("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']") ;
+        String actualError = loginPage.getErrorMessage() ;
         Assert.assertEquals(expectedError,actualError);
-        log.info("Validate error access");
+
 
 
     }
@@ -73,27 +77,25 @@ public class LoginTestOrange extends CommonAPI {
     @Test
     public void noCred(){
 
-        //body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > form:nth-child(2) > div:nth-child(2) > div:nth-child(1) > span:nth-child(3
+        LoginPage loginPage = new LoginPage(getDriver());
 
-        String expectedTitle = "orangeHRM";
+        String expectedTitle = "OrangeHRM";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);
 
 
         //enter username,enter password, and click on login button
 
-        type("input[placeholder='Username']","");
-        log.info("Enter username , success");
+        loginPage.enterUsername("");
 
-        type("input[placeholder='Password']","");
-        log.info("Enter password , success");
 
-        clickOn("button[type='submit']");
-        log.info("click on button Login Success");
+        loginPage.enterPassword("");
+
+        loginPage.clickOnLoginBtn();
 
 
         String expectedError = "Required";
-        String actualError = getElementText("body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > form:nth-child(2) > div:nth-child(2) > div:nth-child(1) > span:nth-child(3") ;
+        String actualError = loginPage.getErrorMisingCred() ;
         Assert.assertEquals(expectedError,actualError);
         log.info("Validate error access");
 

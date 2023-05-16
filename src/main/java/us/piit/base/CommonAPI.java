@@ -3,6 +3,7 @@ package us.piit.base;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
@@ -12,10 +13,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.*;
-import us.piit.Utility.Utility;
+import us.piit.utility.*;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
@@ -103,7 +105,7 @@ public class CommonAPI {
         }
         driver.get(url);
 
-       // PageFactory.initElements(driver, this);
+        // PageFactory.initElements(driver, this);
     }
 
     // This method quit the browser after each test case
@@ -144,22 +146,7 @@ public class CommonAPI {
 
         }
     }
-    public void hoverOver(WebElement locator){
-        Actions actions=new Actions(driver);
-        try {
-            actions.moveToElement(locator).build().perform();
-        }catch (Exception e){
-            actions.moveToElement(locator).build().perform();
 
-        }
-    }
-    public void waitFor(int seconds)  {
-        try {
-            Thread.sleep(seconds*1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
 
 
@@ -255,18 +242,34 @@ public class CommonAPI {
         return element.isDisplayed();
     }
 
+    public void sendKey(WebElement locator,String text){
+
+        locator.sendKeys(text);
+    }
 
     public boolean isInteractable(WebElement element) {
 
         return element.isEnabled();
     }
 
+
     public boolean checkCheckBoxIsCh(WebElement element) {
 
 
         return element.isSelected();
     }
-}
+
+    public static void captureScreenshot(WebDriver driver, String screenshotPath) {
+        File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(screenshotFile, new File(screenshotPath));
+            System.out.println("Screenshot captured successfully");
+        } catch (IOException e) {
+            System.err.println("Failed to capture screenshot: " + e.getMessage());
+        }
+    }
+
+
 
 
 
@@ -275,30 +278,16 @@ public class CommonAPI {
     //                                              selenium methods
     //------------------------------------------------------------------------------------------------------------------
 
-    public WebDriver getDriver() {
-        return driver;
-    }
 
-    public String getCurrentTitle(){
-        return driver.getTitle();
-    }
-    public String getElementText(WebElement element){
-        return element.getText();
-    }
-    public void clickOn(WebElement element){
-        element.click();
-    }
-    public void type(WebElement element, String text){
-        element.sendKeys(text);
-    }
+
+
+
     public void hoverOver(WebElement element){
         Actions actions = new Actions(driver);
         actions.moveToElement(element).build().perform();
     }
-    public void hoverOverAndClickOn(WebElement element){
-        Actions actions = new Actions(driver);
-        actions.moveToElement(element).click().build().perform();
-    }
+
+
     public void waitFor(int seconds){
         try {
             Thread.sleep(seconds * 1000);
@@ -306,20 +295,12 @@ public class CommonAPI {
             throw new RuntimeException(e);
         }
     }
-    public boolean isVisible(WebElement element){
-        return element.isDisplayed();
-    }
+
     public boolean isInteractible(WebElement element){
         return element.isEnabled();
     }
     public boolean isChecked(WebElement element){
         return element.isSelected();
     }
-    public String generateTestEmail(){
-        Random rn = new Random(System.nanoTime());
-        int ranNumber = rn.nextInt(1000) + 101;
-        String TestEmail = "test"+ranNumber+"@gmail.com";
-        return TestEmail;
-    }
-}
 
+}

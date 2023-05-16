@@ -4,56 +4,64 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import us.piit.utility.Utility;
 import us.piit.base.CommonAPI;
+import us.piit.pages.orangeHRM.DashbordPage;
+import us.piit.pages.orangeHRM.LoginPage;
+
+import java.util.Properties;
 
 public class LogOutTest extends CommonAPI {
 
 
         Logger log = LogManager.getLogger(LogOutTest.class.getName());
 
-        @Test
+    Properties prop = Utility.loadProperties();
+    String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+    String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+
+
+    @Test
         public  void logout() throws InterruptedException {
 
+        LoginPage loginPage = new LoginPage(getDriver());
+        DashbordPage dashbordPage = new DashbordPage(getDriver());
 
-            String expectedTitle = "orangeHRM";
+
+            String expectedTitle = "OrangeHRM";
             String actualTitle = driver.getTitle();
             Assert.assertEquals(expectedTitle,actualTitle);
 
 
             //enter username,enter password, and click on login button
 
-            type("input[placeholder='Username']","Admin");
-            log.info("Enter username , success");
-
-            type("input[placeholder='Password']","admin123");
-            log.info("Enter password , success");
-
-            clickOn("button[type='submit']");
-            log.info("click on button Login Success");
+        loginPage.enterUsername(validUsername);
 
 
-            //check user is logged in
+        loginPage.enterPassword(validPassword);
+
+        loginPage.clickOnLoginBtn();
+
+
+        //check user is logged in
             String expectedHomePage = "Dashboard";
-            String actualHomePage =  getElementText("//h6[normalize-space()='Dashboard']");
+            String actualHomePage = dashbordPage.getHraderText();
             Assert.assertEquals(expectedHomePage,actualHomePage);
-            log.info("user logged in success");
 
 
             //Log Out
-            clickOn(".oxd-userdropdown-name");
-            log.info("click on the Menu Success");
+          dashbordPage.ClickOnMenuButton();
 
-            clickOn("//a[normalize-space()='Logout']");
-            log.info("click on the logOut button Success");
-
-            waitFor(5);
+          dashbordPage.clickOnLogoutBtn();
 
 
-            String expectedLoginPage = "orangeHRM";
+
+
+            String expectedLoginPage = "OrangeHRM";
             String actualLoginPage = driver.getTitle();
             Assert.assertEquals(expectedLoginPage,actualLoginPage);
 
-            log.info("user logged out success");
+
 
 
         }
