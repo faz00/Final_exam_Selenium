@@ -16,8 +16,8 @@ public class LogoutTest extends CommonAPI {
     Logger log = LogManager.getLogger(LogoutTest.class.getName());
 
     Properties prop = Utility.loadProperties();
-    String ValidEmail = prop.getProperty("nopCommerce.username");
-    String validPassword = prop.getProperty("nopCommerce.password");
+    String ValidEmail = Utility.decode(prop.getProperty("nopCommerce.username"));
+    String validPassword = Utility.decode(prop.getProperty("nopCommerce.password"));
 
 
     @Test
