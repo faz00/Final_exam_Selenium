@@ -35,4 +35,3 @@
             <class name="orangeHRM.LoginToMaintenance"></class>
         </classes>
     </test>
-</suite>

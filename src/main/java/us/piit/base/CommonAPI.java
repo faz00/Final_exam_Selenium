@@ -105,7 +105,7 @@ public class CommonAPI {
         }
         driver.get(url);
 
-       // PageFactory.initElements(driver, this);
+        // PageFactory.initElements(driver, this);
     }
 
     // This method quit the browser after each test case
@@ -304,4 +304,3 @@ public class CommonAPI {
     }
 
 }
-
