@@ -20,7 +20,8 @@ import java.util.Properties;
 public class RegisterPage extends CommonAPI {
     Logger log = LogManager.getLogger(LoginPage.class.getName());
     protected WebDriver driver;
-    public RegisterPage(WebDriver driver){
+
+    public RegisterPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -70,14 +71,12 @@ public class RegisterPage extends CommonAPI {
     WebElement WelcomeNote;
 
 
-
-
-    public void goToRegisterPage(){
+    public void goToRegisterPage() {
         RegisterLink.click();
         log.info("User is on Register page success");
     }
 
-    public void registerNewUser(String Case){
+    public void registerNewUser(String Case) {
         switch (Case) {
             case "All details":
                 waitFor(1);
@@ -95,6 +94,7 @@ public class RegisterPage extends CommonAPI {
                     isVisible(RegistrationCompletedSuccessMessage);
                     Assert.assertTrue(RegistrationCompletedSuccessMessage.isDisplayed());
                     Assert.assertEquals(RegistrationCompletedSuccessMessage.getText(), "Your registration completed");
+                    break;
                 } else {
                     log.info("This Email Aleady Exists");
 
@@ -110,8 +110,8 @@ public class RegisterPage extends CommonAPI {
                     isVisible(RegistrationCompletedSuccessMessage);
                     Assert.assertTrue(RegistrationCompletedSuccessMessage.isDisplayed());
                     Assert.assertEquals(RegistrationCompletedSuccessMessage.getText(), "Your registration completed");
+                    break;
                 }
-                break;
             case "No company details":
                 waitFor(1);
                 isVisible(genderMale);
@@ -166,7 +166,7 @@ public class RegisterPage extends CommonAPI {
         js.executeScript("document.querySelector('[name=\"DateOfBirthYear\"]').options[1].selected = true");
     }
 
-    public void verifyAllMentadoryFieldErrorAppears(){
+    public void verifyAllMentadoryFieldErrorAppears() {
         List<String> error = new ArrayList<>();
         // Add elements to the list
         error.add("First name is required.");
@@ -176,11 +176,11 @@ public class RegisterPage extends CommonAPI {
         error.add("Password is required.");
 
         List<WebElement> fieldErrors = driver.findElements(By.cssSelector("[class=\"field-validation-error\"]"));
-        int index =0;
-        for (WebElement fieldError : fieldErrors){
+        int index = 0;
+        for (WebElement fieldError : fieldErrors) {
             log.info(fieldError.getText());
             Assert.assertEquals(fieldError.getText(), error.get(index));
-            index +=1;
+            index += 1;
         }
     }
 
