@@ -9,16 +9,13 @@
 
     <parameter name="browserName" value="chrome"/>
     <parameter name="url" value="https://demo.nopcommerce.com/"/>
-    <parameter name="Email" value="test002@gmail.com"/>
-    <parameter name="Password" value="qwerty@123"/>
-    <test name="login test">
+    <test name="nopCommerce Tests">
         <classes>
             <class name="nopCommerce.RegisterNewUser"/>
             <class name="nopCommerce.LoginTest"/>
-            <class name="nopCommerce.AddProductToCart"/>
-            <class name="nopCommerce.AddToWishList"/>
-            <class name="nopCommerce.ForgotPassword"/>
+            <class name="nopCommerce.LogoutTest"/>
+            <class name="nopCommerce.CartTest"/>
+            <class name="nopCommerce.WishListTest"/>
         </classes>
     </test>
-
 </suite>
