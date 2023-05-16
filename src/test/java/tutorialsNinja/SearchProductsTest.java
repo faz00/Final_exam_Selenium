@@ -1,21 +1,20 @@
 package tutorialsNinja;
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
-
-import java.time.Duration;
-import java.util.List;
-import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
-import us.piit.Utility.Utility;
+import us.piit.utility.Utility;
 import us.piit.base.CommonAPI;
 import us.piit.pages.tutorialsNinja.SearchProductsHomePage;
 import us.piit.pages.tutorialsNinja.SearchProductsPage;
+
+import java.util.List;
+import java.util.Properties;
+
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class SearchProductsTest extends CommonAPI {
 

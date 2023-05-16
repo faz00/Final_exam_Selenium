@@ -1,18 +1,18 @@
 package tutorialsNinja;
-import static org.testng.Assert.assertEquals;
-import static org.testng.AssertJUnit.assertTrue;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.testng.annotations.Test;
+import us.piit.utility.Utility;
+import us.piit.base.CommonAPI;
+import us.piit.pages.tutorialsNinja.ForgottenPasswordHomePage;
+import us.piit.pages.tutorialsNinja.ForgottenPasswordPage;
 
 import java.time.Duration;
 import java.util.Properties;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.annotations.Test;
-import us.piit.Utility.Utility;
-import us.piit.base.CommonAPI;
-import us.piit.pages.tutorialsNinja.ForgottenPasswordPage;
+import static org.testng.Assert.assertEquals;
+import static org.testng.AssertJUnit.assertTrue;
 
 public class ForgottenPasswordTest extends CommonAPI {
 
@@ -24,31 +24,55 @@ public class ForgottenPasswordTest extends CommonAPI {
 
     //verify if the user is able to reset the password
     @Test
-    public void restUserPassword() {
-        waitFor(30);
+    public void verifyUserNavigatesToTheForgotPasswordPage() {
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         ForgottenPasswordPage forgottenPasswordPage = new  ForgottenPasswordPage(getDriver());
+        ForgottenPasswordHomePage forgottenPasswordHomePage = new  ForgottenPasswordHomePage(getDriver());
         //click on the 'forgot Password link'
         forgottenPasswordPage.navigateToForgotPasswordPage();
-        forgottenPasswordPage.resetUserPassword(validEmail);
+        forgottenPasswordHomePage.resetUserPassword(validEmail);
+
+// Verify that the user landed on the 'Forgot Your Password?'home page
+        String expectedHomPgeTitle="Forgot Your Password?";
+        String actHomPgeTitle=forgottenPasswordHomePage.getForgPassHeaderTitle();
+        assertEquals(expectedHomPgeTitle,actHomPgeTitle,"the home page header title is not the same");
+    }
+    //verify if the user is able to reset the password
+    @Test
+    public void restUserPassword() {
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+
+        ForgottenPasswordPage forgottenPasswordPage = new  ForgottenPasswordPage(getDriver());
+        ForgottenPasswordHomePage forgottenPasswordHomePage = new  ForgottenPasswordHomePage(getDriver());
+        //click on the 'forgot Password link'
+        forgottenPasswordPage.navigateToForgotPasswordPage();
+        forgottenPasswordHomePage.resetUserPassword(validEmail);
 
 // Verify that the success message is displayed
-        assertTrue(forgottenPasswordPage.isResetPasswordSuccessMessageDisplayed());
+        assertTrue(forgottenPasswordHomePage.isResetPasswordSuccessMessageDisplayed());
     }
 
     //verify resetting password for non registred users
     @Test
     public void resetPassForNonRegistredUsers() {
-        waitFor(30);
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         ForgottenPasswordPage forgottenPasswordPage = new  ForgottenPasswordPage(getDriver());
+        ForgottenPasswordHomePage forgottenPasswordHomePage = new  ForgottenPasswordHomePage(getDriver());
 
         // Navigate to the forgot password page
         forgottenPasswordPage.navigateToForgotPasswordPage();
 
         // Enter the non registered email and  click on submit
-        forgottenPasswordPage.resetUserPassword(invalidEmail);
+        forgottenPasswordHomePage.resetUserPassword(invalidEmail);
 
         // Verify an Error Mesaage gets displayed
-        assertTrue(forgottenPasswordPage.isResetPasswordErrorMessageDisplayed());
+        assertTrue(forgottenPasswordHomePage.isResetPasswordErrorMessageDisplayed());
 
     }
 
@@ -57,15 +81,16 @@ public class ForgottenPasswordTest extends CommonAPI {
     public void resetPasswordWithoutEmail() {
         waitFor(30);
         ForgottenPasswordPage forgottenPasswordPage = new  ForgottenPasswordPage(getDriver());
+        ForgottenPasswordHomePage forgottenPasswordHomePage = new  ForgottenPasswordHomePage(getDriver());
 
         // Navigate to the forgot password page
         forgottenPasswordPage.navigateToForgotPasswordPage();
 
 //Click on the continue button without providing email
-        forgottenPasswordPage.clickContinueButton();
+        forgottenPasswordHomePage.clickContinueButton();
 
         //assert an error message gets displayed
-        assertTrue(forgottenPasswordPage.isResetPasswordErrorMessageDisplayed());
+        assertTrue(forgottenPasswordHomePage.isResetPasswordErrorMessageDisplayed());
     }
 
 
@@ -73,15 +98,15 @@ public class ForgottenPasswordTest extends CommonAPI {
     @Test
     public void verifyThePlaceHoldText() {
         waitFor(30);
-        ForgottenPasswordPage forgottenPasswordPage = new  ForgottenPasswordPage(getDriver());
+        ForgottenPasswordPage forgottenPasswordPage = new ForgottenPasswordPage(getDriver());
+        ForgottenPasswordHomePage forgottenPasswordHomePage = new ForgottenPasswordHomePage(getDriver());
 
         // Navigate to the forgot password page
         forgottenPasswordPage.navigateToForgotPasswordPage();
 
         //verify the placeholder text of Email address
-        String actualPlaceholder = forgottenPasswordPage.getEmailInput().getAttribute("placeholder");
         String expectedPlaceholder = "E-Mail Address";
-        assertEquals(actualPlaceholder, expectedPlaceholder);
+        assertEquals(expectedPlaceholder,forgottenPasswordHomePage.getEmailInput());
     }
 
 
@@ -91,16 +116,17 @@ public class ForgottenPasswordTest extends CommonAPI {
     public void verifyBackButtonOnForgotPassword() {
         waitFor(30);
         ForgottenPasswordPage forgottenPasswordPage = new  ForgottenPasswordPage(getDriver());
+        ForgottenPasswordHomePage forgottenPasswordHomePage = new ForgottenPasswordHomePage(getDriver());
 
         // Navigate to the forgot password page
         forgottenPasswordPage.navigateToForgotPasswordPage();
 
         // Click on the Back button
-        forgottenPasswordPage.clickBackButton();
+        forgottenPasswordHomePage.clickBackButton();
 
         // Verify that the user is taken back to the Login page
         String expectedURL = "https://tutorialsninja.com/demo/index.php?route=account/login";
-        String actualURL = forgottenPasswordPage.getURL() ;
+        String actualURL = forgottenPasswordHomePage.getURL() ;
         assertEquals(expectedURL, actualURL);
     }
 
