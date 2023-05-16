@@ -1,22 +1,16 @@
 package orangeHRM;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import us.piit.Utility.Utility;
+import us.piit.utility.Utility;
 import us.piit.base.CommonAPI;
 import us.piit.pages.orangeHRM.BuzzPage;
 import us.piit.pages.orangeHRM.DashbordPage;
 import us.piit.pages.orangeHRM.LoginPage;
 
 import java.io.File;
-import java.io.IOException;
-import java.time.Duration;
 import java.util.Properties;
 
 public class BuzzSection extends CommonAPI {

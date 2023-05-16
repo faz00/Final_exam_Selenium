@@ -3,10 +3,9 @@ package orangeHRM;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import us.piit.Utility.Utility;
+import us.piit.utility.Utility;
 import us.piit.base.CommonAPI;
 import us.piit.pages.orangeHRM.DashbordPage;
 import us.piit.pages.orangeHRM.LoginPage;

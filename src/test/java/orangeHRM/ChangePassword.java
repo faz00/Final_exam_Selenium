@@ -1,24 +1,17 @@
 package orangeHRM;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import org.bouncycastle.pqc.jcajce.provider.qtesla.SignatureSpi;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import us.piit.Utility.Utility;
+import us.piit.utility.Utility;
 import us.piit.base.CommonAPI;
 import us.piit.pages.orangeHRM.DashbordPage;
 import us.piit.pages.orangeHRM.LoginPage;
 import us.piit.pages.orangeHRM.PIMPage;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Properties;
 
 public class ChangePassword extends CommonAPI {
