@@ -3,6 +3,7 @@ package us.piit.base;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
@@ -16,6 +17,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.*;
 import us.piit.Utility.Utility;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
@@ -255,17 +258,33 @@ public class CommonAPI {
         return element.isDisplayed();
     }
 
+    public void sendKey(WebElement locator,String text){
+
+        locator.sendKeys(text);
+    }
 
     public boolean isInteractable(WebElement element) {
 
         return element.isEnabled();
     }
 
+
     public boolean checkCheckBoxIsCh(WebElement element) {
 
 
         return element.isSelected();
     }
+
+    public static void captureScreenshot(WebDriver driver, String screenshotPath) {
+        File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(screenshotFile, new File(screenshotPath));
+            System.out.println("Screenshot captured successfully");
+        } catch (IOException e) {
+            System.err.println("Failed to capture screenshot: " + e.getMessage());
+        }
+    }
+
 }
 
 

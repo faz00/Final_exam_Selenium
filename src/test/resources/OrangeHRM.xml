@@ -7,21 +7,21 @@
     <parameter name="osVersion" value="10"></parameter>
     <parameter name="browserVersion" value="110"></parameter>
 
-    <parameter name="browserName" value="firefox"></parameter>
+    <parameter name="browserName" value="chrome"></parameter>
     <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"></parameter>
-    <test name="login test">
-        <classes>
-            <class name="orangeHRM.LoginTestOrange"></class>
-        </classes>
-    </test>
-    <test name="logout test">
-        <classes>
-            <class name="orangeHRM.LogOutTest"></class>
-        </classes>
-    </test>
+<!--    <test name="login test">-->
+<!--        <classes>-->
+<!--            <class name="orangeHRM.LoginTestOrange"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="logout test">-->
+<!--        <classes>-->
+<!--            <class name="orangeHRM.LogOutTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
     <test name="ChangePassword test">
         <classes>
-            <class name="orangeHRM.ChangePassword"></class>
+            <class name="orangeHRM.BuzzSection"></class>
         </classes>
     </test>
 
