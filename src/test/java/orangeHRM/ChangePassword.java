@@ -1,93 +1,109 @@
 package orangeHRM;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import org.bouncycastle.pqc.jcajce.provider.qtesla.SignatureSpi;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import us.piit.Utility.Utility;
 import us.piit.base.CommonAPI;
+import us.piit.pages.orangeHRM.DashbordPage;
+import us.piit.pages.orangeHRM.LoginPage;
+import us.piit.pages.orangeHRM.PIMPage;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Properties;
 
 public class ChangePassword extends CommonAPI {
 
     Logger log = LogManager.getLogger(LogOutTest.class.getName());
+    Properties prop = Utility.loadProperties();
+    String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+    String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+
+    String newPassword = Utility.decode(prop.getProperty("orangeHRM.newPassword"));
+
     @Test
     public  void ChangePassword()  {
 
+        LoginPage loginPage = new LoginPage(getDriver());
+        DashbordPage dashbordPage = new DashbordPage(getDriver());
+        PIMPage pimPage = new PIMPage(getDriver());
 
-        String expectedTitle = "orangeHRM";
+
+        String expectedTitle = "OrangeHRM";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);
 
 
         //enter username,enter password, and click on login button
 
-        type("input[placeholder='Username']","Admin");
-        log.info("Enter username , success");
+        loginPage.enterUsername(validUsername);
 
-        type("input[placeholder='Password']","admin123");
-        log.info("Enter password , success");
 
-        driver.findElement(By.cssSelector("button[type='submit']")).click();
-        log.info("click on button Login Success");
+        loginPage.enterPassword(validPassword);
+
+        loginPage.clickOnLoginBtn();
 
         //check user is logged in
         String expectedHomePage = "Dashboard";
-        String actualHomePage =  getElementText("//h6[normalize-space()='Dashboard']");
+        String actualHomePage = dashbordPage.getHraderText();
         Assert.assertEquals(expectedHomePage,actualHomePage);
-        log.info("user logged in success");
 
 
-        clickOn(".oxd-userdropdown-name");
-        log.info("click on the Menu Success");
+        dashbordPage.clickOnUserDropdwon();
 
-        clickOn("//a[normalize-space()='Change Password']");
-        log.info("click on change password button Success");
+        dashbordPage.clickOnChangePassword();
+
+        pimPage.enterCurrentPassword(validPassword);
+
+        pimPage.enterNewPassword(newPassword);
+        pimPage.enterConfirmNewPassword(newPassword);
+
+        pimPage.clickOnChangePasswordBtn();
+
+        waitFor(2);
 
 
-        type("div[class='oxd-form-row'] div[class='oxd-grid-2 orangehrm-full-width-grid'] div[class='oxd-grid-item oxd-grid-item--gutters'] div[class='oxd-input-group oxd-input-field-bottom-space'] div input[type='password']", "admin123");
-        log.info("Password entered in Current Password field");
+        //Take a screenShot
+        captureScreenshot(driver, "C:\\Users\\DELL G5\\IdeaProjects\\Final_exam_Selenium\\src\\test\\java\\orangeHRM\\orangeHRMScreenshots"+File.separator+"UpadtePswrdScreenshot.png");
 
-        type("//div[@class='oxd-grid-item oxd-grid-item--gutters user-password-cell']//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@type='password']","Admin2000*");
-        log.info("Password entered in New Password field");
-
-        type("div[class='oxd-form-row user-password-row'] div[class='oxd-grid-2 orangehrm-full-width-grid'] div[class='oxd-grid-item oxd-grid-item--gutters'] div[class='oxd-input-group oxd-input-field-bottom-space'] div input[type='password'","Admin2000*");
-        log.info("Password entered in Confirm Password field ");
-
-        clickOn("button[type='submit' i]");
-        log.info("Password updated");
 
 
         //Log out
-        clickOn(".oxd-userdropdown-name");
-        log.info("click on the Menu Success");
+        dashbordPage.ClickOnMenuButton();
 
-        clickOn("//a[normalize-space()='Logout']");
-        log.info("click on the logOut button Success");
+        dashbordPage.clickOnLogoutBtn();
+
 
         waitFor(5);
 
-        String expectedLoginPage = "orangeHRM";
+        String expectedLoginPage = "OrangeHRM";
         String actualLoginPage = driver.getTitle();
         Assert.assertEquals(expectedLoginPage,actualLoginPage);
 
         //Try to log in with the new password
 
 
-        type("input[placeholder='Username']","Admin");
-        log.info("Enter username , success");
+        loginPage.enterUsername(validUsername);
 
-        type("input[placeholder='Password']","Admin2000*");
-        log.info("Enter password , success");
 
-        clickOn("button[type='submit']");
-        log.info("click on button Login Success");
+        loginPage.enterPassword(newPassword);
+
+        loginPage.clickOnLoginBtn();
 
         //check user is logged in
-        String expectedError = "Invalid credentials";
-        String actualError = getElementText("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']") ;
+        String expectedError = "Dashbord";
+        String actualError = loginPage.getHeaderLogin() ;
         Assert.assertEquals(expectedError,actualError);
-        log.info("Password is not updated");
+
 
     }
 
