@@ -45,7 +45,7 @@ public class RegisterPage extends CommonAPI {
     @FindBy(id = "LastName")
     WebElement LastNameInputField;
 
-     @FindBy(css = "#Email")
+    @FindBy(css = "#Email")
     WebElement EmailInputField;
 
     @FindBy(id = "Password")

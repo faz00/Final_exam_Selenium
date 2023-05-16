@@ -14,7 +14,7 @@ import java.util.Properties;
 
 
 public class LoginTestOrange extends CommonAPI {
-    Logger log = LogManager.getLogger(orangeHRM.LoginTestOrange.class.getName());
+    Logger log = LogManager.getLogger(LoginTestOrange.class.getName());
 
     Properties prop = Utility.loadProperties();
     String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));

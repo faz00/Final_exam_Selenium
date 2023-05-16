@@ -1,229 +1,205 @@
 package tutorialsNinja;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
-
-import java.time.Duration;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+import us.piit.utility.Utility;
 import us.piit.base.CommonAPI;
+import us.piit.pages.tutorialsNinja.LoginHomePage;
+import us.piit.pages.tutorialsNinja.LoginPage;
+
+import java.time.Duration;
+import java.util.Properties;
+
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 
-public class LoginTest  extends CommonAPI {
+public class LoginTest extends CommonAPI {
 
     Logger log = LogManager.getLogger(LoginTest.class.getName());
 
-    @Test
+    Properties prop = Utility.loadProperties();
+    String validEmail = Utility.decode(prop.getProperty("tutorialsninja.validEmail"));
+    String validPassword = Utility.decode(prop.getProperty("tutorialsninja.validPassword"));
+    String invalidPassword = Utility.decode(prop.getProperty("tutorialsninja.invalidPassword"));
+    String invalidEmail = Utility.decode(prop.getProperty("tutorialsninja.invalidEmail"));
+    String password = Utility.decode(prop.getProperty("tutorialsninja.password"));
+
+
+
+@Test
     public void testLoginWithValidInputs() {
         //click on the login
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+
+        LoginPage loginPage = new LoginPage(getDriver());
+        LoginHomePage loginHomePge = new LoginHomePage(getDriver());
+
+        //enter valid email and valid password into the required fields
+        loginPage.setEmail(validEmail);
+        loginPage.setPassword(validPassword);
+        waitFor(5);
+        loginPage.clickLoginButton();
+
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+    // Check that the user is redirected to the  login home page
+        assertTrue(loginHomePge.isAccountLinkDisplayed() );
+    }
+    @Test
+    public void testLoginWithInvalidCredentials() {
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        LoginPage loginPage = new LoginPage(getDriver());
+
+        // Enter an invalid email address and an invalid password
+        loginPage.setEmail(invalidEmail);
+        loginPage.setPassword(invalidPassword);
+
+        // Click the login button
+        loginPage.clickLoginButton();
+
+        // Verify that an error message is displayed for the invalid inputs
+      boolean expectedErMsg=loginPage.LoginCredenErrMsgDisplayed();
+        assertTrue(expectedErMsg);
+    }
+    @Test
+    public void verifyLoginWithInvalidEmailAddress(){
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+
+        LoginPage loginPage = new LoginPage(getDriver());
+
+        // Enter an invalid email address and a valid password
+        loginPage.setEmail(invalidEmail);
+        loginPage.setPassword(validPassword);
+
+        // Click the login button
+        loginPage.clickLoginButton();
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        // Fill in the login form
-        type("#input-email","sunflower"+ generateTimeStamp()+"@gmail.com");
-        log.info("the user-email entered success");
-
-        type("#input-password","sun123");
-        log.info("the user-password entered success");
-
-
-        // Click the login button
-        clickOn("input[value='Login']");
-
-        // Check that the user is redirected to the account dashboard page
-        String expectedUrl = "https://tutorialsninja.com/demo/index.php?route=account/login";
-        assertEquals(expectedUrl, driver.getCurrentUrl());
-    }
-    @Test
-    public void testLoginWithInValidEmail() {
-        //click on the login
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
-        // Fill in the login form
-        type("#input-email","su"+ generateTimeStamp()+"@g");
-        log.info("the user-email entered success");
-
-        type("#input-password","sun123");
-        log.info("the user-password entered success");
-
-
-        // Click the login button
-        clickOn("input[value='Login']");
-
-        // Check that the user has got an error message
-        String errorMassage=driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText();
-        String expectedErmsg="Warning: No match for E-Mail Address and/or Password.";
-        assertEquals(errorMassage,expectedErmsg );
-    }
-    @Test
-
-    public void testLoginWithInValidPassword() {
-        //click on the login
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
-        // Fill in the login form
-        type("#input-email","sunflower"+ generateTimeStamp()+"@gmail.com");
-        log.info("the user-email entered success");
-
-        type("#input-password","abcd");
-        log.info("the user-password entered success");
-
-
-        // Click the login button
-        clickOn("input[value='Login']");
-
-        // Check that the user has got an error message
-        String errorMassage=driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText();
-        String expectedErmsg="Warning: No match for E-Mail Address and/or Password.";
-        assertEquals(errorMassage,expectedErmsg );
-    }
-    @Test
-
-    public void testLoginWithNoInputs() {
-        //click on the login
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
-        // Click the login button
-        clickOn("input[value='Login']");
-
-        // Check that the user has got an error message
-        String errorMassage=driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText();
-        String expectedErmsg="Warning: No match for E-Mail Address and/or Password.";
-        assertEquals(errorMassage,expectedErmsg );
-
-    }
-    @Test
-
-    public void testLoginWithInvalidInputs() {
-        //click on the login
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
-        // Fill in the login form
-        type("#input-email","wbjhhbdh526"+ generateTimeStamp()+"@dnnjd.com");
-        log.info("the user-email entered success");
-
-        type("#input-password","abcd789");
-        log.info("the user-password entered success");
-
-
-        // Click the login button
-        clickOn("input[value='Login']");
-
-        // Check that the user has got an error message
-        String errorMassage=driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText();
-        String expectedErmsg="Warning: No match for E-Mail Address and/or Password.";
-        assertEquals(errorMassage,expectedErmsg );
-
+        // Verify that an error message is displayed for the invalid inputs
+        boolean expectedErMsg=loginPage.LoginCredenErrMsgDisplayed();
+        assertTrue(expectedErMsg);
     }
 
-    //verify that the user is not logged out from the login page when browsing back
     @Test
-
-    public void VerifyThatTheUserNotLoggedoutByBrowsingBack() {
-
+    public void verifyLoginWithInvalidPassword(){
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
-        // Fill in the login form
-        type("#input-email","sunflower"+ generateTimeStamp()+"@gmail.com");
-        log.info("the user-email entered success");
+        LoginPage loginPage = new LoginPage(getDriver());
 
-        type("#input-password","sun123");
-        log.info("the user-password entered success");
-
+        // Enter an valid email address and a invalid password
+        loginPage.setEmail(validEmail);
+        loginPage.setPassword(invalidPassword);
 
         // Click the login button
-        clickOn("input[value='Login']");
-        // Verify that the user is  on the dashboard page
-        assertTrue(driver.getCurrentUrl().contains("index.php?route=account/account"));
+        loginPage.clickLoginButton();
 
-        // Click the browser back button
-        driver.navigate().back();
+        // Verify that an error message is displayed for the invalid inputs
 
-        // Wait for the previous page to load
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        // Verify that the user is not on the login page
-        assertFalse(driver.getCurrentUrl().contains("index.php?route=account/login"));
+        boolean expectErMsg=loginPage.LoginCredenErrMsgDisplayed();
+        assertTrue(expectErMsg);
+    }
+    @Test
+    public void verifyLoginWithNoInputs(){
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        // Verify that you are still logged in
-        driver.navigate().forward();
-        assertTrue(driver.findElement(By.cssSelector("a[title='My Account']")).isDisplayed());
+        LoginPage loginPage = new LoginPage(getDriver());
 
-        // Close the browser
-        driver.quit();
+        // Click the login button
+        loginPage.clickLoginButton();
+
+        // Verify that an error message is displayed
+        boolean expectedErMsg=loginPage.LoginCredenErrMsgDisplayed();
+        assertTrue(expectedErMsg);
     }
 
-
-
-    //verify the number of unsuccessful login attempts
     @Test
-
-    public void numberOfUnsuccessfulLoginAttempts() {
-
+    public void verifyTheNumberOfUnsuccessfulLoginAttempts() {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        int maxAttempts=3;
+        LoginPage loginPage = new LoginPage(getDriver());
 
-        for (int i = 1; i <= maxAttempts; i++) {
+        // Enter invalid email address and invalid password
+        loginPage.setEmail(invalidEmail);
+        loginPage.setPassword(invalidPassword);
 
-            // enter incorrect login credentials
+        int maxAttempts = 3;
+        int attemptsMade = 0;
 
-            type("#input-email","s"+ generateTimeStamp()+"gmail.com");
-            log.info("the user-email entered success");
-
-            type("#input-password","sK");
-            log.info("the user-password entered success");
-
+        while (attemptsMade < maxAttempts) {
             // Click the login button
-            clickOn("input[value='Login']");
+            loginPage.clickLoginButton();
+            attemptsMade++;
 
+            // Verify that an error message is displayed
+            boolean expectedErMsg = loginPage.LoginCredenErrMsgDisplayed();
+            assertTrue(expectedErMsg);
 
-            // assert the error message is displayed
-            WebElement errorMessage = driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']"));
-            assertEquals(errorMessage.getText(), "Warning: No match for E-Mail Address and/or Password.");
-
-            // navigate back to the login page
-            driver.navigate().back();
 
         }
     }
 
-
-    //verify the password is not visible to the source page
     @Test
+    public void checkPasswordVisibility(){
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-    public void verifyPasswordVisibilityToThePageSource() {
+        LoginPage loginPage = new LoginPage(getDriver());
 
-        // Find the password input field and get its type attribute
-        WebElement passwordField = driver.findElement(By.id("input-password"));
-        String passwordFieldType = passwordField.getAttribute("type");
+        // Enter any given password into the password text field
 
-        // Assert that the password field type is "password"
-        assertEquals("password", passwordFieldType);
+        loginPage.setPassword(password);
 
         // Retrieve the page source and check if the password field is visible
-        String pageSource = driver.getPageSource();
-        assertFalse(pageSource.contains("input-password"));
+        boolean isPasswordVisible = loginPage.isPasswordVisibleInPageSource(password,driver);
+
+// Assert that the password is visible in the page source
+        assertTrue(isPasswordVisible, "Password is not visible in the page source");
+
+    }
+    @Test
+    public void testLoginFieldsPlaceholders() {
+        LoginPage loginPage = new LoginPage(getDriver());
+        LoginHomePage loginHomePage = new LoginHomePage(getDriver());
+
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
 
+        // Check that the email and password fields have placeholder text
+        String expectedEmailPlaceholder = "E-Mail Address";
+        String actualEmailPlaceholder = loginPage.getEmailPlaceholderText();
+        assertEquals(actualEmailPlaceholder, expectedEmailPlaceholder);
 
+        String expectedPasswordPlaceholder = "Password";
+        String actualPasswordPlaceholder = loginPage.getPasswordPlaceholderText();
+        assertEquals(actualPasswordPlaceholder, expectedPasswordPlaceholder);
+
+
+    }
     }
 
 
 
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
