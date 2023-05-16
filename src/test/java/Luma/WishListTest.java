@@ -1,4 +1,4 @@
-package Luma;
+package luma;
 
 import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;

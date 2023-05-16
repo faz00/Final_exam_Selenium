@@ -11,11 +11,11 @@
     <parameter name="url" value="https://magento.softwaretestingboard.com/"/>
     <test name="Luma Tests">
         <classes>
-            <class name="Luma.RegisterTest"/>
-            <class name="Luma.LoginTest"/>
-            <class name="Luma.CartTest"/>
-            <class name="Luma.SearchTest"/>
-            <class name="Luma.WishListTest"/>
+            <class name="luma.RegisterTest"/>
+            <class name="luma.LoginTest"/>
+            <class name="luma.CartTest"/>
+            <class name="luma.SearchTest"/>
+            <class name="luma.WishListTest"/>
         </classes>
     </test>
 </suite>
