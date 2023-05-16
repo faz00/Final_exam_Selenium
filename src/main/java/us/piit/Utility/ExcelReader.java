@@ -1,3 +1,4 @@
+
 package us.piit.utility;
 
 import org.apache.logging.log4j.LogManager;

@@ -1,60 +1,42 @@
-package luma;
+package Luma;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;
+import us.piit.pages.Luma.LoginPage;
+import us.piit.utility.Utility;
+
+import java.util.Properties;
 
 public class LoginTest extends CommonAPI {
 
-    @FindBy(xpath = "(//li[@class='authorization-link']//a)[1]")
-    WebElement SignInLink;
+    Logger log = LogManager.getLogger(nopCommerce.LoginTest.class.getName());
 
-    @FindBy(id = "email")
-    WebElement EmailInput;
-    
-    @FindBy(id = "pass")
-    WebElement PasswordInput;
-
-    @FindBy(xpath = "//button[@class=\"action login primary\"]")
-    WebElement SignInButton;
-
-    @FindBy(xpath = "(//li[@class=\"greet welcome\"])[1]")
-    WebElement WelcomeGreetMessage;
-
-    @FindBy(xpath = "(//button[@data-action=\"customer-menu-toggle\"])[1]")
-    WebElement SignOutDropDown;
-
-    @FindBy(xpath = "(//a[@href=\"https://magento.softwaretestingboard.com/customer/account/logout/\"])[1]")
-    WebElement SignOutButton;
+    Properties prop = Utility.loadProperties();
+    String ValidEmail = prop.getProperty("luma.username");
+    String validPassword = prop.getProperty("luma.password");
 
 
-
-    @Parameters({"Email", "Password"})
     @Test
-    public void SignIn(String Email, String Password){
+    public void loginWithValidCredentials(){
+        LoginPage loginPage = new LoginPage(getDriver());
 
         // Verify that user is on Home page
-        Assert.assertEquals(getCurrentTitle(), "Home Page");
-        isVisible(SignInLink);
-
-        // Click on SignIn button
-        SignInLink.click();
-
-        //Enter email and password to login
-        EmailInput.sendKeys(Email);
-        PasswordInput.sendKeys(Password);
-        SignInButton.click();
-        waitFor(2);
-        Assert.assertTrue(WelcomeGreetMessage.getText().contains("Welcome"));
-
-        // Logout here
-        waitFor(2);
-        SignOutDropDown.click();
-        waitFor(1);
-        SignOutButton.click();
+        String actualTitle = getCurrentTitle();
+        Assert.assertEquals(actualTitle, "Home Page");
         waitFor(3);
+
+        // go to login page
+        loginPage.goToLoginPage();
+
+        //enter  username, password, and click on login button
+        loginPage.enterUsername(ValidEmail);
+        loginPage.enterPassword(validPassword);
+        loginPage.clickOnSignInBtn();
+
+        // verify that user is logged in
+        Assert.assertTrue(loginPage.verifyUserIsLoggedIn());
     }
 }
