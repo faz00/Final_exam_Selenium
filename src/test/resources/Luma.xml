@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Luma test">
+<suite name="luma test">
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="envName" value="browserstack"/>
     <parameter name="os" value="windows"/>
@@ -9,13 +9,13 @@
 
     <parameter name="browserName" value="chrome"/>
     <parameter name="url" value="https://magento.softwaretestingboard.com/"/>
-    <test name="Luma Tests">
+    <test name="luma Tests">
         <classes>
-            <class name="Luma.RegisterTest"/>
-            <class name="Luma.LoginTest"/>
-            <class name="Luma.CartTest"/>
-            <class name="Luma.SearchTest"/>
-            <class name="Luma.WishListTest"/>
+            <class name="luma.RegisterTest"/>
+            <class name="luma.LoginTest"/>
+            <class name="luma.CartTest"/>
+            <class name="luma.SearchTest"/>
+            <class name="luma.WishListTest"/>
         </classes>
     </test>
 </suite>

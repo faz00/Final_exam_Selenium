@@ -1,9 +1,9 @@
-package Luma;
+package luma;
 
 import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;
-import us.piit.pages.Luma.LoginPage;
-import us.piit.pages.Luma.WishListPage;
+import us.piit.pages.luma.LoginPage;
+import us.piit.pages.luma.WishListPage;
 import us.piit.utility.Utility;
 
 import java.util.Properties;

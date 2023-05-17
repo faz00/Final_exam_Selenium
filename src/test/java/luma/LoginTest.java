@@ -1,18 +1,18 @@
-package Luma;
+package luma;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;
-import us.piit.pages.Luma.LoginPage;
+import us.piit.pages.luma.LoginPage;
 import us.piit.utility.Utility;
 
 import java.util.Properties;
 
 public class LoginTest extends CommonAPI {
 
-    Logger log = LogManager.getLogger(nopCommerce.LoginTest.class.getName());
+    Logger log = LogManager.getLogger(LoginTest.class.getName());
 
     Properties prop = Utility.loadProperties();
     String ValidEmail = prop.getProperty("luma.username");

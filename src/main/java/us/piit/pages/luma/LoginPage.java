@@ -1,4 +1,4 @@
-package us.piit.pages.Luma;
+package us.piit.pages.luma;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

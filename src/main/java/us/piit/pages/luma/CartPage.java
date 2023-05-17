@@ -1,4 +1,4 @@
-package us.piit.pages.Luma;
+package us.piit.pages.luma;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,7 +9,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import us.piit.base.CommonAPI;
-import us.piit.pages.Luma.LoginPage;
 
 public class CartPage extends CommonAPI {
 

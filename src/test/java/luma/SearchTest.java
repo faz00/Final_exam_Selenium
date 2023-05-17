@@ -1,9 +1,9 @@
-package Luma;
+package luma;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;
-import us.piit.pages.Luma.SearchPage;
+import us.piit.pages.luma.SearchPage;
 
 public class SearchTest extends CommonAPI {
 

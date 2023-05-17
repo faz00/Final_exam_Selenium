@@ -1,4 +1,4 @@
-package us.piit.pages.Luma;
+package us.piit.pages.luma;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -64,7 +64,7 @@ public class RegisterPage extends CommonAPI {
         switch (Case){
             case "All details":
                 Assert.assertTrue(FirstName.isDisplayed());
-                FirstName.sendKeys("Luma");
+                FirstName.sendKeys("luma");
                 LastName.sendKeys(".");
                 EmailInput.sendKeys(ValidEmail);
                 PasswordInput.sendKeys(validPassword);
