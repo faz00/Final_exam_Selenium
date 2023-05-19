@@ -1,4 +1,5 @@
-package us.piit.Utility;
+
+package us.piit.utility;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -91,9 +92,11 @@ public class ExcelReader {
     }
 
     public static void main(String[] args)  {
-        String path = "C:\\Users\\PNT\\eclipse-workspace\\Feb2023-web-automation-framework\\data\\data.xlsx";
+
+        String path = "C:\\Users\\DELL G5\\IdeaProjects\\Framework\\data\\OrangeHRMTestCases.xlsx";
         ExcelReader excelReader = new ExcelReader(path);
-        System.out.println(excelReader.getValueForGivenHeaderAndKey("data","ID","101"));
+        System.out.println(excelReader.getDataFromCell("Manual Test Cases",1,1));
+
 //        List<String> items = excelReader.getEntireColumnForGivenHeader("Sheet1", "id");
 //        //String items = excelReader.getValueForGivenHeaderAndKey("Sheet1", "id", "id004");
 //        System.out.println(items);

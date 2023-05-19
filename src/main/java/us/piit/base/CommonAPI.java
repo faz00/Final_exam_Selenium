@@ -2,6 +2,7 @@
 package us.piit.base;
 
 
+import com.relevantcodes.extentreports.LogStatus;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -13,14 +14,24 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
+import us.piit.reporting.ExtentManager;
+import us.piit.reporting.ExtentTestManager;
 import us.piit.utility.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
@@ -38,6 +49,63 @@ public class CommonAPI {
 
 
     protected WebDriver driver;
+    public static com.relevantcodes.extentreports.ExtentReports extent;
+
+    @BeforeSuite
+    public void extentSetup(ITestContext context) {
+        ExtentManager.setOutputDirectory(context);
+        extent = ExtentManager.getInstance();
+    }
+
+    @BeforeMethod
+    public void startExtent(Method method) {
+        String className = method.getDeclaringClass().getSimpleName();
+        String methodName = method.getName().toLowerCase();
+        ExtentTestManager.startTest(method.getName());
+        ExtentTestManager.getTest().assignCategory(className);
+    }
+    protected String getStackTrace(Throwable t) {
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        t.printStackTrace(pw);
+        return sw.toString();
+    }
+
+    @AfterMethod
+    public void afterEachTestMethod(ITestResult result) {
+        ExtentTestManager.getTest().getTest().setStartedTime(getTime(result.getStartMillis()));
+        ExtentTestManager.getTest().getTest().setEndedTime(getTime(result.getEndMillis()));
+
+        for (String group : result.getMethod().getGroups()) {
+            ExtentTestManager.getTest().assignCategory(group);
+        }
+
+        if (result.getStatus() == 1) {
+            ExtentTestManager.getTest().log(LogStatus.PASS, "Test Passed");
+        } else if (result.getStatus() == 2) {
+            ExtentTestManager.getTest().log(LogStatus.FAIL, getStackTrace(result.getThrowable()));
+        } else if (result.getStatus() == 3) {
+            ExtentTestManager.getTest().log(LogStatus.SKIP, "Test Skipped");
+        }
+        ExtentTestManager.endTest();
+        extent.flush();
+        if (takeScreenshots.equalsIgnoreCase("true")){
+            if (result.getStatus() == ITestResult.FAILURE) {
+                takeScreenshot(result.getName());
+            }
+        }
+        driver.quit();
+    }
+    @AfterSuite
+    public void generateReport() {
+        extent.close();
+    }
+
+    private Date getTime(long millis) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(millis);
+        return calendar.getTime();
+    }
 
     // This method is getting Cloud Browser
     public void getCloudDriver(String envName , String os , String osVersion , String browserName , String browserVersion,String userName,String password) throws MalformedURLException {
@@ -301,6 +369,49 @@ public class CommonAPI {
     }
     public boolean isChecked(WebElement element){
         return element.isSelected();
+    }
+
+    public void clickWithJavascript(WebElement element){
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].click();", element);
+    }
+    public void scrollToElement(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].scrollIntoView();",element);
+    }
+    public void captureScreenshot() {
+        File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(file,new File("screenshots"+File.separator+"screenshot.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public void takeScreenshot(String screenshotName){
+        DateFormat df = new SimpleDateFormat("MMddyyyyHHmma");
+        Date date = new Date();
+        df.format(date);
+
+        File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(file, new File(Utility.currentDir+ File.separator +"screenshots"+ File.separator + screenshotName+" "+df.format(date)+".jpeg"));
+            System.out.println("Screenshot captured");
+        } catch (Exception e) {
+            System.out.println("Exception while taking screenshot "+e.getMessage());
+        }
+    }
+    public void takeScreenshot(String packageName,String screenshotName){
+        DateFormat df = new SimpleDateFormat("MMddyyyyHHmma");
+        Date date = new Date();
+        df.format(date);
+
+        File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(file, new File(Utility.currentDir+ File.separator +"screenshots"+File.separator+packageName+ File.separator + screenshotName+" "+df.format(date)+".jpeg"));
+            System.out.println("Screenshot captured");
+        } catch (Exception e) {
+            System.out.println("Exception while taking screenshot "+e.getMessage());
+        }
     }
 
 }

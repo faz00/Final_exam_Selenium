@@ -7,12 +7,8 @@
     <parameter name="osVersion" value="11"></parameter>
     <parameter name="browserVersion" value="112"></parameter>
 
-    <parameter name="browserName" value="edge"></parameter>
+    <parameter name="browserName" value="chrome"></parameter>
     <parameter name="url" value="https://tutorialsninja.com/demo/index.php?route=account/login"></parameter>
-<<<<<<< Updated upstream
-    <test name=" RegisterTest">
-        <classes>
-=======
 
     <test name=" LoginTest">
         <classes>
@@ -21,13 +17,9 @@
     </test>
     <test name=" RegisterTest">
         <classes>
->>>>>>> Stashed changes
             <class name="tutorialsNinja.RegisterTest"></class>
         </classes>
     </test>
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 </suite>
