@@ -16,12 +16,14 @@ import java.util.Properties;
 
 public class ChangePassword extends CommonAPI {
 
-    Logger log = LogManager.getLogger(LogOutTest.class.getName());
+    Logger log = LogManager.getLogger(ChangePassword.class.getName());
     Properties prop = Utility.loadProperties();
     String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
     String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
 
     String newPassword = Utility.decode(prop.getProperty("orangeHRM.newPassword"));
+
+    String pathScreenPackage="orangeHRMScreenshots";
 
     @Test
     public  void ChangePassword()  {
@@ -66,8 +68,8 @@ public class ChangePassword extends CommonAPI {
 
 
         //Take a screenShot
-        captureScreenshot(driver, "C:\\Users\\DELL G5\\IdeaProjects\\Final_exam_Selenium\\src\\test\\java\\orangeHRM\\orangeHRMScreenshots"+File.separator+"UpadtePswrdScreenshot.png");
-
+//        captureScreenshot(driver, "C:\\Users\\DELL G5\\IdeaProjects\\Final_exam_Selenium\\src\\test\\java\\orangeHRM\\orangeHRMScreenshots"+File.separator+"UpadtePswrdScreenshot.png");
+        takeScreenshot(pathScreenPackage,"UpadtePswrdScreenshot");
 
 
         //Log out
