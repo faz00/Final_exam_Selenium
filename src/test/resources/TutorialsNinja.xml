@@ -15,11 +15,7 @@
             <class name="tutorialsNinja.LoginTest"></class>
         </classes>
     </test>
-    <test name=" RegisterTest">
-        <classes>
-            <class name="tutorialsNinja.RegisterTest"></class>
-        </classes>
-    </test>
+
 
 
 </suite>

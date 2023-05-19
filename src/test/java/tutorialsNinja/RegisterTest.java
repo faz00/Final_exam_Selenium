@@ -15,7 +15,6 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 public class RegisterTest extends CommonAPI {
-
     Logger log = LogManager.getLogger(RegisterTest.class.getName());
     Properties prop = Utility.loadProperties();
     String validFirstName = Utility.decode(prop.getProperty("tutorialsninja.validfirstName"));
@@ -142,7 +141,7 @@ public class RegisterTest extends CommonAPI {
         registerPage.clickSubmitButton();
 
         //assert if an error message will be displayed
-       assertTrue(registerPage.isAlertMessageDisplayed(),"the alert message is not displayed");
+        assertTrue(registerPage.isAlertMessageDisplayed(),"the alert message is not displayed");
 
     }
 }

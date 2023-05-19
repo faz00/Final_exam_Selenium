@@ -10,6 +10,7 @@ import us.piit.base.CommonAPI;
 
 public class LoginPage extends CommonAPI {
 
+
     Logger log = LogManager.getLogger(LoginPage.class.getName());
     public LoginPage(WebDriver driver) {
 
@@ -51,17 +52,30 @@ public class LoginPage extends CommonAPI {
 
         setPassword(password);
         String pageSource = driver.getPageSource();
-        return !pageSource.contains(password);
+        return pageSource.contains(password);
     }
     public String getEmailPlaceholderText() {
+
         return emailField.getAttribute("placeholder");
     }
 
     public String getPasswordPlaceholderText() {
+
         return passwordField.getAttribute("placeholder");
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

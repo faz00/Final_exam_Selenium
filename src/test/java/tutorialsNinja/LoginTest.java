@@ -11,11 +11,11 @@ import us.piit.pages.tutorialsNinja.LoginPage;
 import java.time.Duration;
 import java.util.Properties;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 
 public class LoginTest extends CommonAPI {
+
 
     Logger log = LogManager.getLogger(LoginTest.class.getName());
 
@@ -28,7 +28,7 @@ public class LoginTest extends CommonAPI {
 
 
 
-@Test
+    @Test
     public void testLoginWithValidInputs() {
         //click on the login
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
@@ -42,9 +42,9 @@ public class LoginTest extends CommonAPI {
         waitFor(5);
         loginPage.clickLoginButton();
 
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-    // Check that the user is redirected to the  login home page
+        // Check that the user is redirected to the  login home page
         assertTrue(loginHomePge.isAccountLinkDisplayed() );
     }
     @Test
@@ -61,7 +61,7 @@ public class LoginTest extends CommonAPI {
         loginPage.clickLoginButton();
 
         // Verify that an error message is displayed for the invalid inputs
-      boolean expectedErMsg=loginPage.LoginCredenErrMsgDisplayed();
+        boolean expectedErMsg=loginPage.LoginCredenErrMsgDisplayed();
         assertTrue(expectedErMsg);
     }
     @Test
@@ -161,7 +161,7 @@ public class LoginTest extends CommonAPI {
         boolean isPasswordVisible = loginPage.isPasswordVisibleInPageSource(password,driver);
 
 // Assert that the password is visible in the page source
-        assertTrue(isPasswordVisible, "Password is not visible in the page source");
+        assertFalse(isPasswordVisible, "Password is visible in the page source");
 
     }
     @Test
@@ -183,13 +183,7 @@ public class LoginTest extends CommonAPI {
 
 
     }
-    }
-
-
-
-
-
-
+}
 
 
 

@@ -10,6 +10,7 @@ import us.piit.base.CommonAPI;
 
 public class ForgottenPasswordPage extends CommonAPI {
 
+
     Logger log = LogManager.getLogger(ForgottenPasswordPage.class.getName());
 
     public ForgottenPasswordPage(WebDriver driver) {
