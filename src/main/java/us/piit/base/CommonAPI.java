@@ -400,6 +400,7 @@ public class CommonAPI {
             System.out.println("Exception while taking screenshot "+e.getMessage());
         }
     }
+
     public void takeScreenshot(String packageName,String screenshotName){
         DateFormat df = new SimpleDateFormat("MMddyyyyHHmma");
         Date date = new Date();

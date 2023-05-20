@@ -169,8 +169,9 @@ public class BuzzSection extends CommonAPI {
         waitFor(7);
 
         //Take a screenshot
-//        captureScreenshot(driver, screenShotPath+File.separator+"EditPostInBuzzscreenshot.png");
+        //CaptureScreenshot(driver, screenShotPath+File.separator+"EditPostInBuzzscreenshot.png");
         takeScreenshot(pathScreenPackage,"EditPostInBuzzscreenshot");
+
 
 
         waitFor(5);
