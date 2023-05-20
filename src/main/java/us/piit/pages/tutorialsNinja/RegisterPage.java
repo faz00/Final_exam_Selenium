@@ -10,6 +10,7 @@ import us.piit.base.CommonAPI;
 
 public class RegisterPage extends CommonAPI {
 
+
     Logger log = LogManager.getLogger(RegisterPage.class.getName());
 
     public RegisterPage(WebDriver driver) {
@@ -131,7 +132,7 @@ public class RegisterPage extends CommonAPI {
     }
 
 
-   public boolean VerifyDifferentWaysToNavigateToTheRegisterPage( WebDriver driver) {
+    public boolean VerifyDifferentWaysToNavigateToTheRegisterPage( WebDriver driver) {
 
         // Method 1: Click the "My Account" drop-down menu and click "Register" from the options
         clickOn(myAccountButton);
@@ -176,21 +177,18 @@ public class RegisterPage extends CommonAPI {
         if (!driver.getTitle().contains("Register Account")) {
             return false;
         }
-     log.info("all the three methods navigates to the Register page forum");
+        log.info("all the three methods navigates to the Register page forum");
         return true;
     }
 
 
-public boolean isAlertMessageDisplayed(){
+    public boolean isAlertMessageDisplayed(){
         log.info("the alert message is displayed when registering with an existing email address");
         return alertMessage.isDisplayed();
-}
+    }
 
 
 }
-
-
-
 
 
 

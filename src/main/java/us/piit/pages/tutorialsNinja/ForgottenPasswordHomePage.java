@@ -9,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import us.piit.base.CommonAPI;
 
 public class ForgottenPasswordHomePage extends CommonAPI {
-
     Logger log = LogManager.getLogger(ForgottenPasswordHomePage.class.getName());
     public ForgottenPasswordHomePage(WebDriver driver){
 
@@ -23,10 +22,10 @@ public class ForgottenPasswordHomePage extends CommonAPI {
     @FindBy(css = "input[value='Continue']")
     WebElement continueButton;
 
-    @FindBy(css = ".alert-success")
+    @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
     WebElement successMessage;
 
-    @FindBy(css = ".alert-danger")
+    @FindBy(xpath = "//*[@class='alert alert-danger alert-dismissible']")
     WebElement errorMessage;
 
     @FindBy(css = ".pull-left > a")
@@ -51,15 +50,15 @@ public class ForgottenPasswordHomePage extends CommonAPI {
     public void clickContinueButton(){
         clickOn(continueButton);
     }
-    public boolean isResetPasswordSuccessMessageDisplayed() {
+    public String getResetPasswordSuccessMessage() {
         log.info("a success message is displayed");
-        return successMessage.isDisplayed();
+        return successMessage.getText() ;
 
     }
 
-    public boolean isResetPasswordErrorMessageDisplayed() {
+    public String getResetPasswordErrorMessage() {
         log.info("an error message is displayed");
-        return errorMessage.isDisplayed();
+        return errorMessage.getText();
     }
 
     public void clickBackButton() {
@@ -67,10 +66,15 @@ public class ForgottenPasswordHomePage extends CommonAPI {
         log.info("the back button clicked successfully");
     }
 
-    public String getURL() {
+    public String getURL(WebDriver driver) {
         log.info("the URL of the page is :"+driver.getCurrentUrl());
         return driver.getCurrentUrl();
     }
+    public String getEmailValue() {
+
+        return  emailInput.getAttribute("value");
+    }
+
 
 
 

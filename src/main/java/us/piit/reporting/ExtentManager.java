@@ -17,8 +17,8 @@ public class ExtentManager {
             File resultDirectory = new File(outputDirectory.getParentFile(),"html");
             extent = new ExtentReports(Utility.currentDir +"/Extent-Report/ExtentReport.html", true);
             Reporter.log("Extent Report Directory"+ resultDirectory, true);
-            extent.addSystemInfo("Host Name", "PNT").addSystemInfo("Environment","QA")
-                    .addSystemInfo("User Name", "Nacer Zimu");
+            extent.addSystemInfo("Host Name", "TutorialsNinja").addSystemInfo("Environment","QA")
+                    .addSystemInfo("User Name", "REZIKA BARECHE");
             extent.loadConfig(new File(Utility.currentDir+ "/report-config.xml"));
         }
         return extent;

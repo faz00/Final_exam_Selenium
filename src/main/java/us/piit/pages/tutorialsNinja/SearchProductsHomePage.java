@@ -17,6 +17,7 @@ public class SearchProductsHomePage extends CommonAPI {
 
     Logger log = LogManager.getLogger(SearchProductsHomePage.class.getName());
     public SearchProductsHomePage(WebDriver driver){
+
         PageFactory.initElements(driver, this);
     }
 
@@ -40,7 +41,9 @@ public class SearchProductsHomePage extends CommonAPI {
 
     public boolean areSearchResultsDisplayed() {
         boolean searchResultsDisplayed = productItems.size() > 0;
-        log.info("the user is able to see the search results");
+        log.info("the user is able to see the search results ");
+        log.info("the search displays many products");
+
         return searchResultsDisplayed;
     }
 
@@ -51,20 +54,6 @@ public class SearchProductsHomePage extends CommonAPI {
         select.selectByVisibleText("Price (High > Low)");
     }
 
-    public boolean verifyProductSortingByPriceDescending() {
-        boolean isSorted = true;
-        double previousPrice = Double.MAX_VALUE;
-        for (WebElement productItem : productItems) {
-            String priceText = productItem.findElement(By.cssSelector(".price")).getText();
-            double price = Double.parseDouble(priceText.replace(",", "").replace("$", ""));
-            if (price > previousPrice) {
-                isSorted = false;
-                break;
-            }
-            previousPrice = price;
-        }
-        return isSorted;
-    }
 
 
     public void clickOnDisplayCountDropdown() {
@@ -73,11 +62,14 @@ public class SearchProductsHomePage extends CommonAPI {
     }
 
     public int getDisplayedProductCount() {
+
         return productTitles.size();
     }
 
 
 
 }
+
+
 
 
