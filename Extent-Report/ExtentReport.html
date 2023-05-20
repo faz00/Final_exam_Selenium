@@ -54,7 +54,7 @@
 					<i class='mdi-hardware-desktop-windows'></i>
 				</li>
 				<li>
-					<span class='suite-started-time'>2023-05-19 23:56:22</span>
+					<span class='suite-started-time'>2023-05-19 23:50:18</span>
 				</li>
 				<li>
 					<span>v2.41.1</span>
@@ -84,25 +84,25 @@
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-current'> 
 							<span class='panel-name'>Total Time Taken (Current Run)</span> 
-							<span class='suite-total-time-current-value panel-lead'>0h 0m 36s+180ms</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 0m 29s+365ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-overall'> 
 							<span class='panel-name'>Total Time Taken (Overall)</span> 
-							<span class='suite-total-time-overall-value panel-lead'>0h 0m 36s+180ms</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 0m 29s+365ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-start-time'>
 						<div class='card accent green-accent'> 
 							<span class='panel-name'>Start</span> 
-							<span class='panel-lead suite-started-time'>2023-05-19 23:55:46</span> 
+							<span class='panel-lead suite-started-time'>2023-05-19 23:49:49</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-end-time'>
 						<div class='card accent pink-accent'> 
 							<span class='panel-name'>End</span> 
-							<span class='panel-lead suite-ended-time'>2023-05-19 23:56:22</span> 
+							<span class='panel-lead suite-ended-time'>2023-05-19 23:50:18</span> 
 						</div> 
 					</div>
 				</div>
@@ -177,7 +177,7 @@
 										</tr>
 										<tr>
 											<td>Java Version</td>
-											<td>19.0.2</td>
+											<td>11.0.12</td>
 										</tr>
 										<tr>
 											<td>Host Name</td>
@@ -205,7 +205,7 @@
 									<tbody>
 											<tr>
 												<td>
-													SearchProductsTest
+													TimeSection
 												</td>
 											</tr>
 									</tbody>
@@ -241,7 +241,7 @@
 										<i class='mdi-maps-local-offer'></i>
 									</a>
 									<ul id='category-toggle' class='dropdown-content'>
-											<li class='SearchProductsTest'><a href='#!'>SearchProductsTest</a></li>
+											<li class='TimeSection'><a href='#!'>TimeSection</a></li>
 										<li class='divider'></li>
 										<li class='clear'><a href='#!'>Clear Filters</a></li>
 									</ul>
@@ -273,94 +273,22 @@
 						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
 							<div class='wrapper'>
 								<ul id='test-collection' class='test-collection'>
-										<li class='collection-item test displayed active fail ' extentid='f340579f-ae91-4162-aad7-2da6da9c56b5'>
+										<li class='collection-item test displayed active pass ' extentid='c843e87d-5dfd-4566-9108-af7b5747e5cb'>
 											<div class='test-head'>
-												<span class='test-name'>verifyProductDisplayCount </span>
-												<span class='test-status label right outline capitalize fail'>fail</span>
-												<span class='category-assigned hide  searchproductstest'></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-19 23:55:54</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-19 23:55:59</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 5s+197ms</span>
-												</div>
-												<div class='test-desc'></div>
-												<div class='test-attributes'>
-														<div class='categories'>
-																<span class='category text-white'>SearchProductsTest</span>
-														</div>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>23:55:59</td>
-																	<td class='step-details'>java.lang.AssertionError: Displayed product count doesn't match the selected count expected [100] but found [3]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:1418)
-	at org.testng.Assert.assertEquals(Assert.java:1382)
-	at tutorialsNinja.SearchProductsTest.verifyProductDisplayCount(SearchProductsTest.java:115)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)</td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active pass ' extentid='1489ce6e-8c85-4962-8beb-ba3b3b3ef6e7'>
-											<div class='test-head'>
-												<span class='test-name'>verifySearchWithANonExistingProduct </span>
+												<span class='test-name'>deleteAddedCustomer </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide  searchproductstest'></span>
+												<span class='category-assigned hide  timesection'></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-19 23:56:07</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-19 23:56:08</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+906ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-19 23:49:56</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-19 23:50:17</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 20s+851ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
 														<div class='categories'>
-																<span class='category text-white'>SearchProductsTest</span>
+																<span class='category text-white'>TimeSection</span>
 														</div>
 												</div>
 												<div class='test-steps'>
@@ -375,87 +303,7 @@
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>23:56:08</td>
-																	<td class='step-details'>Test Passed</td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active pass ' extentid='14a71499-2232-4b3e-b01e-0d2a419a9f65'>
-											<div class='test-head'>
-												<span class='test-name'>verifySearchWithAnExistingProduct </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide  searchproductstest'></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-19 23:56:13</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-19 23:56:14</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+184ms</span>
-												</div>
-												<div class='test-desc'></div>
-												<div class='test-attributes'>
-														<div class='categories'>
-																<span class='category text-white'>SearchProductsTest</span>
-														</div>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>23:56:14</td>
-																	<td class='step-details'>Test Passed</td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active pass ' extentid='f5331592-df14-4e69-a181-ea8d4643fdd4'>
-											<div class='test-head'>
-												<span class='test-name'>verifyUsernavigatedToTHeSearchHomePage </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide  searchproductstest'></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-19 23:56:21</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-19 23:56:22</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+300ms</span>
-												</div>
-												<div class='test-desc'></div>
-												<div class='test-attributes'>
-														<div class='categories'>
-																<span class='category text-white'>SearchProductsTest</span>
-														</div>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>23:56:22</td>
+																	<td class='timestamp'>23:50:17</td>
 																	<td class='step-details'>Test Passed</td>
 																</tr>
 														</tbody>
@@ -514,17 +362,16 @@
 									<ul id='cat-collection' class='cat-collection'>
 											<li class='category-item displayed'>
 												<div class='cat-head'>
-													<span class='category-name'>SearchProductsTest</span>
+													<span class='category-name'>TimeSection</span>
 												</div>
 												<div class='category-status-counts'>
-														<span class='pass label dot'>Pass: 3</span>
-														<span class='fail label dot'>Fail: 1</span>
+														<span class='pass label dot'>Pass: 1</span>
 												</div>
 												<div class='cat-body'>
 													<div class='category-status-counts'>
 														<div class='button-group'>
-															<a href='#!' class='pass label filter'>Pass <span class='icon'>3</span></a>
-															<a href='#!' class='fail label filter'>Fail <span class='icon'>1</span></a>
+															<a href='#!' class='pass label filter'>Pass <span class='icon'>1</span></a>
+															<a href='#!' class='fail label filter'>Fail <span class='icon'>0</span></a>
 															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
 														</div>
 													</div>
@@ -538,24 +385,9 @@
 																</tr>
 															</thead>
 															<tbody>
-																	<tr class='fail'>
-																		<td>2023-05-19 23:55:54</td>
-																		<td><span class='category-link linked' extentid='f340579f-ae91-4162-aad7-2da6da9c56b5'>verifyProductDisplayCount</span></td>
-																		<td><div class='status label capitalize fail'>fail</div></td>
-																	</tr>
 																	<tr class='pass'>
-																		<td>2023-05-19 23:56:07</td>
-																		<td><span class='category-link linked' extentid='1489ce6e-8c85-4962-8beb-ba3b3b3ef6e7'>verifySearchWithANonExistingProduct</span></td>
-																		<td><div class='status label capitalize pass'>pass</div></td>
-																	</tr>
-																	<tr class='pass'>
-																		<td>2023-05-19 23:56:13</td>
-																		<td><span class='category-link linked' extentid='14a71499-2232-4b3e-b01e-0d2a419a9f65'>verifySearchWithAnExistingProduct</span></td>
-																		<td><div class='status label capitalize pass'>pass</div></td>
-																	</tr>
-																	<tr class='pass'>
-																		<td>2023-05-19 23:56:21</td>
-																		<td><span class='category-link linked' extentid='f5331592-df14-4e69-a181-ea8d4643fdd4'>verifyUsernavigatedToTHeSearchHomePage</span></td>
+																		<td>2023-05-19 23:49:56</td>
+																		<td><span class='category-link linked' extentid='c843e87d-5dfd-4566-9108-af7b5747e5cb'>deleteAddedCustomer</span></td>
 																		<td><div class='status label capitalize pass'>pass</div></td>
 																	</tr>
 															<tbody>
