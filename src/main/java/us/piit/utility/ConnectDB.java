@@ -64,7 +64,7 @@ public class ConnectDB {
             connectToSqlDatabase();
 
 
-      List<String> emails = getTableColumnData("select * from tutorialsninja;","FirstName");
+      List<String> emails = getTableColumnData("select * from tutorialsninja;","validPhoNum");
       System.out.println(emails.get(0));
 
 
