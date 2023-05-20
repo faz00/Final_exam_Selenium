@@ -54,10 +54,13 @@ public class ForgottenPasswordTest extends CommonAPI {
 
         // Enter the non registered email and  click on submit
         forgottenPasswordHomePage.resetUserPassword(invalidEmail);
+      //takeScreenshot
+            takeScreenshot("tutorialsNinja","resetNmfrnnrgstrdUser");
 
         // Verify an Error Message gets displayed
         String expectedErMsg = "Warning: The E-Mail Address was not found in our records, please try again!";
         assertEquals(expectedErMsg, forgottenPasswordHomePage.getResetPasswordErrorMessage());
+
 
     }
 
@@ -79,6 +82,8 @@ public class ForgottenPasswordTest extends CommonAPI {
         //assert an error message gets displayed
         String expectedErMsg = "Warning: The E-Mail Address was not found in our records, please try again!";
         assertEquals(expectedErMsg, forgottenPasswordHomePage.getResetPasswordErrorMessage());
+   //takescreenShot
+            takeScreenshot("tutorialsNinja","resetPasswordWithoutEmail");
     }
 
 

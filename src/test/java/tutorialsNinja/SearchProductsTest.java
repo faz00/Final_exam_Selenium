@@ -38,6 +38,8 @@ public class SearchProductsTest extends CommonAPI {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         // assert that the user navigates to the ResearchHomePage
         assertTrue(searchprhomePage.isSearchResultsPageDisplayed());
+   //takeScreenshot
+        takeScreenshot("tutorialsNinja","userNavigateToSearchHmPge");
 
     }
 
@@ -105,9 +107,13 @@ public class SearchProductsTest extends CommonAPI {
 
         // Select an option by visible text
         select.selectByVisibleText("100");
+     waitFor(3);
+        //takescreenshot
+        takeScreenshot("tutorialsNinja","productDisplayCount");
 
         // Verify that the number of displayed products matches the selected count
         assertEquals(searchprhomePage.getDisplayedProductCount(), 100, "Displayed product count doesn't match the selected count");
+
     }
 }
 

@@ -43,9 +43,9 @@ public class CommonAPI {
     String browserstackUsername = prop.getProperty("browserstack.username");
     String browserstackPassword = prop.getProperty("browserstack.password");
 
-    String implicitWait = prop.getProperty("implicit.Wait","10");
-    String windowMaximize = prop.getProperty("browser.maximize","true");
-    String takeScreenshots = prop.getProperty("take.screenshosts","false");
+    String implicitWait = prop.getProperty("implicit.Wait", "10");
+    String windowMaximize = prop.getProperty("browser.maximize", "true");
+    String takeScreenshots = prop.getProperty("take.screenshosts", "false");
 
 
     protected WebDriver driver;
@@ -64,6 +64,7 @@ public class CommonAPI {
         ExtentTestManager.startTest(method.getName());
         ExtentTestManager.getTest().assignCategory(className);
     }
+
     protected String getStackTrace(Throwable t) {
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
@@ -89,13 +90,14 @@ public class CommonAPI {
         }
         ExtentTestManager.endTest();
         extent.flush();
-        if (takeScreenshots.equalsIgnoreCase("true")){
+        if (takeScreenshots.equalsIgnoreCase("true")) {
             if (result.getStatus() == ITestResult.FAILURE) {
                 takeScreenshot(result.getName());
             }
         }
         driver.quit();
     }
+
     @AfterSuite
     public void generateReport() {
         extent.close();
@@ -108,31 +110,31 @@ public class CommonAPI {
     }
 
     // This method is getting Cloud Browser
-    public void getCloudDriver(String envName , String os , String osVersion , String browserName , String browserVersion,String userName,String password) throws MalformedURLException {
+    public void getCloudDriver(String envName, String os, String osVersion, String browserName, String browserVersion, String userName, String password) throws MalformedURLException {
 
         //cardentials to access to the website
         DesiredCapabilities cap = new DesiredCapabilities();
 
-        cap.setCapability("os",os);
+        cap.setCapability("os", os);
         //os
-        cap.setCapability("os_version",osVersion);
+        cap.setCapability("os_version", osVersion);
         //os version
-        cap.setCapability("browser",browserName);
+        cap.setCapability("browser", browserName);
         //browser
-        cap.setCapability("browser_version",browserVersion);
+        cap.setCapability("browser_version", browserVersion);
         //browser version
         //url + username + password
 
-        if(envName.equalsIgnoreCase("browserstack")) {
-            cap.setCapability("resolution","1024x768");
-            driver = new RemoteWebDriver(new URL("http://"+userName+":"+password+"@hub-cloud.browserstack.com:80/wd/hub"), cap);
+        if (envName.equalsIgnoreCase("browserstack")) {
+            cap.setCapability("resolution", "1024x768");
+            driver = new RemoteWebDriver(new URL("http://" + userName + ":" + password + "@hub-cloud.browserstack.com:80/wd/hub"), cap);
 
         }
 
     }
 
     // This method is getting Browsers from Bonigracia repo and manage Browsers at run time
-    public void getLocalDriver(String browserName){
+    public void getLocalDriver(String browserName) {
         // Setting Chrome browser
         if (browserName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
@@ -146,7 +148,7 @@ public class CommonAPI {
             log.info("Firefox browser open success");
 
             // Setting Edge browser
-        }else if(browserName.equalsIgnoreCase("edge")){
+        } else if (browserName.equalsIgnoreCase("edge")) {
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
             log.info("Edge browser open success");
@@ -155,20 +157,20 @@ public class CommonAPI {
 
 
     // This method invoke and Open up the browser
-    @Parameters({"useCloudEnv","envName","os","osVersion","browserName","browserVersion","url"})
+    @Parameters({"useCloudEnv", "envName", "os", "osVersion", "browserName", "browserVersion", "url"})
     @BeforeMethod
     public void setUp(@Optional("false") String useCloudEnv, @Optional("browserstack") String envName, @Optional("windows") String os,
                       @Optional("10") String osVersion, @Optional("chrome") String browserName, @Optional("110") String browserVersion,
                       @Optional("https://www.google.com") String url) throws MalformedURLException {
-        if (useCloudEnv.equalsIgnoreCase("true")){
-            getCloudDriver(envName,os,osVersion,browserName,browserVersion,browserstackUsername,browserstackPassword);
+        if (useCloudEnv.equalsIgnoreCase("true")) {
+            getCloudDriver(envName, os, osVersion, browserName, browserVersion, browserstackUsername, browserstackPassword);
 
-        } else if(useCloudEnv.equalsIgnoreCase("false")){
+        } else if (useCloudEnv.equalsIgnoreCase("false")) {
             getLocalDriver(browserName);
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(implicitWait)));
 
-        if(windowMaximize.equalsIgnoreCase(("true"))){
+        if (windowMaximize.equalsIgnoreCase(("true"))) {
             driver.manage().window().maximize();
         }
         driver.get(url);
@@ -180,7 +182,7 @@ public class CommonAPI {
 
 
     @AfterMethod
-    public void tearDownR(){
+    public void tearDownR() {
         //close browser
         driver.quit();
         log.info("browser close success");
@@ -191,36 +193,36 @@ public class CommonAPI {
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-    public String getElementText(String locator){
+    public String getElementText(String locator) {
         try {
             return driver.findElement(By.cssSelector(locator)).getText();
-        }catch (Exception e){
+        } catch (Exception e) {
             return driver.findElement(By.xpath(locator)).getText();
         }
     }
-    public void clickOn(String locator){
+
+    public void clickOn(String locator) {
         try {
             driver.findElement(By.cssSelector(locator)).click();
-        }catch (Exception e){
+        } catch (Exception e) {
             driver.findElement(By.xpath(locator)).click();
 
         }
     }
-    public void type(String locator,String text){
+
+    public void type(String locator, String text) {
         try {
             driver.findElement(By.cssSelector(locator)).sendKeys(text);
-        }catch (Exception e){
+        } catch (Exception e) {
             driver.findElement(By.xpath(locator)).sendKeys(text);
 
         }
     }
 
 
-
-
     public boolean isInteractable(String locator) {
         try {
-            return  driver.findElement(By.cssSelector(locator)).isEnabled();
+            return driver.findElement(By.cssSelector(locator)).isEnabled();
         } catch (Exception e) {
             return driver.findElement(By.xpath(locator)).isEnabled();
 
@@ -230,7 +232,7 @@ public class CommonAPI {
 
     public boolean checkCheckBoxIsCh(String locator) {
         try {
-            return  driver.findElement(By.cssSelector(locator)).isDisplayed();
+            return driver.findElement(By.cssSelector(locator)).isDisplayed();
         } catch (Exception e) {
             return driver.findElement(By.xpath(locator)).isDisplayed();
 
@@ -238,24 +240,25 @@ public class CommonAPI {
 
     }
 
-    public String generateTestEmail(){
+    public String generateTestEmail() {
         Random rn = new Random();
         int ranNumber = rn.nextInt(100) + 2;
-        String TestEmail = "test"+ranNumber+"@gmail.com";
+        String TestEmail = "test" + ranNumber + "@gmail.com";
         return TestEmail;
     }
 
-    public void clickOnRatingStar(){
+    public void clickOnRatingStar() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("document.querySelector('#Rating_5').click()");
     }
 
     public String generateTimeStamp() {
 
-        Date date=new Date();
+        Date date = new Date();
         return date.toString().replace(" ", " _").replace(":", " ");
 
     }
+
     public void linktext(String locator) {
 
         driver.findElement(By.linkText(locator));
@@ -264,11 +267,12 @@ public class CommonAPI {
     public void type(String locator) {
         try {
             driver.findElement(By.xpath(locator));
-        }catch(Exception e) {
+        } catch (Exception e) {
             driver.findElement(By.cssSelector(locator));
 
         }
     }
+
     public void linkclickOn(String locator) {
 
         driver.findElement(By.linkText(locator)).click();
@@ -283,34 +287,39 @@ public class CommonAPI {
         return driver;
     }
 
-    public String getCurrentTitle(){
+    public String getCurrentTitle() {
 
         return driver.getTitle();
     }
-    public String getElementText(WebElement element){
+
+    public String getElementText(WebElement element) {
 
         return element.getText();
     }
-    public void clickOn(WebElement element){
+
+    public void clickOn(WebElement element) {
 
         element.click();
     }
-    public void type(WebElement element,String text){
+
+    public void type(WebElement element, String text) {
 
         element.sendKeys(text);
     }
-    public void hoverOverAndClickOn(WebElement element){
-        Actions actions=new Actions(driver);
+
+    public void hoverOverAndClickOn(WebElement element) {
+        Actions actions = new Actions(driver);
         actions.moveToElement(element).click().build().perform();
 
     }
+
     public boolean isVisible(WebElement element) {
 
 
         return element.isDisplayed();
     }
 
-    public void sendKey(WebElement locator,String text){
+    public void sendKey(WebElement locator, String text) {
 
         locator.sendKeys(text);
     }
@@ -338,25 +347,18 @@ public class CommonAPI {
     }
 
 
-
-
-
-
     //------------------------------------------------------------------------------------------------------------------
     //                                              selenium methods
     //------------------------------------------------------------------------------------------------------------------
 
 
-
-
-
-    public void hoverOver(WebElement element){
+    public void hoverOver(WebElement element) {
         Actions actions = new Actions(driver);
         actions.moveToElement(element).build().perform();
     }
 
 
-    public void waitFor(int seconds){
+    public void waitFor(int seconds) {
         try {
             Thread.sleep(seconds * 1000);
         } catch (InterruptedException e) {
@@ -364,54 +366,80 @@ public class CommonAPI {
         }
     }
 
-    public boolean isInteractible(WebElement element){
+    public boolean isInteractible(WebElement element) {
         return element.isEnabled();
     }
-    public boolean isChecked(WebElement element){
+
+    public boolean isChecked(WebElement element) {
         return element.isSelected();
     }
 
-    public void clickWithJavascript(WebElement element){
-        JavascriptExecutor js = (JavascriptExecutor)driver;
+    public void clickWithJavascript(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", element);
     }
+
     public void scrollToElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor)driver;
-        js.executeScript("arguments[0].scrollIntoView();",element);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", element);
     }
+
     public void captureScreenshot() {
-        File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(file,new File("screenshots"+File.separator+"screenshot.png"));
+            FileUtils.copyFile(file, new File("screenshots" + File.separator + "screenshot.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    public void takeScreenshot(String screenshotName){
+
+    public void takeScreenshot(String screenshotName) {
         DateFormat df = new SimpleDateFormat("MMddyyyyHHmma");
         Date date = new Date();
         df.format(date);
 
-        File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(file, new File(Utility.currentDir+ File.separator +"screenshots"+ File.separator + screenshotName+" "+df.format(date)+".jpeg"));
+            FileUtils.copyFile(file, new File(Utility.currentDir + File.separator + "screenshots" + File.separator + screenshotName + " " + df.format(date) + ".jpeg"));
             System.out.println("Screenshot captured");
         } catch (Exception e) {
-            System.out.println("Exception while taking screenshot "+e.getMessage());
+            System.out.println("Exception while taking screenshot " + e.getMessage());
         }
     }
-    public void takeScreenshot(String packageName,String screenshotName){
+
+    public void takeScreenshot(String packageName, String screenshotName) {
         DateFormat df = new SimpleDateFormat("MMddyyyyHHmma");
         Date date = new Date();
         df.format(date);
 
-        File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(file, new File(Utility.currentDir+ File.separator +"screenshots"+File.separator+packageName+ File.separator + screenshotName+" "+df.format(date)+".jpeg"));
+            FileUtils.copyFile(file, new File(Utility.currentDir + File.separator + "screenshots" + File.separator + packageName + File.separator + screenshotName + " " + df.format(date) + ".jpeg"));
             System.out.println("Screenshot captured");
         } catch (Exception e) {
-            System.out.println("Exception while taking screenshot "+e.getMessage());
+            System.out.println("Exception while taking screenshot " + e.getMessage());
         }
     }
 
-}
+   /* @AfterMethod
+    public void takeScreenshotOnFailure(ITestResult result) {
+        if (result.getStatus() == ITestResult.FAILURE) {
+            // Get the driver from your test class
+
+            // Take the screenshot
+            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+            // Set the name and destination folder for the screenshot
+            String screenshotName = result.getMethod().getMethodName() + "_" + System.currentTimeMillis() + ".png";
+            String screenshotDirectory = "./screenshots/tutorialsninja/\"";
+
+            // Save the screenshot to the destination folder
+            try {
+                FileUtils.copyFile(screenshot, new File(screenshotDirectory + screenshotName));
+                System.out.println("Screenshot saved: " + screenshotDirectory + screenshotName);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }*/
+
+    }
