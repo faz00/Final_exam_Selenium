@@ -56,6 +56,35 @@ public class CartPage extends CommonAPI {
     @FindBy(css = "[name=\"updatecart\"][class=\"remove-btn\"]")
     WebElement RemoveProductFromCart;
 
+    @FindBy(css = "[id=\"open-estimate-shipping-popup\"]")
+    WebElement EstimateShippingBtn;
+
+    @FindBy(css = "[id=\"estimate-shipping-popup\"]")
+    WebElement EstimateShippingPopUp;
+
+    @FindBy(css = "[id=\"CountryId\"]")
+    WebElement CountryDropdown;
+
+    @FindBy(css = "[id=\"StateProvinceId\"]")
+    WebElement StateDropdown;
+
+    @FindBy(css = "[id=\"ZipPostalCode\"]")
+    WebElement ZipCodeField;
+
+    @FindBy(xpath = "//*[@id=\"estimate-shipping-popup\"]//button[contains(text(), 'Apply')]")
+    WebElement ShippingApplyBtn;
+
+    @FindBy(css = "[class=\"shipping-cost\"]")
+    WebElement ShippingCost;
+
+    @FindBy(xpath = "//option[contains(text(), 'United States')] [@value=1]")
+    WebElement USOption;
+
+    @FindBy(xpath = "//option[contains(text(), 'Alabama')] [@value=53]")
+    WebElement StateOption;
+
+    @FindBy(css = "[class=\"order-summary-content\"]")
+    WebElement emptyCart;
 
 
     public void clickOnAddToCartBTN(){
@@ -110,6 +139,47 @@ public class CartPage extends CommonAPI {
             actions.moveToElement(locator).build().perform();
 
         }
+    }
+
+    public void viewCart(){
+        ShoppingCart.click();
+        waitForElementToBeVisible(ShoppingCartDetailedTable);
+        isVisible(ShoppingCartDetailedTable);
+        waitFor(1);
+    }
+
+    public void seeEstimatedShippingCost(){
+        isVisible(ShoppingCartDetailedTable);
+        isVisible(EstimateShippingBtn);
+        EstimateShippingBtn.click();
+        waitForElementToBeVisible(EstimateShippingPopUp);
+        isVisible(CountryDropdown);
+        CountryDropdown.click();
+        waitForElementToBeVisible(USOption);
+        USOption.click();
+        isVisible(StateDropdown);
+        StateDropdown.click();
+        isVisible(StateOption);
+        StateOption.click();
+        ZipCodeField.clear();
+        ZipCodeField.sendKeys("35202");
+        waitFor(1);
+        ShippingApplyBtn.click();
+        waitForElementToBeVisible(ShippingCost);
+        hoverOver(ShippingCost);
+        Assert.assertTrue(ShippingCost.isDisplayed());
+        waitFor(1);
+    }
+
+    public void removeProductFromCart(){
+        isVisible(ShoppingCartDetailedTable);
+        isVisible(RemoveProductFromCart);
+        waitFor(1);
+        RemoveProductFromCart.click();
+        waitForElementToBeVisible(emptyCart);
+        isVisible(emptyCart);
+        Assert.assertTrue(emptyCart.getText().contains("Your Shopping Cart is empty!"));
+        waitFor(1);
     }
 }
 
