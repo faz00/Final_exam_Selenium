@@ -32,6 +32,7 @@ public class LoginTest extends CommonAPI {
     public void testLoginWithValidInputs() {
         //click on the login
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         LoginPage loginPage = new LoginPage(getDriver());
         LoginHomePage loginHomePge = new LoginHomePage(getDriver());
@@ -39,10 +40,10 @@ public class LoginTest extends CommonAPI {
         //enter valid email and valid password into the required fields
         loginPage.setEmail(validEmail);
         loginPage.setPassword(validPassword);
-        waitFor(5);
+
         loginPage.clickLoginButton();
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         // Check that the user is redirected to the  login home page
         assertTrue(loginHomePge.isAccountLinkDisplayed() );
@@ -67,7 +68,7 @@ public class LoginTest extends CommonAPI {
     @Test
     public void verifyLoginWithInvalidEmailAddress(){
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         LoginPage loginPage = new LoginPage(getDriver());
 
         // Enter an invalid email address and a valid password
@@ -77,7 +78,7 @@ public class LoginTest extends CommonAPI {
         // Click the login button
         loginPage.clickLoginButton();
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        //.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         // Verify that an error message is displayed for the invalid inputs
         boolean expectedErMsg=loginPage.LoginCredenErrMsgDisplayed();
@@ -87,7 +88,7 @@ public class LoginTest extends CommonAPI {
     @Test
     public void verifyLoginWithInvalidPassword(){
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         LoginPage loginPage = new LoginPage(getDriver());
 
         // Enter an valid email address and a invalid password
@@ -98,8 +99,6 @@ public class LoginTest extends CommonAPI {
         loginPage.clickLoginButton();
 
         // Verify that an error message is displayed for the invalid inputs
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         boolean expectErMsg=loginPage.LoginCredenErrMsgDisplayed();
         assertTrue(expectErMsg);

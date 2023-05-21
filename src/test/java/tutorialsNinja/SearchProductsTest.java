@@ -2,6 +2,7 @@ package tutorialsNinja;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
@@ -10,6 +11,7 @@ import us.piit.base.CommonAPI;
 import us.piit.pages.tutorialsNinja.SearchProductsHomePage;
 import us.piit.pages.tutorialsNinja.SearchProductsPage;
 
+import java.awt.*;
 import java.time.Duration;
 import java.util.List;
 import java.util.Properties;
@@ -98,7 +100,7 @@ public class SearchProductsTest extends CommonAPI {
         searchProductsPage.SearchButton();
 
         // Click on the display count dropdown
-        searchprhomePage .clickOnDisplayCountDropdown();
+        searchprhomePage.clickOnDisplayCountDropdown();
 
         // Verify that the display count options are displayed
         Select select = new Select(searchprhomePage.displayCountDropdown);
@@ -107,7 +109,7 @@ public class SearchProductsTest extends CommonAPI {
 
         // Select an option by visible text
         select.selectByVisibleText("100");
-     waitFor(3);
+
         //takescreenshot
         takeScreenshot("tutorialsNinja","productDisplayCount");
 

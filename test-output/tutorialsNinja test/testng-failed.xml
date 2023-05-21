@@ -12,8 +12,8 @@
     <classes>
       <class name="tutorialsNinja.SearchProductsTest">
         <methods>
-          <include name="afterEachTestMethod"/>
           <include name="setUp"/>
+          <include name="afterEachTestMethod"/>
           <include name="startExtent"/>
           <include name="tearDownR"/>
           <include name="extentSetup"/>
