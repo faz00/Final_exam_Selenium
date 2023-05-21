@@ -63,8 +63,15 @@ public class ConnectDB {
 
             connectToSqlDatabase();
 
-//
-//        List<String> emails = getTableColumnData("select * from employees;","first_name");
-//        System.out.println(emails.get(0));
+
+      List<String> emails = getTableColumnData("select * from tutorialsninja;","FirstName");
+      System.out.println(emails.get(0));
+
+
+
+
+
+
+
     }
 }

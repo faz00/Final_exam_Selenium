@@ -10,44 +10,41 @@ import us.piit.base.CommonAPI;
 
 public class SearchProductsPage extends CommonAPI {
 
-        Logger log = LogManager.getLogger(SearchProductsPage.class.getName());
 
-        public SearchProductsPage(WebDriver driver) {
-            PageFactory.initElements(driver, this);
-        }
+    Logger log = LogManager.getLogger(SearchProductsPage.class.getName());
 
-        @FindBy(xpath = "//input[@name='search']")
-        WebElement searchField;
-        @FindBy(xpath = "button[class='btn btn-default btn-lg']")
-        WebElement searchButton;
-        @FindBy(css = "#content h1")
-        WebElement searchResultsTitle;
-        @FindBy(xpath = "//*[@id=\"content\"]/p[2]")
-        WebElement nonExistingSearchErrMsg;
+    public SearchProductsPage(WebDriver driver) {
+        PageFactory.initElements(driver, this);
+    }
 
-        public void SearchField(String search) {
-            type(searchField, search);
-            log.info("the search product enters in success");
-        }
-        public void SearchButton() {
-            clickOn(searchButton);
-            log.info("the search button clicked");
-        }
+    @FindBy(xpath = "//input[@name='search']")
+    WebElement searchField;
+    @FindBy(xpath = "//*[@id=\"search\"]/span/button")
+    WebElement searchButton;
 
-        public boolean isErrorMessageDisplayed() {
-            // Assert a non-existing product error message is displayed
-            log.info("searching for a non existing product creates an error msg");
-            return getElementText(nonExistingSearchErrMsg).equals("There is no product that matches the search criteria.");
+    @FindBy(xpath = "//*[@id=\"content\"]/p[2]")
+    WebElement nonExistingSearchErrMsg;
 
-        }
-        public boolean isSearchResultsPageDisplayed() {
+    public void SearchField(String search) {
+        type(searchField, search);
+        log.info("the search product enters in success");
+    }
+    public void SearchButton() {
+        clickOn(searchButton);
+        log.info("the search button clicked");
+    }
 
-            return searchResultsTitle.isDisplayed();
-        }
-
-
+    public boolean isErrorMessageDisplayed() {
+        // Assert a non-existing product error message is displayed
+        log.info("searching for a non existing product creates an error msg");
+        return getElementText(nonExistingSearchErrMsg).equals("There is no product that matches the search criteria.");
 
     }
+
+
+
+
+}
 
 
 

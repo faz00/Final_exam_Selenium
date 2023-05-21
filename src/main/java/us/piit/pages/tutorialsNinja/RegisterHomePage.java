@@ -19,11 +19,12 @@ public class RegisterHomePage extends CommonAPI {
     WebElement registerHomePageTitle;
 
     public boolean isRegisterHomePageTitleDisplayed() {
-log.info("the user is able to see the title of the registerHomePage");
+        log.info("the user is able to see the title of the registerHomePage");
         return registerHomePageTitle.isDisplayed() ;
     }
 
 }
+
 
 
 

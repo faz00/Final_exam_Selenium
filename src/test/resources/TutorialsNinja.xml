@@ -10,7 +10,7 @@
     <parameter name="browserName" value="chrome"></parameter>
     <parameter name="url" value="https://tutorialsninja.com/demo/index.php?route=account/login"></parameter>
 
-    <test name=" LoginTest">
+   <!-- <test name=" LoginTest">
         <classes>
             <class name="tutorialsNinja.LoginTest"></class>
         </classes>
@@ -20,6 +20,15 @@
             <class name="tutorialsNinja.RegisterTest"></class>
         </classes>
     </test>
-
+    <test name=" ForgottenPasswordTest">
+        <classes>
+            <class name="tutorialsNinja.ForgottenPasswordTest"></class>
+        </classes>
+    </test>-->
+    <test name=" SearchProductsTest">
+        <classes>
+            <class name="tutorialsNinja.SearchProductsTest"></class>
+        </classes>
+    </test>
 
 </suite>

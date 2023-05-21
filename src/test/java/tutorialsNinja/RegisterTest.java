@@ -15,7 +15,6 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 public class RegisterTest extends CommonAPI {
-
     Logger log = LogManager.getLogger(RegisterTest.class.getName());
     Properties prop = Utility.loadProperties();
     String validFirstName = Utility.decode(prop.getProperty("tutorialsninja.validfirstName"));
@@ -81,7 +80,9 @@ public class RegisterTest extends CommonAPI {
         /*String expectedErMessage = "invalid phone number";
         String actualErMessage = registerHomePage.getRegisterHomePageTitle();
         assertNotEquals(expectedErMessage, actualErMessage);*/
-
+     //Takescreenshot
+        takeScreenshot("tutorialsNinja","rgstrwithinvaphonum");
+       //assert if the user navigates to the home page
         assertFalse(registerHomePage.isRegisterHomePageTitleDisplayed());
 
     }
@@ -113,7 +114,8 @@ public class RegisterTest extends CommonAPI {
         // Assert if the password field is  visible in the source page
 
         assertTrue(registerPage.isPasswordFieldVisible(validPassword), "the password is visible");
-
+        //takescreenshot
+       takeScreenshot("tutorialsNinja","pwVisiblToSrcPge");
 
     }
 
@@ -142,7 +144,12 @@ public class RegisterTest extends CommonAPI {
         registerPage.clickSubmitButton();
 
         //assert if an error message will be displayed
-       assertTrue(registerPage.isAlertMessageDisplayed(),"the alert message is not displayed");
+        assertTrue(registerPage.isAlertMessageDisplayed(),"the alert message is not displayed");
+//takeScreenshot
+        takeScreenshot("tutorialsNinja","rgstrWthExisEmail");
+
+
 
     }
+
 }
