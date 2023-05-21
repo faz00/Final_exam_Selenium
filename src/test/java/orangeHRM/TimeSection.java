@@ -1,5 +1,6 @@
 package orangeHRM;
 
+import com.sun.jna.win32.W32APIFunctionMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -13,6 +14,7 @@ import us.piit.pages.orangeHRM.TimePage;
 import us.piit.utility.Utility;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
 import java.util.Properties;
 
 public class TimeSection extends CommonAPI {
@@ -95,6 +97,7 @@ public class TimeSection extends CommonAPI {
     }
 
 
+    @Test
     public void addCustomer(){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -122,7 +125,7 @@ public class TimeSection extends CommonAPI {
 
 
         waitFor(5);
-        //click on buzz
+        //click on TIME
         dashbordPage.searchOptionOnSearchBar("Time");
 
         dashbordPage.clickOnTimeOption();
@@ -139,46 +142,88 @@ public class TimeSection extends CommonAPI {
         clickOn("header[class='oxd-topbar'] li:nth-child(1) a:nth-child(1)");
         log.info("Customer option clicked on success");
 
-      clickOn("//button[normalize-space()='Add']");
-      log.info("Add button clicked on success");
-
-      type("div[class='oxd-input-group oxd-input-field-bottom-space'] div input[class='oxd-input oxd-input--active']","PNT");
-      log.info("Name added successfully");
-
-      type("//textarea[@placeholder='Type description here']","This is a simple test");
-      log.info("description added successfully");
-
-      clickOn("//textarea[@placeholder='Type description here']");
-      log.info("Save button clicked on success");
 
 
+            clickOn("//button[normalize-space()='Add']");
+            log.info("Add button clicked on success");
 
-        clickOn("button[type='submit']");
+            type("div[class='oxd-input-group oxd-input-field-bottom-space'] div input[class='oxd-input oxd-input--active']", "PNT");
+            log.info("Name added successfully");
 
-        waitFor(5);
+            type("//textarea[@placeholder='Type description here']", "This is a simple test");
+            log.info("description added successfully");
 
-//
-        String expectedAddedName="PNT";
-        String actualAddedNAme=getElementText("//div[contains(text(),'PNT')]");
-        Assert.assertEquals(expectedAddedName,actualAddedNAme);
+            clickOn("//textarea[@placeholder='Type description here']");
+            log.info("Save button clicked on success");
+
+
+            clickOn("button[type='submit']");
+
+            waitFor(5);
+
+
+
+            String expectedName = "PNT";
+            String actualName=getElementText("//div[contains(text(),'PNT')]");
+            Assert.assertEquals(expectedName,actualName);
 
 
     }
 
-    @Test
-    public void deleteAddedCustomer(){
-        addCustomer();
 
-        clickOn("div[role='columnheader'] span[class='oxd-checkbox-input oxd-checkbox-input--active --label-right oxd-checkbox-input']");
+    public void deleteAddedCustomer(){
+//        addCustomer();
+
+
+
+        clickOn("//div[@role='columnheader']//i[@class='oxd-icon bi-check oxd-checkbox-input-icon']");
+
+            log.info("Check box is checked successfully");
+
 
         clickOn("button[class='oxd-button oxd-button--medium oxd-button--label-danger orangehrm-horizontal-margin']");
+        log.info("Delete selection button clicked in success");
 
         clickOn("//button[normalize-space()='Yes, Delete']");
+        log.info("Button clicked in success");
+
+
+        List<WebElement> customerNames = driver.findElements(By.xpath("//table[@id='resultTable']//td[2]"));
+
+// Specify the name you want to check
+        String nameToCheck = "PNT";
+
+// Assert that the name does not exist in the list of customer names
+        boolean nameExists = customerNames.stream().anyMatch(element -> element.getText().equals(nameToCheck));
+        Assert.assertFalse(nameExists, "The name '" + nameToCheck + "' should not exist in the list of customers.");
 
 
 
 
 
+
+
+    }
+
+
+    public void addAnExistingCustomer(){
+        addCustomer();
+
+        clickOn("//button[normalize-space()='Add']");
+        log.info("Add button clicked on success");
+
+        type("div[class='oxd-input-group oxd-input-field-bottom-space'] div input[class='oxd-input oxd-input--active']","PNT");
+        log.info("Name added successfully");
+
+        type("//textarea[@placeholder='Type description here']","This is a simple test");
+        log.info("description added successfully");
+
+        clickOn("//textarea[@placeholder='Type description here']");
+        log.info("Save button clicked on success");
+
+        String expectedError="Already exists";
+        String actualError= getElementText(".oxd-text.oxd-text--span.oxd-input-field-error-message.oxd-input-group__message");
+        Assert.assertEquals(expectedError,actualError);
 
 
     }

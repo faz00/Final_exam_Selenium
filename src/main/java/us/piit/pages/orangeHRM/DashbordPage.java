@@ -41,6 +41,9 @@ public class DashbordPage extends CommonAPI {
 
     @FindBy(xpath="(//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'][normalize-space()='Maintenance'])[1]")
     WebElement maintenanceButtonInMenu;
+
+    @FindBy(xpath = "(//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'])[1]")
+    WebElement pimButton;
     public String getHraderText(){
         String text = getElementText(mainHeader);
         log.info("user logged in success");
@@ -72,6 +75,11 @@ public class DashbordPage extends CommonAPI {
     public void clickOnMaintenanceOption(){
         clickOn(maintenanceButtonInMenu);
         log.info("Maintenance page displayed");
+    }
+
+    public void clickOnPimOption(){
+        clickOn(pimButton);
+        log.info("PIM page displayed");
     }
     public void clickOnLogoutBtn(){
         clickOn(logoutBtn);

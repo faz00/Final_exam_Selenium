@@ -11,10 +11,15 @@ import us.piit.base.CommonAPI;
 
 
 public class PIMPage extends CommonAPI {
-    Logger log = LogManager.getLogger(DashbordPage.class.getName());
+    Logger log = LogManager.getLogger(PIMPage.class.getName());
     public PIMPage(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
+
+    @FindBy(css = "button[class='oxd-icon-button oxd-icon-button--solid-main employee-image-action']")
+    WebElement inputFieldOfTheDialog;
+
+
 
     @FindBy(css ="div[class='oxd-form-row'] div[class='oxd-grid-2 orangehrm-full-width-grid'] div[class='oxd-grid-item oxd-grid-item--gutters'] div[class='oxd-input-group oxd-input-field-bottom-space'] div input[type='password']")
     WebElement currentPassword;
@@ -43,6 +48,10 @@ public class PIMPage extends CommonAPI {
     public void enterConfirmNewPassword(String Password){
         type(confirmPassword,Password);
         log.info("Password entered in Confirm Password field ");
+    }
+    public void setThePathOfImage(String path){
+        inputFieldOfTheDialog.sendKeys(path);
+        log.info("path sent with success");
     }
 
 
