@@ -38,7 +38,7 @@
 <!--    </test>-->
         <test name="Time test">
             <classes>
-                <class name="orangeHRM.TimeSection"></class>
+                <class name="orangeHRM.MaintenanceSection"></class>
             </classes>
         </test>
 </suite>
