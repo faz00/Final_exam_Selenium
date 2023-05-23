@@ -429,6 +429,8 @@ public class CommonAPI {
         }
     }
 
+<<<<<<< HEAD
+=======
     public Double extractNumericPrice(String priceWithSymbol) {
         Pattern p = Pattern.compile("[^0-9]*([0-9]*,?([0-9]+(\\.[0-9]*))?)");
         Matcher m = p.matcher(priceWithSymbol);
@@ -438,6 +440,7 @@ public class CommonAPI {
         return d_num;
     }
 
+>>>>>>> c3bf2355b21406d1932bed8fd1e77a47b22a6734
 
 }
 

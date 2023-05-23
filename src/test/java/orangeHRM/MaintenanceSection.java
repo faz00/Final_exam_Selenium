@@ -77,43 +77,24 @@ public class MaintenanceSection extends CommonAPI {
 
 
     //download records
-    clickOn("a[class='oxd-topbar-body-nav-tab-item']");
-    log.info("Access Records clicked on success");
+        maintenancePage.clickOnAccessRecordBtn();
+        String name = dashbordPage.getUsernameName();
+        maintenancePage.selectNAmeFromDropDownList(name);
+        maintenancePage.clickOnSearchEmployeeBtn();
 
-    String name=getElementText("//p[@class='oxd-userdropdown-name']");
-    log.info("USer name copied successfully");
-
-    WebElement element = driver.findElement(By.xpath("//input[@placeholder='Type for hints...']"));
-    type("//input[@placeholder='Type for hints...']",name);
-    waitFor(5);
-    element.sendKeys(Keys.ARROW_DOWN);
-    waitFor(5);
-    element.sendKeys(Keys.ENTER);
-
-    clickOn("button[type='submit']");
-    log.info("Button clicked on success");
 
     String expectedEmployeeDisplayed="Selected Employee";
-    String actualEmployeeDisplayed =getElementText("div[class='orangehrm-background-container'] h6[class='oxd-text oxd-text--h6 orangehrm-main-title']");
+    String actualEmployeeDisplayed =maintenancePage.getActualEmployeeDisplayed();
     Assert.assertEquals(expectedEmployeeDisplayed,actualEmployeeDisplayed);
 
-    clickOn("div[class='orangehrm-background-container'] button[type='submit']");
-    log.info("Button download clicked on success");
 
-
-
+        maintenancePage.clickOnDownloadEmployee();
 
     log.info(name);
     log.info("Download dir"+downloadsDir);
-    String path=downloadsDir+File.separator+name+".json";
-    log.info("PAth "+path);
-        //driver.findElement(By.linkText("Download Document")).click();
-        String filePath =downloadsDir+"\\Paul  Collings.json";
 
-
-
-        waitFor(10);
-
+    String filePath =downloadsDir+"\\Paul  Collings.json";
+    waitFor(10);
 
         log.info(filePath);
         File file = new File(filePath);
