@@ -3,6 +3,7 @@ package orangeHRM;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import us.piit.utility.Utility;
 import us.piit.base.CommonAPI;
@@ -13,14 +14,18 @@ import us.piit.pages.orangeHRM.MaintenancePage;
 import java.util.Properties;
 
 public class LoginToMaintenance extends CommonAPI {
-    Logger log = LogManager.getLogger(LogOutTest.class.getName());
-    Properties prop = Utility.loadProperties();
-    String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
-    String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+     @DataProvider(name = "loginTestData")
+    public Object[][] provideLoginTestData() {
+        Properties prop = Utility.loadProperties();
+        String username = Utility.decode(prop.getProperty("orangeHRM.username"));
+        String password = Utility.decode(prop.getProperty("orangeHRM.password"));
 
-
-    @Test
-    public void loginWithValidCred(){
+        return new Object[][]{
+                {username, password},
+        };
+    }
+    @Test(dataProvider = "loginTestData")
+    public void loginWithValidCred(String username,String password){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
         MaintenancePage maintenancePage =new MaintenancePage(getDriver());
@@ -33,10 +38,10 @@ public class LoginToMaintenance extends CommonAPI {
 
         //enter username,enter password, and click on login button
 
-        loginPage.enterUsername(validUsername);
+        loginPage.enterUsername(username);
 
 
-        loginPage.enterPassword(validPassword);
+        loginPage.enterPassword(password);
 
         loginPage.clickOnLoginBtn();
 
@@ -54,7 +59,7 @@ public class LoginToMaintenance extends CommonAPI {
 
         waitFor(5);
 
-       maintenancePage.enterPassword(validPassword);
+       maintenancePage.enterPassword(password);
 
       maintenancePage.clickOnSubmitBtn();
 
@@ -68,8 +73,8 @@ public class LoginToMaintenance extends CommonAPI {
 
     }
 
-    @Test
-    public void loginWithInvalidCred(){
+    @Test(dataProvider = "loginTestData")
+    public void loginWithInvalidCred(String username,String password){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
         MaintenancePage maintenancePage =new MaintenancePage(getDriver());
@@ -80,10 +85,10 @@ public class LoginToMaintenance extends CommonAPI {
 
 
         //enter username,enter password, and click on login button
-        loginPage.enterUsername(validUsername);
+        loginPage.enterUsername(username);
 
 
-        loginPage.enterPassword(validPassword);
+        loginPage.enterPassword(password);
 
         loginPage.clickOnLoginBtn();
 

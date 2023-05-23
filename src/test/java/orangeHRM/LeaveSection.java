@@ -3,6 +3,7 @@ package orangeHRM;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;
 import us.piit.pages.orangeHRM.DashbordPage;
@@ -14,15 +15,22 @@ import us.piit.utility.Utility;
 import java.util.Properties;
 
 public class LeaveSection  extends CommonAPI {
-    Logger log = LogManager.getLogger(LeaveSection.class.getName());
 
-    Properties prop = Utility.loadProperties();
-    String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
-    String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+    @DataProvider(name = "loginCredentials")
+    public Object[][] getLoginCredentials() {
+        Properties prop = Utility.loadProperties();
+        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+
+        return new Object[][]{
+                {validUsername, validPassword}
+
+        };
+    }
 
 
-
-    public void approveLeaveRecordOfAnEmployee(){
+    @Test(dataProvider = "loginCredentials")
+    public void approveLeaveRecordOfAnEmployee(String validUsername,String validPassword){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
         LeavePage leavePage =new LeavePage(getDriver());
@@ -64,7 +72,8 @@ public class LeaveSection  extends CommonAPI {
     }
 
 
-    public void rejectLeaveRecordOfAnEmployee(){
+    @Test(dataProvider = "loginCredentials")
+    public void rejectLeaveRecordOfAnEmployee(String validUsername,String validPassword){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
         LeavePage leavePage =new LeavePage(getDriver());
@@ -109,7 +118,8 @@ public class LeaveSection  extends CommonAPI {
     }
 
 
-    public void addCommentForAnEmployeeRecord(){
+    @Test(dataProvider = "loginCredentials")
+    public void addCommentForAnEmployeeRecord(String validUsername,String validPassword){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
         LeavePage leavePage =new LeavePage(getDriver());
@@ -223,8 +233,9 @@ public class LeaveSection  extends CommonAPI {
 //    }
 
 
-    @Test
-    public void AddHolidayInHolidaysList(){
+    @Test(dataProvider = "NewHoliday")
+
+    public void AddHolidayInHolidaysList(String validUsername,String validPassword,String holidayName,String date){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
         LeavePage leavePage =new LeavePage(getDriver());
@@ -258,18 +269,29 @@ public class LeaveSection  extends CommonAPI {
         leavePage.clickOnHolidayOption();
         waitFor(2);
         leavePage.clickOnAddHolidayBtn();
-        leavePage.typeHolidayName("Eid El Adha");
-        leavePage.typeHolidayDate("2023-07-28");
+        leavePage.typeHolidayName(holidayName);
+        leavePage.typeHolidayDate(date);
         leavePage.clickOnCheckBox();
         leavePage.clickOnSubmitBtn();
 
 
-        String expectedHoliday="Eid El Adha";
+        String expectedHoliday=holidayName;
         String actualHoliday=leavePage.getActualAddedHoliday();
         Assert.assertEquals(expectedHoliday,actualHoliday);
 
     }
 
+    @DataProvider(name = "NewHoliday")
+    public Object[][] addNewHoliday() {
+        Properties prop = Utility.loadProperties();
+        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+        String holidayName="Eid El Adha";
+        String date="2023-06-28";
+        return new Object[][]{
+                {validUsername, validPassword,holidayName,date}
 
+        };
+    }
 
 }

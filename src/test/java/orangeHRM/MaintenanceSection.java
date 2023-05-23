@@ -9,6 +9,7 @@ import org.openqa.selenium.bidi.Command;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;
 import us.piit.pages.orangeHRM.DashbordPage;
@@ -24,14 +25,21 @@ public class MaintenanceSection extends CommonAPI {
 
     Logger log = LogManager.getLogger(MaintenanceSection.class.getName());
 
-    Properties prop = Utility.loadProperties();
-    String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
-    String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+    @DataProvider(name = "loginCredentials")
+    public Object[][] getLoginCredentials() {
+        Properties prop = Utility.loadProperties();
+        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
 
-    String downloadsDir = System.getProperty("user.home") + File.separator + "Downloads";
-    @Test
+        String downloadsDir = System.getProperty("user.home") + File.separator + "Downloads";
 
-    public void DownloadEmployeesRecord(){
+        return new Object[][]{
+                {validUsername, validPassword,downloadsDir}
+
+        };
+    }
+    @Test(dataProvider = "loginCredentials")
+    public void DownloadEmployeesRecord(String validUsername,String validPassword,String downloadsDir){
     LoginPage loginPage = new LoginPage(getDriver());
     DashbordPage dashbordPage = new DashbordPage(getDriver());
     MaintenancePage maintenancePage =new MaintenancePage(getDriver());

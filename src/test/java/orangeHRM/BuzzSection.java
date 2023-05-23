@@ -3,6 +3,7 @@ package orangeHRM;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import us.piit.utility.Utility;
 import us.piit.base.CommonAPI;
@@ -18,24 +19,61 @@ public class BuzzSection extends CommonAPI {
 
     Logger log = LogManager.getLogger(BuzzSection.class.getName());
 
-    Properties prop = Utility.loadProperties();
-    String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
-    String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+    @DataProvider(name = "loginCredentials")
+    public Object[][] getLoginCredentials() {
+        Properties prop = Utility.loadProperties();
+        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
 
-    String textPost="Hi, this is just a test";
+        return new Object[][]{
+                {validUsername, validPassword}
+
+        };
+    }
+
+    @DataProvider(name = "addComent")
+    public Object[][] addComment() {
+        Properties prop = Utility.loadProperties();
+        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+        String textPost="Hi, this is just a test";
 
 
-    String pathScreenPackage="orangeHRMScreenshots";
-   String imagePath = "C:\\Users\\DELL G5\\IdeaProjects\\Final_exam_Selenium\\screenShots\\orangeHRMScreenshots\\DeletePostInBuzzscreenshot.png";
-//
-//    String screenShotPath="jetbrains://idea/navigate/reference?project=Final_exam_Selenium&fqn=screenShots.orangeHRM.orangeHRMScreenshots";
+        String pathScreenPackage="orangeHRMScreenshots";
+
+
+
+        return new Object[][]{
+                {validUsername, validPassword,textPost,pathScreenPackage}
+
+        };
+    }
+
+    @DataProvider(name = "EditPost")
+    public Object[][] editPost() {
+        Properties prop = Utility.loadProperties();
+        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+        String textPost="Hi, this is just a test";
+
+        String pathScreenPackage="orangeHRMScreenshots";
+        String imagePath = "C:\\Users\\DELL G5\\IdeaProjects\\Final_exam_Selenium\\screenShots\\orangeHRMScreenshots\\analysis.png";
+
+
+
+
+        return new Object[][]{
+                {validUsername, validPassword,textPost,pathScreenPackage,imagePath}
+
+        };
+    }
 
 
 
 
 
-    @Test
-    public void sharePost(){
+    @Test(dataProvider = "EditPost")
+    public void sharePost(String validUsername, String validPassword,String textPost,String pathScreenPackage){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
         BuzzPage buzzPage = new BuzzPage(getDriver());
@@ -82,8 +120,6 @@ public class BuzzSection extends CommonAPI {
         waitFor(2);
 
         //Take a screenshot
-//        captureScreenshot(driver, screenShotPath+File.separator+"SharePostInBuzzscreenshot.png");
-
         takeScreenshot(pathScreenPackage,"SharePostInBuzzscreenshot");
 
         waitFor(10);
@@ -98,9 +134,9 @@ public class BuzzSection extends CommonAPI {
 
 
 
-    @Test
+    @Test(dataProvider = "EditPost")
 
-    public void editSharedPost(){
+    public void editSharedPost(String validUsername, String validPassword,String textPost,String pathScreenPackage,String imagePath){
 
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -149,17 +185,11 @@ public class BuzzSection extends CommonAPI {
 
         waitFor(5);
         //Edit the shared post
-       buzzPage.clickOnThreeDotes();
+        buzzPage.clickOnThreeDotes();
         waitFor(2);
         buzzPage.clickOnEditOption();
 
         waitFor(2);
-
-
-
-        // Use the sendKeys() method to set the path of the image file in the input field of the dialog
-//        WebElement fileInputField = driver.findElement(By.xpath("//input[@type='file']"));
-//        fileInputField.sendKeys("C:\\Users\\DELL G5\\IdeaProjects\\Final_exam_Selenium\\src\\test\\java\\orangeHRM\\orangeHRMScreenshots"+File.separator+"DeletePostInBuzzscreenshot.png");
 
 
         waitFor(5);
@@ -169,7 +199,6 @@ public class BuzzSection extends CommonAPI {
         waitFor(7);
 
         //Take a screenshot
-        //CaptureScreenshot(driver, screenShotPath+File.separator+"EditPostInBuzzscreenshot.png");
         takeScreenshot(pathScreenPackage,"EditPostInBuzzscreenshot");
 
 
@@ -181,9 +210,9 @@ public class BuzzSection extends CommonAPI {
         Assert.assertEquals(expectedPost,actualPost);
     }
 
-@Test
+    @Test(dataProvider = "EditPost")
 
-    public void DeletePost(){
+    public void DeletePost(String validUsername, String validPassword,String textPost,String pathScreenPackage){
 
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -242,7 +271,7 @@ public class BuzzSection extends CommonAPI {
 
 
         //Take a screenshot
-//        captureScreenshot(driver, screenShotPath+File.separator+"DeletePostInBuzzscreenshot.png");
+
         takeScreenshot(pathScreenPackage,"DeletePostInBuzzscreenshot");
 
 
@@ -250,13 +279,12 @@ public class BuzzSection extends CommonAPI {
     }
 
 
-    @Test
+    @Test(dataProvider = "addComment")
+    public void addCommentAndLike(String validUsername, String validPassword, String textPost, String pathScreenPackage) {
 
- public void addCommentAndLike(){
-
-    LoginPage loginPage = new LoginPage(getDriver());
-    DashbordPage dashbordPage = new DashbordPage(getDriver());
-    BuzzPage buzzPage = new BuzzPage(getDriver());
+        LoginPage loginPage = new LoginPage(getDriver());
+        DashbordPage dashbordPage = new DashbordPage(getDriver());
+        BuzzPage buzzPage = new BuzzPage(getDriver());
 
         String expectedTitle = "OrangeHRM";
         String actualTitle = driver.getTitle();
@@ -265,12 +293,12 @@ public class BuzzSection extends CommonAPI {
 
         //enter username,enter password, and click on login button
 
-    loginPage.enterUsername(validUsername);
+        loginPage.enterUsername(validUsername);
 
 
-    loginPage.enterPassword(validPassword);
+        loginPage.enterPassword(validPassword);
 
-    loginPage.clickOnLoginBtn();
+        loginPage.clickOnLoginBtn();
 
         //check user is logged in
         String expectedHomePage = "Dashboard";
@@ -284,7 +312,7 @@ public class BuzzSection extends CommonAPI {
 
         dashbordPage.clickOnBuzzOption();
 
-         waitFor(10);
+        waitFor(10);
 
         //check the buzz`s page
         String expectedBuzzTitle="https://opensource-demo.orangehrmlive.com/web/index.php/buzz/viewBuzz";
@@ -292,20 +320,20 @@ public class BuzzSection extends CommonAPI {
         Assert.assertEquals(expectedBuzzTitle,actualBuzzTitle);
 
         //go to the most commented post
-      buzzPage.clickOnMostCommentedBtn();
+        buzzPage.clickOnMostCommentedBtn();
 
         //comment
-       buzzPage.clickOnCommentIcon();
+        buzzPage.clickOnCommentIcon();
 
 
         //write the comment
-       buzzPage.shareComment("Hello Word");
+        buzzPage.shareComment("Hello Word");
 
         waitFor(2);
 
         //Take a screenshot
-     takeScreenshot(pathScreenPackage,"CommentPostInBuzzscreenshot");
-      //  captureScreenshot(driver, currentDir+File.separator+"CommentPostInBuzzscreenshot.png");
+        takeScreenshot(pathScreenPackage,"CommentPostInBuzzScreenshot");
+
 
 //
 //        String expectedBuzzComment="Hello World";

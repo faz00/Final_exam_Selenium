@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;
 import us.piit.pages.orangeHRM.DashbordPage;
@@ -17,297 +18,316 @@ import us.piit.utility.Utility;
 import java.util.Properties;
 
 public class PIMSection extends CommonAPI {
-    Logger log = LogManager.getLogger(PIMSection.class.getName());
 
-    Properties prop = Utility.loadProperties();
-    String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
-    String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+    public class LoginToMaintenance extends CommonAPI {
+        // Existing code
 
-    String imagePath = "C:\\Users\\DELL G5\\IdeaProjects\\Final_exam_Selenium\\screenShots\\orangeHRMScreenshots\\DeletePostInBuzzscreenshot.png";
+        @DataProvider(name = "loginCredentials")
+        public Object[][] getLoginCredentials() {
+            Properties prop = Utility.loadProperties();
+            String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+            String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
 
-    String firstName="Fazia";
-    String middleName="Sid";
-    String lastName="Ali";
-    String userName="FaziaSid";
-    String password="Fazia2000";
-    String companyName="Amazon";
-    String titleJob="QA Tester";
-    String beginningDate="2022-02-03";
-    String endDate="2023-04-04";
+            return new Object[][]{
+                    {validUsername, validPassword}
+//                    {validUsername, "InvalidAdmin123"}
+            };
+        }
 
 
-    public void searchEmployee(){
-        LoginPage loginPage = new LoginPage(getDriver());
-        DashbordPage dashbordPage = new DashbordPage(getDriver());
-        PIMPage pimPage = new PIMPage(getDriver());
+        @DataProvider(name = "testData")
+        public Object[][] getTestData() {
+            Properties prop = Utility.loadProperties();
+            String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+            String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
 
-        String expectedTitle = "OrangeHRM";
-        String actualTitle = driver.getTitle();
-        Assert.assertEquals(expectedTitle, actualTitle);
+            String imagePath = "C:\\Users\\DELL G5\\IdeaProjects\\Final_exam_Selenium\\screenShots\\orangeHRMScreenshots\\DeletePostInBuzzscreenshot.png";
+            String firstName = "Fazia";
+            String middleName = "Sid";
+            String lastName = "Ali";
+            String userName = "FaziaSid";
+            String password = "Fazia2000";
+            String companyName = "Amazon";
+            String titleJob = "QA Tester";
+            String beginningDate = "2022-02-03";
+            String endDate = "2023-04-04";
 
+            return new Object[][]{
+                    {validUsername, validPassword,imagePath, firstName, middleName, lastName, userName, password, companyName, titleJob, beginningDate, endDate}
 
-        //enter username,enter password, and click on login button
 
-        loginPage.enterUsername(validUsername);
+            };
+        }
 
+        @Test(dataProvider = "loginCredentials")
+        public void searchEmployee(String validUsername, String validPassword) {
+            LoginPage loginPage = new LoginPage(getDriver());
+            DashbordPage dashbordPage = new DashbordPage(getDriver());
+            PIMPage pimPage = new PIMPage(getDriver());
 
-        loginPage.enterPassword(validPassword);
+            String expectedTitle = "OrangeHRM";
+            String actualTitle = driver.getTitle();
+            Assert.assertEquals(expectedTitle, actualTitle);
 
-        loginPage.clickOnLoginBtn();
 
-        //check user is logged in
-        String expectedHomePage = "Dashboard";
-        String actualHomePage = dashbordPage.getHraderText();
-        Assert.assertEquals(expectedHomePage, actualHomePage);
+            //enter username,enter password, and click on login button
 
+            loginPage.enterUsername(validUsername);
 
 
-        waitFor(5);
-        //click on PIM
-        dashbordPage.searchOptionOnSearchBar("PIM");
+            loginPage.enterPassword(validPassword);
 
-        dashbordPage.clickOnPimOption();
-        pimPage.searchEmployeeName(dashbordPage.getUsernameName());
+            loginPage.clickOnLoginBtn();
 
-        pimPage.submitSearchEmployeeBtn();
+            //check user is logged in
+            String expectedHomePage = "Dashboard";
+            String actualHomePage = dashbordPage.getHraderText();
+            Assert.assertEquals(expectedHomePage, actualHomePage);
 
 
-        String expectedResult ="(1) Record Found";
-        String actualResult=getElementText("div[class='orangehrm-horizontal-padding orangehrm-vertical-padding'] span[class='oxd-text oxd-text--span']");
-        Assert.assertEquals(expectedResult,actualResult);
+            waitFor(5);
+            //click on PIM
+            dashbordPage.searchOptionOnSearchBar("PIM");
 
+            dashbordPage.clickOnPimOption();
+            pimPage.searchEmployeeName(dashbordPage.getUsernameName());
 
+            pimPage.submitSearchEmployeeBtn();
 
-    }
 
+            String expectedResult = "(1) Record Found";
+            String actualResult = getElementText("div[class='orangehrm-horizontal-padding orangehrm-vertical-padding'] span[class='oxd-text oxd-text--span']");
+            Assert.assertEquals(expectedResult, actualResult);
 
-    public void addEmployee(){
-        LoginPage loginPage = new LoginPage(getDriver());
-        DashbordPage dashbordPage = new DashbordPage(getDriver());
-        PIMPage pimPage = new PIMPage(getDriver());
 
-        String expectedTitle = "OrangeHRM";
-        String actualTitle = driver.getTitle();
-        Assert.assertEquals(expectedTitle, actualTitle);
+        }
 
 
-        //enter username,enter password, and click on login button
+      @Test(dataProvider = "testData")
+        public void addEmployee(String validUsername, String validPassword, String imagePath, String firstName, String middleName, String lastName, String userName, String password, String companyName, String titleJob, String beginningDate, String endDate) {
+            LoginPage loginPage = new LoginPage(getDriver());
+            DashbordPage dashbordPage = new DashbordPage(getDriver());
+            PIMPage pimPage = new PIMPage(getDriver());
 
-        loginPage.enterUsername(validUsername);
+            String expectedTitle = "OrangeHRM";
+            String actualTitle = driver.getTitle();
+            Assert.assertEquals(expectedTitle, actualTitle);
 
 
-        loginPage.enterPassword(validPassword);
+            //enter username,enter password, and click on login button
 
-        loginPage.clickOnLoginBtn();
+            loginPage.enterUsername(validUsername);
 
-        //check user is logged in
-        String expectedHomePage = "Dashboard";
-        String actualHomePage = dashbordPage.getHraderText();
-        Assert.assertEquals(expectedHomePage, actualHomePage);
 
+            loginPage.enterPassword(validPassword);
 
+            loginPage.clickOnLoginBtn();
 
-        waitFor(5);
-        //click on PIM
-        dashbordPage.searchOptionOnSearchBar("PIM");
+            //check user is logged in
+            String expectedHomePage = "Dashboard";
+            String actualHomePage = dashbordPage.getHraderText();
+            Assert.assertEquals(expectedHomePage, actualHomePage);
 
-        dashbordPage.clickOnPimOption();
 
-        pimPage.clickOnAddEmployeeBtn();
+            waitFor(5);
+            //click on PIM
+            dashbordPage.searchOptionOnSearchBar("PIM");
 
-        pimPage.addFirstName(firstName);
-        pimPage.addMidleName(middleName);
-        pimPage.addLastName(lastName);
+            dashbordPage.clickOnPimOption();
 
-        //add profile picture
+            pimPage.clickOnAddEmployeeBtn();
 
-        waitFor(5);
-        pimPage.setThePathOfImage(imagePath);
+            pimPage.addFirstName(firstName);
+            pimPage.addMidleName(middleName);
+            pimPage.addLastName(lastName);
 
-        waitFor(10);
+            //add profile picture
 
-        pimPage.clickCheckBox();
+            waitFor(5);
+            pimPage.setThePathOfImage(imagePath);
 
-        pimPage.addUsername(userName);
+            waitFor(10);
 
-        pimPage.addPasswordForNewUser(password);
+            pimPage.clickCheckBox();
 
-        pimPage.confirmPasswordForNewUser(password);
+            pimPage.addUsername(userName);
 
-        pimPage.clickOnSubmitNewUser();
+            pimPage.addPasswordForNewUser(password);
 
-        waitFor(5);
-        String expectedUsername =userName;
-        String actualUsername= pimPage.getActualUsername();
-        Assert.assertEquals(expectedUsername,actualUsername);
+            pimPage.confirmPasswordForNewUser(password);
 
-    }
+            pimPage.clickOnSubmitNewUser();
 
+            waitFor(5);
+            String expectedUsername = userName;
+            String actualUsername = pimPage.getActualUsername();
+            Assert.assertEquals(expectedUsername, actualUsername);
 
+        }
 
-    public void editEmployeesQualification(){
-        LoginPage loginPage = new LoginPage(getDriver());
-        DashbordPage dashbordPage = new DashbordPage(getDriver());
-        PIMPage pimPage = new PIMPage(getDriver());
 
-        String expectedTitle = "OrangeHRM";
-        String actualTitle = driver.getTitle();
-        Assert.assertEquals(expectedTitle, actualTitle);
+       @Test(dataProvider = "testData")
+        public void editEmployeesQualification(String validUsername, String validPassword, String imagePath, String firstName, String middleName, String lastName, String userName, String password, String companyName, String titleJob, String beginningDate, String endDate) {
+            LoginPage loginPage = new LoginPage(getDriver());
+            DashbordPage dashbordPage = new DashbordPage(getDriver());
+            PIMPage pimPage = new PIMPage(getDriver());
 
+            String expectedTitle = "OrangeHRM";
+            String actualTitle = driver.getTitle();
+            Assert.assertEquals(expectedTitle, actualTitle);
 
-        //enter username,enter password, and click on login button
 
-        loginPage.enterUsername(validUsername);
+            //enter username,enter password, and click on login button
 
+            loginPage.enterUsername(validUsername);
 
-        loginPage.enterPassword(validPassword);
 
-        loginPage.clickOnLoginBtn();
+            loginPage.enterPassword(validPassword);
 
-        //check user is logged in
-        String expectedHomePage = "Dashboard";
-        String actualHomePage = dashbordPage.getHraderText();
-        Assert.assertEquals(expectedHomePage, actualHomePage);
+            loginPage.clickOnLoginBtn();
 
-        waitFor(5);
-        //click on PIM
-        dashbordPage.searchOptionOnSearchBar("PIM");
+            //check user is logged in
+            String expectedHomePage = "Dashboard";
+            String actualHomePage = dashbordPage.getHraderText();
+            Assert.assertEquals(expectedHomePage, actualHomePage);
 
-        dashbordPage.clickOnPimOption();
+            waitFor(5);
+            //click on PIM
+            dashbordPage.searchOptionOnSearchBar("PIM");
 
-        pimPage.clickOnEditBtn();
+            dashbordPage.clickOnPimOption();
 
-        waitFor(2);
-       // Qualification
-        pimPage.clickOnQualificationOption();
+            pimPage.clickOnEditBtn();
 
-        waitFor(5);
+            waitFor(2);
+            // Qualification
+            pimPage.clickOnQualificationOption();
 
-        pimPage.clickOnAddExperienceBtn();
+            waitFor(5);
 
-        waitFor(3);
+            pimPage.clickOnAddExperienceBtn();
 
+            waitFor(3);
 
-        pimPage.typeCompanyName(companyName);
-        pimPage.typeTitleJobField(titleJob);
-        pimPage.typeBeginningDate(beginningDate);
-        pimPage.typeEndDate(endDate);
 
+            pimPage.typeCompanyName(companyName);
+            pimPage.typeTitleJobField(titleJob);
+            pimPage.typeBeginningDate(beginningDate);
+            pimPage.typeEndDate(endDate);
 
-        pimPage.clickSubmitBtn();
 
-        String expectedResultAddedExperience=companyName;
-        String actualResultAddedExperience= pimPage.getActualResultAddedExperience();
-        Assert.assertEquals(expectedResultAddedExperience,actualResultAddedExperience);
+            pimPage.clickSubmitBtn();
 
+            String expectedResultAddedExperience = companyName;
+            String actualResultAddedExperience = pimPage.getActualResultAddedExperience();
+            Assert.assertEquals(expectedResultAddedExperience, actualResultAddedExperience);
 
-    }
 
+        }
 
-    @Test
-    public void editTaxExemptionOFAnEmployee(){
-        LoginPage loginPage = new LoginPage(getDriver());
-        DashbordPage dashbordPage = new DashbordPage(getDriver());
-        PIMPage pimPage = new PIMPage(getDriver());
 
-        String expectedTitle = "OrangeHRM";
-        String actualTitle = driver.getTitle();
-        Assert.assertEquals(expectedTitle, actualTitle);
+        @Test(dataProvider = "loginCredentials")
+        public void editTaxExemptionOFAnEmployee(String validUsername, String validPassword) {
+            LoginPage loginPage = new LoginPage(getDriver());
+            DashbordPage dashbordPage = new DashbordPage(getDriver());
+            PIMPage pimPage = new PIMPage(getDriver());
 
+            String expectedTitle = "OrangeHRM";
+            String actualTitle = driver.getTitle();
+            Assert.assertEquals(expectedTitle, actualTitle);
 
-        //enter username,enter password, and click on login button
 
-        loginPage.enterUsername(validUsername);
+            //enter username,enter password, and click on login button
 
+            loginPage.enterUsername(validUsername);
 
-        loginPage.enterPassword(validPassword);
 
-        loginPage.clickOnLoginBtn();
+            loginPage.enterPassword(validPassword);
 
-        //check user is logged in
-        String expectedHomePage = "Dashboard";
-        String actualHomePage = dashbordPage.getHraderText();
-        Assert.assertEquals(expectedHomePage, actualHomePage);
+            loginPage.clickOnLoginBtn();
 
+            //check user is logged in
+            String expectedHomePage = "Dashboard";
+            String actualHomePage = dashbordPage.getHraderText();
+            Assert.assertEquals(expectedHomePage, actualHomePage);
 
 
-        waitFor(5);
-        //click on PIM
-        dashbordPage.searchOptionOnSearchBar("PIM");
+            waitFor(5);
+            //click on PIM
+            dashbordPage.searchOptionOnSearchBar("PIM");
 
-        dashbordPage.clickOnPimOption();
+            dashbordPage.clickOnPimOption();
 
-        pimPage.clickOnEditBtn();
+            pimPage.clickOnEditBtn();
 
-        pimPage.clickOnTaxExemptionBtn();
+            pimPage.clickOnTaxExemptionBtn();
 
-        pimPage.dropDownList1();
+            pimPage.dropDownList1();
 
-        pimPage.typeTaxExemption("23");
+            pimPage.typeTaxExemption("23");
 
-        waitFor(5);
+            waitFor(5);
 
-        pimPage.dropDownList2();
+            pimPage.dropDownList2();
 
-        pimPage.typeTaxExemptions2("23");
+            pimPage.typeTaxExemptions2("23");
 
-        waitFor(5);
+            waitFor(5);
 
-        pimPage.dropDownListOption3();
-        waitFor(5);
-        pimPage.dropDownList4();
-        waitFor(5);
-        pimPage.clickOnSubmitButtonTaxExemption();
+            pimPage.dropDownListOption3();
+            waitFor(5);
+            pimPage.dropDownList4();
+            waitFor(5);
+            pimPage.clickOnSubmitButtonTaxExemption();
 
-        takeScreenshot("orangeHRM","EditTaxExemptions");
+            takeScreenshot("orangeHRM", "EditTaxExemptions");
 
-    }
+        }
 
 
+        @Test(dataProvider = "loginCredentials")
+        public void deleteEmployee(String validUsername, String validPassword) {
+            LoginPage loginPage = new LoginPage(getDriver());
+            DashbordPage dashbordPage = new DashbordPage(getDriver());
+            PIMPage pimPage = new PIMPage(getDriver());
 
-    public void deleteEmployee(){
-        LoginPage loginPage = new LoginPage(getDriver());
-        DashbordPage dashbordPage = new DashbordPage(getDriver());
-        PIMPage pimPage = new PIMPage(getDriver());
+            String expectedTitle = "OrangeHRM";
+            String actualTitle = driver.getTitle();
+            Assert.assertEquals(expectedTitle, actualTitle);
 
-        String expectedTitle = "OrangeHRM";
-        String actualTitle = driver.getTitle();
-        Assert.assertEquals(expectedTitle, actualTitle);
 
+            //enter username,enter password, and click on login button
 
-        //enter username,enter password, and click on login button
+            loginPage.enterUsername(validUsername);
 
-        loginPage.enterUsername(validUsername);
 
+            loginPage.enterPassword(validPassword);
 
-        loginPage.enterPassword(validPassword);
+            loginPage.clickOnLoginBtn();
 
-        loginPage.clickOnLoginBtn();
+            //check user is logged in
+            String expectedHomePage = "Dashboard";
+            String actualHomePage = dashbordPage.getHraderText();
+            Assert.assertEquals(expectedHomePage, actualHomePage);
 
-        //check user is logged in
-        String expectedHomePage = "Dashboard";
-        String actualHomePage = dashbordPage.getHraderText();
-        Assert.assertEquals(expectedHomePage, actualHomePage);
 
+            waitFor(5);
+            //click on PIM
+            dashbordPage.searchOptionOnSearchBar("PIM");
 
+            dashbordPage.clickOnPimOption();
 
-        waitFor(5);
-        //click on PIM
-        dashbordPage.searchOptionOnSearchBar("PIM");
-
-        dashbordPage.clickOnPimOption();
-
-        pimPage.clickOnDeleteIcon();
-        pimPage.clickOnYesDeleteButton();
+            pimPage.clickOnDeleteIcon();
+            pimPage.clickOnYesDeleteButton();
 //
-        waitFor(2);
+            waitFor(2);
 
 
+            takeScreenshot("orangeHRM", "deleteEmployeePIM");
 
-        takeScreenshot("orangeHRM","deleteEmployeePIM");
 
+        }
 
     }
 
 }
-

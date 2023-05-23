@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;
 import us.piit.pages.orangeHRM.DashbordPage;
@@ -21,13 +22,55 @@ public class TimeSection extends CommonAPI {
 
     Logger log = LogManager.getLogger(TimeSection.class.getName());
 
-    Properties prop = Utility.loadProperties();
-    String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
-    String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+    @DataProvider(name = "loginCredentials")
+    public Object[][] getLoginCredentials() {
+        Properties prop = Utility.loadProperties();
+        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
 
+        return new Object[][]{
+                {validUsername, validPassword}
 
+        };
+    }
+    @DataProvider(name = "addCustomer")
+    public Object[][] newCustomerCredentials() {
+        Properties prop = Utility.loadProperties();
+        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+        String name = "PNT";
+        String description="This is a simple test";
+        return new Object[][]{
+                {validUsername, validPassword,name,description}
 
-    public void editCustomerInfo() {
+        };
+    }
+    @DataProvider(name = "addCustomer1")
+    public Object[][] newCustomerCredentials1() {
+        Properties prop = Utility.loadProperties();
+        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+        String name = "PNT1";
+        String description="This is a simple test";
+        return new Object[][]{
+                {validUsername, validPassword,name,description}
+
+        };
+    }
+    @DataProvider(name = "addCustomer2")
+    public Object[][] newCustomerCredentials2() {
+        Properties prop = Utility.loadProperties();
+        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+        String name = "PNT2";
+        String description="This is a simple test";
+        return new Object[][]{
+                {validUsername, validPassword,name,description}
+
+        };
+    }
+//      @Test(dataProvider = "loginCredentials")
+        public void editCustomerInfo(String validUsername, String validPassword) {
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
         TimePage timePAge = new TimePage(getDriver());
@@ -91,8 +134,8 @@ public class TimeSection extends CommonAPI {
 
 
 
-
-    public void addCustomer(){
+//    @Test(dataProvider = "addCustomer")
+        public void addCustomer(String validUsername, String validPassword,String name,String description){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
         TimePage timePAge = new TimePage(getDriver());
@@ -134,19 +177,19 @@ public class TimeSection extends CommonAPI {
         timePAge.clickOnCustomerOption();
 
         timePAge.clickOnAddCustomerBtn();
-        timePAge.typeCustomerNameField("PNT");
-        timePAge.typeCustomerDescriptionField("This is a simple test");
+        timePAge.typeCustomerNameField(name);
+        timePAge.typeCustomerDescriptionField(description);
         timePAge.clickOnSaveNewCustomerBtn();
             waitFor(5);
 
-            String expectedName = "PNT";
+            String expectedName = name;
             String actualName=timePAge.getActualName();
             Assert.assertEquals(expectedName,actualName);
     }
 
 
-
-    public void deleteAddedCustomer(){
+    @Test(dataProvider = "addCustomer2")
+        public void deleteAddedCustomer(String validUsername, String validPassword,String name,String description){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
         TimePage timePAge = new TimePage(getDriver());
@@ -188,13 +231,13 @@ public class TimeSection extends CommonAPI {
         timePAge.clickOnCustomerOption();
 
         timePAge.clickOnAddCustomerBtn();
-        timePAge.typeCustomerNameField("PNT1");
-        timePAge.typeCustomerDescriptionField("This is a simple test");
+        timePAge.typeCustomerNameField(name);
+        timePAge.typeCustomerDescriptionField(description);
         timePAge.clickOnSaveNewCustomerBtn();
         waitFor(5);
 
-        String expectedName = "PNT1";
-        String actualName=timePAge.getActualName1();
+        String expectedName = name;
+        String actualName=timePAge.getActualName2();
         Assert.assertEquals(expectedName,actualName);
 
 
@@ -206,7 +249,7 @@ public class TimeSection extends CommonAPI {
 
 
         // Specify the name you want to check
-        String nameToCheck = "PNT";
+        String nameToCheck = name;
 
 
         // Assert that the name does not exist in the list of customer names
@@ -216,8 +259,8 @@ public class TimeSection extends CommonAPI {
     }
 
 
-    @Test
-    public void addAnExistingCustomer(){
+//       @Test(dataProvider = "addCustomer1")
+        public void addAnExistingCustomer(String validUsername, String validPassword,String name,String description){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
         TimePage timePAge = new TimePage(getDriver());
@@ -259,18 +302,18 @@ public class TimeSection extends CommonAPI {
         timePAge.clickOnCustomerOption();
 
         timePAge.clickOnAddCustomerBtn();
-        timePAge.typeCustomerNameField("PNT1");
-        timePAge.typeCustomerDescriptionField("This is a simple test");
+        timePAge.typeCustomerNameField(name);
+        timePAge.typeCustomerDescriptionField(description);
         timePAge.clickOnSaveNewCustomerBtn();
         waitFor(5);
 
-        String expectedName = "PNT1";
+        String expectedName = name;
         String actualName=timePAge.getActualName1();
         Assert.assertEquals(expectedName,actualName);
 
         timePAge.clickOnAddCustomerBtn();
-        timePAge.typeCustomerNameField("PNT1");
-        timePAge.typeCustomerDescriptionField("This is a simple test");
+        timePAge.typeCustomerNameField(name);
+        timePAge.typeCustomerDescriptionField(description);
         timePAge.clickOnSaveNewCustomerBtn();
 
 

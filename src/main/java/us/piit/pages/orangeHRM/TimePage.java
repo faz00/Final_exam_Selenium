@@ -48,6 +48,9 @@ public class TimePage extends CommonAPI {
 
     @FindBy(xpath = "//div[contains(text(),'PNT1')]")
     WebElement actualName1;
+
+    @FindBy(xpath = "//div[contains(text(),'PNT2')]")
+    WebElement actualName2;
     @FindBy(xpath = "//div[@role='columnheader']//i[@class='oxd-icon bi-check oxd-checkbox-input-icon']")
     WebElement checkBoxToDelete;
 
@@ -114,6 +117,9 @@ public class TimePage extends CommonAPI {
 
     public String getActualName1(){
         return getElementText(actualName1);
+    }
+    public String getActualName2(){
+        return getElementText(actualName2);
     }
     public void clickOnCheckBoxToDelete(){
         clickOn(checkBoxToDelete);
