@@ -15,7 +15,10 @@
             <class name="luma.LoginTest"/>
             <class name="luma.CartTest"/>
             <class name="luma.SearchTest"/>
+            <class name="luma.ProductsTest"/>
             <class name="luma.WishListTest"/>
+            <class name="luma.MyAccountTest"/>
+            <class name="luma.OrderTest"/>
         </classes>
     </test>
 </suite>
