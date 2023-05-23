@@ -8,6 +8,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import us.piit.base.CommonAPI;
 
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
 public class RegisterPage extends CommonAPI {
 
 
@@ -118,7 +121,10 @@ public class RegisterPage extends CommonAPI {
         clickOn(privacyPolicyCheckbox);
         log.info("the privacy policy checkbox is selected successfully");
     }
+public boolean isPrivacyPolicyCheckboxSelected(){
 
+        return privacyPolicyCheckbox.isSelected();
+}
     public void clickSubmitButton() {
         clickOn(submitButton);
         log.info("the submit button is clicked successfully");
@@ -186,6 +192,14 @@ public class RegisterPage extends CommonAPI {
         log.info("the alert message is displayed when registering with an existing email address");
         return alertMessage.isDisplayed();
     }
+
+
+
+
+
+
+
+
 
 
 }

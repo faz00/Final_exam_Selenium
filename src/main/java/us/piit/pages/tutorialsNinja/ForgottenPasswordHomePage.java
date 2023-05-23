@@ -41,6 +41,12 @@ public class ForgottenPasswordHomePage extends CommonAPI {
         return emailInput.getAttribute("placeholder");
 
     }
+    public boolean isEmailInputDisplayed() {
+        log.info("Checking if the email input field is displayed");
+        return emailInput.isDisplayed();
+    }
+
+
     public void resetUserPassword(String email) {
         type(emailInput,email);
         log.info("the user enters email successfully");
@@ -51,6 +57,9 @@ public class ForgottenPasswordHomePage extends CommonAPI {
     public void clickContinueButton(){
         log.info(" the continue button of reset password is clicked successfully");
         clickOn(continueButton);
+    }
+    public boolean isContinuBttnDisp(){
+        return continueButton.isDisplayed();
     }
     public String getResetPasswordSuccessMessage() {
         log.info("a success message is displayed");
@@ -67,11 +76,21 @@ public class ForgottenPasswordHomePage extends CommonAPI {
         backButton.click();
         log.info("the back button clicked successfully");
     }
+    public boolean isBackButtonDisp(){
+        return  backButton.isDisplayed();
+    }
 
     public String getURL(WebDriver driver) {
         log.info("the URL of the page is :"+driver.getCurrentUrl());
         return driver.getCurrentUrl();
     }
+    public boolean isUrlDisp(String expectedUrl,WebDriver driver) {
+        String currentUrl = driver.getCurrentUrl();
+        log.info("Current URL: " + currentUrl);
+        log.info("Expected URL: " + expectedUrl);
+        return currentUrl.equals(expectedUrl);
+    }
+
     public String getEmailValue() {
 
         return  emailInput.getAttribute("value");

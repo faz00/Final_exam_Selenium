@@ -2,6 +2,7 @@ package tutorialsNinja;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import us.piit.utility.Utility;
@@ -147,6 +148,30 @@ import static org.testng.AssertJUnit.assertTrue;
             String actualURL = forgottenPasswordHomePage.getURL(getDriver());
             assertEquals(expectedURL, actualURL,"the URL is not the same");
         }
+// verify the "UI" of the forgotten password page
+        @Test(priority =6, groups = "ui")
+        public void verifyForgottenPasswordPageUI() {
+            // Navigate to the forgotten password page
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+            ForgottenPasswordPage forgottenPasswordPage = new ForgottenPasswordPage(getDriver());
+            ForgottenPasswordHomePage forgottenPasswordHomePage = new ForgottenPasswordHomePage(getDriver());
+
+            // Navigate to the forgot password page
+            forgottenPasswordPage.navigateToForgotPasswordPage();
+
+            // Verify UI elements on the forgotten password page
+            boolean isEmailInputDisplayed = forgottenPasswordHomePage.isEmailInputDisplayed();
+           String expectedURL="https://tutorialsninja.com/demo/index.php?route=account/forgotten";
+
+          Assert.assertTrue(isEmailInputDisplayed,"the email input is not displayed");
+            Assert.assertTrue(forgottenPasswordHomePage.isContinuBttnDisp(), "Submit button is not displayed");
+             Assert.assertTrue(forgottenPasswordHomePage.isBackButtonDisp(), "back button is not displayed");
+             Assert.assertTrue(forgottenPasswordHomePage.isUrlDisp(expectedURL,driver),"the URL is not displayed");
+
+        }
+
 
 
     }

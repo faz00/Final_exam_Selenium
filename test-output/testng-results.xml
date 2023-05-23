@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Extent Report DirectoryC:\Users\My Pc\eclipse-workspace\Final_exam_Selenium\test-output\html]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-05-23T03:45:41 EDT" name="tutorialsNinja test" finished-at="2023-05-23T03:46:44 EDT" duration-ms="63966">
+  <suite started-at="2023-05-23T18:15:45 EDT" name="tutorialsNinja test" finished-at="2023-05-23T18:16:38 EDT" duration-ms="52620">
     <groups>
+      <group name="ui">
+        <method signature="ForgottenPasswordTest.verifyForgottenPasswordPageUI()[pri:6, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" name="verifyForgottenPasswordPageUI" class="tutorialsNinja.ForgottenPasswordTest"/>
+      </group> <!-- ui -->
       <group name="placeHolderTests">
-        <method signature="ForgottenPasswordTest.verifyThePlaceHoldText()[pri:5, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" name="verifyThePlaceHoldText" class="tutorialsNinja.ForgottenPasswordTest"/>
+        <method signature="ForgottenPasswordTest.verifyThePlaceHoldText()[pri:5, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" name="verifyThePlaceHoldText" class="tutorialsNinja.ForgottenPasswordTest"/>
       </group> <!-- placeHolderTests -->
       <group name="resetPasswordTests">
-        <method signature="ForgottenPasswordTest.resetPassForNonRegistredUsers(java.lang.String,java.lang.String)[pri:3, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" name="resetPassForNonRegistredUsers" class="tutorialsNinja.ForgottenPasswordTest"/>
-        <method signature="ForgottenPasswordTest.resetPasswordWithoutEmail()[pri:4, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" name="resetPasswordWithoutEmail" class="tutorialsNinja.ForgottenPasswordTest"/>
+        <method signature="ForgottenPasswordTest.resetPassForNonRegistredUsers(java.lang.String,java.lang.String)[pri:3, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" name="resetPassForNonRegistredUsers" class="tutorialsNinja.ForgottenPasswordTest"/>
+        <method signature="ForgottenPasswordTest.resetPasswordWithoutEmail()[pri:4, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" name="resetPasswordWithoutEmail" class="tutorialsNinja.ForgottenPasswordTest"/>
       </group> <!-- resetPasswordTests -->
       <group name="navigationTests">
-        <method signature="ForgottenPasswordTest.verifyUserNavigatesToTheForgotPasswordPage(java.lang.String)[pri:1, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" name="verifyUserNavigatesToTheForgotPasswordPage" class="tutorialsNinja.ForgottenPasswordTest"/>
-        <method signature="ForgottenPasswordTest.verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd()[pri:2, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" name="verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd" class="tutorialsNinja.ForgottenPasswordTest"/>
+        <method signature="ForgottenPasswordTest.verifyUserNavigatesToTheForgotPasswordPage(java.lang.String)[pri:1, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" name="verifyUserNavigatesToTheForgotPasswordPage" class="tutorialsNinja.ForgottenPasswordTest"/>
+        <method signature="ForgottenPasswordTest.verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd()[pri:2, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" name="verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd" class="tutorialsNinja.ForgottenPasswordTest"/>
       </group> <!-- navigationTests -->
     </groups>
-    <test started-at="2023-05-23T03:45:41 EDT" name=" ForgottenPasswordTest" finished-at="2023-05-23T03:46:44 EDT" duration-ms="63966">
+    <test started-at="2023-05-23T18:15:45 EDT" name=" ForgottenPasswordTest" finished-at="2023-05-23T18:16:38 EDT" duration-ms="52620">
       <class name="tutorialsNinja.ForgottenPasswordTest">
-        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:45:40 EDT" name="extentSetup" finished-at="2023-05-23T03:45:41 EDT" duration-ms="283" status="PASS">
+        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:15:45 EDT" name="extentSetup" finished-at="2023-05-23T18:15:45 EDT" duration-ms="259" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@64b018f3]]>
+                <![CDATA[org.testng.TestRunner@2315052d]]>
               </value>
             </param>
           </params>
@@ -35,11 +38,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- extentSetup -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:45:41 EDT" name="setUp" finished-at="2023-05-23T03:45:51 EDT" duration-ms="10239" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:15:45 EDT" name="setUp" finished-at="2023-05-23T18:15:54 EDT" duration-ms="8811" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[true]]>
+                <![CDATA[false]]>
               </value>
             </param>
             <param index="1">
@@ -54,17 +57,17 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[8]]>
+                <![CDATA[11]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[edge]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[109]]>
+                <![CDATA[112]]>
               </value>
             </param>
             <param index="6">
@@ -76,7 +79,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:45:51 EDT" name="startExtent" finished-at="2023-05-23T03:45:51 EDT" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:15:54 EDT" name="startExtent" finished-at="2023-05-23T18:15:54 EDT" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -87,7 +90,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="verifyUserNavigatesToTheForgotPasswordPage(java.lang.String)[pri:1, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:45:51 EDT" name="verifyUserNavigatesToTheForgotPasswordPage" data-provider="forgotPasswordData" finished-at="2023-05-23T03:45:53 EDT" duration-ms="2378" status="PASS">
+        <test-method signature="verifyUserNavigatesToTheForgotPasswordPage(java.lang.String)[pri:1, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:15:54 EDT" name="verifyUserNavigatesToTheForgotPasswordPage" data-provider="forgotPasswordData" finished-at="2023-05-23T18:15:55 EDT" duration-ms="1403" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -98,26 +101,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserNavigatesToTheForgotPasswordPage -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:45:53 EDT" name="afterEachTestMethod" finished-at="2023-05-23T03:45:55 EDT" duration-ms="1307" status="PASS">
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:15:55 EDT" name="afterEachTestMethod" finished-at="2023-05-23T18:15:56 EDT" duration-ms="775" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserNavigatesToTheForgotPasswordPage status=SUCCESS method=ForgottenPasswordTest.verifyUserNavigatesToTheForgotPasswordPage(java.lang.String)[pri:1, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserNavigatesToTheForgotPasswordPage status=SUCCESS method=ForgottenPasswordTest.verifyUserNavigatesToTheForgotPasswordPage(java.lang.String)[pri:1, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:45:55 EDT" name="tearDownR" finished-at="2023-05-23T03:45:55 EDT" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:15:56 EDT" name="tearDownR" finished-at="2023-05-23T18:15:56 EDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:45:55 EDT" name="setUp" finished-at="2023-05-23T03:46:02 EDT" duration-ms="7849" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:15:56 EDT" name="setUp" finished-at="2023-05-23T18:16:03 EDT" duration-ms="6394" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[true]]>
+                <![CDATA[false]]>
               </value>
             </param>
             <param index="1">
@@ -132,17 +135,17 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[8]]>
+                <![CDATA[11]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[edge]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[109]]>
+                <![CDATA[112]]>
               </value>
             </param>
             <param index="6">
@@ -154,7 +157,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:02 EDT" name="startExtent" finished-at="2023-05-23T03:46:02 EDT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:03 EDT" name="startExtent" finished-at="2023-05-23T18:16:03 EDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -165,30 +168,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd()[pri:2, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:02 EDT" name="verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd" finished-at="2023-05-23T03:46:04 EDT" duration-ms="1809" status="PASS">
+        <test-method signature="verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd()[pri:2, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:03 EDT" name="verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd" finished-at="2023-05-23T18:16:04 EDT" duration-ms="1180" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:04 EDT" name="afterEachTestMethod" finished-at="2023-05-23T03:46:05 EDT" duration-ms="1005" status="PASS">
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:04 EDT" name="afterEachTestMethod" finished-at="2023-05-23T18:16:04 EDT" duration-ms="492" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd status=SUCCESS method=ForgottenPasswordTest.verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd()[pri:2, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0] output={null}]]]>
+                <![CDATA[[TestResult name=verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd status=SUCCESS method=ForgottenPasswordTest.verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd()[pri:2, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:05 EDT" name="tearDownR" finished-at="2023-05-23T03:46:05 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:04 EDT" name="tearDownR" finished-at="2023-05-23T18:16:04 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:05 EDT" name="setUp" finished-at="2023-05-23T03:46:10 EDT" duration-ms="4454" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:04 EDT" name="setUp" finished-at="2023-05-23T18:16:11 EDT" duration-ms="7262" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[true]]>
+                <![CDATA[false]]>
               </value>
             </param>
             <param index="1">
@@ -203,17 +206,17 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[8]]>
+                <![CDATA[11]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[edge]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[109]]>
+                <![CDATA[112]]>
               </value>
             </param>
             <param index="6">
@@ -225,7 +228,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:10 EDT" name="startExtent" finished-at="2023-05-23T03:46:10 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:11 EDT" name="startExtent" finished-at="2023-05-23T18:16:11 EDT" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -236,7 +239,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="resetPassForNonRegistredUsers(java.lang.String,java.lang.String)[pri:3, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:10 EDT" name="resetPassForNonRegistredUsers" data-provider="emailData" finished-at="2023-05-23T03:46:16 EDT" duration-ms="6245" status="PASS">
+        <test-method signature="resetPassForNonRegistredUsers(java.lang.String,java.lang.String)[pri:3, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:11 EDT" name="resetPassForNonRegistredUsers" data-provider="emailData" finished-at="2023-05-23T18:16:14 EDT" duration-ms="2947" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -252,26 +255,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resetPassForNonRegistredUsers -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:16 EDT" name="afterEachTestMethod" finished-at="2023-05-23T03:46:17 EDT" duration-ms="934" status="PASS">
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:14 EDT" name="afterEachTestMethod" finished-at="2023-05-23T18:16:15 EDT" duration-ms="378" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=resetPassForNonRegistredUsers status=SUCCESS method=ForgottenPasswordTest.resetPassForNonRegistredUsers(java.lang.String,java.lang.String)[pri:3, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0] output={null}]]]>
+                <![CDATA[[TestResult name=resetPassForNonRegistredUsers status=SUCCESS method=ForgottenPasswordTest.resetPassForNonRegistredUsers(java.lang.String,java.lang.String)[pri:3, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:17 EDT" name="tearDownR" finished-at="2023-05-23T03:46:17 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:15 EDT" name="tearDownR" finished-at="2023-05-23T18:16:15 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:17 EDT" name="setUp" finished-at="2023-05-23T03:46:23 EDT" duration-ms="6458" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:15 EDT" name="setUp" finished-at="2023-05-23T18:16:21 EDT" duration-ms="6664" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[true]]>
+                <![CDATA[false]]>
               </value>
             </param>
             <param index="1">
@@ -286,17 +289,17 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[8]]>
+                <![CDATA[11]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[edge]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[109]]>
+                <![CDATA[112]]>
               </value>
             </param>
             <param index="6">
@@ -308,7 +311,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:23 EDT" name="startExtent" finished-at="2023-05-23T03:46:23 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:21 EDT" name="startExtent" finished-at="2023-05-23T18:16:21 EDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -319,30 +322,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="resetPasswordWithoutEmail()[pri:4, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:23 EDT" name="resetPasswordWithoutEmail" finished-at="2023-05-23T03:46:25 EDT" duration-ms="2068" status="PASS">
+        <test-method signature="resetPasswordWithoutEmail()[pri:4, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:21 EDT" name="resetPasswordWithoutEmail" finished-at="2023-05-23T18:16:23 EDT" duration-ms="1221" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resetPasswordWithoutEmail -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:25 EDT" name="afterEachTestMethod" finished-at="2023-05-23T03:46:26 EDT" duration-ms="717" status="PASS">
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:23 EDT" name="afterEachTestMethod" finished-at="2023-05-23T18:16:23 EDT" duration-ms="367" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=resetPasswordWithoutEmail status=SUCCESS method=ForgottenPasswordTest.resetPasswordWithoutEmail()[pri:4, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0] output={null}]]]>
+                <![CDATA[[TestResult name=resetPasswordWithoutEmail status=SUCCESS method=ForgottenPasswordTest.resetPasswordWithoutEmail()[pri:4, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:26 EDT" name="tearDownR" finished-at="2023-05-23T03:46:26 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:23 EDT" name="tearDownR" finished-at="2023-05-23T18:16:23 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:26 EDT" name="setUp" finished-at="2023-05-23T03:46:41 EDT" duration-ms="14692" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:23 EDT" name="setUp" finished-at="2023-05-23T18:16:30 EDT" duration-ms="6897" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[true]]>
+                <![CDATA[false]]>
               </value>
             </param>
             <param index="1">
@@ -357,17 +360,17 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[8]]>
+                <![CDATA[11]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[edge]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[109]]>
+                <![CDATA[112]]>
               </value>
             </param>
             <param index="6">
@@ -379,7 +382,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:41 EDT" name="startExtent" finished-at="2023-05-23T03:46:41 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:30 EDT" name="startExtent" finished-at="2023-05-23T18:16:30 EDT" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -390,26 +393,97 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="verifyThePlaceHoldText()[pri:5, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:41 EDT" name="verifyThePlaceHoldText" finished-at="2023-05-23T03:46:43 EDT" duration-ms="2104" status="PASS">
+        <test-method signature="verifyThePlaceHoldText()[pri:5, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:30 EDT" name="verifyThePlaceHoldText" finished-at="2023-05-23T18:16:31 EDT" duration-ms="575" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyThePlaceHoldText -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:43 EDT" name="afterEachTestMethod" finished-at="2023-05-23T03:46:44 EDT" duration-ms="1575" status="PASS">
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:31 EDT" name="afterEachTestMethod" finished-at="2023-05-23T18:16:31 EDT" duration-ms="368" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyThePlaceHoldText status=SUCCESS method=ForgottenPasswordTest.verifyThePlaceHoldText()[pri:5, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0] output={null}]]]>
+                <![CDATA[[TestResult name=verifyThePlaceHoldText status=SUCCESS method=ForgottenPasswordTest.verifyThePlaceHoldText()[pri:5, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:44 EDT" name="tearDownR" finished-at="2023-05-23T03:46:44 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:31 EDT" name="tearDownR" finished-at="2023-05-23T18:16:31 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:44 EDT" name="generateReport" finished-at="2023-05-23T03:46:45 EDT" duration-ms="46" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:31 EDT" name="setUp" finished-at="2023-05-23T18:16:37 EDT" duration-ms="5643" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[112]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://tutorialsninja.com/demo/index.php?route=account/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:37 EDT" name="startExtent" finished-at="2023-05-23T18:16:37 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tutorialsNinja.ForgottenPasswordTest.verifyForgottenPasswordPageUI()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method signature="verifyForgottenPasswordPageUI()[pri:6, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:37 EDT" name="verifyForgottenPasswordPageUI" finished-at="2023-05-23T18:16:37 EDT" duration-ms="728" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyForgottenPasswordPageUI -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:37 EDT" name="afterEachTestMethod" finished-at="2023-05-23T18:16:38 EDT" duration-ms="401" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyForgottenPasswordPageUI status=SUCCESS method=ForgottenPasswordTest.verifyForgottenPasswordPageUI()[pri:6, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:38 EDT" name="tearDownR" finished-at="2023-05-23T18:16:38 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownR -->
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@eda25e5]" started-at="2023-05-23T18:16:38 EDT" name="generateReport" finished-at="2023-05-23T18:16:38 EDT" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->

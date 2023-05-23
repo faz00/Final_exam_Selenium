@@ -3,24 +3,24 @@
 <suite name="Failed suite [tutorialsNinja test]" guice-stage="DEVELOPMENT">
   <parameter name="useCloudEnv" value="false"/>
   <parameter name="os" value="windows"/>
-  <parameter name="osVersion" value="8"/>
+  <parameter name="osVersion" value="11"/>
   <parameter name="envName" value="browserstack"/>
-  <parameter name="browserVersion" value="109"/>
+  <parameter name="browserVersion" value="112"/>
   <parameter name="browserName" value="chrome"/>
   <parameter name="url" value="https://tutorialsninja.com/demo/index.php?route=account/login"/>
-  <test thread-count="5" name=" SearchProductsTest(failed)">
+  <test thread-count="5" name=" ForgottenPasswordTest(failed)">
     <classes>
-      <class name="tutorialsNinja.SearchProductsTest">
+      <class name="tutorialsNinja.ForgottenPasswordTest">
         <methods>
-          <include name="afterEachTestMethod"/>
           <include name="setUp"/>
+          <include name="afterEachTestMethod"/>
           <include name="startExtent"/>
           <include name="tearDownR"/>
           <include name="extentSetup"/>
-          <include name="verifyProductDisplayCount"/>
+          <include name="verifyForgottenPasswordPageUI"/>
           <include name="generateReport"/>
         </methods>
-      </class> <!-- tutorialsNinja.SearchProductsTest -->
+      </class> <!-- tutorialsNinja.ForgottenPasswordTest -->
     </classes>
-  </test> <!--  SearchProductsTest(failed) -->
+  </test> <!--  ForgottenPasswordTest(failed) -->
 </suite> <!-- Failed suite [tutorialsNinja test] -->

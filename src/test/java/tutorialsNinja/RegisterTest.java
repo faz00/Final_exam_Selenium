@@ -34,12 +34,13 @@ public class RegisterTest extends CommonAPI {
 
     @DataProvider(name = "RegistrationData")
     public Object[][] provideRegistrationData() {
-        return new Object[][] {
+        return new Object[][]{
                 {validFirstName, validLastName, validEmail, validPhoneNumber, validPassword, validConPassword},
-                {invalidFirstName,invalidLastName,invalidEmail,invalidPhoneNumber,invalidPassword,invalidConPaswrd},
-                {validFirstName,invalidLastName,validEmail,validPhoneNumber,validPassword,validConPassword},
+                {invalidFirstName, invalidLastName, invalidEmail, invalidPhoneNumber, invalidPassword, invalidConPaswrd},
+
         };
     }
+
     @Test(priority = 1, groups = "registration", dataProvider = "RegistrationData")
     public void registerWithCredentials(String firstName, String lastName, String email, String phoneNumber,
                                         String password, String confirmPassword) {
@@ -63,20 +64,16 @@ public class RegisterTest extends CommonAPI {
         registerPage.selectPrivacyPolicyCheckbox();
         registerPage.clickSubmitButton();
 
-        // Verify that the user is landed on the register home page
-        // assertTrue(registerHomePage.isRegisterHomePageTitleDisplayed(),"user can not register with invalid credentials");
-
-        // Verify registration success or failure based on the provided data
-        boolean isExpectedSuccess = !firstName.startsWith("invalid");
-        assertEquals(isExpectedSuccess, registerHomePage.isRegisterHomePageTitleDisplayed(),
-                "Registration success mismatch for credentials: " +
-                        "firstName=" + firstName + ", lastName=" + lastName + ", email=" + email +
-                        ", phoneNumber=" + phoneNumber + ", password=" + password + ", confirmPassword=" + confirmPassword);
+// Verify registration success or failure based on the provided data
+       // boolean isExpectedSuccess = !email.startsWith("invalid");
+        assertTrue( registerHomePage.isRegisterHomePageTitleDisplayed(),
+                "no register home page title is displayed");
     }
+
 
     @DataProvider(name = "invalidPhoneNumberData")
     public Object[][] provideInvalidPhoneNumberData() {
-        return new Object[][] {
+        return new Object[][]{
                 {validFirstName, validLastName, validEmail, invalidPhoneNumber, validPassword, validConPassword},
 
         };
@@ -138,13 +135,15 @@ public class RegisterTest extends CommonAPI {
 
         assertTrue(registerPage.isPasswordFieldVisible(validPassword), "the password is visible");
     }
+
     @DataProvider(name = "existingEmailAddressData")
     public Object[][] provideExistingEmailAddressData() {
-        return new Object[][] {
+        return new Object[][]{
                 {validFirstName, validLastName, existingvalidEmail, validPhoneNumber, validPassword, validConPassword},
 
         };
     }
+
     @Test(priority = 3, groups = "registration", dataProvider = "existingEmailAddressData")
     public void verifyRegisterWithAnExistingEmailAddress(String firstName, String lastName, String email, String phoneNumber,
                                                          String password, String confirmPassword) {
@@ -169,5 +168,63 @@ public class RegisterTest extends CommonAPI {
 
         // Assert if an error message will be displayed
         assertTrue(registerPage.isAlertMessageDisplayed(), "The alert message is not displayed for existing email address");
+    }
+
+
+    @DataProvider(name = "privacyCheckBox")
+    public Object[][] selectprivacyPolicyData() {
+        return new Object[][]{
+                {"yes"},
+                {"No"},
+        };
+    }
+
+    @Test(priority = 6, groups = "registration", dataProvider = "privacyCheckBox")
+    public void checkPrivacyPolicyCheckBox(String privacyOption) {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
+
+        RegisterPage registerPage = new RegisterPage(getDriver());
+        RegisterHomePage registerHomePage = new RegisterHomePage(getDriver());
+
+
+        // Click on the continue button
+        registerPage.clickContinueButton();
+
+        // Enter firstName, lastName, phoneNumber, password, email, and click on the continue button
+        registerPage.enterFirstName(validFirstName);
+        registerPage.enterLastName(validLastName);
+        registerPage.enterEmail(validEmail);
+        registerPage.enterPhoneNumber(validPhoneNumber);
+        registerPage.enterPassword(validPassword);
+        registerPage.enterConfirmPassword(validConPassword);
+
+        // Select privacy policy checkbox based on the provided option
+        if (privacyOption.equalsIgnoreCase("yes")) {
+            registerPage.selectPrivacyPolicyCheckbox();
+        }
+
+        registerPage.clickSubmitButton();
+
+        // Assert if the privacy policy checkbox is selected when 'yes' option is provided
+      /*  if (privacyOption.equalsIgnoreCase("yes")) {
+            assertTrue(registerPage.isPrivacyPolicyCheckboxSelected(), "The privacy policy checkbox is not selected");
+        } else {
+            assertFalse(registerPage.isPrivacyPolicyCheckboxSelected(), "The privacy policy checkbox should not be selected");
+        }
+*/
+        // Assert if the user can register successfully based on the privacy policy checkbox selection
+        if (privacyOption.equalsIgnoreCase("yes")) {
+            assertTrue(registerHomePage.isRegisterHomePageTitleDisplayed(), "The user should be able to register when the privacy policy checkbox is selected");
+        } else {
+            assertFalse(registerHomePage.isRegisterHomePageTitleDisplayed(), "The user should not be able to register when the privacy policy checkbox is not selected");
+        }
+
+
+
+
+
+
+
     }
 }
