@@ -3,6 +3,7 @@ package luma;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;
 import us.piit.pages.luma.LoginPage;
@@ -18,9 +19,16 @@ public class LoginTest extends CommonAPI {
     String ValidEmail = prop.getProperty("luma.username");
     String validPassword = prop.getProperty("luma.password");
 
+    @DataProvider(name = "validLoginData")
+    public Object[][] getValidLoginData(){
+        return new Object[][]{
+                {ValidEmail, validPassword}
+        };
+    }
 
-    @Test
-    public void loginWithValidCredentials(){
+
+    @Test(priority = 0, groups = "Login", dataProvider = "validLoginData")
+    public void loginWithValidCredentials(String valid_email, String valid_password){
         LoginPage loginPage = new LoginPage(getDriver());
 
         // Verify that user is on Home page
@@ -32,8 +40,8 @@ public class LoginTest extends CommonAPI {
         loginPage.goToLoginPage();
 
         //enter  username, password, and click on login button
-        loginPage.enterUsername(ValidEmail);
-        loginPage.enterPassword(validPassword);
+        loginPage.enterUsername(valid_email);
+        loginPage.enterPassword(valid_password);
         loginPage.clickOnSignInBtn();
 
         // verify that user is logged in
