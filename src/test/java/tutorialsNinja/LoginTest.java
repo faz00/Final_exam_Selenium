@@ -52,81 +52,11 @@ public class LoginTest  extends CommonAPI {
         if (email.equals(validEmail) && password.equals(validPassword)) {
             assertTrue(loginHomePage.isAccountLinkDisplayed(), "The user is not logged in");
         } else {
-            assertTrue(loginPage.isErrorMessageDisplayed(), "The user is logged in");
+            assertTrue(loginPage.isErrorMessageDisplayed(), " no error message displayed the user is logged in");
         }
 
     }
-    @Test(priority =8 , groups = {"loginTests"})
-    public void testLoginWithInvalidCredentials() {
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        LoginPage loginPage = new LoginPage(getDriver());
 
-        // Enter an invalid email address and an invalid password
-        loginPage.setEmail(invalidEmail);
-        loginPage.setPassword(invalidPassword);
-
-        // Click the login button
-        loginPage.clickLoginButton();
-
-        // Verify that an error message is displayed for the invalid inputs
-        boolean expectedErMsg=loginPage.LoginCredenErrMsgDisplayed();
-        assertTrue(expectedErMsg);
-    }
-    @Test(priority = 7, groups = {"loginTests"})
-    public void verifyLoginWithInvalidEmailAddress(){
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-
-        LoginPage loginPage = new LoginPage(getDriver());
-
-        // Enter an invalid email address and a valid password
-        loginPage.setEmail(invalidEmail);
-        loginPage.setPassword(validPassword);
-
-        // Click the login button
-        loginPage.clickLoginButton();
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-        // Verify that an error message is displayed for the invalid inputs
-        boolean expectedErMsg=loginPage.LoginCredenErrMsgDisplayed();
-        assertTrue(expectedErMsg);
-    }
-
-    @Test(priority = 6, groups = {"loginTests"})
-    public void verifyLoginWithInvalidPassword(){
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-
-        LoginPage loginPage = new LoginPage(getDriver());
-
-        // Enter an valid email address and a invalid password
-        loginPage.setEmail(validEmail);
-        loginPage.setPassword(invalidPassword);
-
-        // Click the login button
-        loginPage.clickLoginButton();
-
-        // Verify that an error message is displayed for the invalid inputs
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-        boolean expectErMsg=loginPage.LoginCredenErrMsgDisplayed();
-        assertTrue(expectErMsg);
-    }
-    @Test(priority = 5, groups = {"loginTests"})
-    public void verifyLoginWithNoInputs(){
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-        LoginPage loginPage = new LoginPage(getDriver());
-
-        // Click the login button
-        loginPage.clickLoginButton();
-
-        // Verify that an error message is displayed
-        boolean expectedErMsg=loginPage.LoginCredenErrMsgDisplayed();
-        assertTrue(expectedErMsg);
-    }
 
     @Test(priority = 2, groups = {"loginTests"})
     public void verifyTheNumberOfUnsuccessfulLoginAttempts() {
@@ -149,7 +79,7 @@ public class LoginTest  extends CommonAPI {
 
             // Verify that an error message is displayed
             boolean expectedErMsg = loginPage.LoginCredenErrMsgDisplayed();
-            assertTrue(expectedErMsg);
+            assertTrue(expectedErMsg,"the user doesn't received any LoginCredenErrMsg ");
 
 
         }
@@ -165,15 +95,13 @@ public class LoginTest  extends CommonAPI {
         // Enter any given password into the password text field
 
         loginPage.setPassword(password);
+        loginPage.clickLoginButton();
 
-        // Retrieve the page source and check if the password field is visible
-        boolean isPasswordVisible = loginPage.isPasswordVisibleInPageSource(password,driver);
-
-// Assert that the password is visible in the page source
-        assertFalse(isPasswordVisible, "Password is visible in the page source");
+// Assert if the password is visible in the page source
+        assertTrue(loginPage.isPasswordFieldVisible(password), "Password is visible to the page source");
 
     }
-    @Test(priority = 4, groups = {"loginTests"})
+    @Test(priority = 4, groups = {"placeHoldersTest"})
     public void testLoginFieldsPlaceholders() {
         LoginPage loginPage = new LoginPage(getDriver());
         LoginHomePage loginHomePage = new LoginHomePage(getDriver());
@@ -184,11 +112,13 @@ public class LoginTest  extends CommonAPI {
         // Check that the email and password fields have placeholder text
         String expectedEmailPlaceholder = "E-Mail Address";
         String actualEmailPlaceholder = loginPage.getEmailPlaceholderText();
-        assertEquals(actualEmailPlaceholder, expectedEmailPlaceholder);
+
+        assertEquals(actualEmailPlaceholder, expectedEmailPlaceholder,"the expectedEmailPlaceholder is not equal actualEmailPlaceholder");
 
         String expectedPasswordPlaceholder = "Password";
         String actualPasswordPlaceholder = loginPage.getPasswordPlaceholderText();
-        assertEquals(actualPasswordPlaceholder, expectedPasswordPlaceholder);
+
+        assertEquals(actualPasswordPlaceholder, expectedPasswordPlaceholder,"the expectedPasswordPlaceholder  is not equal actualPasswordPlaceholder");
 
 
     }

@@ -15,7 +15,6 @@
           <include name="afterEachTestMethod"/>
           <include name="setUp"/>
           <include name="startExtent"/>
-          <include name="verifyUsernavigatedToTHeSearchHomePage" invocation-numbers="1"/>
           <include name="tearDownR"/>
           <include name="extentSetup"/>
           <include name="verifyProductDisplayCount"/>

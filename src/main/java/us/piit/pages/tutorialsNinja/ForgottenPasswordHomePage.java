@@ -33,6 +33,7 @@ public class ForgottenPasswordHomePage extends CommonAPI {
 
 
     public String getForgPassHeaderTitle() {
+        log.info("the user is able to see the forget password header title  which is :"+forgetPassHeader.getText());
         return forgetPassHeader.getText();
     }
     public String getEmailInput(){
@@ -48,6 +49,7 @@ public class ForgottenPasswordHomePage extends CommonAPI {
 
     }
     public void clickContinueButton(){
+        log.info(" the continue button of reset password is clicked successfully");
         clickOn(continueButton);
     }
     public String getResetPasswordSuccessMessage() {

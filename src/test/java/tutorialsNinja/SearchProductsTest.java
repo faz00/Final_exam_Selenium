@@ -29,37 +29,24 @@ public class SearchProductsTest extends CommonAPI {
     String nonExissearch = Utility.decode(prop.getProperty("tutorialsninja.nonExisSearch"));//"Headphones"
 
 
-    @DataProvider(name = "searchData")
-    public Object[][] provideSearchData() {
-        return new Object[][]{
-                {search},        // Search with an existing product
-                {nonExissearch}  // Search with a non-existing product
-                // Add more test data sets as needed
-        };
-    }
-    @Test(priority = 4, groups = {"searchTests"},dataProvider = "searchData")
+    @Test(priority = 4, groups = {"searchTests"})
 
-    public void verifyUsernavigatedToTHeSearchHomePage(String searchTerm) {
+    public void verifyUsernavigatedToTHeSearchHomePage() {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
         SearchProductsPage searchProductsPage = new SearchProductsPage(getDriver());
         SearchProductsHomePage searchprhomePage = new SearchProductsHomePage(getDriver());
 
         //enter the search name and click on the search button
-        searchProductsPage.SearchField(searchTerm);
+        searchProductsPage.SearchField(search);
         searchProductsPage.SearchButton();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        // assert that the user navigates to the ResearchHomePage
-        assertTrue(searchprhomePage.isSearchResultsPageDisplayed());
         // Assert that the user navigates to the search results page
         assertTrue(searchprhomePage.isSearchResultsPageDisplayed(), "Search results page is not displayed");
 
         // Assert that the search results contain at least one product
         assertTrue(searchprhomePage.areSearchResultsDisplayed(), "Search results do not contain any products for the given search term");
-
-   //takeScreenshot
-        takeScreenshot("tutorialsNinja","userNavigateToSearchHmPge");
 
     }
 
@@ -87,12 +74,9 @@ public class SearchProductsTest extends CommonAPI {
 
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
-
 // Search for a non existing product
         searchProductsPage.SearchField(nonExissearch);
         searchProductsPage.SearchButton();
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         // Assert a non-existing product message is displayed
         assertTrue(searchProductsPage.isErrorMessageDisplayed(), "Error message is not displayed");

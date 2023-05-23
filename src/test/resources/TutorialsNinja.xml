@@ -7,28 +7,27 @@
     <parameter name="osVersion" value="8"></parameter>
     <parameter name="browserVersion" value="109"></parameter>
 
-    <parameter name="browserName" value="chrome"></parameter>
+    <parameter name="browserName" value="edge"></parameter>
     <parameter name="url" value="https://tutorialsninja.com/demo/index.php?route=account/login"></parameter>
 
     <!--<test name=" LoginTest">
           <classes>
               <class name="tutorialsNinja.LoginTest"></class>
           </classes>
-      </test>
-     <test name=" RegisterTest">
+      </test>-->
+     <!--<test name=" RegisterTest">
           <classes>
               <class name="tutorialsNinja.RegisterTest"></class>
           </classes>
-      </test>
-      <test name=" ForgottenPasswordTest">
+      </test>-->
+  <test name=" ForgottenPasswordTest">
           <classes>
               <class name="tutorialsNinja.ForgottenPasswordTest"></class>
           </classes>
-      </test>-->
-      <test name=" SearchProductsTest">
-          <classes>
-              <class name="tutorialsNinja.SearchProductsTest"></class>
-          </classes>
       </test>
-
+   <!-- <test name=" SearchProductsTest">
+       <classes>
+           <class name="tutorialsNinja.SearchProductsTest"></class>
+       </classes>
+   </test>-->
 </suite>

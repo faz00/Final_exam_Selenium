@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Extent Report DirectoryC:\Users\My Pc\eclipse-workspace\Final_exam_Selenium\test-output\html]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-05-22T03:53:06 EDT" name="tutorialsNinja test" finished-at="2023-05-22T03:54:00 EDT" duration-ms="53977">
+  <suite started-at="2023-05-23T03:45:41 EDT" name="tutorialsNinja test" finished-at="2023-05-23T03:46:44 EDT" duration-ms="63966">
     <groups>
-      <group name="searchTests">
-        <method signature="SearchProductsTest.verifySearchWithANonExistingProduct()[pri:1, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" name="verifySearchWithANonExistingProduct" class="tutorialsNinja.SearchProductsTest"/>
-        <method signature="SearchProductsTest.verifySearchWithAnExistingProduct()[pri:2, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" name="verifySearchWithAnExistingProduct" class="tutorialsNinja.SearchProductsTest"/>
-        <method signature="SearchProductsTest.verifyProductDisplayCount()[pri:3, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" name="verifyProductDisplayCount" class="tutorialsNinja.SearchProductsTest"/>
-        <method signature="SearchProductsTest.verifyUsernavigatedToTHeSearchHomePage(java.lang.String)[pri:4, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" name="verifyUsernavigatedToTHeSearchHomePage" class="tutorialsNinja.SearchProductsTest"/>
-      </group> <!-- searchTests -->
+      <group name="placeHolderTests">
+        <method signature="ForgottenPasswordTest.verifyThePlaceHoldText()[pri:5, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" name="verifyThePlaceHoldText" class="tutorialsNinja.ForgottenPasswordTest"/>
+      </group> <!-- placeHolderTests -->
+      <group name="resetPasswordTests">
+        <method signature="ForgottenPasswordTest.resetPassForNonRegistredUsers(java.lang.String,java.lang.String)[pri:3, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" name="resetPassForNonRegistredUsers" class="tutorialsNinja.ForgottenPasswordTest"/>
+        <method signature="ForgottenPasswordTest.resetPasswordWithoutEmail()[pri:4, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" name="resetPasswordWithoutEmail" class="tutorialsNinja.ForgottenPasswordTest"/>
+      </group> <!-- resetPasswordTests -->
+      <group name="navigationTests">
+        <method signature="ForgottenPasswordTest.verifyUserNavigatesToTheForgotPasswordPage(java.lang.String)[pri:1, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" name="verifyUserNavigatesToTheForgotPasswordPage" class="tutorialsNinja.ForgottenPasswordTest"/>
+        <method signature="ForgottenPasswordTest.verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd()[pri:2, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" name="verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd" class="tutorialsNinja.ForgottenPasswordTest"/>
+      </group> <!-- navigationTests -->
     </groups>
-    <test started-at="2023-05-22T03:53:06 EDT" name=" SearchProductsTest" finished-at="2023-05-22T03:54:00 EDT" duration-ms="53977">
-      <class name="tutorialsNinja.SearchProductsTest">
-        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:06 EDT" name="extentSetup" finished-at="2023-05-22T03:53:06 EDT" duration-ms="239" status="PASS">
+    <test started-at="2023-05-23T03:45:41 EDT" name=" ForgottenPasswordTest" finished-at="2023-05-23T03:46:44 EDT" duration-ms="63966">
+      <class name="tutorialsNinja.ForgottenPasswordTest">
+        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:45:40 EDT" name="extentSetup" finished-at="2023-05-23T03:45:41 EDT" duration-ms="283" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3009eed7]]>
+                <![CDATA[org.testng.TestRunner@64b018f3]]>
               </value>
             </param>
           </params>
@@ -30,11 +35,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- extentSetup -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:06 EDT" name="setUp" finished-at="2023-05-22T03:53:14 EDT" duration-ms="8202" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:45:41 EDT" name="setUp" finished-at="2023-05-23T03:45:51 EDT" duration-ms="10239" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[false]]>
+                <![CDATA[true]]>
               </value>
             </param>
             <param index="1">
@@ -54,7 +59,7 @@
             </param>
             <param index="4">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[edge]]>
               </value>
             </param>
             <param index="5">
@@ -71,41 +76,48 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:14 EDT" name="startExtent" finished-at="2023-05-22T03:53:14 EDT" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:45:51 EDT" name="startExtent" finished-at="2023-05-23T03:45:51 EDT" duration-ms="9" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tutorialsNinja.SearchProductsTest.verifySearchWithANonExistingProduct()]]>
+                <![CDATA[public void tutorialsNinja.ForgottenPasswordTest.verifyUserNavigatesToTheForgotPasswordPage(java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="verifySearchWithANonExistingProduct()[pri:1, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:14 EDT" name="verifySearchWithANonExistingProduct" finished-at="2023-05-22T03:53:15 EDT" duration-ms="773" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySearchWithANonExistingProduct -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:15 EDT" name="afterEachTestMethod" finished-at="2023-05-22T03:53:16 EDT" duration-ms="650" status="PASS">
+        <test-method signature="verifyUserNavigatesToTheForgotPasswordPage(java.lang.String)[pri:1, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:45:51 EDT" name="verifyUserNavigatesToTheForgotPasswordPage" data-provider="forgotPasswordData" finished-at="2023-05-23T03:45:53 EDT" duration-ms="2378" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifySearchWithANonExistingProduct status=SUCCESS method=SearchProductsTest.verifySearchWithANonExistingProduct()[pri:1, instance:tutorialsNinja.SearchProductsTest@3d2ee678] output={null}]]]>
+                <![CDATA[sunflower"+ generateTimeStamp()+"@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserNavigatesToTheForgotPasswordPage -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:45:53 EDT" name="afterEachTestMethod" finished-at="2023-05-23T03:45:55 EDT" duration-ms="1307" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserNavigatesToTheForgotPasswordPage status=SUCCESS method=ForgottenPasswordTest.verifyUserNavigatesToTheForgotPasswordPage(java.lang.String)[pri:1, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:16 EDT" name="tearDownR" finished-at="2023-05-22T03:53:16 EDT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:45:55 EDT" name="tearDownR" finished-at="2023-05-23T03:45:55 EDT" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:16 EDT" name="setUp" finished-at="2023-05-22T03:53:22 EDT" duration-ms="6079" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:45:55 EDT" name="setUp" finished-at="2023-05-23T03:46:02 EDT" duration-ms="7849" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[false]]>
+                <![CDATA[true]]>
               </value>
             </param>
             <param index="1">
@@ -125,7 +137,7 @@
             </param>
             <param index="4">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[edge]]>
               </value>
             </param>
             <param index="5">
@@ -142,41 +154,41 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:22 EDT" name="startExtent" finished-at="2023-05-22T03:53:22 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:02 EDT" name="startExtent" finished-at="2023-05-23T03:46:02 EDT" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tutorialsNinja.SearchProductsTest.verifySearchWithAnExistingProduct()]]>
+                <![CDATA[public void tutorialsNinja.ForgottenPasswordTest.verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="verifySearchWithAnExistingProduct()[pri:2, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:22 EDT" name="verifySearchWithAnExistingProduct" finished-at="2023-05-22T03:53:23 EDT" duration-ms="1268" status="PASS">
+        <test-method signature="verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd()[pri:2, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:02 EDT" name="verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd" finished-at="2023-05-23T03:46:04 EDT" duration-ms="1809" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySearchWithAnExistingProduct -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:23 EDT" name="afterEachTestMethod" finished-at="2023-05-22T03:53:23 EDT" duration-ms="439" status="PASS">
+        </test-method> <!-- verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:04 EDT" name="afterEachTestMethod" finished-at="2023-05-23T03:46:05 EDT" duration-ms="1005" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifySearchWithAnExistingProduct status=SUCCESS method=SearchProductsTest.verifySearchWithAnExistingProduct()[pri:2, instance:tutorialsNinja.SearchProductsTest@3d2ee678] output={null}]]]>
+                <![CDATA[[TestResult name=verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd status=SUCCESS method=ForgottenPasswordTest.verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd()[pri:2, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:23 EDT" name="tearDownR" finished-at="2023-05-22T03:53:23 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:05 EDT" name="tearDownR" finished-at="2023-05-23T03:46:05 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:23 EDT" name="setUp" finished-at="2023-05-22T03:53:29 EDT" duration-ms="5902" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:05 EDT" name="setUp" finished-at="2023-05-23T03:46:10 EDT" duration-ms="4454" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[false]]>
+                <![CDATA[true]]>
               </value>
             </param>
             <param index="1">
@@ -196,7 +208,7 @@
             </param>
             <param index="4">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[edge]]>
               </value>
             </param>
             <param index="5">
@@ -213,82 +225,53 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:29 EDT" name="startExtent" finished-at="2023-05-22T03:53:29 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:10 EDT" name="startExtent" finished-at="2023-05-23T03:46:10 EDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tutorialsNinja.SearchProductsTest.verifyProductDisplayCount()]]>
+                <![CDATA[public void tutorialsNinja.ForgottenPasswordTest.resetPassForNonRegistredUsers(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="verifyProductDisplayCount()[pri:3, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:29 EDT" name="verifyProductDisplayCount" finished-at="2023-05-22T03:53:32 EDT" duration-ms="2270" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Displayed product count doesn't match the selected count expected [100] but found [3]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Displayed product count doesn't match the selected count expected [100] but found [3]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1577)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:1418)
-at org.testng.Assert.assertEquals(Assert.java:1382)
-at tutorialsNinja.SearchProductsTest.verifyProductDisplayCount(SearchProductsTest.java:132)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyProductDisplayCount -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:32 EDT" name="afterEachTestMethod" finished-at="2023-05-22T03:53:32 EDT" duration-ms="384" status="PASS">
+        <test-method signature="resetPassForNonRegistredUsers(java.lang.String,java.lang.String)[pri:3, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:10 EDT" name="resetPassForNonRegistredUsers" data-provider="emailData" finished-at="2023-05-23T03:46:16 EDT" duration-ms="6245" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyProductDisplayCount status=FAILURE method=SearchProductsTest.verifyProductDisplayCount()[pri:3, instance:tutorialsNinja.SearchProductsTest@3d2ee678] output={null}]]]>
+                <![CDATA[sunflower"+ generateTimeStamp()+"@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sun@]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPassForNonRegistredUsers -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:16 EDT" name="afterEachTestMethod" finished-at="2023-05-23T03:46:17 EDT" duration-ms="934" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=resetPassForNonRegistredUsers status=SUCCESS method=ForgottenPasswordTest.resetPassForNonRegistredUsers(java.lang.String,java.lang.String)[pri:3, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:32 EDT" name="tearDownR" finished-at="2023-05-22T03:53:32 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:17 EDT" name="tearDownR" finished-at="2023-05-23T03:46:17 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:32 EDT" name="setUp" finished-at="2023-05-22T03:53:40 EDT" duration-ms="7592" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:17 EDT" name="setUp" finished-at="2023-05-23T03:46:23 EDT" duration-ms="6458" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[false]]>
+                <![CDATA[true]]>
               </value>
             </param>
             <param index="1">
@@ -308,7 +291,7 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
             </param>
             <param index="4">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[edge]]>
               </value>
             </param>
             <param index="5">
@@ -325,48 +308,41 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:40 EDT" name="startExtent" finished-at="2023-05-22T03:53:40 EDT" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:23 EDT" name="startExtent" finished-at="2023-05-23T03:46:23 EDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tutorialsNinja.SearchProductsTest.verifyUsernavigatedToTHeSearchHomePage(java.lang.String)]]>
+                <![CDATA[public void tutorialsNinja.ForgottenPasswordTest.resetPasswordWithoutEmail()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="verifyUsernavigatedToTHeSearchHomePage(java.lang.String)[pri:4, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:40 EDT" name="verifyUsernavigatedToTHeSearchHomePage" data-provider="searchData" finished-at="2023-05-22T03:53:41 EDT" duration-ms="1487" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[macbook]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="resetPasswordWithoutEmail()[pri:4, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:23 EDT" name="resetPasswordWithoutEmail" finished-at="2023-05-23T03:46:25 EDT" duration-ms="2068" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUsernavigatedToTHeSearchHomePage -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:41 EDT" name="afterEachTestMethod" finished-at="2023-05-22T03:53:41 EDT" duration-ms="375" status="PASS">
+        </test-method> <!-- resetPasswordWithoutEmail -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:25 EDT" name="afterEachTestMethod" finished-at="2023-05-23T03:46:26 EDT" duration-ms="717" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUsernavigatedToTHeSearchHomePage status=SUCCESS method=SearchProductsTest.verifyUsernavigatedToTHeSearchHomePage(java.lang.String)[pri:4, instance:tutorialsNinja.SearchProductsTest@3d2ee678] output={null}]]]>
+                <![CDATA[[TestResult name=resetPasswordWithoutEmail status=SUCCESS method=ForgottenPasswordTest.resetPasswordWithoutEmail()[pri:4, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:41 EDT" name="tearDownR" finished-at="2023-05-22T03:53:41 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:26 EDT" name="tearDownR" finished-at="2023-05-23T03:46:26 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:41 EDT" name="setUp" finished-at="2023-05-22T03:53:48 EDT" duration-ms="7036" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:26 EDT" name="setUp" finished-at="2023-05-23T03:46:41 EDT" duration-ms="14692" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[false]]>
+                <![CDATA[true]]>
               </value>
             </param>
             <param index="1">
@@ -386,7 +362,7 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
             </param>
             <param index="4">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[edge]]>
               </value>
             </param>
             <param index="5">
@@ -403,86 +379,41 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:48 EDT" name="startExtent" finished-at="2023-05-22T03:53:48 EDT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:41 EDT" name="startExtent" finished-at="2023-05-23T03:46:41 EDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tutorialsNinja.SearchProductsTest.verifyUsernavigatedToTHeSearchHomePage(java.lang.String)]]>
+                <![CDATA[public void tutorialsNinja.ForgottenPasswordTest.verifyThePlaceHoldText()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="verifyUsernavigatedToTHeSearchHomePage(java.lang.String)[pri:4, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:48 EDT" name="verifyUsernavigatedToTHeSearchHomePage" data-provider="searchData" finished-at="2023-05-22T03:53:59 EDT" duration-ms="10818" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[headphones]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Search results do not contain any products for the given search term expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Search results do not contain any products for the given search term expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1577)
-at org.testng.Assert.assertTrue(Assert.java:56)
-at tutorialsNinja.SearchProductsTest.verifyUsernavigatedToTHeSearchHomePage(SearchProductsTest.java:59)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="verifyThePlaceHoldText()[pri:5, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:41 EDT" name="verifyThePlaceHoldText" finished-at="2023-05-23T03:46:43 EDT" duration-ms="2104" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUsernavigatedToTHeSearchHomePage -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:53:59 EDT" name="afterEachTestMethod" finished-at="2023-05-22T03:54:00 EDT" duration-ms="588" status="PASS">
+        </test-method> <!-- verifyThePlaceHoldText -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:43 EDT" name="afterEachTestMethod" finished-at="2023-05-23T03:46:44 EDT" duration-ms="1575" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUsernavigatedToTHeSearchHomePage status=FAILURE method=SearchProductsTest.verifyUsernavigatedToTHeSearchHomePage(java.lang.String)[pri:4, instance:tutorialsNinja.SearchProductsTest@3d2ee678] output={null}]]]>
+                <![CDATA[[TestResult name=verifyThePlaceHoldText status=SUCCESS method=ForgottenPasswordTest.verifyThePlaceHoldText()[pri:5, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:54:00 EDT" name="tearDownR" finished-at="2023-05-22T03:54:00 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:44 EDT" name="tearDownR" finished-at="2023-05-23T03:46:44 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:tutorialsNinja.SearchProductsTest@3d2ee678]" started-at="2023-05-22T03:54:00 EDT" name="generateReport" finished-at="2023-05-22T03:54:00 EDT" duration-ms="43" status="PASS">
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:tutorialsNinja.ForgottenPasswordTest@4b6690c0]" started-at="2023-05-23T03:46:44 EDT" name="generateReport" finished-at="2023-05-23T03:46:45 EDT" duration-ms="46" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-      </class> <!-- tutorialsNinja.SearchProductsTest -->
-    </test> <!--  SearchProductsTest -->
+      </class> <!-- tutorialsNinja.ForgottenPasswordTest -->
+    </test> <!--  ForgottenPasswordTest -->
   </suite> <!-- tutorialsNinja test -->
 </testng-results>

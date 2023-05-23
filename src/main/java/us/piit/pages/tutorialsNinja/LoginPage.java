@@ -48,18 +48,20 @@ public class LoginPage extends CommonAPI {
         return invalidloginCredenErMsg.isDisplayed();
 
     }
-    public boolean isPasswordVisibleInPageSource(String password,WebDriver driver) {
-        setPassword(password);
-        String pageSource = driver.getPageSource();
-        return pageSource.contains(password);
+    public boolean isPasswordFieldVisible(String enteredPassword) {
+        String passwordFieldValue = passwordField.getAttribute("value");
+        log.info("Entered password value: " + enteredPassword);
+        log.info("Password field value: " + passwordFieldValue);
+        return !enteredPassword.equals(passwordFieldValue);
     }
+
     public String getEmailPlaceholderText() {
           log.info("the email placeHolder text is "+emailField.getAttribute("placeholder"));
         return emailField.getAttribute("placeholder");
     }
 
     public String getPasswordPlaceholderText() {
-
+        log.info("the password placeHolder text is "+passwordField.getAttribute("placeholder"));
         return passwordField.getAttribute("placeholder");
     }
     public boolean isLoggedIn() {

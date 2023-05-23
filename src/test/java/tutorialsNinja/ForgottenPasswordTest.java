@@ -15,7 +15,7 @@ import java.util.Properties;
 import static org.testng.Assert.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
-    @Test(groups = {"resetPasswordTests"})
+
     public class ForgottenPasswordTest extends CommonAPI {
 
 
@@ -24,10 +24,16 @@ import static org.testng.AssertJUnit.assertTrue;
         String validEmail = Utility.decode(prop.getProperty("tutorialsninja.validEmail"));
         String invalidEmail = Utility.decode(prop.getProperty("tutorialsninja.invalidEmail"));
 
+        @DataProvider(name = "forgotPasswordData")
+        public Object[][] provideForgotPasswordData() {
+            return new Object[][] {
+                    { validEmail } // Valid email
+            };
+        }
 
         //verify if the user landed to the 'Forgot Your Password' page
-        @Test(priority = 1, groups = {"navigationTests"})
-        public void verifyIfuserNavigatesToTheForgotPasswordPage() {
+        @Test(priority = 1, groups = {"navigationTests"},dataProvider = "forgotPasswordData")
+        public void verifyUserNavigatesToTheForgotPasswordPage( String email) {
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -96,7 +102,7 @@ import static org.testng.AssertJUnit.assertTrue;
 
             //assert an error message gets displayed
             String expectedErMsg = "Warning: The E-Mail Address was not found in our records, please try again!";
-            assertEquals(expectedErMsg, forgottenPasswordHomePage.getResetPasswordErrorMessage());
+            assertEquals(expectedErMsg, forgottenPasswordHomePage.getResetPasswordErrorMessage(),"no error message is displayed");
         }
 
 
@@ -115,7 +121,7 @@ import static org.testng.AssertJUnit.assertTrue;
 
             //verify the placeholder text of Email address
             String expectedPlaceholder = "E-Mail Address";
-            assertEquals(expectedPlaceholder, forgottenPasswordHomePage.getEmailInput());
+            assertEquals(expectedPlaceholder, forgottenPasswordHomePage.getEmailInput(),"the expectedPlaceholder Email doesnt match the actual placeholder email");
         }
 
 
@@ -139,7 +145,7 @@ import static org.testng.AssertJUnit.assertTrue;
             // Verify that the user is taken back to the Login page
             String expectedURL = "https://tutorialsninja.com/demo/index.php?route=account/login";
             String actualURL = forgottenPasswordHomePage.getURL(getDriver());
-            assertEquals(expectedURL, actualURL);
+            assertEquals(expectedURL, actualURL,"the URL is not the same");
         }
 
 
