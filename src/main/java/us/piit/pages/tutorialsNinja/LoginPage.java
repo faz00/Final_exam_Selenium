@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import us.piit.base.CommonAPI;
 
 public class LoginPage extends CommonAPI {
+
+
     Logger log = LogManager.getLogger(LoginPage.class.getName());
     public LoginPage(WebDriver driver) {
 
@@ -25,14 +27,12 @@ public class LoginPage extends CommonAPI {
 
     @FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")
     WebElement invalidloginCredenErMsg;
-    @FindBy(xpath = "//*[@id=\"content\"]/h2[1]")
-    WebElement accountHeaderPage;
-
 
     public void setEmail(String email) {
         type(emailField,email);
         log.info("the email address entered successfully in the email input field");
     }
+
     public void setPassword(String password) {
         type(passwordField,password);
         log.info("Entered password success");
@@ -49,12 +49,13 @@ public class LoginPage extends CommonAPI {
 
     }
     public boolean isPasswordVisibleInPageSource(String password,WebDriver driver) {
+
         setPassword(password);
         String pageSource = driver.getPageSource();
         return pageSource.contains(password);
     }
     public String getEmailPlaceholderText() {
-          log.info("the email placeHolder text is "+emailField.getAttribute("placeholder"));
+
         return emailField.getAttribute("placeholder");
     }
 
@@ -62,19 +63,8 @@ public class LoginPage extends CommonAPI {
 
         return passwordField.getAttribute("placeholder");
     }
-    public boolean isLoggedIn() {
-        log.info("the account header page is displayed");
-        return accountHeaderPage.isDisplayed();
-    }
-
-
-    public boolean isErrorMessageDisplayed() {
-        log.info("invalid login error message is displayed");
-        return invalidloginCredenErMsg.isDisplayed();
-    }
 
 }
-
 
 
 

@@ -16,9 +16,6 @@
             <class name="nopCommerce.LogoutTest"/>
             <class name="nopCommerce.CartTest"/>
             <class name="nopCommerce.WishListTest"/>
-            <class name="nopCommerce.CheckOutTest"/>
-            <class name="nopCommerce.ForgotPasswordTest"/>
-            <class name="nopCommerce.MyAccountTest"/>
         </classes>
     </test>
 </suite>

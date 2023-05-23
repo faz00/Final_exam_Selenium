@@ -2,7 +2,6 @@ package tutorialsNinja;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import us.piit.utility.Utility;
 import us.piit.base.CommonAPI;
@@ -13,7 +12,10 @@ import java.time.Duration;
 import java.util.Properties;
 
 import static org.testng.Assert.*;
-public class LoginTest  extends CommonAPI {
+
+
+public class LoginTest extends CommonAPI {
+
 
     Logger log = LogManager.getLogger(LoginTest.class.getName());
 
@@ -24,39 +26,28 @@ public class LoginTest  extends CommonAPI {
     String invalidEmail = Utility.decode(prop.getProperty("tutorialsninja.invalidEmail"));
     String password = Utility.decode(prop.getProperty("tutorialsninja.password"));
 
-    @DataProvider(name = "loginData")
-    public Object[][] provideLoginData() {
-        return new Object[][] {
-                {validEmail, validPassword},     // Valid email and valid password
-                {invalidEmail, invalidPassword}, // Invalid email and invalid password
-                {invalidEmail, validPassword},   // Invalid email and valid password
-                {validEmail, invalidPassword},   // Valid email and invalid password
-                {"", ""}                         // Empty email and password
-        };
-    }
 
-    @Test(priority = 1, groups = {"loginTests"}, dataProvider = "loginData")
-    public void testLoginWithCredentials(String email, String password) {
-        // Click on the login
+
+    @Test
+    public void testLoginWithValidInputs() {
+        //click on the login
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
         LoginPage loginPage = new LoginPage(getDriver());
-        LoginHomePage loginHomePage = new LoginHomePage(getDriver());
+        LoginHomePage loginHomePge = new LoginHomePage(getDriver());
 
-        // Enter email and password from the data provider
-        loginPage.setEmail(email);
-        loginPage.setPassword(password);
+        //enter valid email and valid password into the required fields
+        loginPage.setEmail(validEmail);
+        loginPage.setPassword(validPassword);
+        waitFor(5);
         loginPage.clickLoginButton();
 
-        // Assert that the user is logged in or an error message is displayed
-        if (email.equals(validEmail) && password.equals(validPassword)) {
-            assertTrue(loginHomePage.isAccountLinkDisplayed(), "The user is not logged in");
-        } else {
-            assertTrue(loginPage.isErrorMessageDisplayed(), "The user is logged in");
-        }
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
+        // Check that the user is redirected to the  login home page
+        assertTrue(loginHomePge.isAccountLinkDisplayed() );
     }
-    @Test(priority =8 , groups = {"loginTests"})
+    @Test
     public void testLoginWithInvalidCredentials() {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -73,7 +64,7 @@ public class LoginTest  extends CommonAPI {
         boolean expectedErMsg=loginPage.LoginCredenErrMsgDisplayed();
         assertTrue(expectedErMsg);
     }
-    @Test(priority = 7, groups = {"loginTests"})
+    @Test
     public void verifyLoginWithInvalidEmailAddress(){
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
@@ -93,7 +84,7 @@ public class LoginTest  extends CommonAPI {
         assertTrue(expectedErMsg);
     }
 
-    @Test(priority = 6, groups = {"loginTests"})
+    @Test
     public void verifyLoginWithInvalidPassword(){
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
@@ -113,7 +104,7 @@ public class LoginTest  extends CommonAPI {
         boolean expectErMsg=loginPage.LoginCredenErrMsgDisplayed();
         assertTrue(expectErMsg);
     }
-    @Test(priority = 5, groups = {"loginTests"})
+    @Test
     public void verifyLoginWithNoInputs(){
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -128,7 +119,7 @@ public class LoginTest  extends CommonAPI {
         assertTrue(expectedErMsg);
     }
 
-    @Test(priority = 2, groups = {"loginTests"})
+    @Test
     public void verifyTheNumberOfUnsuccessfulLoginAttempts() {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -155,7 +146,7 @@ public class LoginTest  extends CommonAPI {
         }
     }
 
-    @Test(priority = 3, groups = {"loginTests"})
+    @Test
     public void checkPasswordVisibility(){
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -173,7 +164,7 @@ public class LoginTest  extends CommonAPI {
         assertFalse(isPasswordVisible, "Password is visible in the page source");
 
     }
-    @Test(priority = 4, groups = {"loginTests"})
+    @Test
     public void testLoginFieldsPlaceholders() {
         LoginPage loginPage = new LoginPage(getDriver());
         LoginHomePage loginHomePage = new LoginHomePage(getDriver());
@@ -193,6 +184,13 @@ public class LoginTest  extends CommonAPI {
 
     }
 }
+
+
+
+
+
+
+
 
 
 
