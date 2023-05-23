@@ -14,6 +14,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -35,6 +38,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CommonAPI {
     Logger log = LogManager.getLogger(CommonAPI.class.getName());
@@ -230,9 +235,9 @@ public class CommonAPI {
 
     public boolean checkCheckBoxIsCh(String locator) {
         try {
-            return  driver.findElement(By.cssSelector(locator)).isDisplayed();
+            return  driver.findElement(By.cssSelector(locator)).isSelected();
         } catch (Exception e) {
-            return driver.findElement(By.xpath(locator)).isDisplayed();
+            return driver.findElement(By.xpath(locator)).isSelected();
 
         }
 
@@ -337,7 +342,16 @@ public class CommonAPI {
         }
     }
 
-
+    public void waitForElementToBeVisible(WebElement element) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+            wait.until(ExpectedConditions.visibilityOfAllElements(element));
+            Assert.assertTrue(element.isDisplayed());
+        }
+        catch (Exception e){
+            log.info(e);
+        }
+    }
 
 
 
@@ -415,4 +429,17 @@ public class CommonAPI {
         }
     }
 
+
+    public Double extractNumericPrice(String priceWithSymbol) {
+        Pattern p = Pattern.compile("[^0-9]*([0-9]*,?([0-9]+(\\.[0-9]*))?)");
+        Matcher m = p.matcher(priceWithSymbol);
+        m.matches();
+        String s_num = m.group(1).replace(",", "");
+        Double d_num = Double.valueOf(s_num);
+        return d_num;
+    }
+
+
+
 }
+
