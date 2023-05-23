@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-tutorialsNinja_test" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                    <span class="method-stats">5 methods, 2 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.SearchProductsTest" class="method navigator-link" hash-for-method="verifyProductDisplayCount">verifyProductDisplayCount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.SearchProductsTest" class="method navigator-link" hash-for-method="verifyUsernavigatedToTHeSearchHomePage(headphones)">verifyUsernavigatedToTHeSearchHomePage(headphones)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-tutorialsNinja_test -->
@@ -127,7 +132,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.SearchProductsTest" class="method navigator-link" hash-for-method="verifyUsernavigatedToTHeSearchHomePage">verifyUsernavigatedToTHeSearchHomePage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.SearchProductsTest" class="method navigator-link" hash-for-method="verifyUsernavigatedToTHeSearchHomePage(macbook)">verifyUsernavigatedToTHeSearchHomePage(macbook)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-tutorialsNinja_test -->
@@ -154,11 +159,26 @@
                   </a> <!-- verifyProductDisplayCount -->
                   <span class="method-name">verifyProductDisplayCount</span>
                   <div class="stack-trace">java.lang.AssertionError: Displayed product count doesn&apos;t match the selected count expected [100] but found [3]
-	at tutorialsNinja.SearchProductsTest.verifyProductDisplayCount(SearchProductsTest.java:115)
+	at tutorialsNinja.SearchProductsTest.verifyProductDisplayCount(SearchProductsTest.java:132)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
 ... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUsernavigatedToTHeSearchHomePage(headphones)">
+                  </a> <!-- verifyUsernavigatedToTHeSearchHomePage(headphones) -->
+                  <span class="method-name">verifyUsernavigatedToTHeSearchHomePage</span>
+                  <span class="parameters">(headphones)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Search results do not contain any products for the given search term expected [true] but found [false]
+	at tutorialsNinja.SearchProductsTest.verifyUsernavigatedToTHeSearchHomePage(SearchProductsTest.java:59)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -186,9 +206,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUsernavigatedToTHeSearchHomePage">
-                  </a> <!-- verifyUsernavigatedToTHeSearchHomePage -->
+                  <a name="verifyUsernavigatedToTHeSearchHomePage(macbook)">
+                  </a> <!-- verifyUsernavigatedToTHeSearchHomePage(macbook) -->
                   <span class="method-name">verifyUsernavigatedToTHeSearchHomePage</span>
+                  <span class="parameters">(macbook)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -205,9 +226,9 @@
 &lt;suite name=&quot;tutorialsNinja test&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;parameter name=&quot;useCloudEnv&quot; value=&quot;false&quot;/&gt;
   &lt;parameter name=&quot;os&quot; value=&quot;windows&quot;/&gt;
-  &lt;parameter name=&quot;osVersion&quot; value=&quot;11&quot;/&gt;
+  &lt;parameter name=&quot;osVersion&quot; value=&quot;8&quot;/&gt;
   &lt;parameter name=&quot;envName&quot; value=&quot;browserstack&quot;/&gt;
-  &lt;parameter name=&quot;browserVersion&quot; value=&quot;112&quot;/&gt;
+  &lt;parameter name=&quot;browserVersion&quot; value=&quot;109&quot;/&gt;
   &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;https://tutorialsninja.com/demo/index.php?route=account/login&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot; SearchProductsTest&quot;&gt;
@@ -236,6 +257,26 @@
             <span class="header-content">Groups for tutorialsNinja test</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">searchTests</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyProductDisplayCount</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifySearchWithANonExistingProduct</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifySearchWithAnExistingProduct</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyUsernavigatedToTHeSearchHomePage</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-tutorialsNinja_test" class="panel">
@@ -252,28 +293,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyProductDisplayCount')
+data.setCell(0, 1, 'verifyUsernavigatedToTHeSearchHomePage')
 data.setCell(0, 2, 'tutorialsNinja.SearchProductsTest')
-data.setCell(0, 3, 5197);
+data.setCell(0, 3, 10818);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyUsernavigatedToTHeSearchHomePage')
+data.setCell(1, 1, 'verifyProductDisplayCount')
 data.setCell(1, 2, 'tutorialsNinja.SearchProductsTest')
-data.setCell(1, 3, 1300);
+data.setCell(1, 3, 2270);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifySearchWithAnExistingProduct')
+data.setCell(2, 1, 'verifyUsernavigatedToTHeSearchHomePage')
 data.setCell(2, 2, 'tutorialsNinja.SearchProductsTest')
-data.setCell(2, 3, 1184);
+data.setCell(2, 3, 1487);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifySearchWithANonExistingProduct')
+data.setCell(3, 1, 'verifySearchWithAnExistingProduct')
 data.setCell(3, 2, 'tutorialsNinja.SearchProductsTest')
-data.setCell(3, 3, 906);
+data.setCell(3, 3, 1268);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifySearchWithANonExistingProduct')
+data.setCell(4, 2, 'tutorialsNinja.SearchProductsTest')
+data.setCell(4, 3, 773);
 window.suiteTableData['tutorialsNinja_test']= { tableData: data, tableDiv: 'times-div-tutorialsNinja_test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-tutorialsNinja_test">
               </div> <!-- times-div-tutorialsNinja_test -->
             </div> <!-- times-div -->
@@ -301,94 +346,116 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsNinja.SearchProductsTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">extentSetup(org.testng.TestRunner@16f7f59f)</span>
+                <span class="method-name">extentSetup(org.testng.TestRunner@3009eed7)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
-                <span class="method-start">297 ms</span>
+                <span class="method-name">setUp(false, browserstack, windows, 8, chrome, 109, https://tutorialsninja.com/demo/index.php?route=accoun...)</span>
+                <span class="method-start">294 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.SearchProductsTest.verifySearchWithANonExistingProduct())</span>
+                <span class="method-start">8497 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchWithANonExistingProduct</span>
+                <span class="method-start">8505 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifySearchWithANonExistingProduct status=SUCCESS method=SearchProductsTest.verify...)</span>
+                <span class="method-start">9280 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">9930 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 8, chrome, 109, https://tutorialsninja.com/demo/index.php?route=accoun...)</span>
+                <span class="method-start">9939 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.SearchProductsTest.verifySearchWithAnExistingProduct())</span>
+                <span class="method-start">16019 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchWithAnExistingProduct</span>
+                <span class="method-start">16021 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifySearchWithAnExistingProduct status=SUCCESS method=SearchProductsTest.verifySe...)</span>
+                <span class="method-start">17290 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">17729 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 8, chrome, 109, https://tutorialsninja.com/demo/index.php?route=accoun...)</span>
+                <span class="method-start">17732 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">startExtent(public void tutorialsNinja.SearchProductsTest.verifyProductDisplayCount())</span>
-                <span class="method-start">7986 ms</span>
+                <span class="method-start">23635 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyProductDisplayCount</span>
-                <span class="method-start">7993 ms</span>
+                <span class="method-start">23636 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTestMethod([TestResult name=verifyProductDisplayCount status=FAILURE method=SearchProductsTest.verifyProductDis...)</span>
-                <span class="method-start">13200 ms</span>
+                <span class="method-start">25912 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownR</span>
-                <span class="method-start">14169 ms</span>
+                <span class="method-start">26296 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
-                <span class="method-start">14184 ms</span>
+                <span class="method-name">setUp(false, browserstack, windows, 8, chrome, 109, https://tutorialsninja.com/demo/index.php?route=accoun...)</span>
+                <span class="method-start">26307 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">startExtent(public void tutorialsNinja.SearchProductsTest.verifySearchWithANonExistingProduct())</span>
-                <span class="method-start">20757 ms</span>
+                <span class="method-name">startExtent(public void tutorialsNinja.SearchProductsTest.verifyUsernavigatedToTHeSearchHomePage(java.lang.Strin...)</span>
+                <span class="method-start">33900 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifySearchWithANonExistingProduct</span>
-                <span class="method-start">20759 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterEachTestMethod([TestResult name=verifySearchWithANonExistingProduct status=SUCCESS method=SearchProductsTest.verify...)</span>
-                <span class="method-start">21666 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDownR</span>
-                <span class="method-start">22083 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
-                <span class="method-start">22087 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">startExtent(public void tutorialsNinja.SearchProductsTest.verifySearchWithAnExistingProduct())</span>
-                <span class="method-start">27082 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifySearchWithAnExistingProduct</span>
-                <span class="method-start">27084 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterEachTestMethod([TestResult name=verifySearchWithAnExistingProduct status=SUCCESS method=SearchProductsTest.verifySe...)</span>
-                <span class="method-start">28269 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDownR</span>
-                <span class="method-start">28690 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
-                <span class="method-start">28693 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">startExtent(public void tutorialsNinja.SearchProductsTest.verifyUsernavigatedToTHeSearchHomePage())</span>
-                <span class="method-start">34345 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyUsernavigatedToTHeSearchHomePage</span>
-                <span class="method-start">34349 ms</span>
+                <span class="method-name">verifyUsernavigatedToTHeSearchHomePage(macbook)</span>
+                <span class="method-start">33904 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTestMethod([TestResult name=verifyUsernavigatedToTHeSearchHomePage status=SUCCESS method=SearchProductsTest.ver...)</span>
-                <span class="method-start">35650 ms</span>
+                <span class="method-start">35392 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownR</span>
-                <span class="method-start">36017 ms</span>
+                <span class="method-start">35767 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 8, chrome, 109, https://tutorialsninja.com/demo/index.php?route=accoun...)</span>
+                <span class="method-start">35769 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.SearchProductsTest.verifyUsernavigatedToTHeSearchHomePage(java.lang.Strin...)</span>
+                <span class="method-start">42806 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyUsernavigatedToTHeSearchHomePage(headphones)</span>
+                <span class="method-start">42808 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifyUsernavigatedToTHeSearchHomePage status=FAILURE method=SearchProductsTest.ver...)</span>
+                <span class="method-start">53628 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">54217 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">generateReport</span>
-                <span class="method-start">36057 ms</span>
+                <span class="method-start">54295 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
