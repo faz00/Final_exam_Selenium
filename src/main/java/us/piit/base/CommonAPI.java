@@ -235,9 +235,9 @@ public class CommonAPI {
 
     public boolean checkCheckBoxIsCh(String locator) {
         try {
-            return  driver.findElement(By.cssSelector(locator)).isDisplayed();
+            return  driver.findElement(By.cssSelector(locator)).isSelected();
         } catch (Exception e) {
-            return driver.findElement(By.xpath(locator)).isDisplayed();
+            return driver.findElement(By.xpath(locator)).isSelected();
 
         }
 
