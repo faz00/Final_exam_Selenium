@@ -35,6 +35,10 @@ public class DashbordPage extends CommonAPI {
     @FindBy( xpath="(//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'][normalize-space()='Buzz'])[1]")
     WebElement buzzButtonInMenu;
 
+
+    @FindBy(xpath=" (//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'][normalize-space()='Time'])[1]")
+    WebElement TimeButtonInMenu;
+
     @FindBy(xpath="(//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'][normalize-space()='Maintenance'])[1]")
     WebElement maintenanceButtonInMenu;
     public String getHraderText(){
@@ -61,6 +65,10 @@ public class DashbordPage extends CommonAPI {
          }
 
 
+    public void clickOnTimeOption(){
+        clickOn(TimeButtonInMenu);
+        log.info("Time page displayed");
+    }
     public void clickOnMaintenanceOption(){
         clickOn(maintenanceButtonInMenu);
         log.info("Maintenance page displayed");

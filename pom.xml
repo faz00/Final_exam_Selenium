@@ -103,10 +103,12 @@
         <version>2.12.4</version>
         <configuration>
           <suiteXmlFiles>
-          <!--  <suiteXmlFile>src/test/resources/Luma.xml</suiteXmlFile>
-            <suiteXmlFile>src/test/resources/nopCommerce.xml</suiteXmlFile>
-            <suiteXmlFile>src/test/resources/OrangeHRM.xml</suiteXmlFile>-->
-            <suiteXmlFile>src/test/resources/TutorialsNinja.xml</suiteXmlFile>
+
+            <suiteXmlFile>src/test/resources/Luma.xml</suiteXmlFile>
+<!--            <suiteXmlFile>src/test/resources/nopCommerce.xml</suiteXmlFile>-->
+<!--            <suiteXmlFile>src/test/resources/OrangeHRM.xml</suiteXmlFile>-->
+<!--            <suiteXmlFile>src/test/resources/TutorialsNinja.xml</suiteXmlFile>-->
+
           </suiteXmlFiles>
         </configuration>
       </plugin>

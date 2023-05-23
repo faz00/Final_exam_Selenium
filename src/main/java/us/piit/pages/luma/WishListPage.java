@@ -65,7 +65,20 @@ public class WishListPage extends CommonAPI {
     @FindBy(xpath = "//span[text()='You have no items in your wish list.']")
     WebElement NoItemInWishList;
 
+    @FindBy(name = "save_and_share")
+    WebElement ShareWishList_first_BTN;
 
+    @FindBy(css = "[class=\"action submit primary\"]")
+    WebElement ShareWishList_sec_BTN;
+
+    @FindBy(id = "email_address")
+    WebElement email_Addressess;
+
+    @FindBy(id = "message")
+    WebElement message_area;
+
+    @FindBy(css = "[data-ui-id=\"message-success\"]")
+    WebElement succesMessageForwishlist;
 
     public void clickOnSaleTab(){
         Assert.assertTrue(SaleTab.isEnabled());
@@ -85,6 +98,19 @@ public class WishListPage extends CommonAPI {
         WishListIcon.isDisplayed();
         WishListIcon.click();
         waitFor(2);
+    }
+
+    public void share_wishList(){
+        hoverOver(ShareWishList_first_BTN);
+        isInteractable(ShareWishList_first_BTN);
+        ShareWishList_first_BTN.click();
+        waitFor(1);
+        isVisible(email_Addressess);
+        type(email_Addressess, "test002@gmail.com");
+        type(message_area, "test wish list");
+        ShareWishList_sec_BTN.click();
+        waitFor(2);
+        Assert.assertTrue(succesMessageForwishlist.isDisplayed());
     }
 
     public void hoverOver(WebElement element){
