@@ -1,5 +1,6 @@
 package luma;
 
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;
 import us.piit.pages.luma.LoginPage;
@@ -33,5 +34,28 @@ public class WishListTest extends CommonAPI {
         // Add product to wish list
         wishListPage.AddProductToWishList();
         waitFor(1);
+    }
+
+    @Test
+    public void ShareWishlist(){
+        WishListPage wishListPage = new WishListPage(getDriver());
+        LoginPage loginPage = new LoginPage(getDriver());
+
+        // Login First
+        loginPage.Login(ValidEmail, validPassword);
+
+
+        // Go to product page
+        wishListPage.clickOnSaleTab();
+        waitFor(2);
+        wishListPage.clickOnHoodiesAndShirts();
+        waitFor(2);
+
+        // Add product to wish list
+        wishListPage.AddProductToWishList();
+        waitFor(1);
+
+        // share your wishlist
+        wishListPage.share_wishList();
     }
 }
