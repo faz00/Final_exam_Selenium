@@ -16,10 +16,10 @@ public class LoginPage extends CommonAPI {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css ="input[placeholder='username']")
+    @FindBy(css ="input[placeholder='Username']")
     WebElement usernameField;
 
-    @FindBy(css ="input[placeholder='password']")
+    @FindBy(css ="input[placeholder='Password']")
     WebElement passwordField;
     @FindBy(css ="button[type='submit']")
     WebElement loginBtn;
