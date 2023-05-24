@@ -29,7 +29,7 @@ public class LeaveSection  extends CommonAPI {
     }
 
 
-    @Test(dataProvider = "loginCredentials")
+    @Test(dataProvider = "loginCredentials", priority = 1, groups = "Leave")
     public void approveLeaveRecordOfAnEmployee(String validUsername,String validPassword){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -72,7 +72,7 @@ public class LeaveSection  extends CommonAPI {
     }
 
 
-    @Test(dataProvider = "loginCredentials")
+    @Test(dataProvider = "loginCredentials", priority = 2, groups = "Leave")
     public void rejectLeaveRecordOfAnEmployee(String validUsername,String validPassword){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -118,7 +118,7 @@ public class LeaveSection  extends CommonAPI {
     }
 
 
-    @Test(dataProvider = "loginCredentials")
+    @Test(dataProvider = "loginCredentials", priority = 3, groups = "Leave")
     public void addCommentForAnEmployeeRecord(String validUsername,String validPassword){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -149,6 +149,9 @@ public class LeaveSection  extends CommonAPI {
         waitFor(5);
         dashbordPage.clickOnLeaveOption();
 
+        waitFor(2);
+        leavePage.clickOnLeaveListOption();
+        waitFor(2);
         leavePage.clickonThreeDots();
         leavePage.clickOnAddCommentOption();
         leavePage.addComment();
@@ -233,7 +236,7 @@ public class LeaveSection  extends CommonAPI {
 //    }
 
 
-    @Test(dataProvider = "NewHoliday")
+    @Test(dataProvider = "NewHoliday", priority = 4, groups = "Leave")
 
     public void AddHolidayInHolidaysList(String validUsername,String validPassword,String holidayName,String date){
         LoginPage loginPage = new LoginPage(getDriver());

@@ -59,7 +59,7 @@ public class PIMSection extends CommonAPI {
             };
         }
 
-        @Test(dataProvider = "loginCredentials")
+        @Test(dataProvider = "loginCredentials", priority = 1, groups = "PIM")
         public void searchEmployee(String validUsername, String validPassword) {
             LoginPage loginPage = new LoginPage(getDriver());
             DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -103,7 +103,7 @@ public class PIMSection extends CommonAPI {
         }
 
 
-      @Test(dataProvider = "testData")
+      @Test(dataProvider = "testData", priority = 2, groups = "PIM")
         public void addEmployee(String validUsername, String validPassword, String imagePath, String firstName, String middleName, String lastName, String userName, String password, String companyName, String titleJob, String beginningDate, String endDate) {
             LoginPage loginPage = new LoginPage(getDriver());
             DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -166,7 +166,7 @@ public class PIMSection extends CommonAPI {
         }
 
 
-       @Test(dataProvider = "testData")
+       @Test(dataProvider = "testData", priority = 3, groups = "PIM")
         public void editEmployeesQualification(String validUsername, String validPassword, String imagePath, String firstName, String middleName, String lastName, String userName, String password, String companyName, String titleJob, String beginningDate, String endDate) {
             LoginPage loginPage = new LoginPage(getDriver());
             DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -226,7 +226,7 @@ public class PIMSection extends CommonAPI {
         }
 
 
-        @Test(dataProvider = "loginCredentials")
+        @Test(dataProvider = "loginCredentials", priority = 4, groups = "PIM")
         public void editTaxExemptionOFAnEmployee(String validUsername, String validPassword) {
             LoginPage loginPage = new LoginPage(getDriver());
             DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -285,7 +285,7 @@ public class PIMSection extends CommonAPI {
         }
 
 
-        @Test(dataProvider = "loginCredentials")
+        @Test(dataProvider = "loginCredentials", priority = 5, groups = "PIM")
         public void deleteEmployee(String validUsername, String validPassword) {
             LoginPage loginPage = new LoginPage(getDriver());
             DashbordPage dashbordPage = new DashbordPage(getDriver());

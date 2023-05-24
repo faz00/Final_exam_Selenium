@@ -24,7 +24,7 @@ public class LoginToMaintenance extends CommonAPI {
                 {username, password},
         };
     }
-    @Test(dataProvider = "loginTestData")
+    @Test(dataProvider = "loginTestData", priority = 1, groups = "Maintenance")
     public void loginWithValidCred(String username,String password){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -73,7 +73,7 @@ public class LoginToMaintenance extends CommonAPI {
 
     }
 
-    @Test(dataProvider = "loginTestData")
+    @Test(dataProvider = "loginTestData", priority = 2, groups = "Maintenance")
     public void loginWithInvalidCred(String username,String password){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());

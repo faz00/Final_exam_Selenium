@@ -5,32 +5,41 @@ import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import us.piit.utility.ConnectDB;
 import us.piit.utility.Utility;
 import us.piit.base.CommonAPI;
 import us.piit.pages.orangeHRM.DashbordPage;
 import us.piit.pages.orangeHRM.LoginPage;
 import us.piit.pages.orangeHRM.PIMPage;
 
+import java.util.List;
 import java.util.Properties;
+
+import static us.piit.utility.ConnectDB.getTableColumnData;
 
 public class ChangePassword extends CommonAPI {
 
 
     Properties prop = Utility.loadProperties();
 
+    List<String> username = getTableColumnData("select * from orangeHRM;","validCodedUsername");
+    List<String> newPassword = getTableColumnData("select * from orangeHRM;","validCodedNewPassword");
+    List<String> password = getTableColumnData("select * from orangeHRM;","validCodedPassword");
+
+
     String pathScreenPackage = "orangeHRMScreenshots";
 
     @DataProvider(name = "passwordData")
     public Object[][] providePasswordData() {
         return new Object[][] {
-                { Utility.decode(prop.getProperty("orangeHRM.username")),
-                        Utility.decode(prop.getProperty("orangeHRM.password")),
-                        Utility.decode(prop.getProperty("orangeHRM.newPassword")) }
-                // Add more test data sets as needed
+                { Utility.decode(username.get(0)),
+                        Utility.decode(password.get(0)),
+                        Utility.decode(newPassword.get(0)) }
+
         };
     }
 
-    @Test(dataProvider = "passwordData")
+    @Test(dataProvider = "passwordData", priority = 1, groups = "ChangePassword")
     public void ChangePassword(String validUsername, String validPassword, String newPassword) {
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());

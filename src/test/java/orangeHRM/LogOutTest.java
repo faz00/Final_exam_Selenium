@@ -27,7 +27,7 @@ public class LogOutTest extends CommonAPI {
         };
     }
 
-    @Test(dataProvider = "logoutTestData")
+    @Test(dataProvider = "logoutTestData", priority = 1, groups = "LogOutTest")
     public void logout(String username, String password)  {
 
         LoginPage loginPage = new LoginPage(getDriver());

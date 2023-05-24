@@ -24,23 +24,9 @@ public class BuzzSection extends CommonAPI {
         Properties prop = Utility.loadProperties();
         String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
         String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
-
-        return new Object[][]{
-                {validUsername, validPassword}
-
-        };
-    }
-
-    @DataProvider(name = "addComent")
-    public Object[][] addComment() {
-        Properties prop = Utility.loadProperties();
-        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
-        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
         String textPost="Hi, this is just a test";
 
-
         String pathScreenPackage="orangeHRMScreenshots";
-
 
 
         return new Object[][]{
@@ -48,6 +34,8 @@ public class BuzzSection extends CommonAPI {
 
         };
     }
+
+
 
     @DataProvider(name = "EditPost")
     public Object[][] editPost() {
@@ -72,7 +60,7 @@ public class BuzzSection extends CommonAPI {
 
 
 
-    @Test(dataProvider = "EditPost")
+    @Test(dataProvider = "loginCredentials", priority = 1, groups = "Buzz")
     public void sharePost(String validUsername, String validPassword,String textPost,String pathScreenPackage){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -134,8 +122,7 @@ public class BuzzSection extends CommonAPI {
 
 
 
-    @Test(dataProvider = "EditPost")
-
+    @Test(dataProvider = "EditPost", priority = 2, groups = "Buzz")
     public void editSharedPost(String validUsername, String validPassword,String textPost,String pathScreenPackage,String imagePath){
 
         LoginPage loginPage = new LoginPage(getDriver());
@@ -209,8 +196,21 @@ public class BuzzSection extends CommonAPI {
         String actualPost =buzzPage.getSharedPostText();
         Assert.assertEquals(expectedPost,actualPost);
     }
+    @DataProvider(name = "deletePost")
+    public Object[][] deletePost() {
+        Properties prop = Utility.loadProperties();
+        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+        String textPost="Hi, this is just a test";
 
-    @Test(dataProvider = "EditPost")
+        String pathScreenPackage="orangeHRMScreenshots";
+        return new Object[][]{
+                {validUsername, validPassword,textPost,pathScreenPackage}
+
+        };
+    }
+
+    @Test(dataProvider = "deletePost", priority = 3, groups = "Buzz")
 
     public void DeletePost(String validUsername, String validPassword,String textPost,String pathScreenPackage){
 
@@ -278,8 +278,25 @@ public class BuzzSection extends CommonAPI {
 
     }
 
+    @DataProvider(name = "addComment")
+    public Object[][] addComment() {
+        Properties prop = Utility.loadProperties();
+        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+        String textPost="Hello Word";
 
-    @Test(dataProvider = "addComment")
+
+        String pathScreenPackage="orangeHRMScreenshots";
+
+
+
+        return new Object[][]{
+                {validUsername, validPassword,textPost,pathScreenPackage}
+
+        };
+    }
+
+    @Test(dataProvider = "addComment", priority = 4, groups = "Buzz")
     public void addCommentAndLike(String validUsername, String validPassword, String textPost, String pathScreenPackage) {
 
         LoginPage loginPage = new LoginPage(getDriver());
@@ -327,7 +344,7 @@ public class BuzzSection extends CommonAPI {
 
 
         //write the comment
-        buzzPage.shareComment("Hello Word");
+        buzzPage.shareComment(textPost);
 
         waitFor(2);
 

@@ -38,7 +38,7 @@ public class MaintenanceSection extends CommonAPI {
 
         };
     }
-    @Test(dataProvider = "loginCredentials")
+    @Test(dataProvider = "loginCredentials", priority = 1, groups = "MaintenanceSection")
     public void DownloadEmployeesRecord(String validUsername,String validPassword,String downloadsDir){
     LoginPage loginPage = new LoginPage(getDriver());
     DashbordPage dashbordPage = new DashbordPage(getDriver());

@@ -69,7 +69,7 @@ public class TimeSection extends CommonAPI {
 
         };
     }
-//      @Test(dataProvider = "loginCredentials")
+      @Test(dataProvider = "loginCredentials", priority = 1, groups = "Time")
         public void editCustomerInfo(String validUsername, String validPassword) {
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -134,7 +134,7 @@ public class TimeSection extends CommonAPI {
 
 
 
-//    @Test(dataProvider = "addCustomer")
+    @Test(dataProvider = "addCustomer", priority = 2, groups = "Time")
         public void addCustomer(String validUsername, String validPassword,String name,String description){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -188,7 +188,7 @@ public class TimeSection extends CommonAPI {
     }
 
 
-    @Test(dataProvider = "addCustomer2")
+    @Test(dataProvider = "addCustomer2", priority = 3, groups = "Time")
         public void deleteAddedCustomer(String validUsername, String validPassword,String name,String description){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -259,7 +259,7 @@ public class TimeSection extends CommonAPI {
     }
 
 
-//       @Test(dataProvider = "addCustomer1")
+       @Test(dataProvider = "addCustomer1", priority = 4, groups = "Time")
         public void addAnExistingCustomer(String validUsername, String validPassword,String name,String description){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
