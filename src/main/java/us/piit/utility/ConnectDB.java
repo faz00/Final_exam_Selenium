@@ -61,7 +61,6 @@ public class ConnectDB {
     public static void main(String[] args) throws SQLException {
 
 
-//            connectToSqlDatabase();
 
       List<String> password = getTableColumnData("select * from orangeHRM;","validCodedNewPassword");
       System.out.println(password.get(0));
