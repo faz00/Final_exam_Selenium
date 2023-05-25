@@ -3,9 +3,9 @@
 <suite name="Failed suite [tutorialsNinja test]" guice-stage="DEVELOPMENT">
   <parameter name="useCloudEnv" value="false"/>
   <parameter name="os" value="windows"/>
-  <parameter name="osVersion" value="8"/>
+  <parameter name="osVersion" value="11"/>
   <parameter name="envName" value="browserstack"/>
-  <parameter name="browserVersion" value="109"/>
+  <parameter name="browserVersion" value="112"/>
   <parameter name="browserName" value="chrome"/>
   <parameter name="url" value="https://tutorialsninja.com/demo/index.php?route=account/login"/>
   <test thread-count="5" name=" SearchProductsTest(failed)">
@@ -15,7 +15,6 @@
           <include name="afterEachTestMethod"/>
           <include name="setUp"/>
           <include name="startExtent"/>
-          <include name="verifyUsernavigatedToTHeSearchHomePage" invocation-numbers="1"/>
           <include name="tearDownR"/>
           <include name="extentSetup"/>
           <include name="verifyProductDisplayCount"/>
