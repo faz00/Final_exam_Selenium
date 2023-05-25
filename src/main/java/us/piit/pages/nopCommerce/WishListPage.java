@@ -2,7 +2,6 @@ package us.piit.pages.nopCommerce;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -59,7 +58,7 @@ public class WishListPage extends CommonAPI {
     WebElement WishListButton;
 
     @FindBy(css = "[class=\"wishlist-content\"]")
-    WebElement WishListDetailsTable;
+    WebElement WishListDetails;
 
     @FindBy(css = "[name=\"updatecart\"][class=\"remove-btn\"]")
     WebElement RemoveProductFromCart;
@@ -78,46 +77,6 @@ public class WishListPage extends CommonAPI {
 
     @FindBy(xpath = "//ul[@class=\"top-menu notmobile\"]//a[@href=\"/computers\"]")
     WebElement ProductCategoryComputers;
-
-    @FindBy(css = "[class=\"quantity\"] input")
-    WebElement QTYfield;
-
-    @FindBy(css = "[class=\"product-unit-price\"]")
-    WebElement UnitPrice;
-
-    @FindBy(css = "[class=\"product-subtotal\"]")
-    WebElement TotalPrice;
-
-    @FindBy(css = "[id=\"updatecart\"]")
-    WebElement updateWishListBTn;
-
-    @FindBy(css = "[name=\"addtocart\"]")
-    WebElement productCheckBox;
-
-    @FindBy(css = "[name=\"addtocartbutton\"]")
-    WebElement AddToCartBtn;
-
-    @FindBy(css = "[class=\"button-2 email-a-friend-wishlist-button\"]")
-    WebElement Email_a_FriendBTn;
-
-    @FindBy(css = "[class=\"page email-a-friend-page\"]")
-    WebElement Email_a_Friend_Form;
-
-    @FindBy(id = "FriendEmail")
-    WebElement FriendEmailInput;
-
-    @FindBy(id = "YourEmailAddress")
-    WebElement YourEmailInput;
-
-    @FindBy(id = "PersonalMessage")
-    WebElement PersonalMessage;
-
-    @FindBy(name = "send-email")
-    WebElement SendEmailBtn;
-
-    @FindBy(xpath = "//*[contains(text(), 'Your message has been sent')]")
-    WebElement emailSentSuccess;
-
 
     public String getProductTitle(){
         Assert.assertTrue(ProductTitle.isDisplayed());
@@ -169,79 +128,5 @@ public class WishListPage extends CommonAPI {
             actions.moveToElement(locator).build().perform();
 
         }
-    }
-
-    public void exploreWishlist(){
-        Assert.assertTrue(wishCartDetails().contains("1"));
-        waitFor(1);
-        WishListCart.click();
-        waitForElementToBeVisible(WishListDetailsTable);
-        isInteractable(WishListDetailsTable);
-        Assert.assertTrue(WishListDetailsTable.isDisplayed());
-        waitFor(1);
-    }
-
-    public void updateWishlist(){
-        Assert.assertTrue(wishCartDetails().contains("1"));
-        waitFor(1);
-        WishListCart.click();
-        waitForElementToBeVisible(WishListDetailsTable);
-        isVisible(QTYfield);
-
-        // fetch unit price
-        String unitPriceWithSymbols = UnitPrice.getText();
-        Double unitPrice = extractNumericPrice(unitPriceWithSymbols);
-        log.info("Unit Price of Product" + unitPrice);
-
-        QTYfield.clear();
-        QTYfield.sendKeys("10");
-        updateWishListBTn.click();
-        waitFor(1);
-
-        // fetch updated total price
-        String TotalPriceWithSymbols = TotalPrice.getText();
-        Double totalPrice = extractNumericPrice(TotalPriceWithSymbols);
-        log.info("total Price of Product" + totalPrice);
-
-        Assert.assertEquals(totalPrice, unitPrice*10);
-        waitFor(1);
-    }
-
-    public void add_Product_From_wishlist_to_cart(){
-        Assert.assertTrue(wishCartDetails().contains("1"));
-        WishListCart.click();
-        waitForElementToBeVisible(WishListDetailsTable);
-        isVisible(WishListDetailsTable);
-        productCheckBox.click();
-        checkCheckBoxIsCh(productCheckBox);
-        AddToCartBtn.click();
-        waitFor(1);
-        Assert.assertTrue(ShoppingCart.getText().contains("1"));
-        Assert.assertTrue(driver.findElement(By.cssSelector("[class=\"page shopping-cart-page\"]")).isDisplayed());
-        waitFor(1);
-    }
-
-    public void shareYourWishList(){
-        WishListCart.click();
-        waitForElementToBeVisible(WishListDetailsTable);
-        isVisible(WishListDetailsTable);
-        Email_a_FriendBTn.click();
-        waitForElementToBeVisible(Email_a_Friend_Form);
-        waitFor(1);
-        FriendEmailInput.sendKeys("friend@gmail.com");
-        PersonalMessage.sendKeys("This is test message");
-        waitFor(1);
-        SendEmailBtn.click();
-        waitFor(1);
-        Assert.assertTrue(emailSentSuccess.isDisplayed());
-        Assert.assertTrue(emailSentSuccess.getText().contains("Your message has been sent"));
-    }
-
-    public void removeProdcut(){
-        WishListCart.click();
-        waitForElementToBeVisible(WishListDetailsTable);
-        RemoveProductFromCart.click();
-        waitFor(1);
-        Assert.assertTrue(WishListCart.getText().contains("0"));
     }
 }

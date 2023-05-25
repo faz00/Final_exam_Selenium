@@ -3,6 +3,8 @@ package nopCommerce;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;
 import us.piit.pages.nopCommerce.HomePage;
@@ -18,8 +20,22 @@ public class LoginTest extends CommonAPI{
     String ValidEmail = Utility.decode(prop.getProperty("nopCommerce.username"));
     String validPassword = Utility.decode(prop.getProperty("nopCommerce.password"));
 
-    @Test
-    public void validCredential() {
+    @DataProvider(name = "validLoginData")
+    public Object[][] getValidLoginData(){
+        return new Object[][]{
+                {ValidEmail, validPassword}
+        };
+    }
+
+    @DataProvider(name = "inValidLoginData")
+    public Object[][] getInValidLoginData(){
+        return new Object[][]{
+                {"invaliduser@gmail.com", "invalidpassword"}
+        };
+    }
+
+    @Test(priority = 1, groups = "login", dataProvider = "validLoginData")
+    public void validCredential(String email, String password) {
         LoginPage loginPage = new LoginPage(getDriver());
         HomePage homePage = new HomePage(getDriver());
         String actualTitle = getCurrentTitle();
@@ -28,8 +44,8 @@ public class LoginTest extends CommonAPI{
 
         //enter  username, password, and click on login button
         loginPage.goToLoginPage();
-        loginPage.enterUsername(ValidEmail);
-        loginPage.enterPassword(validPassword);
+        loginPage.enterUsername(email);
+        loginPage.enterPassword(password);
         loginPage.checkRememberMebox();
         loginPage.clickOnLoginBtn();
 
@@ -39,8 +55,8 @@ public class LoginTest extends CommonAPI{
         waitFor(3);
     }
 
-    @Test
-    public void invalidEmail(){
+    @Test(priority = 0, groups = "login", dataProvider = "inValidLoginData")
+    public void invalidEmail(String inValidEmail, String inValidPass){
         LoginPage loginPage = new LoginPage(getDriver());
         HomePage homePage = new HomePage(getDriver());
         String actualTitle = getCurrentTitle();
@@ -49,8 +65,8 @@ public class LoginTest extends CommonAPI{
 
         //enter  username, password, and click on login button
         loginPage.goToLoginPage();
-        loginPage.enterUsername("invalid@gmail.com");
-        loginPage.enterPassword("invalidPassword");
+        loginPage.enterUsername(inValidEmail);
+        loginPage.enterPassword(inValidPass);
         loginPage.checkRememberMebox();
         loginPage.clickOnLoginBtn();
 
