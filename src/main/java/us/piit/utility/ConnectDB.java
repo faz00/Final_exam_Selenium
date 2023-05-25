@@ -61,21 +61,10 @@ public class ConnectDB {
     public static void main(String[] args) throws SQLException {
 
 
-//            connectToSqlDatabase();
-
-//
-//YWRtaW4xMjM=
-//
       List<String> password = getTableColumnData("select * from orangeHRM;","validCodedNewPassword");
       System.out.println(password.get(0));
 
-//        CREATE TABLE orangeHRM (
-//                id INT AUTO_INCREMENT,
-//                validCodedPassword VARCHAR(255),
-//                validCodedUsername VARCHAR(255),
-//                validCodedNewPassword VARCHAR(255),
-//                PRIMARY KEY (id)
-//        );
+
 
 
 
