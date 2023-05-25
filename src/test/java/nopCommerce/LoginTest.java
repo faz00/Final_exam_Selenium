@@ -20,6 +20,7 @@ public class LoginTest extends CommonAPI{
     String ValidEmail = Utility.decode(prop.getProperty("nopCommerce.username"));
     String validPassword = Utility.decode(prop.getProperty("nopCommerce.password"));
 
+    // Data provider is to manipulate the data in test cases.
     @DataProvider(name = "validLoginData")
     public Object[][] getValidLoginData(){
         return new Object[][]{
@@ -53,6 +54,7 @@ public class LoginTest extends CommonAPI{
         waitFor(2);
         Assert.assertTrue(loginPage.WelcomeGreetMessage());
         waitFor(3);
+        takeScreenshot("nopCommerce", "validCredentialstestcase");
     }
 
     @Test(priority = 0, groups = "login", dataProvider = "inValidLoginData")
@@ -75,6 +77,7 @@ public class LoginTest extends CommonAPI{
                 "No customer account found";
         String actualError = loginPage.getErrorMessage();
         Assert.assertEquals(actualError, expectedError);
+        takeScreenshot("nopCommerce", "invalidemailtestcase");
     }
 
     @Test
@@ -93,5 +96,6 @@ public class LoginTest extends CommonAPI{
         String expectedError = "Please enter your email";
         String actualError = loginPage.emptyFieldsErrorMessage();
         Assert.assertEquals(expectedError, actualError);
+        takeScreenshot("nopCommerce", "emptyCredentialstestcase");
     }
 }
