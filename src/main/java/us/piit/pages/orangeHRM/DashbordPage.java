@@ -14,6 +14,9 @@ public class DashbordPage extends CommonAPI {
         PageFactory.initElements(driver, this);
     }
 
+    @FindBy(xpath = "//p[@class='oxd-userdropdown-name']")
+    WebElement userNameOfTheLoggedEmployee;
+
     @FindBy(xpath = "//h6[normalize-space()='Dashboard']")
     WebElement mainHeader;
     @FindBy(css=".oxd-userdropdown-name")
@@ -41,6 +44,12 @@ public class DashbordPage extends CommonAPI {
 
     @FindBy(xpath="(//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'][normalize-space()='Maintenance'])[1]")
     WebElement maintenanceButtonInMenu;
+
+    @FindBy(xpath="(//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'][normalize-space()='Leave'])[1]")
+    WebElement leaveButtonInMenu;
+
+    @FindBy(xpath = "(//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'])[1]")
+    WebElement pimButton;
     public String getHraderText(){
         String text = getElementText(mainHeader);
         log.info("user logged in success");
@@ -48,8 +57,8 @@ public class DashbordPage extends CommonAPI {
     }
 
     public void ClickOnMenuButton(){
-            clickOn(menuBtn);
-            log.info("click on Menu button Success");
+        clickOn(menuBtn);
+        log.info("click on Menu button Success");
 
     }
 
@@ -62,7 +71,7 @@ public class DashbordPage extends CommonAPI {
     public void clickOnBuzzOption(){
         clickOn(buzzButtonInMenu);
         log.info("Buzz page displayed");
-         }
+    }
 
 
     public void clickOnTimeOption(){
@@ -73,13 +82,23 @@ public class DashbordPage extends CommonAPI {
         clickOn(maintenanceButtonInMenu);
         log.info("Maintenance page displayed");
     }
+
+    public void clickOnLeaveOption(){
+        clickOn(leaveButtonInMenu);
+        log.info("Leave page displayed");
+    }
+
+    public void clickOnPimOption(){
+        clickOn(pimButton);
+        log.info("PIM page displayed");
+    }
     public void clickOnLogoutBtn(){
         clickOn(logoutBtn);
         log.info("click on logout button Success");
     }
 
     public void clickOnUserDropdwon(){
-       clickOn(userDropDownMenu);
+        clickOn(userDropDownMenu);
         log.info("click on the Menu Success");
     }
     public void clickOnChangePassword(){
@@ -87,6 +106,8 @@ public class DashbordPage extends CommonAPI {
         log.info("click on the Menu Success");
     }
 
+    public String getUsernameName(){
+        return getElementText(userNameOfTheLoggedEmployee);
 
-
+    }
 }

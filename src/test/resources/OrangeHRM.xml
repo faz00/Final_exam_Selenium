@@ -13,9 +13,9 @@
         <classes>
 <!--            <class name="orangeHRM.BuzzSection"></class>-->
 <!--            <class name="orangeHRM.ChangePassword"></class>-->
-<!--            <class name="orangeHRM.LeaveSection"></class>-->
-            <class name="orangeHRM.LoginTestOrange"></class>
-            <class name="orangeHRM.LoginToMaintenance"></class>
+            <class name="orangeHRM.LeaveSection"></class>
+<!--            <class name="orangeHRM.LoginTestOrange"></class>-->
+<!--            <class name="orangeHRM.LoginToMaintenance"></class>-->
 <!--            <class name="orangeHRM.LogOutTest"></class>-->
 <!--            <class name="orangeHRM.MaintenanceSection"></class>-->
 <!--            <class name="orangeHRM.PIMSection"></class>-->
