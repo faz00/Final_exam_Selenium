@@ -38,6 +38,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CommonAPI {
     Logger log = LogManager.getLogger(CommonAPI.class.getName());
@@ -422,4 +424,13 @@ public class CommonAPI {
         }
     }
 
+    // extract numeric values from String
+    public Double extractNumericPrice(String priceWithSymbol) {
+        Pattern p = Pattern.compile("[^0-9]*([0-9]*,?([0-9]+(\\.[0-9]*))?)");
+        Matcher m = p.matcher(priceWithSymbol);
+        m.matches();
+        String s_num = m.group(1).replace(",", "");
+        Double d_num = Double.valueOf(s_num);
+        return d_num;
+    }
 }
