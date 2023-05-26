@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-tutorialsNinja_test" class="navigator-link">
-              <span class="suite-name border-passed">tutorialsNinja test</span>
+              <span class="suite-name border-failed">tutorialsNinja test</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -55,12 +55,12 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-tutorialsNinja_test" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">6 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="group-tutorialsNinja_test" class="navigator-link ">
-                    <span>4 groups</span>
+                    <span>15 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,41 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">38 methods, 5 failed,   33 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-tutorialsNinja_test" class="hide-methods failed suite-tutorialsNinja_test"> (hide)</a> <!-- hide-methods failed suite-tutorialsNinja_test -->
+                      <a href="#" panel-name="suite-tutorialsNinja_test" class="show-methods failed suite-tutorialsNinja_test"> (show)</a> <!-- show-methods failed suite-tutorialsNinja_test -->
+                    </span>
+                    <div class="method-list-content failed suite-tutorialsNinja_test">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.RegisterTest" class="method navigator-link" hash-for-method="VerifyThePasswordNotVisibleToTheSourcePage">VerifyThePasswordNotVisibleToTheSourcePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.LoginTest" class="method navigator-link" hash-for-method="checkPasswordVisibility">checkPasswordVisibility</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.RegisterTest" class="method navigator-link" hash-for-method="checkPrivacyPolicyCheckBox(No)">checkPrivacyPolicyCheckBox(No)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.RegisterTest" class="method navigator-link" hash-for-method="registerWithInvalidPhoneNumber(sunflower, yellow, sunflower&quot;+ generateTimeStamp()+&quot;@gmail.com, abcd, sun123, sun123)">registerWithInvalidPhoneNumber(sunflower, yellow, sunflower"+ generateTimeStamp()+"@gmail.com, abcd, sun123, sun123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.SearchProductsTest" class="method navigator-link" hash-for-method="verifyProductDisplayCount">verifyProductDisplayCount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-tutorialsNinja_test -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +137,87 @@
                     <div class="method-list-content passed suite-tutorialsNinja_test">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.RegisterTest" class="method navigator-link" hash-for-method="VerifyDifferentWaysToNavigateToTheRegisterPage">VerifyDifferentWaysToNavigateToTheRegisterPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.AddToCartTest" class="method navigator-link" hash-for-method="VerifyRemoveAnItemFromCart">VerifyRemoveAnItemFromCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.RegisterTest" class="method navigator-link" hash-for-method="checkPrivacyPolicyCheckBox(yes)">checkPrivacyPolicyCheckBox(yes)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.RegisterTest" class="method navigator-link" hash-for-method="registerWithCredentials(invalidFirstName, inavalidlastname, sun@, abcd, sun, sun)">registerWithCredentials(invalidFirstName, inavalidlastname, sun@, abcd, sun, sun)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.RegisterTest" class="method navigator-link" hash-for-method="registerWithCredentials(sunflower, yellow, sunflower&quot;+ generateTimeStamp()+&quot;@gmail.com, 1234567890, sun123, sun123)">registerWithCredentials(sunflower, yellow, sunflower"+ generateTimeStamp()+"@gmail.com, 1234567890, sun123, sun123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.ForgottenPasswordTest" class="method navigator-link" hash-for-method="resetPassForNonRegistredUsers(sunflower&quot;+ generateTimeStamp()+&quot;@gmail.com, sun@)">resetPassForNonRegistredUsers(sunflower"+ generateTimeStamp()+"@gmail.com, sun@)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.ForgottenPasswordTest" class="method navigator-link" hash-for-method="resetPasswordWithoutEmail">resetPasswordWithoutEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.LoginTest" class="method navigator-link" hash-for-method="testLoginFieldsPlaceholders">testLoginFieldsPlaceholders</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.LoginTest" class="method navigator-link" hash-for-method="testLoginWithCredentials(sun@, sun)">testLoginWithCredentials(sun@, sun)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.LoginTest" class="method navigator-link" hash-for-method="testLoginWithCredentials(sunflower&quot;+ generateTimeStamp()+&quot;@gmail.com, sun123)">testLoginWithCredentials(sunflower"+ generateTimeStamp()+"@gmail.com, sun123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.LoginTest" class="method navigator-link" hash-for-method="testLoginWithCredentials(sun@, sun123)">testLoginWithCredentials(sun@, sun123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.LoginTest" class="method navigator-link" hash-for-method="testLoginWithCredentials(, )">testLoginWithCredentials(, )</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.LoginTest" class="method navigator-link" hash-for-method="testLoginWithCredentials(sunflower&quot;+ generateTimeStamp()+&quot;@gmail.com, sun)">testLoginWithCredentials(sunflower"+ generateTimeStamp()+"@gmail.com, sun)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.AddToCartTest" class="method navigator-link" hash-for-method="verifyAddingDuplicatePrdctsTCrt">verifyAddingDuplicatePrdctsTCrt</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.AddToCartTest" class="method navigator-link" hash-for-method="verifyAddingItemToCart">verifyAddingItemToCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.CheckoutTest" class="method navigator-link" hash-for-method="verifyCouponfonctionality(xyz123)">verifyCouponfonctionality(xyz123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.CheckoutTest" class="method navigator-link" hash-for-method="verifyCouponfonctionality()">verifyCouponfonctionality()</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -123,12 +232,72 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.AddToCartTest" class="method navigator-link" hash-for-method="verifyPrdctUpdtQunt(0)">verifyPrdctUpdtQunt(0)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.AddToCartTest" class="method navigator-link" hash-for-method="verifyPrdctUpdtQunt()">verifyPrdctUpdtQunt()</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.AddToCartTest" class="method navigator-link" hash-for-method="verifyPrdctUpdtQunt(-10)">verifyPrdctUpdtQunt(-10)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.RegisterTest" class="method navigator-link" hash-for-method="verifyRegisterWithAnExistingEmailAddress(sunflower, yellow, rezikabarech@gmail.com, 1234567890, sun123, sun123)">verifyRegisterWithAnExistingEmailAddress(sunflower, yellow, rezikabarech@gmail.com, 1234567890, sun123, sun123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.SearchProductsTest" class="method navigator-link" hash-for-method="verifySearchWithANonExistingProduct">verifySearchWithANonExistingProduct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.SearchProductsTest" class="method navigator-link" hash-for-method="verifySearchWithAnExistingProduct">verifySearchWithAnExistingProduct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.LoginTest" class="method navigator-link" hash-for-method="verifyTheNumberOfUnsuccessfulLoginAttempts">verifyTheNumberOfUnsuccessfulLoginAttempts</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.ForgottenPasswordTest" class="method navigator-link" hash-for-method="verifyThePlaceHoldText">verifyThePlaceHoldText</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.AddToCartTest" class="method navigator-link" hash-for-method="verifyUpdateAnItem">verifyUpdateAnItem</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.AddToCartTest" class="method navigator-link" hash-for-method="verifyUserNavigateTShoppingCartHmPge">verifyUserNavigateTShoppingCartHmPge</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.CheckoutTest" class="method navigator-link" hash-for-method="verifyUserNavigateToCheckoutHomePge">verifyUserNavigateToCheckoutHomePge</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.ForgottenPasswordTest" class="method navigator-link" hash-for-method="verifyUserNavigatesToTheForgotPasswordPage(sunflower&quot;+ generateTimeStamp()+&quot;@gmail.com)">verifyUserNavigatesToTheForgotPasswordPage(sunflower"+ generateTimeStamp()+"@gmail.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.SearchProductsTest" class="method navigator-link" hash-for-method="verifyUsernavigatedToTHeSearchHomePage">verifyUsernavigatedToTHeSearchHomePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.CheckoutTest" class="method navigator-link" hash-for-method="verifycouponFieldPlaceHolder">verifycouponFieldPlaceHolder</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-tutorialsNinja_test -->
@@ -143,6 +312,260 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-tutorialsNinja_test" class="panel tutorialsNinja_test">
+          <div class="suite-tutorialsNinja_test-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tutorialsNinja.SearchProductsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyProductDisplayCount">
+                  </a> <!-- verifyProductDisplayCount -->
+                  <span class="method-name">verifyProductDisplayCount</span>
+                  <div class="stack-trace">java.lang.AssertionError: Displayed product count doesn&apos;t match the selected count expected [100] but found [3]
+	at tutorialsNinja.SearchProductsTest.verifyProductDisplayCount(SearchProductsTest.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tutorialsNinja_test-class-failed -->
+          <div class="suite-tutorialsNinja_test-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tutorialsNinja.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkPasswordVisibility">
+                  </a> <!-- checkPasswordVisibility -->
+                  <span class="method-name">checkPasswordVisibility</span>
+                  <div class="stack-trace">java.lang.AssertionError: Password is visible to the page source expected [true] but found [false]
+	at tutorialsNinja.LoginTest.checkPasswordVisibility(LoginTest.java:101)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tutorialsNinja_test-class-failed -->
+          <div class="suite-tutorialsNinja_test-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tutorialsNinja.RegisterTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifyThePasswordNotVisibleToTheSourcePage">
+                  </a> <!-- VerifyThePasswordNotVisibleToTheSourcePage -->
+                  <span class="method-name">VerifyThePasswordNotVisibleToTheSourcePage</span>
+                  <div class="stack-trace">java.lang.AssertionError: the password is visible expected [true] but found [false]
+	at tutorialsNinja.RegisterTest.VerifyThePasswordNotVisibleToTheSourcePage(RegisterTest.java:136)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkPrivacyPolicyCheckBox(No)">
+                  </a> <!-- checkPrivacyPolicyCheckBox(No) -->
+                  <span class="method-name">checkPrivacyPolicyCheckBox</span>
+                  <span class="parameters">(No)</span>
+                  <div class="stack-trace">java.lang.AssertionError: The user should not be able to register when the privacy policy checkbox is not selected expected [false] but found [true]
+	at tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox(RegisterTest.java:220)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerWithInvalidPhoneNumber(sunflower, yellow, sunflower&quot;+ generateTimeStamp()+&quot;@gmail.com, abcd, sun123, sun123)">
+                  </a> <!-- registerWithInvalidPhoneNumber(sunflower, yellow, sunflower"+ generateTimeStamp()+"@gmail.com, abcd, sun123, sun123) -->
+                  <span class="method-name">registerWithInvalidPhoneNumber</span>
+                  <span class="parameters">(sunflower,yellow,sunflower"+ generateTimeStamp()+"@gmail.com,abcd,sun123,sun123)</span>
+                  <div class="stack-trace">java.lang.AssertionError: The user is able to register with an invalid phone number expected [false] but found [true]
+	at tutorialsNinja.RegisterTest.registerWithInvalidPhoneNumber(RegisterTest.java:105)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tutorialsNinja_test-class-failed -->
+          <div class="suite-tutorialsNinja_test-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tutorialsNinja.AddToCartTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifyRemoveAnItemFromCart">
+                  </a> <!-- VerifyRemoveAnItemFromCart -->
+                  <span class="method-name">VerifyRemoveAnItemFromCart</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddingDuplicatePrdctsTCrt">
+                  </a> <!-- verifyAddingDuplicatePrdctsTCrt -->
+                  <span class="method-name">verifyAddingDuplicatePrdctsTCrt</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddingItemToCart">
+                  </a> <!-- verifyAddingItemToCart -->
+                  <span class="method-name">verifyAddingItemToCart</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPrdctUpdtQunt(0)">
+                  </a> <!-- verifyPrdctUpdtQunt(0) -->
+                  <span class="method-name">verifyPrdctUpdtQunt</span>
+                  <span class="parameters">(0)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPrdctUpdtQunt()">
+                  </a> <!-- verifyPrdctUpdtQunt() -->
+                  <span class="method-name">verifyPrdctUpdtQunt</span>
+                  <span class="parameters">()</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPrdctUpdtQunt(-10)">
+                  </a> <!-- verifyPrdctUpdtQunt(-10) -->
+                  <span class="method-name">verifyPrdctUpdtQunt</span>
+                  <span class="parameters">(-10)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUpdateAnItem">
+                  </a> <!-- verifyUpdateAnItem -->
+                  <span class="method-name">verifyUpdateAnItem</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserNavigateTShoppingCartHmPge">
+                  </a> <!-- verifyUserNavigateTShoppingCartHmPge -->
+                  <span class="method-name">verifyUserNavigateTShoppingCartHmPge</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tutorialsNinja_test-class-passed -->
+          <div class="suite-tutorialsNinja_test-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tutorialsNinja.SearchProductsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchWithANonExistingProduct">
+                  </a> <!-- verifySearchWithANonExistingProduct -->
+                  <span class="method-name">verifySearchWithANonExistingProduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchWithAnExistingProduct">
+                  </a> <!-- verifySearchWithAnExistingProduct -->
+                  <span class="method-name">verifySearchWithAnExistingProduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUsernavigatedToTHeSearchHomePage">
+                  </a> <!-- verifyUsernavigatedToTHeSearchHomePage -->
+                  <span class="method-name">verifyUsernavigatedToTHeSearchHomePage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tutorialsNinja_test-class-passed -->
+          <div class="suite-tutorialsNinja_test-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tutorialsNinja.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoginFieldsPlaceholders">
+                  </a> <!-- testLoginFieldsPlaceholders -->
+                  <span class="method-name">testLoginFieldsPlaceholders</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoginWithCredentials(sun@, sun)">
+                  </a> <!-- testLoginWithCredentials(sun@, sun) -->
+                  <span class="method-name">testLoginWithCredentials</span>
+                  <span class="parameters">(sun@,sun)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoginWithCredentials(sunflower&quot;+ generateTimeStamp()+&quot;@gmail.com, sun123)">
+                  </a> <!-- testLoginWithCredentials(sunflower"+ generateTimeStamp()+"@gmail.com, sun123) -->
+                  <span class="method-name">testLoginWithCredentials</span>
+                  <span class="parameters">(sunflower"+ generateTimeStamp()+"@gmail.com,sun123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoginWithCredentials(sun@, sun123)">
+                  </a> <!-- testLoginWithCredentials(sun@, sun123) -->
+                  <span class="method-name">testLoginWithCredentials</span>
+                  <span class="parameters">(sun@,sun123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoginWithCredentials(, )">
+                  </a> <!-- testLoginWithCredentials(, ) -->
+                  <span class="method-name">testLoginWithCredentials</span>
+                  <span class="parameters">(,)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoginWithCredentials(sunflower&quot;+ generateTimeStamp()+&quot;@gmail.com, sun)">
+                  </a> <!-- testLoginWithCredentials(sunflower"+ generateTimeStamp()+"@gmail.com, sun) -->
+                  <span class="method-name">testLoginWithCredentials</span>
+                  <span class="parameters">(sunflower"+ generateTimeStamp()+"@gmail.com,sun)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyTheNumberOfUnsuccessfulLoginAttempts">
+                  </a> <!-- verifyTheNumberOfUnsuccessfulLoginAttempts -->
+                  <span class="method-name">verifyTheNumberOfUnsuccessfulLoginAttempts</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tutorialsNinja_test-class-passed -->
           <div class="suite-tutorialsNinja_test-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -195,6 +618,91 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-tutorialsNinja_test-class-passed -->
+          <div class="suite-tutorialsNinja_test-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tutorialsNinja.RegisterTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifyDifferentWaysToNavigateToTheRegisterPage">
+                  </a> <!-- VerifyDifferentWaysToNavigateToTheRegisterPage -->
+                  <span class="method-name">VerifyDifferentWaysToNavigateToTheRegisterPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkPrivacyPolicyCheckBox(yes)">
+                  </a> <!-- checkPrivacyPolicyCheckBox(yes) -->
+                  <span class="method-name">checkPrivacyPolicyCheckBox</span>
+                  <span class="parameters">(yes)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerWithCredentials(invalidFirstName, inavalidlastname, sun@, abcd, sun, sun)">
+                  </a> <!-- registerWithCredentials(invalidFirstName, inavalidlastname, sun@, abcd, sun, sun) -->
+                  <span class="method-name">registerWithCredentials</span>
+                  <span class="parameters">(invalidFirstName,inavalidlastname,sun@,abcd,sun,sun)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerWithCredentials(sunflower, yellow, sunflower&quot;+ generateTimeStamp()+&quot;@gmail.com, 1234567890, sun123, sun123)">
+                  </a> <!-- registerWithCredentials(sunflower, yellow, sunflower"+ generateTimeStamp()+"@gmail.com, 1234567890, sun123, sun123) -->
+                  <span class="method-name">registerWithCredentials</span>
+                  <span class="parameters">(sunflower,yellow,sunflower"+ generateTimeStamp()+"@gmail.com,1234567890,sun123,sun123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRegisterWithAnExistingEmailAddress(sunflower, yellow, rezikabarech@gmail.com, 1234567890, sun123, sun123)">
+                  </a> <!-- verifyRegisterWithAnExistingEmailAddress(sunflower, yellow, rezikabarech@gmail.com, 1234567890, sun123, sun123) -->
+                  <span class="method-name">verifyRegisterWithAnExistingEmailAddress</span>
+                  <span class="parameters">(sunflower,yellow,rezikabarech@gmail.com,1234567890,sun123,sun123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tutorialsNinja_test-class-passed -->
+          <div class="suite-tutorialsNinja_test-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tutorialsNinja.CheckoutTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCouponfonctionality(xyz123)">
+                  </a> <!-- verifyCouponfonctionality(xyz123) -->
+                  <span class="method-name">verifyCouponfonctionality</span>
+                  <span class="parameters">(xyz123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCouponfonctionality()">
+                  </a> <!-- verifyCouponfonctionality() -->
+                  <span class="method-name">verifyCouponfonctionality</span>
+                  <span class="parameters">()</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserNavigateToCheckoutHomePge">
+                  </a> <!-- verifyUserNavigateToCheckoutHomePge -->
+                  <span class="method-name">verifyUserNavigateToCheckoutHomePge</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifycouponFieldPlaceHolder">
+                  </a> <!-- verifycouponFieldPlaceHolder -->
+                  <span class="method-name">verifycouponFieldPlaceHolder</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tutorialsNinja_test-class-passed -->
         </div> <!-- panel tutorialsNinja_test -->
         <div panel-name="test-xml-tutorialsNinja_test" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -212,11 +720,36 @@
   &lt;parameter name=&quot;browserVersion&quot; value=&quot;112&quot;/&gt;
   &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;https://tutorialsninja.com/demo/index.php?route=account/login&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot; LoginTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tutorialsNinja.LoginTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!--  LoginTest --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot; RegisterTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tutorialsNinja.RegisterTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!--  RegisterTest --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot; ForgottenPasswordTest&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tutorialsNinja.ForgottenPasswordTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!--  ForgottenPasswordTest --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot; SearchProductsTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tutorialsNinja.SearchProductsTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!--  SearchProductsTest --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot; CheckoutTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tutorialsNinja.CheckoutTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!--  CheckoutTest --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot; AddToCartTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tutorialsNinja.AddToCartTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!--  AddToCartTest --&gt;
 &lt;/suite&gt; &lt;!-- tutorialsNinja test --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -228,7 +761,22 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
+                <span class="test-name"> LoginTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name"> RegisterTest (1 class)</span>
+              </li>
+              <li>
                 <span class="test-name"> ForgottenPasswordTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name"> SearchProductsTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name"> CheckoutTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name"> AddToCartTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -238,6 +786,70 @@
             <span class="header-content">Groups for tutorialsNinja test</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">addProductsToCartTest</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">VerifyRemoveAnItemFromCart</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddingItemToCart</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyUpdateAnItem</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyUserNavigateTShoppingCartHmPge</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">checkoutNavTest</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyUserNavigateToCheckoutHomePge</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">checkoutTest</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyCouponfonctionality</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifycouponFieldPlaceHolder</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">loginTests</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkPasswordVisibility</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testLoginWithCredentials</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyTheNumberOfUnsuccessfulLoginAttempts</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">navigation</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">VerifyDifferentWaysToNavigateToTheRegisterPage</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
             <div class="test-group">
               <span class="test-group-name">navigationTests</span>
               <br/>
@@ -251,10 +863,46 @@
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
+              <span class="test-group-name">passwordSecurity</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">VerifyThePasswordNotVisibleToTheSourcePage</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
               <span class="test-group-name">placeHolderTests</span>
               <br/>
               <div class="method-in-group">
                 <span class="method-in-group-name">verifyThePlaceHoldText</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">placeHoldersTest</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">testLoginFieldsPlaceholders</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">registration</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkPrivacyPolicyCheckBox</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">registerWithCredentials</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">registerWithInvalidPhoneNumber</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyRegisterWithAnExistingEmailAddress</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -271,10 +919,46 @@
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
+              <span class="test-group-name">searchTests</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyProductDisplayCount</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifySearchWithANonExistingProduct</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifySearchWithAnExistingProduct</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyUsernavigatedToTHeSearchHomePage</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
               <span class="test-group-name">ui</span>
               <br/>
               <div class="method-in-group">
                 <span class="method-in-group-name">verifyForgottenPasswordPageUI</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">updateProductsQntTest</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyPrdctUpdtQunt</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">verifyProductsQntTest</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddingDuplicatePrdctsTCrt</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -294,36 +978,164 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(38);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'resetPassForNonRegistredUsers')
-data.setCell(0, 2, 'tutorialsNinja.ForgottenPasswordTest')
-data.setCell(0, 3, 2947);
+data.setCell(0, 1, 'verifyUserNavigateTShoppingCartHmPge')
+data.setCell(0, 2, 'tutorialsNinja.AddToCartTest')
+data.setCell(0, 3, 13461);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyUserNavigatesToTheForgotPasswordPage')
-data.setCell(1, 2, 'tutorialsNinja.ForgottenPasswordTest')
-data.setCell(1, 3, 1403);
+data.setCell(1, 1, 'verifyAddingDuplicatePrdctsTCrt')
+data.setCell(1, 2, 'tutorialsNinja.AddToCartTest')
+data.setCell(1, 3, 10587);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'resetPasswordWithoutEmail')
-data.setCell(2, 2, 'tutorialsNinja.ForgottenPasswordTest')
-data.setCell(2, 3, 1221);
+data.setCell(2, 1, 'verifyCouponfonctionality')
+data.setCell(2, 2, 'tutorialsNinja.CheckoutTest')
+data.setCell(2, 3, 9378);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd')
-data.setCell(3, 2, 'tutorialsNinja.ForgottenPasswordTest')
-data.setCell(3, 3, 1180);
+data.setCell(3, 1, 'verifyCouponfonctionality')
+data.setCell(3, 2, 'tutorialsNinja.CheckoutTest')
+data.setCell(3, 3, 8660);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyForgottenPasswordPageUI')
-data.setCell(4, 2, 'tutorialsNinja.ForgottenPasswordTest')
-data.setCell(4, 3, 728);
+data.setCell(4, 1, 'verifyPrdctUpdtQunt')
+data.setCell(4, 2, 'tutorialsNinja.AddToCartTest')
+data.setCell(4, 3, 7446);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyThePlaceHoldText')
-data.setCell(5, 2, 'tutorialsNinja.ForgottenPasswordTest')
-data.setCell(5, 3, 575);
+data.setCell(5, 1, 'verifycouponFieldPlaceHolder')
+data.setCell(5, 2, 'tutorialsNinja.CheckoutTest')
+data.setCell(5, 3, 7402);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyUpdateAnItem')
+data.setCell(6, 2, 'tutorialsNinja.AddToCartTest')
+data.setCell(6, 3, 7058);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'VerifyRemoveAnItemFromCart')
+data.setCell(7, 2, 'tutorialsNinja.AddToCartTest')
+data.setCell(7, 3, 6896);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyPrdctUpdtQunt')
+data.setCell(8, 2, 'tutorialsNinja.AddToCartTest')
+data.setCell(8, 3, 6802);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verifyPrdctUpdtQunt')
+data.setCell(9, 2, 'tutorialsNinja.AddToCartTest')
+data.setCell(9, 3, 6782);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyRegisterWithAnExistingEmailAddress')
+data.setCell(10, 2, 'tutorialsNinja.RegisterTest')
+data.setCell(10, 3, 4316);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifyAddingItemToCart')
+data.setCell(11, 2, 'tutorialsNinja.AddToCartTest')
+data.setCell(11, 3, 3862);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'VerifyDifferentWaysToNavigateToTheRegisterPage')
+data.setCell(12, 2, 'tutorialsNinja.RegisterTest')
+data.setCell(12, 3, 3761);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'registerWithCredentials')
+data.setCell(13, 2, 'tutorialsNinja.RegisterTest')
+data.setCell(13, 3, 3313);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'resetPassForNonRegistredUsers')
+data.setCell(14, 2, 'tutorialsNinja.ForgottenPasswordTest')
+data.setCell(14, 3, 2935);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'checkPrivacyPolicyCheckBox')
+data.setCell(15, 2, 'tutorialsNinja.RegisterTest')
+data.setCell(15, 3, 2874);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'checkPrivacyPolicyCheckBox')
+data.setCell(16, 2, 'tutorialsNinja.RegisterTest')
+data.setCell(16, 3, 2794);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'registerWithInvalidPhoneNumber')
+data.setCell(17, 2, 'tutorialsNinja.RegisterTest')
+data.setCell(17, 3, 2696);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'verifyProductDisplayCount')
+data.setCell(18, 2, 'tutorialsNinja.SearchProductsTest')
+data.setCell(18, 3, 2633);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'registerWithCredentials')
+data.setCell(19, 2, 'tutorialsNinja.RegisterTest')
+data.setCell(19, 3, 2617);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'verifyTheNumberOfUnsuccessfulLoginAttempts')
+data.setCell(20, 2, 'tutorialsNinja.LoginTest')
+data.setCell(20, 3, 1984);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'VerifyThePasswordNotVisibleToTheSourcePage')
+data.setCell(21, 2, 'tutorialsNinja.RegisterTest')
+data.setCell(21, 3, 1834);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'verifyUserNavigatesToTheForgotPasswordPage')
+data.setCell(22, 2, 'tutorialsNinja.ForgottenPasswordTest')
+data.setCell(22, 3, 1601);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'verifySearchWithAnExistingProduct')
+data.setCell(23, 2, 'tutorialsNinja.SearchProductsTest')
+data.setCell(23, 3, 1541);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testLoginWithCredentials')
+data.setCell(24, 2, 'tutorialsNinja.LoginTest')
+data.setCell(24, 3, 1530);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'verifyUsernavigatedToTHeSearchHomePage')
+data.setCell(25, 2, 'tutorialsNinja.SearchProductsTest')
+data.setCell(25, 3, 1305);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'resetPasswordWithoutEmail')
+data.setCell(26, 2, 'tutorialsNinja.ForgottenPasswordTest')
+data.setCell(26, 3, 1196);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd')
+data.setCell(27, 2, 'tutorialsNinja.ForgottenPasswordTest')
+data.setCell(27, 3, 1162);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'verifyUserNavigateToCheckoutHomePge')
+data.setCell(28, 2, 'tutorialsNinja.CheckoutTest')
+data.setCell(28, 3, 1155);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'checkPasswordVisibility')
+data.setCell(29, 2, 'tutorialsNinja.LoginTest')
+data.setCell(29, 3, 1088);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'testLoginWithCredentials')
+data.setCell(30, 2, 'tutorialsNinja.LoginTest')
+data.setCell(30, 3, 1043);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'verifySearchWithANonExistingProduct')
+data.setCell(31, 2, 'tutorialsNinja.SearchProductsTest')
+data.setCell(31, 3, 989);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'testLoginWithCredentials')
+data.setCell(32, 2, 'tutorialsNinja.LoginTest')
+data.setCell(32, 3, 971);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'testLoginWithCredentials')
+data.setCell(33, 2, 'tutorialsNinja.LoginTest')
+data.setCell(33, 3, 929);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'testLoginWithCredentials')
+data.setCell(34, 2, 'tutorialsNinja.LoginTest')
+data.setCell(34, 3, 896);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'verifyForgottenPasswordPageUI')
+data.setCell(35, 2, 'tutorialsNinja.ForgottenPasswordTest')
+data.setCell(35, 3, 711);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'verifyThePlaceHoldText')
+data.setCell(36, 2, 'tutorialsNinja.ForgottenPasswordTest')
+data.setCell(36, 3, 681);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'testLoginFieldsPlaceholders')
+data.setCell(37, 2, 'tutorialsNinja.LoginTest')
+data.setCell(37, 3, 181);
 window.suiteTableData['tutorialsNinja_test']= { tableData: data, tableDiv: 'times-div-tutorialsNinja_test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-tutorialsNinja_test">
               </div> <!-- times-div-tutorialsNinja_test -->
             </div> <!-- times-div -->
@@ -349,134 +1161,802 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tutorialsNinja.ForgottenPasswordTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tutorialsNinja.AddToCartTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">extentSetup(org.testng.TestRunner@2315052d)</span>
+                <span class="method-name">extentSetup(org.testng.TestRunner@1435b17)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tutorialsNinja.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
-                <span class="method-start">316 ms</span>
+                <span class="method-start">551 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String))</span>
+                <span class="method-start">25812 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLoginWithCredentials(sunflower"+ generateTimeStamp()+"@gmail.com, sun123)</span>
+                <span class="method-start">25867 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=testLoginWithCredentials status=SUCCESS method=LoginTest.testLoginWithCredentials(j...)</span>
+                <span class="method-start">27399 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">28780 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">28783 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String))</span>
+                <span class="method-start">37263 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLoginWithCredentials(sun@, sun)</span>
+                <span class="method-start">37264 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=testLoginWithCredentials status=SUCCESS method=LoginTest.testLoginWithCredentials(j...)</span>
+                <span class="method-start">38161 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">38598 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">38603 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String))</span>
+                <span class="method-start">46450 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLoginWithCredentials(sun@, sun123)</span>
+                <span class="method-start">46451 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=testLoginWithCredentials status=SUCCESS method=LoginTest.testLoginWithCredentials(j...)</span>
+                <span class="method-start">47495 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">47909 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">47911 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String))</span>
+                <span class="method-start">53352 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLoginWithCredentials(sunflower"+ generateTimeStamp()+"@gmail.com, sun)</span>
+                <span class="method-start">53354 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=testLoginWithCredentials status=SUCCESS method=LoginTest.testLoginWithCredentials(j...)</span>
+                <span class="method-start">54325 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">54697 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">54699 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String))</span>
+                <span class="method-start">60450 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLoginWithCredentials(, )</span>
+                <span class="method-start">60451 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=testLoginWithCredentials status=SUCCESS method=LoginTest.testLoginWithCredentials(j...)</span>
+                <span class="method-start">61381 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">61821 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">61829 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.LoginTest.verifyTheNumberOfUnsuccessfulLoginAttempts())</span>
+                <span class="method-start">68200 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyTheNumberOfUnsuccessfulLoginAttempts</span>
+                <span class="method-start">68201 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifyTheNumberOfUnsuccessfulLoginAttempts status=SUCCESS method=LoginTest.verifyTh...)</span>
+                <span class="method-start">70185 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">70537 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">70539 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.LoginTest.checkPasswordVisibility())</span>
+                <span class="method-start">79208 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkPasswordVisibility</span>
+                <span class="method-start">79209 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=checkPasswordVisibility status=FAILURE method=LoginTest.checkPasswordVisibility()[p...)</span>
+                <span class="method-start">80327 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">80904 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">80909 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.LoginTest.testLoginFieldsPlaceholders())</span>
+                <span class="method-start">87387 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLoginFieldsPlaceholders</span>
+                <span class="method-start">87388 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=testLoginFieldsPlaceholders status=SUCCESS method=LoginTest.testLoginFieldsPlacehol...)</span>
+                <span class="method-start">87569 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">88042 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tutorialsNinja.RegisterTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">88141 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.RegisterTest.registerWithCredentials(java.lang.String,java.lang.String,ja...)</span>
+                <span class="method-start">93877 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">registerWithCredentials(sunflower, yellow, sunflower"+ generateTimeStamp()+"@gmail.com, 1234567890, sun123, sun123)</span>
+                <span class="method-start">93878 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=registerWithCredentials status=SUCCESS method=RegisterTest.registerWithCredentials(...)</span>
+                <span class="method-start">96495 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">97031 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">97033 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.RegisterTest.registerWithCredentials(java.lang.String,java.lang.String,ja...)</span>
+                <span class="method-start">106842 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">registerWithCredentials(invalidFirstName, inavalidlastname, sun@, abcd, sun, sun)</span>
+                <span class="method-start">106844 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=registerWithCredentials status=SUCCESS method=RegisterTest.registerWithCredentials(...)</span>
+                <span class="method-start">110158 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">110711 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">110713 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.RegisterTest.registerWithInvalidPhoneNumber(java.lang.String,java.lang.St...)</span>
+                <span class="method-start">115968 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">registerWithInvalidPhoneNumber(sunflower, yellow, sunflower"+ generateTimeStamp()+"@gmail.com, abcd, sun123, sun123)</span>
+                <span class="method-start">115970 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=registerWithInvalidPhoneNumber status=FAILURE method=RegisterTest.registerWithInval...)</span>
+                <span class="method-start">118667 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">119310 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">119315 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.RegisterTest.verifyRegisterWithAnExistingEmailAddress(java.lang.String,ja...)</span>
+                <span class="method-start">130083 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyRegisterWithAnExistingEmailAddress(sunflower, yellow, rezikabarech@gmail.com, 1234567890, sun123, sun123)</span>
+                <span class="method-start">130084 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifyRegisterWithAnExistingEmailAddress status=SUCCESS method=RegisterTest.verifyR...)</span>
+                <span class="method-start">134400 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">135999 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">136001 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.RegisterTest.VerifyThePasswordNotVisibleToTheSourcePage())</span>
+                <span class="method-start">145393 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">VerifyThePasswordNotVisibleToTheSourcePage</span>
+                <span class="method-start">145395 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=VerifyThePasswordNotVisibleToTheSourcePage status=FAILURE method=RegisterTest.Verif...)</span>
+                <span class="method-start">147231 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">147722 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">147724 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.RegisterTest.VerifyDifferentWaysToNavigateToTheRegisterPage())</span>
+                <span class="method-start">153099 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">VerifyDifferentWaysToNavigateToTheRegisterPage</span>
+                <span class="method-start">153100 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=VerifyDifferentWaysToNavigateToTheRegisterPage status=SUCCESS method=RegisterTest.V...)</span>
+                <span class="method-start">156862 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">157352 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">157355 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox(java.lang.String))</span>
+                <span class="method-start">164252 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">checkPrivacyPolicyCheckBox(yes)</span>
+                <span class="method-start">164253 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=checkPrivacyPolicyCheckBox status=SUCCESS method=RegisterTest.checkPrivacyPolicyChe...)</span>
+                <span class="method-start">167128 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">167768 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">167770 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox(java.lang.String))</span>
+                <span class="method-start">174014 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkPrivacyPolicyCheckBox(No)</span>
+                <span class="method-start">174016 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=checkPrivacyPolicyCheckBox status=FAILURE method=RegisterTest.checkPrivacyPolicyChe...)</span>
+                <span class="method-start">176811 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">177378 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tutorialsNinja.ForgottenPasswordTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">177534 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">startExtent(public void tutorialsNinja.ForgottenPasswordTest.verifyUserNavigatesToTheForgotPasswordPage(java.lan...)</span>
-                <span class="method-start">9128 ms</span>
+                <span class="method-start">184291 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserNavigatesToTheForgotPasswordPage(sunflower"+ generateTimeStamp()+"@gmail.com)</span>
-                <span class="method-start">9136 ms</span>
+                <span class="method-start">184292 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTestMethod([TestResult name=verifyUserNavigatesToTheForgotPasswordPage status=SUCCESS method=ForgottenPasswordT...)</span>
-                <span class="method-start">10541 ms</span>
+                <span class="method-start">185894 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownR</span>
-                <span class="method-start">11316 ms</span>
+                <span class="method-start">186262 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
-                <span class="method-start">11327 ms</span>
+                <span class="method-start">186264 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">startExtent(public void tutorialsNinja.ForgottenPasswordTest.verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd())</span>
-                <span class="method-start">17722 ms</span>
+                <span class="method-start">191457 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd</span>
-                <span class="method-start">17723 ms</span>
+                <span class="method-start">191459 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTestMethod([TestResult name=verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd status=SUCCESS method=ForgottenPasswordTest....)</span>
-                <span class="method-start">18905 ms</span>
+                <span class="method-start">192622 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownR</span>
-                <span class="method-start">19397 ms</span>
+                <span class="method-start">192964 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
-                <span class="method-start">19400 ms</span>
+                <span class="method-start">192966 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">startExtent(public void tutorialsNinja.ForgottenPasswordTest.resetPassForNonRegistredUsers(java.lang.String,java...)</span>
-                <span class="method-start">26663 ms</span>
+                <span class="method-start">198246 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">resetPassForNonRegistredUsers(sunflower"+ generateTimeStamp()+"@gmail.com, sun@)</span>
-                <span class="method-start">26665 ms</span>
+                <span class="method-start">198248 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTestMethod([TestResult name=resetPassForNonRegistredUsers status=SUCCESS method=ForgottenPasswordTest.resetPass...)</span>
-                <span class="method-start">29612 ms</span>
+                <span class="method-start">201184 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownR</span>
-                <span class="method-start">29991 ms</span>
+                <span class="method-start">201556 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
-                <span class="method-start">29993 ms</span>
+                <span class="method-start">201558 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">startExtent(public void tutorialsNinja.ForgottenPasswordTest.resetPasswordWithoutEmail())</span>
-                <span class="method-start">36658 ms</span>
+                <span class="method-start">206874 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">resetPasswordWithoutEmail</span>
-                <span class="method-start">36659 ms</span>
+                <span class="method-start">206875 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTestMethod([TestResult name=resetPasswordWithoutEmail status=SUCCESS method=ForgottenPasswordTest.resetPassword...)</span>
-                <span class="method-start">37881 ms</span>
+                <span class="method-start">208071 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownR</span>
-                <span class="method-start">38249 ms</span>
+                <span class="method-start">208447 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
-                <span class="method-start">38253 ms</span>
+                <span class="method-start">208449 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">startExtent(public void tutorialsNinja.ForgottenPasswordTest.verifyThePlaceHoldText())</span>
-                <span class="method-start">45155 ms</span>
+                <span class="method-start">214571 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyThePlaceHoldText</span>
-                <span class="method-start">45158 ms</span>
+                <span class="method-start">214572 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTestMethod([TestResult name=verifyThePlaceHoldText status=SUCCESS method=ForgottenPasswordTest.verifyThePlaceHo...)</span>
-                <span class="method-start">45734 ms</span>
+                <span class="method-start">215254 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownR</span>
-                <span class="method-start">46102 ms</span>
+                <span class="method-start">215650 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
-                <span class="method-start">46104 ms</span>
+                <span class="method-start">215653 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">startExtent(public void tutorialsNinja.ForgottenPasswordTest.verifyForgottenPasswordPageUI())</span>
-                <span class="method-start">51748 ms</span>
+                <span class="method-start">221818 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyForgottenPasswordPageUI</span>
-                <span class="method-start">51749 ms</span>
+                <span class="method-start">221819 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTestMethod([TestResult name=verifyForgottenPasswordPageUI status=SUCCESS method=ForgottenPasswordTest.verifyFor...)</span>
-                <span class="method-start">52478 ms</span>
+                <span class="method-start">222531 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownR</span>
-                <span class="method-start">52879 ms</span>
+                <span class="method-start">222828 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tutorialsNinja.SearchProductsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">222846 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.SearchProductsTest.verifySearchWithANonExistingProduct())</span>
+                <span class="method-start">231681 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchWithANonExistingProduct</span>
+                <span class="method-start">231682 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifySearchWithANonExistingProduct status=SUCCESS method=SearchProductsTest.verify...)</span>
+                <span class="method-start">232671 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">233174 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">233175 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.SearchProductsTest.verifySearchWithAnExistingProduct())</span>
+                <span class="method-start">241103 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchWithAnExistingProduct</span>
+                <span class="method-start">241104 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifySearchWithAnExistingProduct status=SUCCESS method=SearchProductsTest.verifySe...)</span>
+                <span class="method-start">242646 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">243102 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">243108 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.SearchProductsTest.verifyProductDisplayCount())</span>
+                <span class="method-start">250394 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyProductDisplayCount</span>
+                <span class="method-start">250397 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifyProductDisplayCount status=FAILURE method=SearchProductsTest.verifyProductDis...)</span>
+                <span class="method-start">253031 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">253477 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">253479 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.SearchProductsTest.verifyUsernavigatedToTHeSearchHomePage())</span>
+                <span class="method-start">261887 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUsernavigatedToTHeSearchHomePage</span>
+                <span class="method-start">261890 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifyUsernavigatedToTHeSearchHomePage status=SUCCESS method=SearchProductsTest.ver...)</span>
+                <span class="method-start">263195 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">263627 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tutorialsNinja.CheckoutTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">263699 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.CheckoutTest.verifyUserNavigateToCheckoutHomePge())</span>
+                <span class="method-start">273955 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserNavigateToCheckoutHomePge</span>
+                <span class="method-start">273956 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifyUserNavigateToCheckoutHomePge status=SUCCESS method=CheckoutTest.verifyUserNa...)</span>
+                <span class="method-start">275111 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">275687 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">275689 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.CheckoutTest.verifyCouponfonctionality(java.lang.String))</span>
+                <span class="method-start">283944 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyCouponfonctionality(xyz123)</span>
+                <span class="method-start">283946 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifyCouponfonctionality status=SUCCESS method=CheckoutTest.verifyCouponfonctional...)</span>
+                <span class="method-start">293325 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">293899 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">293900 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.CheckoutTest.verifyCouponfonctionality(java.lang.String))</span>
+                <span class="method-start">301883 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyCouponfonctionality()</span>
+                <span class="method-start">301884 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifyCouponfonctionality status=SUCCESS method=CheckoutTest.verifyCouponfonctional...)</span>
+                <span class="method-start">310544 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">310941 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">310942 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.CheckoutTest.verifycouponFieldPlaceHolder())</span>
+                <span class="method-start">317235 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifycouponFieldPlaceHolder</span>
+                <span class="method-start">317237 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifycouponFieldPlaceHolder status=SUCCESS method=CheckoutTest.verifycouponFieldPl...)</span>
+                <span class="method-start">324639 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">325048 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tutorialsNinja.AddToCartTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">325059 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserNavigateTShoppingCartHmPge</span>
+                <span class="method-start">331246 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.AddToCartTest.verifyUserNavigateTShoppingCartHmPge())</span>
+                <span class="method-start">331246 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifyUserNavigateTShoppingCartHmPge status=SUCCESS method=AddToCartTest.verifyUser...)</span>
+                <span class="method-start">344707 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">345727 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">345750 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.AddToCartTest.verifyAddingItemToCart())</span>
+                <span class="method-start">351918 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddingItemToCart</span>
+                <span class="method-start">351919 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifyAddingItemToCart status=SUCCESS method=AddToCartTest.verifyAddingItemToCart()...)</span>
+                <span class="method-start">355782 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">356160 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">356162 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.AddToCartTest.VerifyRemoveAnItemFromCart())</span>
+                <span class="method-start">362283 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">VerifyRemoveAnItemFromCart</span>
+                <span class="method-start">362284 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=VerifyRemoveAnItemFromCart status=SUCCESS method=AddToCartTest.VerifyRemoveAnItemFr...)</span>
+                <span class="method-start">369182 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">369660 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">369662 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.AddToCartTest.verifyUpdateAnItem())</span>
+                <span class="method-start">375180 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUpdateAnItem</span>
+                <span class="method-start">375181 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifyUpdateAnItem status=SUCCESS method=AddToCartTest.verifyUpdateAnItem()[pri:4, ...)</span>
+                <span class="method-start">382239 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">382681 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">382683 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.AddToCartTest.verifyPrdctUpdtQunt(java.lang.String))</span>
+                <span class="method-start">388224 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyPrdctUpdtQunt(-10)</span>
+                <span class="method-start">388226 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifyPrdctUpdtQunt status=SUCCESS method=AddToCartTest.verifyPrdctUpdtQunt(java.la...)</span>
+                <span class="method-start">395672 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">396063 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">396064 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.AddToCartTest.verifyPrdctUpdtQunt(java.lang.String))</span>
+                <span class="method-start">401791 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyPrdctUpdtQunt()</span>
+                <span class="method-start">401792 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifyPrdctUpdtQunt status=SUCCESS method=AddToCartTest.verifyPrdctUpdtQunt(java.la...)</span>
+                <span class="method-start">408575 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">409030 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">409032 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.AddToCartTest.verifyPrdctUpdtQunt(java.lang.String))</span>
+                <span class="method-start">416480 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyPrdctUpdtQunt(0)</span>
+                <span class="method-start">416481 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifyPrdctUpdtQunt status=SUCCESS method=AddToCartTest.verifyPrdctUpdtQunt(java.la...)</span>
+                <span class="method-start">423283 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">423668 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 11, chrome, 112, https://tutorialsninja.com/demo/index.php?route=accou...)</span>
+                <span class="method-start">423669 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.AddToCartTest.verifyAddingDuplicatePrdctsTCrt())</span>
+                <span class="method-start">429244 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddingDuplicatePrdctsTCrt</span>
+                <span class="method-start">429245 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=verifyAddingDuplicatePrdctsTCrt status=SUCCESS method=AddToCartTest.verifyAddingDup...)</span>
+                <span class="method-start">439832 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">440215 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">generateReport</span>
-                <span class="method-start">52908 ms</span>
+                <span class="method-start">440221 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

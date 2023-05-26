@@ -8,19 +8,51 @@
   <parameter name="browserVersion" value="112"/>
   <parameter name="browserName" value="chrome"/>
   <parameter name="url" value="https://tutorialsninja.com/demo/index.php?route=account/login"/>
-  <test thread-count="5" name=" ForgottenPasswordTest(failed)">
+  <test thread-count="5" name=" LoginTest(failed)">
     <classes>
-      <class name="tutorialsNinja.ForgottenPasswordTest">
+      <class name="tutorialsNinja.LoginTest">
+        <methods>
+          <include name="afterEachTestMethod"/>
+          <include name="setUp"/>
+          <include name="startExtent"/>
+          <include name="tearDownR"/>
+          <include name="checkPasswordVisibility"/>
+          <include name="extentSetup"/>
+          <include name="generateReport"/>
+        </methods>
+      </class> <!-- tutorialsNinja.LoginTest -->
+    </classes>
+  </test> <!--  LoginTest(failed) -->
+  <test thread-count="5" name=" RegisterTest(failed)">
+    <classes>
+      <class name="tutorialsNinja.RegisterTest">
+        <methods>
+          <include name="VerifyThePasswordNotVisibleToTheSourcePage"/>
+          <include name="afterEachTestMethod"/>
+          <include name="setUp"/>
+          <include name="startExtent"/>
+          <include name="checkPrivacyPolicyCheckBox" invocation-numbers="1"/>
+          <include name="tearDownR"/>
+          <include name="registerWithInvalidPhoneNumber" invocation-numbers="0"/>
+          <include name="extentSetup"/>
+          <include name="generateReport"/>
+        </methods>
+      </class> <!-- tutorialsNinja.RegisterTest -->
+    </classes>
+  </test> <!--  RegisterTest(failed) -->
+  <test thread-count="5" name=" SearchProductsTest(failed)">
+    <classes>
+      <class name="tutorialsNinja.SearchProductsTest">
         <methods>
           <include name="setUp"/>
           <include name="afterEachTestMethod"/>
           <include name="startExtent"/>
           <include name="tearDownR"/>
           <include name="extentSetup"/>
-          <include name="verifyForgottenPasswordPageUI"/>
+          <include name="verifyProductDisplayCount"/>
           <include name="generateReport"/>
         </methods>
-      </class> <!-- tutorialsNinja.ForgottenPasswordTest -->
+      </class> <!-- tutorialsNinja.SearchProductsTest -->
     </classes>
-  </test> <!--  ForgottenPasswordTest(failed) -->
+  </test> <!--  SearchProductsTest(failed) -->
 </suite> <!-- Failed suite [tutorialsNinja test] -->
