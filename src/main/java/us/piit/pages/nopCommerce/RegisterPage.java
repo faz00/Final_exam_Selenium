@@ -90,7 +90,7 @@ public class RegisterPage extends CommonAPI {
                 type(PasswordInputField, validPassword);
                 type(ConfirmPasswordInputField, validPassword);
                 RegisterButton.click();
-                if (driver.findElements(By.xpath("//li[text()='The specified email already exists']")).size() < 0) {
+                if (driver.findElements(By.xpath("//li[text()='The specified email already exists']")).size()<=0) {
                     isVisible(RegistrationCompletedSuccessMessage);
                     Assert.assertTrue(RegistrationCompletedSuccessMessage.isDisplayed());
                     Assert.assertEquals(RegistrationCompletedSuccessMessage.getText(), "Your registration completed");
@@ -123,7 +123,7 @@ public class RegisterPage extends CommonAPI {
                 type(PasswordInputField, validPassword);
                 type(ConfirmPasswordInputField, validPassword);
                 RegisterButton.click();
-                if (driver.findElements(By.xpath("//li[text()='The specified email already exists']")).size() < 0) {
+                if (driver.findElements(By.xpath("//li[text()='The specified email already exists']")).size() <= 0) {
                     isVisible(RegistrationCompletedSuccessMessage);
                     Assert.assertTrue(RegistrationCompletedSuccessMessage.isDisplayed());
                     Assert.assertEquals(RegistrationCompletedSuccessMessage.getText(), "Your registration completed");
