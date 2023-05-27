@@ -48,6 +48,13 @@ public class DashbordPage extends CommonAPI {
     @FindBy(xpath="(//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'][normalize-space()='Leave'])[1]")
     WebElement leaveButtonInMenu;
 
+    @FindBy(xpath = "(//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'][normalize-space()='My Info'])[1]")
+    WebElement myInfoButtonInMenu;
+    @FindBy(xpath = "(//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'][normalize-space()='Recruitment'])[1]")
+    WebElement recruitmentButtonInMenu;
+    @FindBy(xpath = "(//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'][normalize-space()='Admin'])[1]")
+    WebElement adminButtonInMenu;
+
     @FindBy(xpath = "(//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'])[1]")
     WebElement pimButton;
     public String getHraderText(){
@@ -70,22 +77,31 @@ public class DashbordPage extends CommonAPI {
 
     public void clickOnBuzzOption(){
         clickOn(buzzButtonInMenu);
-        log.info("Buzz page displayed");
+        log.info("Buzz clicked on success");
     }
 
 
     public void clickOnTimeOption(){
         clickOn(TimeButtonInMenu);
-        log.info("Time page displayed");
+        log.info("Time Button clicked on success");
     }
     public void clickOnMaintenanceOption(){
         clickOn(maintenanceButtonInMenu);
-        log.info("Maintenance page displayed");
+        log.info("Maintenance clicked on success");
     }
 
     public void clickOnLeaveOption(){
         clickOn(leaveButtonInMenu);
-        log.info("Leave page displayed");
+        log.info("Leave clicked on success");
+    }
+
+    public void clickOnMyInfoOption(){
+        clickOn(myInfoButtonInMenu);
+        log.info("My Info clicked on success");
+    }
+    public void clickOnRecruitmentOption(){
+        clickOn(recruitmentButtonInMenu);
+        log.info("Recruitment clicked on success");
     }
 
     public void clickOnPimOption(){
@@ -100,6 +116,10 @@ public class DashbordPage extends CommonAPI {
     public void clickOnUserDropdwon(){
         clickOn(userDropDownMenu);
         log.info("click on the Menu Success");
+    }
+    public void clickOnAdminOption(){
+        clickOn(adminButtonInMenu);
+        log.info("Admin clicked on success");
     }
     public void clickOnChangePassword(){
         clickOn(changePasswordOption);

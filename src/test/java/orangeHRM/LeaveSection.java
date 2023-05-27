@@ -220,80 +220,8 @@ public class LeaveSection  extends CommonAPI {
         Assert.assertEquals(expectedReport,actualReport);
     }
 
-//    @Test(dataProvider = "loginCredentials", priority = 5, groups = "Leave")
-//    public void addEntitlements(String validUsername,String validPassword){
-//        LoginPage loginPage = new LoginPage(getDriver());
-//        DashbordPage dashbordPage = new DashbordPage(getDriver());
-//        MaintenancePage maintenancePage =new MaintenancePage(getDriver());
-//
-//
-//        String expectedTitle = "OrangeHRM";
-//        String actualTitle = driver.getTitle();
-//        Assert.assertEquals(expectedTitle,actualTitle);
-//
-//
-//        //enter username,enter password, and click on login button
-//
-//        loginPage.enterUsername(validUsername);
-//
-//
-//        loginPage.enterPassword(validPassword);
-//
-//        loginPage.clickOnLoginBtn();
-//
-//        //check user is logged in
-//        String expectedHomePage = "Dashboard";
-//        String actualHomePage = dashbordPage.getHraderText();
-//        Assert.assertEquals(expectedHomePage,actualHomePage);
-//
-//        //Maintenance
-//        dashbordPage.searchOptionOnSearchBar("Leave");
-//
-//        waitFor(5);
-//        dashbordPage.clickOnLeaveOption();
-//
-//        waitFor(2);
-//        clickOn("body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > header:nth-child(2) > div:nth-child(2) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(3) > span:nth-child(1)");
-//        //log.info("Entitlement clicked on success");
-//
-//        clickOn("li[class='--active oxd-topbar-body-nav-tab --parent'] li:nth-child(1) a:nth-child(1)");
-//        //log.info("Add Entitlement clicked on success");
-//
-//        String name = dashbordPage.getUsernameName();
-//
-//        WebElement element = driver.findElement(By.cssSelector("input[placeholder='Type for hints...']"));
-//        type(element,name);
-//        waitFor(5);
-//        element.sendKeys(Keys.ARROW_DOWN);
-//        waitFor(5);
-//        element.sendKeys(Keys.ENTER);
-//
-//        clickOn("div[class='oxd-grid-3 orangehrm-full-width-grid'] div:nth-child(1) div:nth-child(1) div:nth-child(2) div:nth-child(1) div:nth-child(1) div:nth-child(2) i:nth-child(1)");
-//        WebElement element1 = driver.findElement(By.cssSelector("//div[@class='oxd-select-text oxd-select-text--active oxd-select-text--error']"));
-//
-//      //  clickOn("//div[contains(text(),'CAN - Bereavement')]");
-//        waitFor(5);
-//        element1.sendKeys(Keys.ARROW_DOWN);
-//        waitFor(5);
-//        element1.sendKeys(Keys.ENTER);
-//
-//        type("div[class='oxd-input-group oxd-input-field-bottom-space'] div input[class='oxd-input oxd-input--active']","22");
-//        //log.info("Entitlement added on success");
-//
-//        clickOn("button[type='submit']");
-//        //log.info("button clicked on success");
-//
-//        clickOn("//button[normalize-space()='Confirm']");
-//        //log.info("button confirm clicked on success");
-//
-//        //
-//        String expectedReport="Leave Type";
-//        String actualReport=getElementText("//div[@role='columnheader'][normalize-space()='Leave Type']");
-//        Assert.assertEquals(expectedReport,actualReport);
-//    }
 
-
-//    @Test(dataProvider = "NewHoliday", priority = 6, groups = "Leave")
+//    @Test(dataProvider = "NewHoliday", priority = 5, groups = "Leave")
 
     public void AddHolidayInHolidaysList(String validUsername,String validPassword,String holidayName,String date){
         LoginPage loginPage = new LoginPage(getDriver());
