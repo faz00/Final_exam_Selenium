@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>5/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri May 26 12:38:23 EDT 2023</td>
+<td>Started on:</td><td>Sat May 27 21:45:25 EDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>89 seconds (89242 ms)</td>
+<tr><td>Total time:</td><td>86 seconds (86813 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,18 +76,59 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tutorialsNinja.RegisterTest.VerifyThePasswordNotVisibleToTheSourcePage()'><b>VerifyThePasswordNotVisibleToTheSourcePage</b><br>Test class: tutorialsNinja.RegisterTest</td>
-<td><div><pre>java.lang.AssertionError: the password is visible expected [true] but found [false]
-	at tutorialsNinja.RegisterTest.VerifyThePasswordNotVisibleToTheSourcePage(RegisterTest.java:136)
+<td title='tutorialsNinja.RegisterTest.registerWithInvalidPhoneNumber()'><b>registerWithInvalidPhoneNumber</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: sunflower, yellow, sunflower"+ generateTimeStamp()+"@gmail.com, abcd, sun123, sun123</td>
+<td><div><pre>java.lang.AssertionError: The user is able to register with an invalid phone number expected [false] but found [true]
+	at tutorialsNinja.RegisterTest.registerWithInvalidPhoneNumber(RegisterTest.java:109)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace959718932", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace959718932'><pre>java.lang.AssertionError: the password is visible expected [true] but found [false]
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1822634375", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1822634375'><pre>java.lang.AssertionError: The user is able to register with an invalid phone number expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertFalse(Assert.java:78)
+	at tutorialsNinja.RegisterTest.registerWithInvalidPhoneNumber(RegisterTest.java:109)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</pre></div></td>
+<td>2</td>
+<td>tutorialsNinja.RegisterTest@9ef8eb7</td></tr>
+<tr>
+<td title='tutorialsNinja.RegisterTest.VerifyThePasswordNotVisibleToTheSourcePage()'><b>VerifyThePasswordNotVisibleToTheSourcePage</b><br>Test class: tutorialsNinja.RegisterTest</td>
+<td><div><pre>java.lang.AssertionError: the password is visible expected [true] but found [false]
+	at tutorialsNinja.RegisterTest.VerifyThePasswordNotVisibleToTheSourcePage(RegisterTest.java:145)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1458088096", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1458088096'><pre>java.lang.AssertionError: the password is visible expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1577)
 	at org.testng.Assert.assertTrue(Assert.java:56)
-	at tutorialsNinja.RegisterTest.VerifyThePasswordNotVisibleToTheSourcePage(RegisterTest.java:136)
+	at tutorialsNinja.RegisterTest.VerifyThePasswordNotVisibleToTheSourcePage(RegisterTest.java:145)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -114,62 +155,21 @@ function toggleAllBoxes() {
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
 </pre></div></td>
-<td>1</td>
-<td>tutorialsNinja.RegisterTest@ff684e1</td></tr>
-<tr>
-<td title='tutorialsNinja.RegisterTest.registerWithInvalidPhoneNumber()'><b>registerWithInvalidPhoneNumber</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: sunflower, yellow, sunflower"+ generateTimeStamp()+"@gmail.com, abcd, sun123, sun123</td>
-<td><div><pre>java.lang.AssertionError: The user is able to register with an invalid phone number expected [false] but found [true]
-	at tutorialsNinja.RegisterTest.registerWithInvalidPhoneNumber(RegisterTest.java:105)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace954492773", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace954492773'><pre>java.lang.AssertionError: The user is able to register with an invalid phone number expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertFalse(Assert.java:78)
-	at tutorialsNinja.RegisterTest.registerWithInvalidPhoneNumber(RegisterTest.java:105)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</pre></div></td>
-<td>2</td>
-<td>tutorialsNinja.RegisterTest@ff684e1</td></tr>
+<td>4</td>
+<td>tutorialsNinja.RegisterTest@9ef8eb7</td></tr>
 <tr>
 <td title='tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox()'><b>checkPrivacyPolicyCheckBox</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: No</td>
 <td><div><pre>java.lang.AssertionError: The user should not be able to register when the privacy policy checkbox is not selected expected [false] but found [true]
-	at tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox(RegisterTest.java:220)
+	at tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox(RegisterTest.java:229)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1937294500", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1937294500'><pre>java.lang.AssertionError: The user should not be able to register when the privacy policy checkbox is not selected expected [false] but found [true]
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1783933562", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1783933562'><pre>java.lang.AssertionError: The user should not be able to register when the privacy policy checkbox is not selected expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1577)
 	at org.testng.Assert.assertFalse(Assert.java:78)
-	at tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox(RegisterTest.java:220)
+	at tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox(RegisterTest.java:229)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -197,7 +197,7 @@ function toggleAllBoxes() {
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
 </pre></div></td>
 <td>2</td>
-<td>tutorialsNinja.RegisterTest@ff684e1</td></tr>
+<td>tutorialsNinja.RegisterTest@9ef8eb7</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -208,30 +208,30 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tutorialsNinja.RegisterTest.verifyRegisterWithAnExistingEmailAddress()'><b>verifyRegisterWithAnExistingEmailAddress</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: sunflower, yellow, rezikabarech@gmail.com, 1234567890, sun123, sun123</td>
-<td></td>
-<td>4</td>
-<td>tutorialsNinja.RegisterTest@ff684e1</td></tr>
-<tr>
-<td title='tutorialsNinja.RegisterTest.registerWithCredentials()'><b>registerWithCredentials</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: invalidFirstName, inavalidlastname, sun@, abcd, sun, sun</td>
+<td title='tutorialsNinja.RegisterTest.registerWithCredentials()'><b>registerWithCredentials</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: sunflower, yellow, sunflower"+ generateTimeStamp()+"@gmail.com, 1234567890, sun123, sun123</td>
 <td></td>
 <td>3</td>
-<td>tutorialsNinja.RegisterTest@ff684e1</td></tr>
-<tr>
-<td title='tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox()'><b>checkPrivacyPolicyCheckBox</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: yes</td>
-<td></td>
-<td>2</td>
-<td>tutorialsNinja.RegisterTest@ff684e1</td></tr>
+<td>tutorialsNinja.RegisterTest@9ef8eb7</td></tr>
 <tr>
 <td title='tutorialsNinja.RegisterTest.VerifyDifferentWaysToNavigateToTheRegisterPage()'><b>VerifyDifferentWaysToNavigateToTheRegisterPage</b><br>Test class: tutorialsNinja.RegisterTest</td>
 <td></td>
 <td>3</td>
-<td>tutorialsNinja.RegisterTest@ff684e1</td></tr>
+<td>tutorialsNinja.RegisterTest@9ef8eb7</td></tr>
 <tr>
-<td title='tutorialsNinja.RegisterTest.registerWithCredentials()'><b>registerWithCredentials</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: sunflower, yellow, sunflower"+ generateTimeStamp()+"@gmail.com, 1234567890, sun123, sun123</td>
+<td title='tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox()'><b>checkPrivacyPolicyCheckBox</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: yes</td>
+<td></td>
+<td>3</td>
+<td>tutorialsNinja.RegisterTest@9ef8eb7</td></tr>
+<tr>
+<td title='tutorialsNinja.RegisterTest.registerWithCredentials()'><b>registerWithCredentials</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: invalidFirstName, inavalidlastname, sun@, abcd, sun, sun</td>
 <td></td>
 <td>2</td>
-<td>tutorialsNinja.RegisterTest@ff684e1</td></tr>
+<td>tutorialsNinja.RegisterTest@9ef8eb7</td></tr>
+<tr>
+<td title='tutorialsNinja.RegisterTest.verifyRegisterWithAnExistingEmailAddress()'><b>verifyRegisterWithAnExistingEmailAddress</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: sunflower, yellow, rezikabarech@gmail.com, 1234567890, sun123, sun123</td>
+<td></td>
+<td>4</td>
+<td>tutorialsNinja.RegisterTest@9ef8eb7</td></tr>
 </table><p>
 </body>
 </html>

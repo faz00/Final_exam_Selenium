@@ -41,7 +41,7 @@ public class RegisterTest extends CommonAPI {
         };
     }
 
-    @Test(priority = 1, groups = "registration", dataProvider = "RegistrationData")
+    @Test(priority = 1, groups = "registerWthCredTest", dataProvider = "RegistrationData")
     public void registerWithCredentials(String firstName, String lastName, String email, String phoneNumber,
                                         String password, String confirmPassword) {
 
@@ -65,9 +65,10 @@ public class RegisterTest extends CommonAPI {
         registerPage.clickSubmitButton();
 
 // Verify registration success or failure based on the provided data
-       // boolean isExpectedSuccess = !email.startsWith("invalid");
-        assertTrue( registerHomePage.isRegisterHomePageTitleDisplayed(),
-                "no register home page title is displayed");
+      assertTrue( registerHomePage.isRegisterHomePageTitleDisplayed(),
+               "no register home page title is displayed when registering with invalid credentials");
+
+        registerPage.invCredMsg(firstName,lastName,email,phoneNumber,password,confirmPassword);
     }
 
 
@@ -79,13 +80,16 @@ public class RegisterTest extends CommonAPI {
         };
     }
 
-    @Test(priority = 2, groups = "registration", dataProvider = "invalidPhoneNumberData")
+    @Test(priority = 2, groups = "registerWithInvPhoNmbrTest", dataProvider = "invalidPhoneNumberData")
     public void registerWithInvalidPhoneNumber(String firstName, String lastName, String email, String phoneNumber,
                                                String password, String confirmPassword) {
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
 
         RegisterPage registerPage = new RegisterPage(getDriver());
+
         RegisterHomePage registerHomePage = new RegisterHomePage(getDriver());
 
         //click on the continue button
@@ -106,7 +110,7 @@ public class RegisterTest extends CommonAPI {
     }
 
     //verify different ways to navigate to the register page
-    @Test(priority = 5, groups = "navigation")
+    @Test(priority = 5, groups = "differentWysTNavgToRgstrTest")
 
     public void VerifyDifferentWaysToNavigateToTheRegisterPage() {
 
@@ -114,15 +118,19 @@ public class RegisterTest extends CommonAPI {
 
         //assert that the user can navigate to the Register forum in different ways
         boolean isOnRegisterPage = registerPage.VerifyDifferentWaysToNavigateToTheRegisterPage(driver);
+
         assertTrue(isOnRegisterPage, "The user did not navigate to the register page.");
     }
 
-    //verify if the password entered is visible to the source page
-    @Test(priority = 4, groups = "passwordSecurity")
 
+    //verify if the password entered is visible to the source page
+    @Test(priority = 4, groups = "passwordVisibilityTest")
     public void VerifyThePasswordNotVisibleToTheSourcePage() {
+
         RegisterPage registerPage = new RegisterPage(getDriver());
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
 
         //click on the continue button
@@ -130,10 +138,13 @@ public class RegisterTest extends CommonAPI {
 
         //enter any given password in the password field
         registerPage.enterPassword(validPassword);
+        registerPage.clickSubmitButton();
+        registerPage.htmlScrenShot(getDriver());
 
         // Assert if the password field is  visible in the source page
-
         assertTrue(registerPage.isPasswordFieldVisible(validPassword), "the password is visible");
+
+
     }
 
     @DataProvider(name = "existingEmailAddressData")
@@ -144,14 +155,15 @@ public class RegisterTest extends CommonAPI {
         };
     }
 
-    @Test(priority = 3, groups = "registration", dataProvider = "existingEmailAddressData")
+    @Test(priority = 3, groups = "rgstrWthExstngEmailAddrssTest", dataProvider = "existingEmailAddressData")
     public void verifyRegisterWithAnExistingEmailAddress(String firstName, String lastName, String email, String phoneNumber,
                                                          String password, String confirmPassword) {
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
 
         RegisterPage registerPage = new RegisterPage(getDriver());
-        RegisterHomePage registerHomePage = new RegisterHomePage(getDriver());
 
         //click on the continue button
         registerPage.clickContinueButton();
@@ -179,12 +191,15 @@ public class RegisterTest extends CommonAPI {
         };
     }
 
-    @Test(priority = 6, groups = "registration", dataProvider = "privacyCheckBox")
+    @Test(priority = 6, groups = "prvcyPlcyChckBxTest", dataProvider = "privacyCheckBox")
     public void checkPrivacyPolicyCheckBox(String privacyOption) {
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
 
         RegisterPage registerPage = new RegisterPage(getDriver());
+
         RegisterHomePage registerHomePage = new RegisterHomePage(getDriver());
 
 
@@ -206,25 +221,17 @@ public class RegisterTest extends CommonAPI {
 
         registerPage.clickSubmitButton();
 
-        // Assert if the privacy policy checkbox is selected when 'yes' option is provided
-      /*  if (privacyOption.equalsIgnoreCase("yes")) {
-            assertTrue(registerPage.isPrivacyPolicyCheckboxSelected(), "The privacy policy checkbox is not selected");
-        } else {
-            assertFalse(registerPage.isPrivacyPolicyCheckboxSelected(), "The privacy policy checkbox should not be selected");
-        }
-*/
         // Assert if the user can register successfully based on the privacy policy checkbox selection
+
         if (privacyOption.equalsIgnoreCase("yes")) {
             assertTrue(registerHomePage.isRegisterHomePageTitleDisplayed(), "The user should be able to register when the privacy policy checkbox is selected");
         } else {
             assertFalse(registerHomePage.isRegisterHomePageTitleDisplayed(), "The user should not be able to register when the privacy policy checkbox is not selected");
         }
-
-
-
-
-
+    }
 
 
     }
-}
+
+
+

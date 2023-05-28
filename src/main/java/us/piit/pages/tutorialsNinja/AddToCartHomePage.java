@@ -42,12 +42,22 @@ public class AddToCartHomePage extends CommonAPI {
     WebElement qntInputField;
     @FindBy(linkText ="Checkout")
     WebElement checkoutBttn;
+    @FindBy(xpath = "//i[@class='fa fa-exchange']")
+    WebElement cmprPrdctIcn;
+    @FindBy(xpath = "//*[@class='alert alert-success alert-dismissible']")
+    WebElement cmprPrdctScssMsg;
+    @FindBy(linkText = "product comparison")
+    WebElement prdctCmprsnLink;
+    @FindBy(xpath = "//input[@class='btn btn-primary btn-block']")
+    WebElement addTCart;
+    @FindBy(xpath = "//*[@class='alert alert-success alert-dismissible']")
+    WebElement sucesaddItmCrtMsg;
+
 
     public void clikOnCntnuebttn(){
         log.info("the continue button is clicked");
         clickOn(continuBttn);
     }
-
     public void clkPrdctImg(){
         log.info("the product is clcked successfully");
         clickOn(productimg);
@@ -88,8 +98,8 @@ public class AddToCartHomePage extends CommonAPI {
         log.info("the update sucess message is displayed");
         return  updateSucssMsg.isDisplayed();
     }
-    public String getPgeURL() {
-        log.info("the user is able to see the URL of the page");
+    public String getPgeURL(WebDriver driver) {
+        log.info("the user is able to see the URL of the page which is "+driver.getCurrentUrl());
         return driver.getCurrentUrl();
     }
     public void setprdctQnt(String qnt){
@@ -106,7 +116,34 @@ public class AddToCartHomePage extends CommonAPI {
         int quantity = Integer.parseInt(quantityValue);
         log.info("the product quantity is "+quantity);
         assertEquals(2, quantity, "The quantity of the product is not increasing when adding it multiple times.");
+    }
 
+    public void CmprPrdIcn(){
+        log.info("the compare product icon is clicked");
+        clickOn(cmprPrdctIcn);
+    }
+
+    public boolean isCmprPrdctSccssMsgDsp(){
+        log.info("compare product success message is displayed");
+        return cmprPrdctScssMsg.isDisplayed();
+    }
+
+    public void clickPrdctCmprsnLink(){
+        log.info("the product comparison link is clicked");
+        clickOn(prdctCmprsnLink);
+    }
+
+    public void clickAddToCart(){
+        log.info("the add to cart button is clicked");
+        clickOn(addTCart);
+    }
+    public boolean isSccssAddItmMsgDsp(){
+        log.info("the add to cart success message is displayed");
+        return sucesaddItmCrtMsg.isDisplayed();
+    }
+    public void clearPrvsQntNum(){
+        log.info("the quantity number cleared successfully");
+        qntInputField.clear();
     }
 }
 

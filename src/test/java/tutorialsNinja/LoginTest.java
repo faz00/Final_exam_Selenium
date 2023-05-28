@@ -16,7 +16,6 @@ import static org.testng.Assert.*;
 public class LoginTest  extends CommonAPI {
 
     Logger log = LogManager.getLogger(LoginTest.class.getName());
-
     Properties prop = Utility.loadProperties();
     String validEmail = Utility.decode(prop.getProperty("tutorialsninja.validEmail"));
     String validPassword = Utility.decode(prop.getProperty("tutorialsninja.validPassword"));
@@ -35,20 +34,26 @@ public class LoginTest  extends CommonAPI {
         };
     }
 
-    @Test(priority = 1, groups = {"loginTests"}, dataProvider = "loginData")
+    @Test(priority = 1, groups = {"loginWithCred(valid,invalid)"}, dataProvider = "loginData")
     public void testLoginWithCredentials(String email, String password) {
+
         // Click on the login
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
         LoginPage loginPage = new LoginPage(getDriver());
+
         LoginHomePage loginHomePage = new LoginHomePage(getDriver());
 
         // Enter email and password from the data provider
         loginPage.setEmail(email);
+
         loginPage.setPassword(password);
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
+
         loginPage.clickLoginButton();
 
-        // Assert that the user is logged in or an error message is displayed
+        // Assert if the user  logged in or an error message is displayed
         if (email.equals(validEmail) && password.equals(validPassword)) {
             assertTrue(loginHomePage.isAccountLinkDisplayed(), "The user is not logged in");
         } else {
@@ -56,69 +61,91 @@ public class LoginTest  extends CommonAPI {
         }
 
     }
-
-
-    @Test(priority = 2, groups = {"loginTests"})
+    @Test(priority = 2, groups = "unsuccessfulLoginAttemptsTest")
     public void verifyTheNumberOfUnsuccessfulLoginAttempts() {
+
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         LoginPage loginPage = new LoginPage(getDriver());
 
         // Enter invalid email address and invalid password
         loginPage.setEmail(invalidEmail);
+
         loginPage.setPassword(invalidPassword);
 
-        int maxAttempts = 3;
-        int attemptsMade = 0;
+        //count the number of unsuccessful login attempts
+        loginPage.unsfLoginAttempts();
 
-        while (attemptsMade < maxAttempts) {
-            // Click the login button
-            loginPage.clickLoginButton();
-            attemptsMade++;
+        // Click the login button
+        loginPage.clickLoginButton();
 
-            // Verify that an error message is displayed
-            boolean expectedErMsg = loginPage.LoginCredenErrMsgDisplayed();
-            assertTrue(expectedErMsg,"the user doesn't received any LoginCredenErrMsg ");
+        // Verify that an error message is displayed
+        boolean expectedErMsg = loginPage.LoginCredenErrMsgDisplayed();
 
+        assertTrue(expectedErMsg, "the user doesn't received any LoginCredenErrMsg ");
 
-        }
     }
 
-    @Test(priority = 3, groups = {"loginTests"})
+
+    @Test(priority = 3, groups = "pswrdVisibilityTest")
     public void checkPasswordVisibility(){
+
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         LoginPage loginPage = new LoginPage(getDriver());
 
         // Enter any given password into the password text field
-
         loginPage.setPassword(password);
+
         loginPage.clickLoginButton();
 
-// Assert if the password is visible in the page source
-        assertTrue(loginPage.isPasswordFieldVisible(password), "Password is visible to the page source");
+// Assert if the password is visible to the page source
+        takeScreenshot("TutorialsNinja","checkPswrdVisibility");
+
+     assertTrue(loginPage.isPasswordFieldVisible(password), "Password is visible to the page source");
 
     }
     @Test(priority = 4, groups = {"placeHoldersTest"})
+
     public void testLoginFieldsPlaceholders() {
+
         LoginPage loginPage = new LoginPage(getDriver());
-        LoginHomePage loginHomePage = new LoginHomePage(getDriver());
 
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
-
         // Check that the email and password fields have placeholder text
         String expectedEmailPlaceholder = "E-Mail Address";
+
         String actualEmailPlaceholder = loginPage.getEmailPlaceholderText();
 
         assertEquals(actualEmailPlaceholder, expectedEmailPlaceholder,"the expectedEmailPlaceholder is not equal actualEmailPlaceholder");
 
         String expectedPasswordPlaceholder = "Password";
+
         String actualPasswordPlaceholder = loginPage.getPasswordPlaceholderText();
 
-        assertEquals(actualPasswordPlaceholder, expectedPasswordPlaceholder,"the expectedPasswordPlaceholder  is not equal actualPasswordPlaceholder");
+        assertEquals(actualPasswordPlaceholder, expectedPasswordPlaceholder,"the expectedPasswordPlaceholder is not equal actualPasswordPlaceholder");
+
+    }
+
+//verify if the 'forgotten password'link is displayed and works
+@Test(priority=5,groups="pswrdLinkTest")
+          public void verifyForgottenPasswrdLinkDsp(){
+
+        LoginPage loginPage = new LoginPage(getDriver());
+
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+
+       //check the 'forgotten password'link displayed
+            assertTrue(loginPage.isFrgtnPawrdLnkDsp(),"the forgotten password link is not displayed");
+
+
+
+
 
 
     }

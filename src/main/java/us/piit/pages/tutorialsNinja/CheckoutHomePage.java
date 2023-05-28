@@ -9,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import us.piit.base.CommonAPI;
 
 public class CheckoutHomePage extends CommonAPI {
-
     Logger log = LogManager.getLogger(CheckoutHomePage.class.getName());
 
     public CheckoutHomePage(WebDriver driver) {
@@ -17,25 +16,14 @@ public class CheckoutHomePage extends CommonAPI {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//*[@id='content']/p")
-    WebElement checkoutHeaderPage;
     @FindBy(xpath = " //*[@id=\"content\"]/div[3]/div[1]/div/div[1]/a/img")
     WebElement productimg;
-    @FindBy(xpath = "//*[@class='btn btn-primary']")
-    WebElement continuBttn;
-
     @FindBy(xpath = "//*[@id='button-cart']")
     WebElement addTCrtButtn;
     @FindBy(xpath = "//*[@id=\"product-product\"]/div[1]")
     WebElement successMsg;
     @FindBy(linkText = "shopping cart")
     WebElement shopgCrtLink;
-    @FindBy(xpath = "//*[@id='cart-total']")
-    WebElement shopCrtBr;
-    @FindBy(xpath = "//*[@class='btn btn-danger btn-xs']")
-    WebElement removeIcn;
-    @FindBy(xpath = "//*[@id=\"content\"]/p")
-    WebElement emptyShngCrtMsg;
     @FindBy(linkText = "Use Coupon Code")
     WebElement couponCodeBtn;
     @FindBy(xpath = "//input[@id='input-coupon']")
@@ -44,20 +32,12 @@ public class CheckoutHomePage extends CommonAPI {
     WebElement applycopnbtn;
     @FindBy(xpath = "//*[@class='alert alert-danger alert-dismissible']")
     WebElement copnWarningMsg;
-
-    public boolean ischeckoutHeaderPageDisp() {
-        log.info("the checkoutHeaderPage should be displayed");
-        return checkoutHeaderPage.isDisplayed();
-    }
+    @FindBy(xpath = "//*[@id='content']/P")
+    WebElement chcktPgHdr;
 
     public void clkPrdctImg() {
         log.info("the product is clcked successfully");
         clickOn(productimg);
-    }
-
-    public void clikOnCntnuebttn() {
-        log.info("the continue button is clicked");
-        clickOn(continuBttn);
     }
 
     public void CkickOnAddTCrtBttn() {
@@ -75,10 +55,6 @@ public class CheckoutHomePage extends CommonAPI {
         clickOn(shopgCrtLink);
     }
 
-    public boolean islinkShopCartDisp() {
-
-        return shopgCrtLink.isDisplayed();
-    }
 
     public void clickCouponCodeBtn() {
         log.info("the coupon code button is clicked");
@@ -90,8 +66,8 @@ public class CheckoutHomePage extends CommonAPI {
         type(inputCopnCodeField, code);
     }
 
-    public String getPgeURL() {
-
+    public String getPgeURL(WebDriver driver) {
+        log.info("the URL of the web page is " + driver.getCurrentUrl());
         return driver.getCurrentUrl();
     }
 
@@ -104,14 +80,15 @@ public class CheckoutHomePage extends CommonAPI {
         log.info("a warning message is displayed when entering invalid or no coupons");
         return copnWarningMsg.isDisplayed();
     }
+
     public boolean isCouponCodePlaceholderDisp() {
         String placeholder = inputCopnCodeField.getAttribute("placeholder");
         log.info("The coupon code functionality has placeholder: " + placeholder);
         return placeholder != null && !placeholder.isEmpty();
     }
 
-
+    public boolean ischeckoutHeaderPageDisp() {
+        log.info("the checkout home page header is displayed");
+  return chcktPgHdr.isDisplayed();
+    }
 }
-
-
-

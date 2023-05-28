@@ -42,7 +42,7 @@ public class ForgottenPasswordHomePage extends CommonAPI {
 
     }
     public boolean isEmailInputDisplayed() {
-        log.info("Checking if the email input field is displayed");
+        log.info("the email input field is displayed");
         return emailInput.isDisplayed();
     }
 
@@ -59,13 +59,10 @@ public class ForgottenPasswordHomePage extends CommonAPI {
         clickOn(continueButton);
     }
     public boolean isContinuBttnDisp(){
+
         return continueButton.isDisplayed();
     }
-    public String getResetPasswordSuccessMessage() {
-        log.info("a success message is displayed");
-        return successMessage.getText() ;
 
-    }
 
     public String getResetPasswordErrorMessage() {
         log.info("an error message is displayed");
@@ -87,7 +84,6 @@ public class ForgottenPasswordHomePage extends CommonAPI {
     public boolean isUrlDisp(String expectedUrl,WebDriver driver) {
         String currentUrl = driver.getCurrentUrl();
         log.info("Current URL: " + currentUrl);
-        log.info("Expected URL: " + expectedUrl);
         return currentUrl.equals(expectedUrl);
     }
 

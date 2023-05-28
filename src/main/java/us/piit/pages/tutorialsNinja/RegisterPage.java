@@ -2,11 +2,18 @@ package us.piit.pages.tutorialsNinja;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import us.piit.base.CommonAPI;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
@@ -60,6 +67,11 @@ public class RegisterPage extends CommonAPI {
 
     @FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")
     WebElement alertMessage;
+    @FindBy(xpath = "//div[contains(text(),'Password confirmation does not match password!')]")
+    WebElement pswrdNtMtchngMsg;
+
+
+
     public void clickContinueButton() {
         clickOn(continueButton);
         log.info("the continue button is clicked successfully");
@@ -187,22 +199,56 @@ public boolean isPrivacyPolicyCheckboxSelected(){
         return true;
     }
 
-
     public boolean isAlertMessageDisplayed(){
         log.info("the alert message is displayed when registering with an existing email address");
         return alertMessage.isDisplayed();
     }
 
 
+    public void invCredMsg(String firstName, String lastName, String email, String phoneNumber,
+            String password, String confirmPassword) {
 
+        if (firstName.startsWith("valid") && lastName.startsWith("valid") && email.startsWith("valid")&& password.startsWith("valid")&& confirmPassword.startsWith("valid")) {
+            log.info("The user is able to log in.");
+        } else {
+            log.info("The user is not able to log in.");
+        }
+    }
+public void htmlScrenShot(WebDriver driver) {
+    // Get the page source HTML
+    String pageSource = driver.getPageSource();
 
+    // Define the file path for saving the screenshot
+    String filePath = "C:\\Users\\My Pc\\eclipse-workspace\\Final_exam_Selenium\\screenShots\\tutorialsNinja/page_source.html";
 
-
-
-
+    // Save the page source as a file
+    File htmlFile = new File(filePath);
+    try (FileWriter writer = new FileWriter(htmlFile)) {
+        writer.write(pageSource);
+        System.out.println("Page source saved: " + htmlFile.getAbsolutePath());
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
 
 
 }
+
+public boolean isPswrdErrMsgDsp(){
+        log.info("the password not matching is displayed");
+        return pswrdNtMtchngMsg.isDisplayed();
+}
+
+
+
+   }
+
+
+
+
+
+
+
+
 
 
 

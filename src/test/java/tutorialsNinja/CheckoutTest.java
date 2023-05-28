@@ -13,30 +13,47 @@ import us.piit.utility.Utility;
 import java.time.Duration;
 import java.util.Properties;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class CheckoutTest extends CommonAPI {
 
 
-    Logger log = LogManager.getLogger(ForgottenPasswordTest.class.getName());
+    Logger log = LogManager.getLogger(CheckoutTest.class.getName());
     Properties prop = Utility.loadProperties();
     String CouponCode = Utility.decode(prop.getProperty("tutorialsninja.CouponCode"));
     String search = Utility.decode(prop.getProperty("tutorialsninja.search"));
+@Test
+    public void verfyUsrNvgtChcktHmPge(){
 
-    @Test(priority = 1, groups = "checkoutNavTest")
-    public void verifyUserNavigateToCheckoutHomePge() {
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
 
         CheckoutPage checkPage = new CheckoutPage(getDriver());
-        CheckoutHomePage checkHmPage = new CheckoutHomePage(getDriver());
+        CheckoutHomePage checkHmPage=new CheckoutHomePage(getDriver());
+// Click on the checkout link
+        checkPage.clickOnCheckoutLink();
 
+        //verify the checkout home page url is displayed
+        String expURL="https://tutorialsninja.com/demo/index.php?route=checkout/cart";
+      String actURL=checkHmPage.getPgeURL(driver);
+      assertEquals(actURL,expURL,"they are not the same");
+
+    }
+
+    @Test(priority = 1, groups = "checkoutNavTest")
+    public void verifyUserNavigateToCheckoutHomePgeWthNoPrdcts() {
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
+
+        CheckoutPage checkPage = new CheckoutPage(getDriver());
+        CheckoutHomePage checkHmPage=new CheckoutHomePage(getDriver());
 // Click on the checkout link
         checkPage.clickOnCheckoutLink();
         //assert that the user navigates to an empty shopping cart page instead of the actual checkout page
         assertTrue(checkHmPage.ischeckoutHeaderPageDisp(), "the checkoutHeaderPage is not displayed");
-
+       // checkHmPage.getCheckoutPgemessage();
     }
 
     @DataProvider(name = "couponCodes")
@@ -48,10 +65,10 @@ public class CheckoutTest extends CommonAPI {
     }
 
     //Verify without entering any fields in the Billing Section of the Checkout Page
-    @Test(priority = 2, groups = "checkoutTest", dataProvider = "couponCodes")
+    @Test(priority = 2, groups = "couponFonctionalityTest", dataProvider = "couponCodes")
     public void verifyCouponfonctionality(String CouponCode) {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
 
         CheckoutPage checkPage = new CheckoutPage(getDriver());
         CheckoutHomePage checkHmPage = new CheckoutHomePage(getDriver());
@@ -88,11 +105,11 @@ public class CheckoutTest extends CommonAPI {
     }
 
     //verify the coupon fonctionality havng the placeholder
-    @Test(priority = 3, groups = "checkoutTest")
+    @Test(priority = 3, groups = "couponFieldPlaceHolderTest")
     public void verifycouponFieldPlaceHolder() {
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
 
         CheckoutPage checkPage = new CheckoutPage(getDriver());
         CheckoutHomePage checkHmPage = new CheckoutHomePage(getDriver());
@@ -122,4 +139,7 @@ public class CheckoutTest extends CommonAPI {
 //verify if the coupon code text field has a placeholder
         assertTrue(checkHmPage.isCouponCodePlaceholderDisp(), "the coupon code text field doesn't have placeholder");
     }
-}
+
+
+    }
+

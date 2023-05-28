@@ -3,17 +3,17 @@
 <suite name="Failed suite [tutorialsNinja test]" guice-stage="DEVELOPMENT">
   <parameter name="useCloudEnv" value="false"/>
   <parameter name="os" value="windows"/>
-  <parameter name="osVersion" value="11"/>
+  <parameter name="osVersion" value="10"/>
   <parameter name="envName" value="browserstack"/>
-  <parameter name="browserVersion" value="112"/>
+  <parameter name="browserVersion" value="110"/>
   <parameter name="browserName" value="chrome"/>
   <parameter name="url" value="https://tutorialsninja.com/demo/index.php?route=account/login"/>
   <test thread-count="5" name=" LoginTest(failed)">
     <classes>
       <class name="tutorialsNinja.LoginTest">
         <methods>
-          <include name="afterEachTestMethod"/>
           <include name="setUp"/>
+          <include name="afterEachTestMethod"/>
           <include name="startExtent"/>
           <include name="tearDownR"/>
           <include name="checkPasswordVisibility"/>
@@ -28,8 +28,8 @@
       <class name="tutorialsNinja.RegisterTest">
         <methods>
           <include name="VerifyThePasswordNotVisibleToTheSourcePage"/>
-          <include name="afterEachTestMethod"/>
           <include name="setUp"/>
+          <include name="afterEachTestMethod"/>
           <include name="startExtent"/>
           <include name="checkPrivacyPolicyCheckBox" invocation-numbers="1"/>
           <include name="tearDownR"/>
