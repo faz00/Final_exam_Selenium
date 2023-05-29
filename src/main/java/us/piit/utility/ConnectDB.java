@@ -61,11 +61,7 @@ public class ConnectDB {
     public static void main(String[] args) throws SQLException {
 
 
-            connectToSqlDatabase();
-
-
-      List<String> emails = getTableColumnData("select * from tutorialsninja;","validemail");
-      System.out.println(emails.get(0));
+     
 
 
 
