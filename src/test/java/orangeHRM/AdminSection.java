@@ -1,22 +1,24 @@
 package orangeHRM;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;
 import us.piit.pages.orangeHRM.AdminPage;
 import us.piit.pages.orangeHRM.DashbordPage;
 import us.piit.pages.orangeHRM.LoginPage;
-import us.piit.pages.orangeHRM.RecruitmentPage;
+import us.piit.utility.ExcelReader;
 import us.piit.utility.Utility;
-
-import java.util.Properties;
+import java.io.File;
+import static us.piit.utility.Utility.currentDir;
 
 public class AdminSection extends CommonAPI {
-    Properties prop = Utility.loadProperties();
-    String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
-    String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+    String path=currentDir+ File.separator+"manualTestCases\\OrangeHRMTest.xlsx";
+    ExcelReader excelReader =new ExcelReader(path);
+        String validUsername = Utility.decode(excelReader.getDataFromCell("DataProvider",1,0));
+        String validPassword = Utility.decode(excelReader.getDataFromCell("DataProvider",1,1));
 
-    @Test
+        @Test
     public void addJobTitle(){
 
         LoginPage loginPage = new LoginPage(getDriver());
@@ -58,8 +60,8 @@ public class AdminSection extends CommonAPI {
         adminPage.clickOnStatus();
         adminPage.typeUsernameField("Username");
 
-        adminPage.typePassword("Fazia2000");
-        adminPage.typeConfirmPassword("Fazia2000");
+        adminPage.typePassword("Fazia2000*");
+        adminPage.typeConfirmPassword("Fazia2000*");
 
         adminPage.clickOnSubmitJobTitle();
 

@@ -5,30 +5,33 @@ import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import us.piit.utility.Utility;
 import us.piit.base.CommonAPI;
 import us.piit.pages.orangeHRM.DashbordPage;
 import us.piit.pages.orangeHRM.LoginPage;
+import us.piit.utility.ExcelReader;
+import us.piit.utility.Utility;
+import java.io.File;
 
-import java.util.Properties;
+import static us.piit.utility.Utility.currentDir;
 
 public class LogOutTest extends CommonAPI {
 
+    Logger log = LogManager.getLogger(LogOutTest.class.getName());
 
-    @DataProvider(name = "logoutTestData")
-    public Object[][] provideLogoutTestData() {
-        Properties prop = Utility.loadProperties();
-        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
-        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+
+    String path=currentDir+File.separator+"manualTestCases\\OrangeHRMTest.xlsx";
+    @DataProvider(name = "loginCredentials")
+    public Object[][] getLoginCredentials() {
+        String validUsername = Utility.decode(ExcelReader.getDataFromCell(path,"DataProvider",1,0));
+        String validPassword = Utility.decode(ExcelReader.getDataFromCell(path,"DataProvider",1,1));
 
         return new Object[][]{
-                {validUsername, validPassword},
-                // Add more test data sets as needed
+                {validUsername, validPassword}
+
         };
     }
-
-    @Test(dataProvider = "logoutTestData", priority = 1, groups = "LogOutTest")
-    public void logout(String username, String password)  {
+    @Test(dataProvider = "loginCredentials", priority = 1, groups = "Logout")
+    public void logout(String validUsername, String validPassword)  {
 
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -41,10 +44,10 @@ public class LogOutTest extends CommonAPI {
 
             //enter username,enter password, and click on login button
 
-        loginPage.enterUsername(username);
+        loginPage.enterUsername(validUsername);
 
 
-        loginPage.enterPassword(password);
+        loginPage.enterPassword(validPassword);
 
         loginPage.clickOnLoginBtn();
 

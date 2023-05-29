@@ -9,18 +9,23 @@ import us.piit.pages.orangeHRM.DashbordPage;
 import us.piit.pages.orangeHRM.LeavePage;
 import us.piit.pages.orangeHRM.LoginPage;
 import us.piit.pages.orangeHRM.RecruitmentPage;
+import us.piit.utility.ExcelReader;
 import us.piit.utility.Utility;
 
 import java.io.File;
 import java.util.Properties;
 
+import static us.piit.utility.Utility.currentDir;
+
 public class Recruitment extends CommonAPI {
+
+    String path=currentDir+ File.separator+"manualTestCases\\OrangeHRMTest.xlsx";
+    ExcelReader excelReader =new ExcelReader(path);
 
     @DataProvider(name = "loginCredentials")
     public Object[][] getLoginCredentials() {
-        Properties prop = Utility.loadProperties();
-        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
-        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+        String validUsername = Utility.decode(excelReader.getDataFromCell("DataProvider",1,0));
+        String validPassword = Utility.decode(excelReader.getDataFromCell("DataProvider",1,1));
 
 
         return new Object[][]{

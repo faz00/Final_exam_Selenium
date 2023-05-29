@@ -30,7 +30,7 @@ public class LeaveSection  extends CommonAPI {
     }
 
 
-//    @Test(dataProvider = "loginCredentials", priority = 1, groups = "Leave")
+    @Test(dataProvider = "loginCredentials", priority = 1, groups = "Leave")
     public void approveLeaveRecordOfAnEmployee(String validUsername,String validPassword){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -73,7 +73,7 @@ public class LeaveSection  extends CommonAPI {
     }
 
 
-//    @Test(dataProvider = "loginCredentials", priority = 2, groups = "Leave")
+    @Test(dataProvider = "loginCredentials", priority = 2, groups = "Leave")
     public void rejectLeaveRecordOfAnEmployee(String validUsername,String validPassword){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -119,7 +119,7 @@ public class LeaveSection  extends CommonAPI {
     }
 
 
-//    @Test(dataProvider = "loginCredentials", priority = 3, groups = "Leave")
+    @Test(dataProvider = "loginCredentials", priority = 3, groups = "Leave")
     public void addCommentForAnEmployeeRecord(String validUsername,String validPassword){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -169,7 +169,7 @@ public class LeaveSection  extends CommonAPI {
 
     }
 
-//    @Test(dataProvider = "loginCredentials", priority = 4, groups = "Leave")
+    @Test(dataProvider = "loginCredentials", priority = 4, groups = "Leave")
      public void generateReportOfAnEmployee(String validUsername,String validPassword){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -221,8 +221,7 @@ public class LeaveSection  extends CommonAPI {
     }
 
 
-//    @Test(dataProvider = "NewHoliday", priority = 5, groups = "Leave")
-
+    @Test(dataProvider = "NewHoliday", priority = 5, groups = "Leave")
     public void AddHolidayInHolidaysList(String validUsername,String validPassword,String holidayName,String date){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
