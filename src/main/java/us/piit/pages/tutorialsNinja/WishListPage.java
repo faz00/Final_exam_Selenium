@@ -8,12 +8,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import us.piit.base.CommonAPI;
 
-public class SearchProductsPage extends CommonAPI {
+public class WishListPage extends CommonAPI {
+    Logger log = LogManager.getLogger(WishListPage.class.getName());
 
+    public WishListPage(WebDriver driver) {
 
-    Logger log = LogManager.getLogger(SearchProductsPage.class.getName());
-
-    public SearchProductsPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
@@ -21,9 +20,14 @@ public class SearchProductsPage extends CommonAPI {
     WebElement searchField;
     @FindBy(xpath = "//*[@id=\"search\"]/span/button")
     WebElement searchButton;
+    @FindBy(css = "#input-email")
+    WebElement emailField;
 
-    @FindBy(xpath = "//*[@id=\"content\"]/p[2]")
-    WebElement nonExistingSearchErrMsg;
+    @FindBy(xpath = "//input[@id='input-password']")
+    WebElement passwordField;
+
+    @FindBy(xpath = "//input[@class='btn btn-primary']")
+    WebElement loginButton;
 
     public void SearchField(String search) {
         type(searchField, search);
@@ -33,20 +37,26 @@ public class SearchProductsPage extends CommonAPI {
         clickOn(searchButton);
         log.info("the search button clicked");
     }
+    public void setEmail(String email) {
+        type(emailField, email);
+        log.info("the email address entered successfully in the email input field");
+    }
 
-    public boolean isErrorMessageDisplayed() {
-        // Assert a non-existing product error message is displayed
-        log.info("an error message is displayed when searching for non existing products");
-        return getElementText(nonExistingSearchErrMsg).equals("There is no product that matches the search criteria.");
+    public void setPassword(String password) {
+        type(passwordField, password);
+        log.info("Entered password success");
+    }
 
+    public void clickLoginButton() {
+        clickOn(loginButton);
+        log.info("Clicked login button success");
     }
 
 
 
 
+
+
+
+
 }
-
-
-
-
-
