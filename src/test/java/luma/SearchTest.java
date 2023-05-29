@@ -82,4 +82,70 @@ public class SearchTest extends CommonAPI {
         // See Latest products
         searchPage.SeeLatestProduct();
     }
+
+    @Test
+    public void sort_Products_by_ProductName(){
+        SearchPage searchPage = new SearchPage(getDriver());
+
+        // Verify that user is on Home page
+        String actualTitle = getCurrentTitle();
+        Assert.assertEquals(actualTitle, "Home Page");
+        waitFor(1);
+
+        // Search Products
+        searchPage.enterProduct("t shirt");
+        searchPage.clickOnSearchIcon();
+        searchPage.verifyThatSearchResults("t shirt");
+
+        // Sort products
+        searchPage.SortProductsBy("Product Name");
+
+        // verify that products are sorted
+        Assert.assertTrue(searchPage.VerifyProductsSortedBy("Product Name"));
+        searchPage.scrollFullPageToSeeAllProducts();
+    }
+
+    @Test
+    public void sort_Products_by_Price(){
+        SearchPage searchPage = new SearchPage(getDriver());
+
+        // Verify that user is on Home page
+        String actualTitle = getCurrentTitle();
+        Assert.assertEquals(actualTitle, "Home Page");
+        waitFor(1);
+
+        // Search Products
+        searchPage.enterProduct("t shirt");
+        searchPage.clickOnSearchIcon();
+        searchPage.verifyThatSearchResults("t shirt");
+
+        // Sort products
+        searchPage.SortProductsBy("Price");
+
+        // verify that products are sorted
+        Assert.assertTrue(searchPage.VerifyProductsSortedBy("Price"));
+        searchPage.scrollFullPageToSeeAllProducts();
+    }
+
+    @Test
+    public void sort_Products_by_Relevance(){
+        SearchPage searchPage = new SearchPage(getDriver());
+
+        // Verify that user is on Home page
+        String actualTitle = getCurrentTitle();
+        Assert.assertEquals(actualTitle, "Home Page");
+        waitFor(1);
+
+        // Search Products
+        searchPage.enterProduct("t shirt");
+        searchPage.clickOnSearchIcon();
+        searchPage.verifyThatSearchResults("t shirt");
+
+        // Sort products
+        searchPage.SortProductsBy("Relevance");
+
+        // verify that products are sorted
+        Assert.assertTrue(searchPage.VerifyProductsSortedBy("Relevance"));
+        searchPage.scrollFullPageToSeeAllProducts();
+    }
 }
