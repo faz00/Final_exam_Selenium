@@ -3,6 +3,7 @@ package orangeHRM;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import us.piit.utility.Utility;
 import us.piit.base.CommonAPI;
@@ -14,15 +15,20 @@ import java.util.Properties;
 public class LogOutTest extends CommonAPI {
 
 
-        Logger log = LogManager.getLogger(LogOutTest.class.getName());
+    @DataProvider(name = "logoutTestData")
+    public Object[][] provideLogoutTestData() {
+        Properties prop = Utility.loadProperties();
+        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
+        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
 
-    Properties prop = Utility.loadProperties();
-    String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
-    String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
+        return new Object[][]{
+                {validUsername, validPassword},
+                // Add more test data sets as needed
+        };
+    }
 
-
-    @Test
-        public  void logout() throws InterruptedException {
+    @Test(dataProvider = "logoutTestData", priority = 1, groups = "LogOutTest")
+    public void logout(String username, String password)  {
 
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -35,10 +41,10 @@ public class LogOutTest extends CommonAPI {
 
             //enter username,enter password, and click on login button
 
-        loginPage.enterUsername(validUsername);
+        loginPage.enterUsername(username);
 
 
-        loginPage.enterPassword(validPassword);
+        loginPage.enterPassword(password);
 
         loginPage.clickOnLoginBtn();
 

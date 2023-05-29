@@ -90,7 +90,7 @@ public class RegisterPage extends CommonAPI {
                 type(PasswordInputField, validPassword);
                 type(ConfirmPasswordInputField, validPassword);
                 RegisterButton.click();
-                if (driver.findElements(By.xpath("//li[text()='The specified email already exists']")).size() < 0) {
+                if (driver.findElements(By.xpath("//li[text()='The specified email already exists']")).size()<=0) {
                     isVisible(RegistrationCompletedSuccessMessage);
                     Assert.assertTrue(RegistrationCompletedSuccessMessage.isDisplayed());
                     Assert.assertEquals(RegistrationCompletedSuccessMessage.getText(), "Your registration completed");
@@ -123,7 +123,7 @@ public class RegisterPage extends CommonAPI {
                 type(PasswordInputField, validPassword);
                 type(ConfirmPasswordInputField, validPassword);
                 RegisterButton.click();
-                if (driver.findElements(By.xpath("//li[text()='The specified email already exists']")).size() < 0) {
+                if (driver.findElements(By.xpath("//li[text()='The specified email already exists']")).size() <= 0) {
                     isVisible(RegistrationCompletedSuccessMessage);
                     Assert.assertTrue(RegistrationCompletedSuccessMessage.isDisplayed());
                     Assert.assertEquals(RegistrationCompletedSuccessMessage.getText(), "Your registration completed");
@@ -150,6 +150,63 @@ public class RegisterPage extends CommonAPI {
                 RegisterButton.click();
                 waitFor(1);
                 verifyAllMentadoryFieldErrorAppears();
+                break;
+            case "Without First Name":
+                waitFor(1);
+                isVisible(genderMale);
+                genderMale.click();
+                type(LastNameInputField, "Commerce");
+                selectDateOfBirth();
+                type(EmailInputField, ValidEmail);
+                type(PasswordInputField, validPassword);
+                type(ConfirmPasswordInputField, validPassword);
+                RegisterButton.click();
+                waitFor(1);
+                Assert.assertTrue(driver.findElement(By.cssSelector("[class=\"field-validation-error\"]"))
+                        .getText().contains("First name is required"));
+                break;
+            case "Without Last Name":
+                waitFor(1);
+                isVisible(genderMale);
+                genderMale.click();
+                type(FirstNameInputField, "Nop");
+                selectDateOfBirth();
+                type(EmailInputField, ValidEmail);
+                type(PasswordInputField, validPassword);
+                type(ConfirmPasswordInputField, validPassword);
+                RegisterButton.click();
+                waitFor(1);
+                Assert.assertTrue(driver.findElement(By.cssSelector("[class=\"field-validation-error\"]"))
+                        .getText().contains("Last name is required"));
+                break;
+            case "Without Email":
+                waitFor(1);
+                isVisible(genderMale);
+                genderMale.click();
+                type(FirstNameInputField, "Nop");
+                type(LastNameInputField, "Commerce");
+                selectDateOfBirth();
+                type(PasswordInputField, validPassword);
+                type(ConfirmPasswordInputField, validPassword);
+                RegisterButton.click();
+                waitFor(1);
+                Assert.assertTrue(driver.findElement(By.cssSelector("[class=\"field-validation-error\"]"))
+                        .getText().contains("Email is required"));
+                break;
+            case "Without Password":
+                waitFor(1);
+                isVisible(genderMale);
+                genderMale.click();
+                type(FirstNameInputField, "Nop");
+                type(LastNameInputField, "Commerce");
+                selectDateOfBirth();
+                type(EmailInputField, ValidEmail);
+                RegisterButton.click();
+                waitFor(1);
+                List<WebElement> fieldErrors = driver.findElements(By.cssSelector("[class=\"field-validation-error\"]"));
+                for (WebElement er: fieldErrors){
+                    Assert.assertTrue(er.getText().contains("Password is required"));
+                }
                 break;
         }
     }

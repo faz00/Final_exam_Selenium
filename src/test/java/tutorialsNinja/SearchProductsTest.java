@@ -123,4 +123,3 @@ public class SearchProductsTest extends CommonAPI {
 
 
 
-

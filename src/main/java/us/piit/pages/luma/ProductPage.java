@@ -10,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import us.piit.base.CommonAPI;
 
+import java.util.List;
+
 public class ProductPage extends CommonAPI {
     public ProductPage(WebDriver driver){
         this.driver = driver;
@@ -58,6 +60,8 @@ public class ProductPage extends CommonAPI {
     @FindBy(xpath = "(//*[@href=\"https://magento.softwaretestingboard.com/customer/account/\"])[1]")
     WebElement myAccountBtn;
 
+    @FindBy(xpath = "(//*[@id=\"limiter\"])[2]")
+    WebElement product_limiter;
 
     public void changeToListView(){
         isInteractable(ListViewIcon);
@@ -118,4 +122,50 @@ public class ProductPage extends CommonAPI {
         Assert.assertTrue(emptyListMessage.getText().contains("You cleared the comparison list."));
     }
 
+    public void go_to_page_footer(){
+        waitFor(1);
+        scrollToElement(product_limiter);
+        hoverOver(product_limiter);
+    }
+
+    public boolean verify_product_displayed(String prodNmber){
+        switch (prodNmber){
+            case "12":
+                waitFor(1);
+                Assert.assertSame("12", prodNmber);
+                break;
+            case "24":
+                waitFor(1);
+                Assert.assertTrue(driver.getCurrentUrl().contains("24"));
+                break;
+            case "36":
+                waitFor(1);
+                Assert.assertTrue(driver.getCurrentUrl().contains("36"));
+                break;
+        }
+        return true;
+    }
+
+    public void show_products_per_page(String prodNmber) throws InterruptedException {
+        switch (prodNmber){
+            case "12":
+                product_limiter.click();
+                Thread.sleep(20);
+                driver.findElement(By.xpath("(//option[@value='12'])[2]")).click();
+                waitFor(2);
+                break;
+            case "24":
+                product_limiter.click();
+                Thread.sleep(20);
+                driver.findElement(By.xpath("(//option[@value='24'])[2]")).click();
+                waitFor(2);
+                break;
+            case "36":
+                product_limiter.click();
+                Thread.sleep(20);
+                driver.findElement(By.xpath("(//option[@value='36'])[2]")).click();
+                waitFor(2);
+                break;
+        }
+    }
 }
