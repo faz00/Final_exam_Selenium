@@ -9,15 +9,18 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import static us.piit.utility.Utility.currentDir;
 
 public class ExcelReader {
     private final Logger LOG = LogManager.getLogger(ExcelReader.class.getName());
 
-    XSSFWorkbook excelWBook;
-    XSSFSheet excelWSheet;
-    XSSFCell cell;
+    static XSSFWorkbook excelWBook;
+    static XSSFSheet excelWSheet;
+    static XSSFCell cell;
     String path;
 
     public ExcelReader(String path){
@@ -90,15 +93,32 @@ public class ExcelReader {
         }
         return value;
     }
+    //Read from Excel using Data Provider
+    public static Object[][] getEntireColumnData(String path, String sheet, int rowStart, int colNum) {
+
+        ExcelReader excelReader = new ExcelReader(path);
+        List<String> columnData = excelReader.getEntireColumnData(sheet, rowStart, colNum);
+
+        Object[][] data = new Object[columnData.size()][1];
+        for (int i = 0; i < columnData.size(); i++) {
+            data[i][0] = columnData.get(i);
+        }
+        return data;
+    }
+
+    public static String getDataFromCell(String path, String sheet, int rowNum, int colNum) {
+        ExcelReader excelReader = new ExcelReader(path);
+        String cellValue = excelReader.getDataFromCell(sheet, rowNum, colNum);
+        return  cellValue;
+    }
+
 
     public static void main(String[] args)  {
+        ExcelReader excelReader = new ExcelReader(currentDir+"\\manualTestCases\\OrangeHRMTest.xlsx");
 
-        String path = "C:\\Users\\My Pc\\eclipse-workspace\\Final_exam_Selenium\\manualTestCases\\tutorialsNinja-TestCases.xlsx";
-        ExcelReader excelReader = new ExcelReader(path);
-        System.out.println(excelReader.getDataFromCell("TutorialsNinjaWebSite-TestCases",1,1));
+        System.out.println(excelReader.getDataFromCell("DataProvider",1,0));
+//        System.out.println(currentDir);
+//        System.out.println(ExcelReader.getDataFromCell(currentDir+"\\manualTestCases\\OrangeHRMTest.xlsx","DataProvider",1,0));
 
-//        List<String> items = excelReader.getEntireColumnForGivenHeader("Sheet1", "id");
-//        //String items = excelReader.getValueForGivenHeaderAndKey("Sheet1", "id", "id004");
-//        System.out.println(items);
     }
 }

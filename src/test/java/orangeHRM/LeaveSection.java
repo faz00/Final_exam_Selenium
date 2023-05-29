@@ -1,15 +1,16 @@
 package orangeHRM;
 
+import com.github.dockerjava.core.exec.WaitContainerCmdExec;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;
-import us.piit.pages.orangeHRM.DashbordPage;
-import us.piit.pages.orangeHRM.LeavePage;
-import us.piit.pages.orangeHRM.LoginPage;
-import us.piit.pages.orangeHRM.MaintenancePage;
+import us.piit.pages.orangeHRM.*;
 import us.piit.utility.Utility;
 
 import java.util.Properties;
@@ -168,76 +169,59 @@ public class LeaveSection  extends CommonAPI {
 
     }
 
+    @Test(dataProvider = "loginCredentials", priority = 4, groups = "Leave")
+     public void generateReportOfAnEmployee(String validUsername,String validPassword){
+        LoginPage loginPage = new LoginPage(getDriver());
+        DashbordPage dashbordPage = new DashbordPage(getDriver());
+         LeavePage leavePage =new LeavePage(getDriver());
+        ReportsLeavePage reportsLeavePage = new ReportsLeavePage(getDriver());
 
-//    public void generateReportFromLeave(){
-//        LoginPage loginPage = new LoginPage(getDriver());
-//        DashbordPage dashbordPage = new DashbordPage(getDriver());
-//        MaintenancePage maintenancePage =new MaintenancePage(getDriver());
-//
-//
-//        String expectedTitle = "OrangeHRM";
-//        String actualTitle = driver.getTitle();
-//        Assert.assertEquals(expectedTitle,actualTitle);
-//
-//
-//        //enter username,enter password, and click on login button
-//
-//        loginPage.enterUsername(validUsername);
-//
-//
-//        loginPage.enterPassword(validPassword);
-//
-//        loginPage.clickOnLoginBtn();
-//
-//        //check user is logged in
-//        String expectedHomePage = "Dashboard";
-//        String actualHomePage = dashbordPage.getHraderText();
-//        Assert.assertEquals(expectedHomePage,actualHomePage);
-//
-//        //Maintenance
-//        dashbordPage.searchOptionOnSearchBar("Leave");
-//
-//        waitFor(5);
-//        dashbordPage.clickOnLeaveOption();
-//
-//    }
-//
-//    public void generatReportOfAnEmployee(){
-//        LoginPage loginPage = new LoginPage(getDriver());
-//        DashbordPage dashbordPage = new DashbordPage(getDriver());
-//        MaintenancePage maintenancePage =new MaintenancePage(getDriver());
-//
-//
-//        String expectedTitle = "OrangeHRM";
-//        String actualTitle = driver.getTitle();
-//        Assert.assertEquals(expectedTitle,actualTitle);
-//
-//
-//        //enter username,enter password, and click on login button
-//
-//        loginPage.enterUsername(validUsername);
-//
-//
-//        loginPage.enterPassword(validPassword);
-//
-//        loginPage.clickOnLoginBtn();
-//
-//        //check user is logged in
-//        String expectedHomePage = "Dashboard";
-//        String actualHomePage = dashbordPage.getHraderText();
-//        Assert.assertEquals(expectedHomePage,actualHomePage);
-//
-//        //Maintenance
-//        dashbordPage.searchOptionOnSearchBar("Leave");
-//
-//        waitFor(5);
-//        dashbordPage.clickOnLeaveOption();
-//
-//    }
+        String expectedTitle = "OrangeHRM";
+        String actualTitle = driver.getTitle();
+        Assert.assertEquals(expectedTitle,actualTitle);
 
 
-    @Test(dataProvider = "NewHoliday", priority = 4, groups = "Leave")
+        //enter username,enter password, and click on login button
 
+        loginPage.enterUsername(validUsername);
+
+
+        loginPage.enterPassword(validPassword);
+
+        loginPage.clickOnLoginBtn();
+
+        //check user is logged in
+        String expectedHomePage = "Dashboard";
+        String actualHomePage = dashbordPage.getHraderText();
+        Assert.assertEquals(expectedHomePage,actualHomePage);
+
+        //Maintenance
+        dashbordPage.searchOptionOnSearchBar("Leave");
+
+        waitFor(5);
+        dashbordPage.clickOnLeaveOption();
+
+        waitFor(2);
+        //Go to report
+
+        reportsLeavePage.clickOnReportBtn();
+
+        reportsLeavePage.clickOnLeaveEntitlementBtn();
+        reportsLeavePage.checkEmployeeCheckbox();
+
+        String name = dashbordPage.getUsernameName();
+        reportsLeavePage.chooseEmployeeName(name);
+
+        reportsLeavePage.clickOnGenerateBtn();
+
+
+        String expectedReport="Leave Type";
+        String actualReport=reportsLeavePage.getActualReport();
+        Assert.assertEquals(expectedReport,actualReport);
+    }
+
+
+    @Test(dataProvider = "NewHoliday", priority = 5, groups = "Leave")
     public void AddHolidayInHolidaysList(String validUsername,String validPassword,String holidayName,String date){
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());

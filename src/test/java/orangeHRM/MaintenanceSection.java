@@ -2,12 +2,6 @@ package orangeHRM;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.bidi.Command;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -15,22 +9,24 @@ import us.piit.base.CommonAPI;
 import us.piit.pages.orangeHRM.DashbordPage;
 import us.piit.pages.orangeHRM.LoginPage;
 import us.piit.pages.orangeHRM.MaintenancePage;
+import us.piit.utility.ExcelReader;
 import us.piit.utility.Utility;
 
 import java.io.File;
-import java.time.Duration;
+import java.io.IOException;
 import java.util.Properties;
+
+import static us.piit.utility.Utility.currentDir;
 
 public class MaintenanceSection extends CommonAPI {
 
     Logger log = LogManager.getLogger(MaintenanceSection.class.getName());
 
+    String path=currentDir+File.separator+"manualTestCases\\OrangeHRMTest.xlsx";
     @DataProvider(name = "loginCredentials")
     public Object[][] getLoginCredentials() {
-        Properties prop = Utility.loadProperties();
-        String validUsername = Utility.decode(prop.getProperty("orangeHRM.username"));
-        String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
-
+       String validUsername = Utility.decode(ExcelReader.getDataFromCell(path,"DataProvider",1,0));
+        String validPassword = Utility.decode(ExcelReader.getDataFromCell(path,"DataProvider",1,1));
         String downloadsDir = System.getProperty("user.home") + File.separator + "Downloads";
 
         return new Object[][]{

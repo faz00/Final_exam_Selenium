@@ -20,7 +20,7 @@ import java.util.Properties;
 
 public class PIMSection extends CommonAPI {
 
-    public class LoginToMaintenance extends CommonAPI {
+
         // Existing code
 
         @DataProvider(name = "loginCredentials")
@@ -331,4 +331,3 @@ public class PIMSection extends CommonAPI {
 
     }
 
-}
