@@ -27,7 +27,10 @@ public class RegisterHomePage extends CommonAPI {
         log.info("the registerHomePageTitle is displayed");
         return registerHomePageTitle.isDisplayed();
     }
-
+public String getRgstrHmPgTtl(WebDriver driver){
+        log.info("the user navigates to:"+driver.getTitle()+"home page");
+        return driver.getTitle();
+}
 
 }
 

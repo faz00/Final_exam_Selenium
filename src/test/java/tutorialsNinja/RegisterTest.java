@@ -32,6 +32,25 @@ public class RegisterTest extends CommonAPI {
     String invalidConPaswrd = Utility.decode(prop.getProperty("tutorialsNinja.invalidConPaswrd"));
     String invalidEmail = Utility.decode(prop.getProperty("tutorialsninja.invalidEmail"));
 
+    @Test
+    public void vrfyUsrNvgtRgstrHmPge(){
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
+
+        RegisterPage registerPage = new RegisterPage(getDriver());
+        RegisterHomePage registerHomePage = new RegisterHomePage(getDriver());
+
+        //click on the continue button
+        registerPage.clickContinueButton();
+
+        //Assert the Register home page displayed
+        String expectedTitle="Register Account";
+        String actualTitle=registerHomePage.getRgstrHmPgTtl(getDriver());
+        assertEquals(expectedTitle,actualTitle);
+
+
+    }
+
     @DataProvider(name = "RegistrationData")
     public Object[][] provideRegistrationData() {
         return new Object[][]{
