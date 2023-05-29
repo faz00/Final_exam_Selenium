@@ -31,6 +31,27 @@ public class ForgotPasswordTest extends CommonAPI {
         Assert.assertTrue(actualError.contains(expectedError));
 
         // click on forgot password and send reset password email
-        forgotPasswordPage.resetPassword();
+        forgotPasswordPage.resetPassword("valid email");
+    }
+
+    @Test
+    public void forgotPassword_InvalidEmail(){
+        LoginPage loginPage = new LoginPage(getDriver());
+        ForgotPasswordPage forgotPasswordPage = new ForgotPasswordPage(getDriver());
+
+        //enter  Invalid username, Invalid password, and click on login button
+        loginPage.goToLoginPage();
+        loginPage.enterUsername(ValidEmail);
+        loginPage.enterPassword("InvalidPassword");
+        loginPage.checkRememberMebox();
+        loginPage.clickOnLoginBtn();
+
+        //validate the error message
+        String expectedError = "Login was unsuccessful. Please correct the errors and try again";
+        String actualError = loginPage.getErrorMessage();
+        Assert.assertTrue(actualError.contains(expectedError));
+
+        // click on forgot password and send reset password email
+        forgotPasswordPage.resetPassword("invalid Email");
     }
 }

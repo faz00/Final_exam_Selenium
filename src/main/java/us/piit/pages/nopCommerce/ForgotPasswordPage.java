@@ -22,22 +22,36 @@ public class ForgotPasswordPage extends CommonAPI {
     WebElement RecoverButton;
     @FindBy(xpath = "//div[@class=\"bar-notification success\"]")
     WebElement EmailSentSuccessMessage;
+    @FindBy(css = "[id=\"bar-notification\"]")
+    WebElement EmailNotFoundError;
 
+
+    Properties prop = Utility.loadProperties();
+    String ValidEmail = Utility.decode(prop.getProperty("nopCommerce.username"));
     public ForgotPasswordPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
-    Properties prop = Utility.loadProperties();
-    String ValidEmail = Utility.decode(prop.getProperty("nopCommerce.username"));
-
-    public void resetPassword() {
-        ForgotPasswordButton.click();
-        isVisible(EmailInputField);
-        EmailInputField.sendKeys(ValidEmail);
-        RecoverButton.click();
-        waitFor(3);
-        isVisible(EmailSentSuccessMessage);
-        Assert.assertTrue(EmailSentSuccessMessage.isDisplayed());
-        Assert.assertEquals(EmailSentSuccessMessage.getText(), "Email with instructions has been sent to you.");
+    public void resetPassword(String Case) {
+        switch (Case) {
+            case "invalid email":
+                ForgotPasswordButton.click();
+                isVisible(EmailInputField);
+                EmailInputField.sendKeys("invalidemail@gmail.com");
+                RecoverButton.click();
+                waitFor(3);
+                isVisible(EmailNotFoundError);
+                Assert.assertTrue(EmailNotFoundError.isDisplayed());
+                Assert.assertEquals(EmailNotFoundError.getText(), "Email not found");
+            case "valid email":
+                ForgotPasswordButton.click();
+                isVisible(EmailInputField);
+                EmailInputField.sendKeys(ValidEmail);
+                RecoverButton.click();
+                waitFor(3);
+                isVisible(EmailSentSuccessMessage);
+                Assert.assertTrue(EmailSentSuccessMessage.isDisplayed());
+                Assert.assertEquals(EmailSentSuccessMessage.getText(), "Email with instructions has been sent to you.");
+        }
     }
 }
