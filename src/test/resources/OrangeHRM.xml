@@ -12,6 +12,7 @@
     <test name="OrangeHRM tests">
         <classes>
 
+
             <class name="orangeHRM.BuzzSection"></class>
             <class name="orangeHRM.ChangePassword"></class>
             <class name="orangeHRM.LeaveSection"></class>
@@ -25,6 +26,7 @@
 
             <class name="orangeHRM.Recruitment"></class>
             <class name="orangeHRM.AdminSection"></class>
+
 
         </classes>
         </test>
