@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'> RegisterTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon May 29 00:34:49 EDT 2023</td>
+<td>Started on:</td><td>Mon May 29 01:11:21 EDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>154 seconds (154918 ms)</td>
+<tr><td>Total time:</td><td>32 seconds (32193 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,18 +76,64 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tutorialsNinja.RegisterTest.VerifyThePasswordNotVisibleToTheSourcePage()'><b>VerifyThePasswordNotVisibleToTheSourcePage</b><br>Test class: tutorialsNinja.RegisterTest</td>
-<td><div><pre>java.lang.AssertionError: the password is visible expected [true] but found [false]
-	at tutorialsNinja.RegisterTest.VerifyThePasswordNotVisibleToTheSourcePage(RegisterTest.java:164)
+<td title='tutorialsNinja.RegisterTest.rgstrWthDffrntCnfrmtnPswrd()'><b>rgstrWthDffrntCnfrmtnPswrd</b><br>Test class: tutorialsNinja.RegisterTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;content&quot;]/form/fieldset[2]/div[2]/div/div&quot;}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7739434f52169eafc082cb070fb7c8ab, findElement {using=xpath, value=//*[@id=&quot;content&quot;]/form/fieldset[2]/div[2]/div/div}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\MYPC~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51337}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51337/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7739434f52169eafc082cb070fb7c8ab
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy35.isDisplayed(Unknown Source)
+	at us.piit.pages.tutorialsNinja.RegisterPage.isPswrdErrMsgDsp(RegisterPage.java:239)
+	at tutorialsNinja.RegisterTest.rgstrWthDffrntCnfrmtnPswrd(RegisterTest.java:276)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace216359372", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace216359372'><pre>java.lang.AssertionError: the password is visible expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertTrue(Assert.java:56)
-	at tutorialsNinja.RegisterTest.VerifyThePasswordNotVisibleToTheSourcePage(RegisterTest.java:164)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1790831630", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1790831630'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;content&quot;]/form/fieldset[2]/div[2]/div/div&quot;}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7739434f52169eafc082cb070fb7c8ab, findElement {using=xpath, value=//*[@id=&quot;content&quot;]/form/fieldset[2]/div[2]/div/div}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\MYPC~1\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51337}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51337/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7739434f52169eafc082cb070fb7c8ab
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy35.isDisplayed(Unknown Source)
+	at us.piit.pages.tutorialsNinja.RegisterPage.isPswrdErrMsgDsp(RegisterPage.java:239)
+	at tutorialsNinja.RegisterTest.rgstrWthDffrntCnfrmtnPswrd(RegisterTest.java:276)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -114,90 +160,8 @@ function toggleAllBoxes() {
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
 </pre></div></td>
-<td>2</td>
-<td>tutorialsNinja.RegisterTest@6399551e</td></tr>
-<tr>
-<td title='tutorialsNinja.RegisterTest.registerWithInvalidPhoneNumber()'><b>registerWithInvalidPhoneNumber</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: sunflower, yellow, sunflower"+ generateTimeStamp()+"@gmail.com, abcd, sun123, sun123</td>
-<td><div><pre>java.lang.AssertionError: The user is able to register with an invalid phone number expected [false] but found [true]
-	at tutorialsNinja.RegisterTest.registerWithInvalidPhoneNumber(RegisterTest.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace421446035", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace421446035'><pre>java.lang.AssertionError: The user is able to register with an invalid phone number expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertFalse(Assert.java:78)
-	at tutorialsNinja.RegisterTest.registerWithInvalidPhoneNumber(RegisterTest.java:128)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</pre></div></td>
-<td>2</td>
-<td>tutorialsNinja.RegisterTest@6399551e</td></tr>
-<tr>
-<td title='tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox()'><b>checkPrivacyPolicyCheckBox</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: No</td>
-<td><div><pre>java.lang.AssertionError: The user should not be able to register when the privacy policy checkbox is not selected expected [false] but found [true]
-	at tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox(RegisterTest.java:248)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2090167770", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2090167770'><pre>java.lang.AssertionError: The user should not be able to register when the privacy policy checkbox is not selected expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertFalse(Assert.java:78)
-	at tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox(RegisterTest.java:248)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</pre></div></td>
-<td>2</td>
-<td>tutorialsNinja.RegisterTest@6399551e</td></tr>
+<td>13</td>
+<td>tutorialsNinja.RegisterTest@2fc6f97f</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -208,35 +172,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox()'><b>checkPrivacyPolicyCheckBox</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: yes</td>
-<td></td>
-<td>2</td>
-<td>tutorialsNinja.RegisterTest@6399551e</td></tr>
-<tr>
-<td title='tutorialsNinja.RegisterTest.vrfyUsrNvgtRgstrHmPge()'><b>vrfyUsrNvgtRgstrHmPge</b><br>Test class: tutorialsNinja.RegisterTest</td>
-<td></td>
-<td>1</td>
-<td>tutorialsNinja.RegisterTest@6399551e</td></tr>
-<tr>
-<td title='tutorialsNinja.RegisterTest.registerWithCredentials()'><b>registerWithCredentials</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: invalidFirstName, inavalidlastname, sun@, abcd, sun, sun</td>
-<td></td>
-<td>2</td>
-<td>tutorialsNinja.RegisterTest@6399551e</td></tr>
-<tr>
-<td title='tutorialsNinja.RegisterTest.verifyRegisterWithAnExistingEmailAddress()'><b>verifyRegisterWithAnExistingEmailAddress</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: sunflower, yellow, rezikabarech@gmail.com, 1234567890, sun123, sun123</td>
-<td></td>
-<td>3</td>
-<td>tutorialsNinja.RegisterTest@6399551e</td></tr>
-<tr>
-<td title='tutorialsNinja.RegisterTest.registerWithCredentials()'><b>registerWithCredentials</b><br>Test class: tutorialsNinja.RegisterTest<br>Parameters: sunflower, yellow, sunflower"+ generateTimeStamp()+"@gmail.com, 1234567890, sun123, sun123</td>
-<td></td>
-<td>3</td>
-<td>tutorialsNinja.RegisterTest@6399551e</td></tr>
-<tr>
 <td title='tutorialsNinja.RegisterTest.VerifyDifferentWaysToNavigateToTheRegisterPage()'><b>VerifyDifferentWaysToNavigateToTheRegisterPage</b><br>Test class: tutorialsNinja.RegisterTest</td>
 <td></td>
 <td>3</td>
-<td>tutorialsNinja.RegisterTest@6399551e</td></tr>
+<td>tutorialsNinja.RegisterTest@2fc6f97f</td></tr>
 </table><p>
 </body>
 </html>

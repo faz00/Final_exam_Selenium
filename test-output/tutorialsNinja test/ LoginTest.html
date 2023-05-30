@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'> LoginTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>8/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat May 27 21:43:58 EDT 2023</td>
+<td>Started on:</td><td>Tue May 30 00:43:44 EDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>86 seconds (86254 ms)</td>
+<tr><td>Total time:</td><td>110 seconds (110337 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -78,16 +78,16 @@ function toggleAllBoxes() {
 <tr>
 <td title='tutorialsNinja.LoginTest.checkPasswordVisibility()'><b>checkPasswordVisibility</b><br>Test class: tutorialsNinja.LoginTest</td>
 <td><div><pre>java.lang.AssertionError: Password is visible to the page source expected [true] but found [false]
-	at tutorialsNinja.LoginTest.checkPasswordVisibility(LoginTest.java:109)
+	at tutorialsNinja.LoginTest.checkPasswordVisibility(LoginTest.java:131)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace981865495", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace981865495'><pre>java.lang.AssertionError: Password is visible to the page source expected [true] but found [false]
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace280291320", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace280291320'><pre>java.lang.AssertionError: Password is visible to the page source expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1577)
 	at org.testng.Assert.assertTrue(Assert.java:56)
-	at tutorialsNinja.LoginTest.checkPasswordVisibility(LoginTest.java:109)
+	at tutorialsNinja.LoginTest.checkPasswordVisibility(LoginTest.java:131)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -114,8 +114,8 @@ function toggleAllBoxes() {
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
 </pre></div></td>
-<td>1</td>
-<td>tutorialsNinja.LoginTest@5d5f10b2</td></tr>
+<td>2</td>
+<td>tutorialsNinja.LoginTest@35f26e72</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -126,45 +126,50 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='tutorialsNinja.LoginTest.testLoginWithCredentials()'><b>testLoginWithCredentials</b><br>Test class: tutorialsNinja.LoginTest<br>Parameters: sun@, sun123</td>
+<td></td>
+<td>3</td>
+<td>tutorialsNinja.LoginTest@35f26e72</td></tr>
+<tr>
 <td title='tutorialsNinja.LoginTest.testLoginWithCredentials()'><b>testLoginWithCredentials</b><br>Test class: tutorialsNinja.LoginTest<br>Parameters: , </td>
 <td></td>
-<td>0</td>
-<td>tutorialsNinja.LoginTest@5d5f10b2</td></tr>
+<td>3</td>
+<td>tutorialsNinja.LoginTest@35f26e72</td></tr>
 <tr>
-<td title='tutorialsNinja.LoginTest.testLoginFieldsPlaceholders()'><b>testLoginFieldsPlaceholders</b><br>Test class: tutorialsNinja.LoginTest</td>
+<td title='tutorialsNinja.LoginTest.vrfyUsrNvgtTloginHmPge()'><b>vrfyUsrNvgtTloginHmPge</b><br>Test class: tutorialsNinja.LoginTest</td>
 <td></td>
-<td>0</td>
-<td>tutorialsNinja.LoginTest@5d5f10b2</td></tr>
+<td>2</td>
+<td>tutorialsNinja.LoginTest@35f26e72</td></tr>
+<tr>
+<td title='tutorialsNinja.LoginTest.testLoginWithCredentials()'><b>testLoginWithCredentials</b><br>Test class: tutorialsNinja.LoginTest<br>Parameters: sunflower"+ generateTimeStamp()+"@gmail.com, sun123</td>
+<td></td>
+<td>4</td>
+<td>tutorialsNinja.LoginTest@35f26e72</td></tr>
+<tr>
+<td title='tutorialsNinja.LoginTest.testLoginWithCredentials()'><b>testLoginWithCredentials</b><br>Test class: tutorialsNinja.LoginTest<br>Parameters: sun@, sun</td>
+<td></td>
+<td>2</td>
+<td>tutorialsNinja.LoginTest@35f26e72</td></tr>
 <tr>
 <td title='tutorialsNinja.LoginTest.verifyForgottenPasswrdLinkDsp()'><b>verifyForgottenPasswrdLinkDsp</b><br>Test class: tutorialsNinja.LoginTest</td>
 <td></td>
 <td>0</td>
-<td>tutorialsNinja.LoginTest@5d5f10b2</td></tr>
-<tr>
-<td title='tutorialsNinja.LoginTest.testLoginWithCredentials()'><b>testLoginWithCredentials</b><br>Test class: tutorialsNinja.LoginTest<br>Parameters: sun@, sun</td>
-<td></td>
-<td>1</td>
-<td>tutorialsNinja.LoginTest@5d5f10b2</td></tr>
-<tr>
-<td title='tutorialsNinja.LoginTest.testLoginWithCredentials()'><b>testLoginWithCredentials</b><br>Test class: tutorialsNinja.LoginTest<br>Parameters: sunflower"+ generateTimeStamp()+"@gmail.com, sun123</td>
-<td></td>
-<td>1</td>
-<td>tutorialsNinja.LoginTest@5d5f10b2</td></tr>
-<tr>
-<td title='tutorialsNinja.LoginTest.testLoginWithCredentials()'><b>testLoginWithCredentials</b><br>Test class: tutorialsNinja.LoginTest<br>Parameters: sun@, sun123</td>
-<td></td>
-<td>1</td>
-<td>tutorialsNinja.LoginTest@5d5f10b2</td></tr>
-<tr>
-<td title='tutorialsNinja.LoginTest.verifyTheNumberOfUnsuccessfulLoginAttempts()'><b>verifyTheNumberOfUnsuccessfulLoginAttempts</b><br>Test class: tutorialsNinja.LoginTest</td>
-<td></td>
-<td>0</td>
-<td>tutorialsNinja.LoginTest@5d5f10b2</td></tr>
+<td>tutorialsNinja.LoginTest@35f26e72</td></tr>
 <tr>
 <td title='tutorialsNinja.LoginTest.testLoginWithCredentials()'><b>testLoginWithCredentials</b><br>Test class: tutorialsNinja.LoginTest<br>Parameters: sunflower"+ generateTimeStamp()+"@gmail.com, sun</td>
 <td></td>
-<td>1</td>
-<td>tutorialsNinja.LoginTest@5d5f10b2</td></tr>
+<td>2</td>
+<td>tutorialsNinja.LoginTest@35f26e72</td></tr>
+<tr>
+<td title='tutorialsNinja.LoginTest.testLoginFieldsPlaceholders()'><b>testLoginFieldsPlaceholders</b><br>Test class: tutorialsNinja.LoginTest</td>
+<td></td>
+<td>3</td>
+<td>tutorialsNinja.LoginTest@35f26e72</td></tr>
+<tr>
+<td title='tutorialsNinja.LoginTest.verifyTheNumberOfUnsuccessfulLoginAttempts()'><b>verifyTheNumberOfUnsuccessfulLoginAttempts</b><br>Test class: tutorialsNinja.LoginTest</td>
+<td></td>
+<td>2</td>
+<td>tutorialsNinja.LoginTest@35f26e72</td></tr>
 </table><p>
 </body>
 </html>

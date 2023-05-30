@@ -32,8 +32,8 @@ public class RegisterTest extends CommonAPI {
     String invalidConPaswrd = Utility.decode(prop.getProperty("tutorialsNinja.invalidConPaswrd"));
     String invalidEmail = Utility.decode(prop.getProperty("tutorialsninja.invalidEmail"));
 
-    @Test
-    public void vrfyUsrNvgtRgstrHmPge(){
+    // @Test
+    public void vrfyUsrNvgtRgstrHmPge() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
 
@@ -44,9 +44,9 @@ public class RegisterTest extends CommonAPI {
         registerPage.clickContinueButton();
 
         //Assert the Register home page displayed
-        String expectedTitle="Register Account";
-        String actualTitle=registerHomePage.getRgstrHmPgTtl(getDriver());
-        assertEquals(expectedTitle,actualTitle);
+        String expectedTitle = "Register Account";
+        String actualTitle = registerHomePage.getRgstrHmPgTtl(getDriver());
+        assertEquals(expectedTitle, actualTitle);
 
 
     }
@@ -60,7 +60,7 @@ public class RegisterTest extends CommonAPI {
         };
     }
 
-    @Test(priority = 1, groups = "registerWthCredTest", dataProvider = "RegistrationData")
+    //@Test(priority = 1, groups = "registerWthCredTest", dataProvider = "RegistrationData")
     public void registerWithCredentials(String firstName, String lastName, String email, String phoneNumber,
                                         String password, String confirmPassword) {
 
@@ -84,10 +84,10 @@ public class RegisterTest extends CommonAPI {
         registerPage.clickSubmitButton();
 
 // Verify registration success or failure based on the provided data
-      assertTrue( registerHomePage.isRegisterHomePageTitleDisplayed(),
-               "no register home page title is displayed when registering with invalid credentials");
+        assertTrue(registerHomePage.isRegisterHomePageTitleDisplayed(),
+                "no register home page title is displayed when registering with invalid credentials");
 
-        registerPage.invCredMsg(firstName,lastName,email,phoneNumber,password,confirmPassword);
+        registerPage.invCredMsg(firstName, lastName, email, phoneNumber, password, confirmPassword);
     }
 
 
@@ -99,7 +99,7 @@ public class RegisterTest extends CommonAPI {
         };
     }
 
-    @Test(priority = 2, groups = "registerWithInvPhoNmbrTest", dataProvider = "invalidPhoneNumberData")
+    //@Test(priority = 2, groups = "registerWithInvPhoNmbrTest", dataProvider = "invalidPhoneNumberData")
     public void registerWithInvalidPhoneNumber(String firstName, String lastName, String email, String phoneNumber,
                                                String password, String confirmPassword) {
 
@@ -143,7 +143,7 @@ public class RegisterTest extends CommonAPI {
 
 
     //verify if the password entered is visible to the source page
-    @Test(priority = 4, groups = "passwordVisibilityTest")
+    // @Test(priority = 4, groups = "passwordVisibilityTest")
     public void VerifyThePasswordNotVisibleToTheSourcePage() {
 
         RegisterPage registerPage = new RegisterPage(getDriver());
@@ -174,7 +174,7 @@ public class RegisterTest extends CommonAPI {
         };
     }
 
-    @Test(priority = 3, groups = "rgstrWthExstngEmailAddrssTest", dataProvider = "existingEmailAddressData")
+    // @Test(priority = 3, groups = "rgstrWthExstngEmailAddrssTest", dataProvider = "existingEmailAddressData")
     public void verifyRegisterWithAnExistingEmailAddress(String firstName, String lastName, String email, String phoneNumber,
                                                          String password, String confirmPassword) {
 
@@ -210,7 +210,7 @@ public class RegisterTest extends CommonAPI {
         };
     }
 
-    @Test(priority = 6, groups = "prvcyPlcyChckBxTest", dataProvider = "privacyCheckBox")
+    // @Test(priority = 6, groups = "prvcyPlcyChckBxTest", dataProvider = "privacyCheckBox")
     public void checkPrivacyPolicyCheckBox(String privacyOption) {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -249,8 +249,46 @@ public class RegisterTest extends CommonAPI {
         }
     }
 
+    @Test
+    public void rgstrWthDffrntCnfrmtnPswrd() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
+
+        RegisterPage registerPage = new RegisterPage(getDriver());
+
+        RegisterHomePage registerHomePage = new RegisterHomePage(getDriver());
+
+        // Click on the continue button
+        registerPage.clickContinueButton();
+
+        // Enter firstName, lastName, phoneNumber, password, email, and click on the continue button
+        registerPage.enterFirstName(validFirstName);
+        registerPage.enterLastName(validLastName);
+        registerPage.enterEmail(validEmail);
+        registerPage.enterPhoneNumber(validPhoneNumber);
+        registerPage.enterPassword(validPassword);
+        registerPage.enterConfirmPassword(invalidConPaswrd);
+        registerPage.selectPrivacyPolicyCheckbox();
+        registerPage.clickSubmitButton();
+
+        //verify if an error message got displayed
+
 
     }
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -2,6 +2,7 @@ package tutorialsNinja;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import us.piit.utility.Utility;
@@ -23,6 +24,27 @@ public class LoginTest  extends CommonAPI {
     String invalidEmail = Utility.decode(prop.getProperty("tutorialsninja.invalidEmail"));
     String password = Utility.decode(prop.getProperty("tutorialsninja.password"));
 
+
+    @Test(priority=1,groups="navigationTest")
+    public void vrfyUsrNvgtTloginHmPge(){
+
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+
+        LoginPage loginPage = new LoginPage(getDriver());
+
+        LoginHomePage loginHomePage = new LoginHomePage(getDriver());
+
+        // Enter email and password
+        loginPage.setEmail(validEmail);
+
+        loginPage.setPassword(validPassword);
+
+        loginPage.clickLoginButton();
+
+        //verify the user navigates to the 'My Account' home page
+Assert.assertTrue(loginHomePage.isAccountLinkDisplayed(),"the link is not displayed");
+    }
+
     @DataProvider(name = "loginData")
     public Object[][] provideLoginData() {
         return new Object[][] {
@@ -34,10 +56,10 @@ public class LoginTest  extends CommonAPI {
         };
     }
 
-    @Test(priority = 1, groups = {"loginWithCred(valid,invalid)"}, dataProvider = "loginData")
+    @Test(priority = 6, groups = "loginWithCredTest", dataProvider = "loginData")
     public void testLoginWithCredentials(String email, String password) {
 
-        // Click on the login
+
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
         LoginPage loginPage = new LoginPage(getDriver());
@@ -106,7 +128,7 @@ public class LoginTest  extends CommonAPI {
 // Assert if the password is visible to the page source
         takeScreenshot("TutorialsNinja","checkPswrdVisibility");
 
-     assertTrue(loginPage.isPasswordFieldVisible(password), "Password is visible to the page source");
+     Assert.assertTrue(loginPage.isPasswordFieldVisible(password), "Password is visible to the page source");
 
     }
     @Test(priority = 4, groups = {"placeHoldersTest"})
@@ -140,7 +162,7 @@ public class LoginTest  extends CommonAPI {
 
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
-       //check the 'forgotten password'link displayed
+       //check the 'forgotten password' link displayed
             assertTrue(loginPage.isFrgtnPawrdLnkDsp(),"the forgotten password link is not displayed");
 
 

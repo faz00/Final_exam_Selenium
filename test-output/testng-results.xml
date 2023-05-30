@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="6" failed="3" skipped="0">
+<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Extent Report DirectoryC:\Users\My Pc\eclipse-workspace\Final_exam_Selenium\test-output\html]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-05-29T00:34:49 EDT" name="tutorialsNinja test" finished-at="2023-05-29T00:37:24 EDT" duration-ms="154918">
+  <suite started-at="2023-05-30T00:43:44 EDT" name="tutorialsNinja test" finished-at="2023-05-30T00:45:35 EDT" duration-ms="110337">
     <groups>
-      <group name="passwordVisibilityTest">
-        <method signature="RegisterTest.VerifyThePasswordNotVisibleToTheSourcePage()[pri:4, instance:tutorialsNinja.RegisterTest@6399551e]" name="VerifyThePasswordNotVisibleToTheSourcePage" class="tutorialsNinja.RegisterTest"/>
-      </group> <!-- passwordVisibilityTest -->
-      <group name="registerWthCredTest">
-        <method signature="RegisterTest.registerWithCredentials(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tutorialsNinja.RegisterTest@6399551e]" name="registerWithCredentials" class="tutorialsNinja.RegisterTest"/>
-      </group> <!-- registerWthCredTest -->
-      <group name="prvcyPlcyChckBxTest">
-        <method signature="RegisterTest.checkPrivacyPolicyCheckBox(java.lang.String)[pri:6, instance:tutorialsNinja.RegisterTest@6399551e]" name="checkPrivacyPolicyCheckBox" class="tutorialsNinja.RegisterTest"/>
-      </group> <!-- prvcyPlcyChckBxTest -->
-      <group name="registerWithInvPhoNmbrTest">
-        <method signature="RegisterTest.registerWithInvalidPhoneNumber(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tutorialsNinja.RegisterTest@6399551e]" name="registerWithInvalidPhoneNumber" class="tutorialsNinja.RegisterTest"/>
-      </group> <!-- registerWithInvPhoNmbrTest -->
-      <group name="rgstrWthExstngEmailAddrssTest">
-        <method signature="RegisterTest.verifyRegisterWithAnExistingEmailAddress(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tutorialsNinja.RegisterTest@6399551e]" name="verifyRegisterWithAnExistingEmailAddress" class="tutorialsNinja.RegisterTest"/>
-      </group> <!-- rgstrWthExstngEmailAddrssTest -->
-      <group name="differentWysTNavgToRgstrTest">
-        <method signature="RegisterTest.VerifyDifferentWaysToNavigateToTheRegisterPage()[pri:5, instance:tutorialsNinja.RegisterTest@6399551e]" name="VerifyDifferentWaysToNavigateToTheRegisterPage" class="tutorialsNinja.RegisterTest"/>
-      </group> <!-- differentWysTNavgToRgstrTest -->
+      <group name="unsuccessfulLoginAttemptsTest">
+        <method signature="LoginTest.verifyTheNumberOfUnsuccessfulLoginAttempts()[pri:2, instance:tutorialsNinja.LoginTest@35f26e72]" name="verifyTheNumberOfUnsuccessfulLoginAttempts" class="tutorialsNinja.LoginTest"/>
+      </group> <!-- unsuccessfulLoginAttemptsTest -->
+      <group name="loginWithCredTest">
+        <method signature="LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String)[pri:6, instance:tutorialsNinja.LoginTest@35f26e72]" name="testLoginWithCredentials" class="tutorialsNinja.LoginTest"/>
+      </group> <!-- loginWithCredTest -->
+      <group name="navigationTest">
+        <method signature="LoginTest.vrfyUsrNvgtTloginHmPge()[pri:1, instance:tutorialsNinja.LoginTest@35f26e72]" name="vrfyUsrNvgtTloginHmPge" class="tutorialsNinja.LoginTest"/>
+      </group> <!-- navigationTest -->
+      <group name="pswrdLinkTest">
+        <method signature="LoginTest.verifyForgottenPasswrdLinkDsp()[pri:5, instance:tutorialsNinja.LoginTest@35f26e72]" name="verifyForgottenPasswrdLinkDsp" class="tutorialsNinja.LoginTest"/>
+      </group> <!-- pswrdLinkTest -->
+      <group name="pswrdVisibilityTest">
+        <method signature="LoginTest.checkPasswordVisibility()[pri:3, instance:tutorialsNinja.LoginTest@35f26e72]" name="checkPasswordVisibility" class="tutorialsNinja.LoginTest"/>
+      </group> <!-- pswrdVisibilityTest -->
+      <group name="placeHoldersTest">
+        <method signature="LoginTest.testLoginFieldsPlaceholders()[pri:4, instance:tutorialsNinja.LoginTest@35f26e72]" name="testLoginFieldsPlaceholders" class="tutorialsNinja.LoginTest"/>
+      </group> <!-- placeHoldersTest -->
     </groups>
-    <test started-at="2023-05-29T00:34:49 EDT" name=" RegisterTest" finished-at="2023-05-29T00:37:24 EDT" duration-ms="154918">
-      <class name="tutorialsNinja.RegisterTest">
-        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:34:48 EDT" name="extentSetup" finished-at="2023-05-29T00:34:49 EDT" duration-ms="1059" status="PASS">
+    <test started-at="2023-05-30T00:43:44 EDT" name=" LoginTest" finished-at="2023-05-30T00:45:35 EDT" duration-ms="110337">
+      <class name="tutorialsNinja.LoginTest">
+        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:43:44 EDT" name="extentSetup" finished-at="2023-05-30T00:43:44 EDT" duration-ms="331" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@13d984ee]]>
+                <![CDATA[org.testng.TestRunner@1537e43]]>
               </value>
             </param>
           </params>
@@ -42,11 +42,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- extentSetup -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:34:49 EDT" name="setUp" finished-at="2023-05-29T00:35:34 EDT" duration-ms="44981" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:43:44 EDT" name="setUp" finished-at="2023-05-30T00:43:55 EDT" duration-ms="10777" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[false]]>
+                <![CDATA[true]]>
               </value>
             </param>
             <param index="1">
@@ -83,41 +83,41 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:35:34 EDT" name="startExtent" finished-at="2023-05-29T00:35:34 EDT" duration-ms="67" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:43:55 EDT" name="startExtent" finished-at="2023-05-30T00:43:55 EDT" duration-ms="15" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tutorialsNinja.RegisterTest.vrfyUsrNvgtRgstrHmPge()]]>
+                <![CDATA[public void tutorialsNinja.LoginTest.vrfyUsrNvgtTloginHmPge()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="vrfyUsrNvgtRgstrHmPge()[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:35:34 EDT" name="vrfyUsrNvgtRgstrHmPge" finished-at="2023-05-29T00:35:36 EDT" duration-ms="1523" status="PASS">
+        <test-method signature="vrfyUsrNvgtTloginHmPge()[pri:1, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:43:55 EDT" name="vrfyUsrNvgtTloginHmPge" finished-at="2023-05-30T00:43:58 EDT" duration-ms="2988" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- vrfyUsrNvgtRgstrHmPge -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:35:36 EDT" name="afterEachTestMethod" finished-at="2023-05-29T00:35:38 EDT" duration-ms="2134" status="PASS">
+        </test-method> <!-- vrfyUsrNvgtTloginHmPge -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:43:58 EDT" name="afterEachTestMethod" finished-at="2023-05-30T00:44:00 EDT" duration-ms="1295" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=vrfyUsrNvgtRgstrHmPge status=SUCCESS method=RegisterTest.vrfyUsrNvgtRgstrHmPge()[pri:0, instance:tutorialsNinja.RegisterTest@6399551e] output={null}]]]>
+                <![CDATA[[TestResult name=vrfyUsrNvgtTloginHmPge status=SUCCESS method=LoginTest.vrfyUsrNvgtTloginHmPge()[pri:1, instance:tutorialsNinja.LoginTest@35f26e72] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:35:38 EDT" name="tearDownR" finished-at="2023-05-29T00:35:38 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:00 EDT" name="tearDownR" finished-at="2023-05-30T00:44:00 EDT" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:35:38 EDT" name="setUp" finished-at="2023-05-29T00:35:50 EDT" duration-ms="12474" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:00 EDT" name="setUp" finished-at="2023-05-30T00:44:08 EDT" duration-ms="8332" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[false]]>
+                <![CDATA[true]]>
               </value>
             </param>
             <param index="1">
@@ -154,45 +154,347 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:35:50 EDT" name="startExtent" finished-at="2023-05-29T00:35:50 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:08 EDT" name="startExtent" finished-at="2023-05-30T00:44:08 EDT" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tutorialsNinja.RegisterTest.registerWithCredentials(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void tutorialsNinja.LoginTest.verifyTheNumberOfUnsuccessfulLoginAttempts()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="registerWithCredentials(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:35:50 EDT" name="registerWithCredentials" data-provider="RegistrationData" finished-at="2023-05-29T00:35:53 EDT" duration-ms="3006" status="PASS">
+        <test-method signature="verifyTheNumberOfUnsuccessfulLoginAttempts()[pri:2, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:08 EDT" name="verifyTheNumberOfUnsuccessfulLoginAttempts" finished-at="2023-05-30T00:44:11 EDT" duration-ms="2667" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheNumberOfUnsuccessfulLoginAttempts -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:11 EDT" name="afterEachTestMethod" finished-at="2023-05-30T00:44:11 EDT" duration-ms="777" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[sunflower]]>
+                <![CDATA[[TestResult name=verifyTheNumberOfUnsuccessfulLoginAttempts status=SUCCESS method=LoginTest.verifyTheNumberOfUnsuccessfulLoginAttempts()[pri:2, instance:tutorialsNinja.LoginTest@35f26e72] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:11 EDT" name="tearDownR" finished-at="2023-05-30T00:44:11 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownR -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:11 EDT" name="setUp" finished-at="2023-05-30T00:44:17 EDT" duration-ms="5816" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[yellow]]>
+                <![CDATA[browserstack]]>
               </value>
             </param>
             <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[110]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://tutorialsninja.com/demo/index.php?route=account/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:17 EDT" name="startExtent" finished-at="2023-05-30T00:44:17 EDT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tutorialsNinja.LoginTest.checkPasswordVisibility()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method signature="checkPasswordVisibility()[pri:3, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:17 EDT" name="checkPasswordVisibility" finished-at="2023-05-30T00:44:20 EDT" duration-ms="2747" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Password is visible to the page source expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Password is visible to the page source expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at tutorialsNinja.LoginTest.checkPasswordVisibility(LoginTest.java:131)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkPasswordVisibility -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:20 EDT" name="afterEachTestMethod" finished-at="2023-05-30T00:44:21 EDT" duration-ms="915" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkPasswordVisibility status=FAILURE method=LoginTest.checkPasswordVisibility()[pri:3, instance:tutorialsNinja.LoginTest@35f26e72] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:21 EDT" name="tearDownR" finished-at="2023-05-30T00:44:21 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownR -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:21 EDT" name="setUp" finished-at="2023-05-30T00:44:27 EDT" duration-ms="6052" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[110]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://tutorialsninja.com/demo/index.php?route=account/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:27 EDT" name="startExtent" finished-at="2023-05-30T00:44:27 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tutorialsNinja.LoginTest.testLoginFieldsPlaceholders()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method signature="testLoginFieldsPlaceholders()[pri:4, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:27 EDT" name="testLoginFieldsPlaceholders" finished-at="2023-05-30T00:44:30 EDT" duration-ms="3593" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginFieldsPlaceholders -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:30 EDT" name="afterEachTestMethod" finished-at="2023-05-30T00:44:31 EDT" duration-ms="681" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginFieldsPlaceholders status=SUCCESS method=LoginTest.testLoginFieldsPlaceholders()[pri:4, instance:tutorialsNinja.LoginTest@35f26e72] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:31 EDT" name="tearDownR" finished-at="2023-05-30T00:44:31 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownR -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:31 EDT" name="setUp" finished-at="2023-05-30T00:44:38 EDT" duration-ms="6406" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[110]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://tutorialsninja.com/demo/index.php?route=account/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:38 EDT" name="startExtent" finished-at="2023-05-30T00:44:38 EDT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tutorialsNinja.LoginTest.verifyForgottenPasswrdLinkDsp()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method signature="verifyForgottenPasswrdLinkDsp()[pri:5, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:38 EDT" name="verifyForgottenPasswrdLinkDsp" finished-at="2023-05-30T00:44:39 EDT" duration-ms="968" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyForgottenPasswrdLinkDsp -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:39 EDT" name="afterEachTestMethod" finished-at="2023-05-30T00:44:39 EDT" duration-ms="785" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyForgottenPasswrdLinkDsp status=SUCCESS method=LoginTest.verifyForgottenPasswrdLinkDsp()[pri:5, instance:tutorialsNinja.LoginTest@35f26e72] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:39 EDT" name="tearDownR" finished-at="2023-05-30T00:44:39 EDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownR -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:39 EDT" name="setUp" finished-at="2023-05-30T00:44:46 EDT" duration-ms="6214" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[110]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://tutorialsninja.com/demo/index.php?route=account/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:46 EDT" name="startExtent" finished-at="2023-05-30T00:44:46 EDT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tutorialsNinja.LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method signature="testLoginWithCredentials(java.lang.String,java.lang.String)[pri:6, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:46 EDT" name="testLoginWithCredentials" data-provider="loginData" finished-at="2023-05-30T00:44:50 EDT" duration-ms="4445" status="PASS">
+          <params>
+            <param index="0">
               <value>
                 <![CDATA[sunflower"+ generateTimeStamp()+"@gmail.com]]>
               </value>
             </param>
-            <param index="3">
-              <value>
-                <![CDATA[1234567890]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[sun123]]>
-              </value>
-            </param>
-            <param index="5">
+            <param index="1">
               <value>
                 <![CDATA[sun123]]>
               </value>
@@ -200,27 +502,27 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registerWithCredentials -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:35:53 EDT" name="afterEachTestMethod" finished-at="2023-05-29T00:35:55 EDT" duration-ms="1428" status="PASS">
+        </test-method> <!-- testLoginWithCredentials -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:50 EDT" name="afterEachTestMethod" finished-at="2023-05-30T00:44:51 EDT" duration-ms="725" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=registerWithCredentials status=SUCCESS method=RegisterTest.registerWithCredentials(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tutorialsNinja.RegisterTest@6399551e] output={null}]]]>
+                <![CDATA[[TestResult name=testLoginWithCredentials status=SUCCESS method=LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String)[pri:6, instance:tutorialsNinja.LoginTest@35f26e72] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:35:55 EDT" name="tearDownR" finished-at="2023-05-29T00:35:55 EDT" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:51 EDT" name="tearDownR" finished-at="2023-05-30T00:44:51 EDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:35:55 EDT" name="setUp" finished-at="2023-05-29T00:36:03 EDT" duration-ms="8617" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:51 EDT" name="setUp" finished-at="2023-05-30T00:44:58 EDT" duration-ms="7370" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[false]]>
+                <![CDATA[true]]>
               </value>
             </param>
             <param index="1">
@@ -257,45 +559,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:03 EDT" name="startExtent" finished-at="2023-05-29T00:36:03 EDT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:58 EDT" name="startExtent" finished-at="2023-05-30T00:44:58 EDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tutorialsNinja.RegisterTest.registerWithCredentials(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void tutorialsNinja.LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="registerWithCredentials(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:03 EDT" name="registerWithCredentials" data-provider="RegistrationData" finished-at="2023-05-29T00:36:06 EDT" duration-ms="2482" status="PASS">
+        <test-method signature="testLoginWithCredentials(java.lang.String,java.lang.String)[pri:6, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:44:58 EDT" name="testLoginWithCredentials" data-provider="loginData" finished-at="2023-05-30T00:45:01 EDT" duration-ms="2465" status="PASS">
           <params>
             <param index="0">
-              <value>
-                <![CDATA[invalidFirstName]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[inavalidlastname]]>
-              </value>
-            </param>
-            <param index="2">
               <value>
                 <![CDATA[sun@]]>
               </value>
             </param>
-            <param index="3">
-              <value>
-                <![CDATA[abcd]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[sun]]>
-              </value>
-            </param>
-            <param index="5">
+            <param index="1">
               <value>
                 <![CDATA[sun]]>
               </value>
@@ -303,27 +585,27 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registerWithCredentials -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:06 EDT" name="afterEachTestMethod" finished-at="2023-05-29T00:36:06 EDT" duration-ms="687" status="PASS">
+        </test-method> <!-- testLoginWithCredentials -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:01 EDT" name="afterEachTestMethod" finished-at="2023-05-30T00:45:02 EDT" duration-ms="1104" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=registerWithCredentials status=SUCCESS method=RegisterTest.registerWithCredentials(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tutorialsNinja.RegisterTest@6399551e] output={null}]]]>
+                <![CDATA[[TestResult name=testLoginWithCredentials status=SUCCESS method=LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String)[pri:6, instance:tutorialsNinja.LoginTest@35f26e72] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:06 EDT" name="tearDownR" finished-at="2023-05-29T00:36:06 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:02 EDT" name="tearDownR" finished-at="2023-05-30T00:45:02 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:06 EDT" name="setUp" finished-at="2023-05-29T00:36:14 EDT" duration-ms="7145" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:02 EDT" name="setUp" finished-at="2023-05-30T00:45:08 EDT" duration-ms="6196" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[false]]>
+                <![CDATA[true]]>
               </value>
             </param>
             <param index="1">
@@ -360,111 +642,136 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:14 EDT" name="startExtent" finished-at="2023-05-29T00:36:14 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:08 EDT" name="startExtent" finished-at="2023-05-30T00:45:08 EDT" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tutorialsNinja.RegisterTest.registerWithInvalidPhoneNumber(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void tutorialsNinja.LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="registerWithInvalidPhoneNumber(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:14 EDT" name="registerWithInvalidPhoneNumber" data-provider="invalidPhoneNumberData" finished-at="2023-05-29T00:36:16 EDT" duration-ms="2450" status="FAIL">
+        <test-method signature="testLoginWithCredentials(java.lang.String,java.lang.String)[pri:6, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:08 EDT" name="testLoginWithCredentials" data-provider="loginData" finished-at="2023-05-30T00:45:11 EDT" duration-ms="3061" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[sunflower]]>
+                <![CDATA[sun@]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[yellow]]>
+                <![CDATA[sun123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithCredentials -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:11 EDT" name="afterEachTestMethod" finished-at="2023-05-30T00:45:12 EDT" duration-ms="777" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLoginWithCredentials status=SUCCESS method=LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String)[pri:6, instance:tutorialsNinja.LoginTest@35f26e72] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:12 EDT" name="tearDownR" finished-at="2023-05-30T00:45:12 EDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownR -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:12 EDT" name="setUp" finished-at="2023-05-30T00:45:18 EDT" duration-ms="6500" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
               </value>
             </param>
             <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[110]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://tutorialsninja.com/demo/index.php?route=account/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:18 EDT" name="startExtent" finished-at="2023-05-30T00:45:18 EDT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tutorialsNinja.LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method signature="testLoginWithCredentials(java.lang.String,java.lang.String)[pri:6, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:18 EDT" name="testLoginWithCredentials" data-provider="loginData" finished-at="2023-05-30T00:45:21 EDT" duration-ms="2603" status="PASS">
+          <params>
+            <param index="0">
               <value>
                 <![CDATA[sunflower"+ generateTimeStamp()+"@gmail.com]]>
               </value>
             </param>
-            <param index="3">
+            <param index="1">
               <value>
-                <![CDATA[abcd]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[sun123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[sun123]]>
+                <![CDATA[sun]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The user is able to register with an invalid phone number expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The user is able to register with an invalid phone number expected [false] but found [true]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1577)
-at org.testng.Assert.assertFalse(Assert.java:78)
-at tutorialsNinja.RegisterTest.registerWithInvalidPhoneNumber(RegisterTest.java:128)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registerWithInvalidPhoneNumber -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:16 EDT" name="afterEachTestMethod" finished-at="2023-05-29T00:36:18 EDT" duration-ms="1991" status="PASS">
+        </test-method> <!-- testLoginWithCredentials -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:21 EDT" name="afterEachTestMethod" finished-at="2023-05-30T00:45:22 EDT" duration-ms="811" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=registerWithInvalidPhoneNumber status=FAILURE method=RegisterTest.registerWithInvalidPhoneNumber(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tutorialsNinja.RegisterTest@6399551e] output={null}]]]>
+                <![CDATA[[TestResult name=testLoginWithCredentials status=SUCCESS method=LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String)[pri:6, instance:tutorialsNinja.LoginTest@35f26e72] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:18 EDT" name="tearDownR" finished-at="2023-05-29T00:36:18 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:22 EDT" name="tearDownR" finished-at="2023-05-30T00:45:22 EDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:18 EDT" name="setUp" finished-at="2023-05-29T00:36:28 EDT" duration-ms="9239" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:22 EDT" name="setUp" finished-at="2023-05-30T00:45:30 EDT" duration-ms="8596" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[false]]>
+                <![CDATA[true]]>
               </value>
             </param>
             <param index="1">
@@ -501,447 +808,53 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:28 EDT" name="startExtent" finished-at="2023-05-29T00:36:28 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:30 EDT" name="startExtent" finished-at="2023-05-30T00:45:30 EDT" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tutorialsNinja.RegisterTest.verifyRegisterWithAnExistingEmailAddress(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void tutorialsNinja.LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="verifyRegisterWithAnExistingEmailAddress(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:28 EDT" name="verifyRegisterWithAnExistingEmailAddress" data-provider="existingEmailAddressData" finished-at="2023-05-29T00:36:31 EDT" duration-ms="3246" status="PASS">
+        <test-method signature="testLoginWithCredentials(java.lang.String,java.lang.String)[pri:6, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:30 EDT" name="testLoginWithCredentials" data-provider="loginData" finished-at="2023-05-30T00:45:34 EDT" duration-ms="3684" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[sunflower]]>
+                <![CDATA[]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[yellow]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[rezikabarech@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[1234567890]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[sun123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[sun123]]>
+                <![CDATA[]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyRegisterWithAnExistingEmailAddress -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:31 EDT" name="afterEachTestMethod" finished-at="2023-05-29T00:36:31 EDT" duration-ms="416" status="PASS">
+        </test-method> <!-- testLoginWithCredentials -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:34 EDT" name="afterEachTestMethod" finished-at="2023-05-30T00:45:35 EDT" duration-ms="739" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyRegisterWithAnExistingEmailAddress status=SUCCESS method=RegisterTest.verifyRegisterWithAnExistingEmailAddress(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tutorialsNinja.RegisterTest@6399551e] output={null}]]]>
+                <![CDATA[[TestResult name=testLoginWithCredentials status=SUCCESS method=LoginTest.testLoginWithCredentials(java.lang.String,java.lang.String)[pri:6, instance:tutorialsNinja.LoginTest@35f26e72] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:31 EDT" name="tearDownR" finished-at="2023-05-29T00:36:31 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:35 EDT" name="tearDownR" finished-at="2023-05-30T00:45:35 EDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:31 EDT" name="setUp" finished-at="2023-05-29T00:36:38 EDT" duration-ms="6781" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[browserstack]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[110]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[https://tutorialsninja.com/demo/index.php?route=account/login]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:38 EDT" name="startExtent" finished-at="2023-05-29T00:36:38 EDT" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void tutorialsNinja.RegisterTest.VerifyThePasswordNotVisibleToTheSourcePage()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startExtent -->
-        <test-method signature="VerifyThePasswordNotVisibleToTheSourcePage()[pri:4, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:38 EDT" name="VerifyThePasswordNotVisibleToTheSourcePage" finished-at="2023-05-29T00:36:40 EDT" duration-ms="2067" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[the password is visible expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: the password is visible expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1577)
-at org.testng.Assert.assertTrue(Assert.java:56)
-at tutorialsNinja.RegisterTest.VerifyThePasswordNotVisibleToTheSourcePage(RegisterTest.java:164)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyThePasswordNotVisibleToTheSourcePage -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:40 EDT" name="afterEachTestMethod" finished-at="2023-05-29T00:36:40 EDT" duration-ms="400" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=VerifyThePasswordNotVisibleToTheSourcePage status=FAILURE method=RegisterTest.VerifyThePasswordNotVisibleToTheSourcePage()[pri:4, instance:tutorialsNinja.RegisterTest@6399551e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:40 EDT" name="tearDownR" finished-at="2023-05-29T00:36:40 EDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:40 EDT" name="setUp" finished-at="2023-05-29T00:36:49 EDT" duration-ms="8718" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[browserstack]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[110]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[https://tutorialsninja.com/demo/index.php?route=account/login]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:49 EDT" name="startExtent" finished-at="2023-05-29T00:36:49 EDT" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void tutorialsNinja.RegisterTest.VerifyDifferentWaysToNavigateToTheRegisterPage()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startExtent -->
-        <test-method signature="VerifyDifferentWaysToNavigateToTheRegisterPage()[pri:5, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:49 EDT" name="VerifyDifferentWaysToNavigateToTheRegisterPage" finished-at="2023-05-29T00:36:52 EDT" duration-ms="3269" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyDifferentWaysToNavigateToTheRegisterPage -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:52 EDT" name="afterEachTestMethod" finished-at="2023-05-29T00:36:54 EDT" duration-ms="1594" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=VerifyDifferentWaysToNavigateToTheRegisterPage status=SUCCESS method=RegisterTest.VerifyDifferentWaysToNavigateToTheRegisterPage()[pri:5, instance:tutorialsNinja.RegisterTest@6399551e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:54 EDT" name="tearDownR" finished-at="2023-05-29T00:36:54 EDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:36:54 EDT" name="setUp" finished-at="2023-05-29T00:37:04 EDT" duration-ms="10249" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[browserstack]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[110]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[https://tutorialsninja.com/demo/index.php?route=account/login]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:37:04 EDT" name="startExtent" finished-at="2023-05-29T00:37:04 EDT" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox(java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startExtent -->
-        <test-method signature="checkPrivacyPolicyCheckBox(java.lang.String)[pri:6, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:37:04 EDT" name="checkPrivacyPolicyCheckBox" data-provider="privacyCheckBox" finished-at="2023-05-29T00:37:07 EDT" duration-ms="2997" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[yes]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkPrivacyPolicyCheckBox -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:37:07 EDT" name="afterEachTestMethod" finished-at="2023-05-29T00:37:08 EDT" duration-ms="913" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkPrivacyPolicyCheckBox status=SUCCESS method=RegisterTest.checkPrivacyPolicyCheckBox(java.lang.String)[pri:6, instance:tutorialsNinja.RegisterTest@6399551e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:37:08 EDT" name="tearDownR" finished-at="2023-05-29T00:37:08 EDT" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:37:08 EDT" name="setUp" finished-at="2023-05-29T00:37:21 EDT" duration-ms="12422" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[browserstack]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[110]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[https://tutorialsninja.com/demo/index.php?route=account/login]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:37:21 EDT" name="startExtent" finished-at="2023-05-29T00:37:21 EDT" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox(java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startExtent -->
-        <test-method signature="checkPrivacyPolicyCheckBox(java.lang.String)[pri:6, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:37:21 EDT" name="checkPrivacyPolicyCheckBox" data-provider="privacyCheckBox" finished-at="2023-05-29T00:37:23 EDT" duration-ms="2752" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[No]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The user should not be able to register when the privacy policy checkbox is not selected expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The user should not be able to register when the privacy policy checkbox is not selected expected [false] but found [true]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1577)
-at org.testng.Assert.assertFalse(Assert.java:78)
-at tutorialsNinja.RegisterTest.checkPrivacyPolicyCheckBox(RegisterTest.java:248)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkPrivacyPolicyCheckBox -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:37:23 EDT" name="afterEachTestMethod" finished-at="2023-05-29T00:37:24 EDT" duration-ms="497" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkPrivacyPolicyCheckBox status=FAILURE method=RegisterTest.checkPrivacyPolicyCheckBox(java.lang.String)[pri:6, instance:tutorialsNinja.RegisterTest@6399551e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:37:24 EDT" name="tearDownR" finished-at="2023-05-29T00:37:24 EDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:tutorialsNinja.RegisterTest@6399551e]" started-at="2023-05-29T00:37:24 EDT" name="generateReport" finished-at="2023-05-29T00:37:24 EDT" duration-ms="205" status="PASS">
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:tutorialsNinja.LoginTest@35f26e72]" started-at="2023-05-30T00:45:35 EDT" name="generateReport" finished-at="2023-05-30T00:45:35 EDT" duration-ms="38" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-      </class> <!-- tutorialsNinja.RegisterTest -->
-    </test> <!--  RegisterTest -->
+      </class> <!-- tutorialsNinja.LoginTest -->
+    </test> <!--  LoginTest -->
   </suite> <!-- tutorialsNinja test -->
 </testng-results>
