@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="orangeHRM test">
-    <parameter name="useCloudEnv" value="false"></parameter>
+    <parameter name="useCloudEnv" value="true"></parameter>
     <parameter name="envName" value="browserstack"></parameter>
     <parameter name="os" value="windows"></parameter>
     <parameter name="osVersion" value="10"></parameter>
@@ -11,16 +11,18 @@
     <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"></parameter>
     <test name="OrangeHRM tests">
         <classes>
-<!--            <class name="orangeHRM.BuzzSection"></class>-->
-<!--            <class name="orangeHRM.ChangePassword"></class>-->
-<!--            <class name="orangeHRM.LeaveSection"></class>-->
-<!--            <class name="orangeHRM.LoginTestOrange"></class>-->
-<!--            <class name="orangeHRM.LoginToMaintenance"></class>-->
-<!--            <class name="orangeHRM.LogOutTest"></class>-->
-<!--            <class name="orangeHRM.MaintenanceSection"></class>-->
-<!--            <class name="orangeHRM.PIMSection"></class>-->
-<!--            <class name="orangeHRM.TimeSection"></class>-->
-<!--               <class name="orangeHRM.MyInfoSection"></class>-->
+
+            <class name="orangeHRM.BuzzSection"></class>
+            <class name="orangeHRM.ChangePassword"></class>
+            <class name="orangeHRM.LeaveSection"></class>
+            <class name="orangeHRM.LoginTestOrange"></class>
+            <class name="orangeHRM.LoginToMaintenance"></class>
+            <class name="orangeHRM.LogOutTest"></class>
+            <class name="orangeHRM.MaintenanceSection"></class>
+            <class name="orangeHRM.PIMSection"></class>
+            <class name="orangeHRM.TimeSection"></class>
+               <class name="orangeHRM.MyInfoSection"></class>
+
             <class name="orangeHRM.Recruitment"></class>
             <class name="orangeHRM.AdminSection"></class>
 
