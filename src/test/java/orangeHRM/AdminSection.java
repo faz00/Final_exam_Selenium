@@ -13,13 +13,15 @@ import java.io.File;
 import static us.piit.utility.Utility.currentDir;
 
 public class AdminSection extends CommonAPI {
-    String path=currentDir+ File.separator+"manualTestCases\\OrangeHRMTest.xlsx";
+//    String path=currentDir+ File.separator+"manualTestCases\\OrangeHRMTest.xlsx";
+
+    String path=currentDir+"\\manualTestCases\\OrangeHRMTest.xlsx";
     ExcelReader excelReader =new ExcelReader(path);
         String validUsername = Utility.decode(excelReader.getDataFromCell("DataProvider",1,0));
         String validPassword = Utility.decode(excelReader.getDataFromCell("DataProvider",1,1));
 
         @Test
-    public void addJobTitle(){
+    public void addUser(){
 
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
@@ -58,12 +60,16 @@ public class AdminSection extends CommonAPI {
         adminPage.addEmployeeNAme(name);
 
         adminPage.clickOnStatus();
-        adminPage.typeUsernameField("Username");
+        adminPage.typeUsernameField("JohnDoeee");
 
-        adminPage.typePassword("Fazia2000*");
-        adminPage.typeConfirmPassword("Fazia2000*");
+        adminPage.typePassword("123qwerty");
+        adminPage.typeConfirmPassword("123qwerty");
 
         adminPage.clickOnSubmitJobTitle();
+
+        adminPage.clickOnUserManagementBtn();
+        adminPage.clickOnUserOption();
+
 
         waitFor(2);
         String expectedCreatedUser="System Users";
