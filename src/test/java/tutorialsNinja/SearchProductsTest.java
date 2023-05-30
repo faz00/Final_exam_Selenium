@@ -2,14 +2,17 @@ package tutorialsNinja;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import us.piit.utility.Utility;
 import us.piit.base.CommonAPI;
 import us.piit.pages.tutorialsNinja.SearchProductsHomePage;
 import us.piit.pages.tutorialsNinja.SearchProductsPage;
 
+import java.awt.*;
 import java.time.Duration;
 import java.util.List;
 import java.util.Properties;
@@ -24,7 +27,10 @@ public class SearchProductsTest extends CommonAPI {
     Properties prop = Utility.loadProperties();
     String search = Utility.decode(prop.getProperty("tutorialsninja.search"));//"Search - MacBook"
     String nonExissearch = Utility.decode(prop.getProperty("tutorialsninja.nonExisSearch"));//"Headphones"
-    @Test
+
+
+    @Test(priority = 4, groups = {"searchTests"})
+
     public void verifyUsernavigatedToTHeSearchHomePage() {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
@@ -36,15 +42,15 @@ public class SearchProductsTest extends CommonAPI {
         searchProductsPage.SearchButton();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        // assert that the user navigates to the ResearchHomePage
-        assertTrue(searchprhomePage.isSearchResultsPageDisplayed());
-   //takeScreenshot
-        takeScreenshot("tutorialsNinja","userNavigateToSearchHmPge");
+        // Assert that the user navigates to the search results page
+        assertTrue(searchprhomePage.isSearchResultsPageDisplayed(), "Search results page is not displayed");
+
+        // Assert that the search results contain at least one product
+        assertTrue(searchprhomePage.areSearchResultsDisplayed(), "Search results do not contain any products for the given search term");
 
     }
 
-    @Test
-
+    @Test(priority = 2, groups = {"searchTests"})
     public void verifySearchWithAnExistingProduct() {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
@@ -61,20 +67,16 @@ public class SearchProductsTest extends CommonAPI {
         // Verify that the search results contain at least one product
         assertTrue(searchprhomePage.areSearchResultsDisplayed(), "Search results do not contain any products");
     }
-    @Test
-
+    @Test(priority = 1, groups = {"searchTests"})
     public void verifySearchWithANonExistingProduct() {
         SearchProductsPage searchProductsPage = new SearchProductsPage(getDriver());
         SearchProductsHomePage searchprhomePage = new SearchProductsHomePage(getDriver());
 
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
-
 // Search for a non existing product
         searchProductsPage.SearchField(nonExissearch);
         searchProductsPage.SearchButton();
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         // Assert a non-existing product message is displayed
         assertTrue(searchProductsPage.isErrorMessageDisplayed(), "Error message is not displayed");
@@ -82,8 +84,7 @@ public class SearchProductsTest extends CommonAPI {
 
 
     //verify the user able to select how many products to be displayed
-    @Test
-
+    @Test(priority = 3, groups = {"searchTests"})
     public void verifyProductDisplayCount() {
 
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
@@ -98,7 +99,7 @@ public class SearchProductsTest extends CommonAPI {
         searchProductsPage.SearchButton();
 
         // Click on the display count dropdown
-        searchprhomePage .clickOnDisplayCountDropdown();
+        searchprhomePage.clickOnDisplayCountDropdown();
 
         // Verify that the display count options are displayed
         Select select = new Select(searchprhomePage.displayCountDropdown);
@@ -107,7 +108,7 @@ public class SearchProductsTest extends CommonAPI {
 
         // Select an option by visible text
         select.selectByVisibleText("100");
-     waitFor(3);
+
         //takescreenshot
         takeScreenshot("tutorialsNinja","productDisplayCount");
 
@@ -116,7 +117,6 @@ public class SearchProductsTest extends CommonAPI {
 
     }
 }
-
 
 
 

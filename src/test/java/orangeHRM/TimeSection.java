@@ -20,7 +20,7 @@ import java.util.Properties;
 
 public class TimeSection extends CommonAPI {
 
-    Logger log = LogManager.getLogger(TimeSection.class.getName());
+
 
     @DataProvider(name = "loginCredentials")
     public Object[][] getLoginCredentials() {

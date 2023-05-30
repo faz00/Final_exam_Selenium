@@ -2,13 +2,15 @@ package us.piit.pages.orangeHRM;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import us.piit.base.CommonAPI;
 
-public class LeavePage extends CommonAPI {
+public class
+LeavePage extends CommonAPI {
 
     Logger log = LogManager.getLogger(LeavePage.class.getName());
     public LeavePage(WebDriver driver){
@@ -63,6 +65,7 @@ public class LeavePage extends CommonAPI {
 
     @FindBy(xpath = "(//div[contains(text(),'Eid El Adha')])[1]")
     WebElement actualAddedHoliday;
+
 
     public void clickonThreeDots(){
         clickOn(threeDotsBtn);
@@ -142,4 +145,8 @@ public class LeavePage extends CommonAPI {
     public String getActualAddedHoliday(){
         return getElementText(actualAddedHoliday);
     }
+
+
 }
+
+

@@ -245,7 +245,7 @@ public class CommonAPI {
 
     public String generateTestEmail(){
         Random rn = new Random();
-        int ranNumber = rn.nextInt(100) + 2;
+        int ranNumber = rn.nextInt(1000) + 2*2;
         String TestEmail = "test"+ranNumber+"@gmail.com";
         return TestEmail;
     }
