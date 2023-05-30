@@ -30,6 +30,9 @@ public class WishListPage extends CommonAPI {
     @FindBy(xpath = "//*[@title='Shopping Cart']")
     WebElement shopngCrticon;
 
+    @FindBy(xpath = "//*[@id='wishlist-total']")
+    WebElement wishlistIcon;
+
     public void SearchField(String search) {
         type(searchField, search);
         log.info("the search product enters in success");
@@ -58,7 +61,10 @@ public void clickOnshpngCrtLnk(){
         clickOn(shopngCrticon);
 }
 
-
+public void clickOnwshLstIcn(){
+        log.info("the wishList icon is clicked successfully");
+        clickOn(wishlistIcon);
+}
 
 
 

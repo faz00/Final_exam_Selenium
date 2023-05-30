@@ -2,6 +2,7 @@ package tutorialsNinja;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -25,7 +26,7 @@ public class LoginTest  extends CommonAPI {
     String password = Utility.decode(prop.getProperty("tutorialsninja.password"));
 
 
-    @Test(priority=1,groups="navigationTest")
+    @Test(priority=1,groups={"navigationTest"})
     public void vrfyUsrNvgtTloginHmPge(){
 
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
@@ -56,7 +57,7 @@ Assert.assertTrue(loginHomePage.isAccountLinkDisplayed(),"the link is not displa
         };
     }
 
-    @Test(priority = 6, groups = "loginWithCredTest", dataProvider = "loginData")
+    @Test(priority = 2, groups = {"loginWithCredTest"}, dataProvider = "loginData")
     public void testLoginWithCredentials(String email, String password) {
 
 
@@ -83,7 +84,7 @@ Assert.assertTrue(loginHomePage.isAccountLinkDisplayed(),"the link is not displa
         }
 
     }
-    @Test(priority = 2, groups = "unsuccessfulLoginAttemptsTest")
+    @Test(priority = 3, groups = {"unsuccessfulLoginAttemptsTest"})
     public void verifyTheNumberOfUnsuccessfulLoginAttempts() {
 
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
@@ -111,7 +112,7 @@ Assert.assertTrue(loginHomePage.isAccountLinkDisplayed(),"the link is not displa
     }
 
 
-    @Test(priority = 3, groups = "pswrdVisibilityTest")
+    @Test(priority = 4, groups = "securityTest")
     public void checkPasswordVisibility(){
 
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
@@ -133,7 +134,7 @@ Assert.assertTrue(loginHomePage.isAccountLinkDisplayed(),"the link is not displa
      Assert.assertTrue(loginPage.isPasswordFieldVisible(password), "Password is visible to the page source");
 
     }
-    @Test(priority = 4, groups = {"placeHoldersTest"})
+    @Test(priority = 5, groups = {"placeHolderTest"})
 
     public void testLoginFieldsPlaceholders() {
 
@@ -157,7 +158,7 @@ Assert.assertTrue(loginHomePage.isAccountLinkDisplayed(),"the link is not displa
     }
 
 //verify if the 'forgotten password'link is displayed and works
-@Test(priority=5,groups="pswrdLinkTest")
+@Test(priority=6,groups="passwordLinkTest")
           public void verifyForgottenPasswrdLinkDsp(){
 
         LoginPage loginPage = new LoginPage(getDriver());

@@ -23,7 +23,7 @@ public class WishListTest extends CommonAPI {
     String validEmail = Utility.decode(prop.getProperty("tutorialsninja.validEmail"));
     String validPassword = Utility.decode(prop.getProperty("tutorialsninja.validPassword"));
 
-@Test(priority=2,groups="addItmsFrmShppngCrtTest")
+@Test(priority=1,groups="addProductTest")
 
     public void vrfyaddItmsTWshListfrmThShppngCrt(){
 
@@ -51,7 +51,7 @@ public class WishListTest extends CommonAPI {
         Assert.assertTrue(WhshLstHmPge.isWshLstScssMsgDsp(),"the sucess message is not displayed");
 
     }
-    @Test(priority=2,groups="addItmsToWishListPageTest")
+  @Test(priority=2,groups="addProductTest")
     public void addItmsTWhshLstWthtLogin(){
 
     WishListPage  WhshLstPge=new WishListPage(getDriver());
@@ -80,6 +80,7 @@ public class WishListTest extends CommonAPI {
     }
 
 
+    }
 
 
 
@@ -88,4 +89,4 @@ public class WishListTest extends CommonAPI {
 
 
 
-}
+

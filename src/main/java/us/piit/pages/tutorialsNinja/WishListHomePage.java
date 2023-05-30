@@ -37,6 +37,8 @@ public class WishListHomePage extends CommonAPI {
 @FindBy(xpath = "//img[@title='MacBook']")
 WebElement imag;
 
+@FindBy(xpath = "//*[@class='col-sm-9']/h2")
+WebElement myWshListHeadr;
    public void clkPrdctImg() {
         log.info("the product is clcked successfully");
         clickOn(productimg);
@@ -61,10 +63,7 @@ public boolean isWshLstEmpty(){
  public String getURL(WebDriver driver){
         log.info("the url of the page is displayed");
         return driver.getCurrentUrl();
- }
- public boolean isHdrPgeTtlDsp(){
-        log.info("the header page title is displayed");
-        return wshLstHdrPgTtl.isDisplayed();
+
  }
  public void clickOnCntnBtn(){
         log.info("the continue button is clicked sucessfully");
@@ -77,5 +76,9 @@ public boolean isWshLstEmpty(){
     public void clickOntheImg(){
        log.info("the image clicked in success");
        clickOn(imag);
+    }
+    public boolean isWshLstHdrPgTtlDsp( WebDriver driver){
+       log.info("the header page title is displayed"+driver.getTitle());
+       return myWshListHeadr.isDisplayed();
     }
 }

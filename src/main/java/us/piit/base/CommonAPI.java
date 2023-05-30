@@ -285,6 +285,7 @@ public class CommonAPI {
 
 
     public WebDriver getDriver() {
+
         return driver;
     }
 

@@ -7,7 +7,7 @@
     <parameter name="osVersion" value="10"></parameter>
     <parameter name="browserVersion" value="110"></parameter>
 
-    <parameter name="browserName" value="firefox"></parameter>
+    <parameter name="browserName" value="edge"></parameter>
     <parameter name="url" value="https://tutorialsninja.com/demo/index.php?route=account/login"></parameter>
 
     <!-- <test name=" LoginTest">
