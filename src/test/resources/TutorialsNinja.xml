@@ -14,12 +14,12 @@
             <classes>
                 <class name="tutorialsNinja.LoginTest"></class>
             </classes>
-        </test>-->
+        </test>
        <test name=" RegisterTest">
             <classes>
                 <class name="tutorialsNinja.RegisterTest"></class>
             </classes>
-        </test>
+        </test>-->
   <!-- <test name=" ForgottenPasswordTest">
                <classes>
                    <class name="tutorialsNinja.ForgottenPasswordTest"></class>
@@ -39,11 +39,11 @@
              <classes>
                  <class name="tutorialsNinja.AddToCartTest"></class>
              </classes>
-         </test>
+         </test>-->
     <test name=" WishListTest">
         <classes>
             <class name="tutorialsNinja.WishListTest"></class>
         </classes>
-    </test>-->
+    </test>
 
 </suite>

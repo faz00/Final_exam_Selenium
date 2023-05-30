@@ -30,7 +30,14 @@ public class WishListHomePage extends CommonAPI {
     WebElement emptyWshLst;
     @FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[1]/h2[1]")
     WebElement wshLstHdrPgTtl;
-    public void clkPrdctImg() {
+    @FindBy(linkText = "Continue")
+    WebElement continueBtn;
+   @FindBy(xpath = "//*[@class='alert alert-success alert-dismissible']")
+    WebElement WshLstScssMsg;
+@FindBy(xpath = "//img[@title='MacBook']")
+WebElement imag;
+
+   public void clkPrdctImg() {
         log.info("the product is clcked successfully");
         clickOn(productimg);
     }
@@ -59,4 +66,16 @@ public boolean isWshLstEmpty(){
         log.info("the header page title is displayed");
         return wshLstHdrPgTtl.isDisplayed();
  }
+ public void clickOnCntnBtn(){
+        log.info("the continue button is clicked sucessfully");
+        clickOn(continueBtn);
+ }
+    public boolean isWshLstScssMsgDsp(){
+        log.info("the wishList success message is displayed");
+        return WshLstScssMsg.isDisplayed();
+    }
+    public void clickOntheImg(){
+       log.info("the image clicked in success");
+       clickOn(imag);
+    }
 }

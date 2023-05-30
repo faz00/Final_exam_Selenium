@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Extent Report DirectoryC:\Users\My Pc\eclipse-workspace\Final_exam_Selenium\test-output\html]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-05-30T01:48:13 EDT" name="tutorialsNinja test" finished-at="2023-05-30T01:48:35 EDT" duration-ms="22169">
+  <suite started-at="2023-05-30T03:27:28 EDT" name="tutorialsNinja test" finished-at="2023-05-30T03:28:24 EDT" duration-ms="55641">
     <groups>
-      <group name="invalidCnfrmtnPswrdTest">
-        <method signature="RegisterTest.rgstrWthDffrntCnfrmtnPswrd()[pri:7, instance:tutorialsNinja.RegisterTest@604c5de8]" name="rgstrWthDffrntCnfrmtnPswrd" class="tutorialsNinja.RegisterTest"/>
-      </group> <!-- invalidCnfrmtnPswrdTest -->
+      <group name="addItmsFrmShppngCrtTest">
+        <method signature="WishListTest.vrfyaddItmsTWshListfrmThShppngCrt()[pri:2, instance:tutorialsNinja.WishListTest@6127a7e]" name="vrfyaddItmsTWshListfrmThShppngCrt" class="tutorialsNinja.WishListTest"/>
+      </group> <!-- addItmsFrmShppngCrtTest -->
+      <group name="addItmsToWishListPageTest">
+        <method signature="WishListTest.addItmsTWhshLstWthtLogin()[pri:2, instance:tutorialsNinja.WishListTest@6127a7e]" name="addItmsTWhshLstWthtLogin" class="tutorialsNinja.WishListTest"/>
+      </group> <!-- addItmsToWishListPageTest -->
     </groups>
-    <test started-at="2023-05-30T01:48:13 EDT" name=" RegisterTest" finished-at="2023-05-30T01:48:35 EDT" duration-ms="22169">
-      <class name="tutorialsNinja.RegisterTest">
-        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:tutorialsNinja.RegisterTest@604c5de8]" started-at="2023-05-30T01:48:13 EDT" name="extentSetup" finished-at="2023-05-30T01:48:13 EDT" duration-ms="247" status="PASS">
+    <test started-at="2023-05-30T03:27:28 EDT" name=" WishListTest" finished-at="2023-05-30T03:28:24 EDT" duration-ms="55641">
+      <class name="tutorialsNinja.WishListTest">
+        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:tutorialsNinja.WishListTest@6127a7e]" started-at="2023-05-30T03:27:28 EDT" name="extentSetup" finished-at="2023-05-30T03:27:28 EDT" duration-ms="287" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7e1ffe70]]>
+                <![CDATA[org.testng.TestRunner@420a8042]]>
               </value>
             </param>
           </params>
@@ -27,7 +30,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- extentSetup -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.RegisterTest@604c5de8]" started-at="2023-05-30T01:48:13 EDT" name="setUp" finished-at="2023-05-30T01:48:28 EDT" duration-ms="14485" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.WishListTest@6127a7e]" started-at="2023-05-30T03:27:28 EDT" name="setUp" finished-at="2023-05-30T03:27:54 EDT" duration-ms="25497" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -68,41 +71,112 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.RegisterTest@604c5de8]" started-at="2023-05-30T01:48:28 EDT" name="startExtent" finished-at="2023-05-30T01:48:28 EDT" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.WishListTest@6127a7e]" started-at="2023-05-30T03:27:54 EDT" name="startExtent" finished-at="2023-05-30T03:27:54 EDT" duration-ms="19" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tutorialsNinja.RegisterTest.rgstrWthDffrntCnfrmtnPswrd()]]>
+                <![CDATA[public void tutorialsNinja.WishListTest.addItmsTWhshLstWthtLogin()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method signature="rgstrWthDffrntCnfrmtnPswrd()[pri:7, instance:tutorialsNinja.RegisterTest@604c5de8]" started-at="2023-05-30T01:48:28 EDT" name="rgstrWthDffrntCnfrmtnPswrd" finished-at="2023-05-30T01:48:31 EDT" duration-ms="2874" status="PASS">
+        <test-method signature="addItmsTWhshLstWthtLogin()[pri:2, instance:tutorialsNinja.WishListTest@6127a7e]" started-at="2023-05-30T03:27:54 EDT" name="addItmsTWhshLstWthtLogin" finished-at="2023-05-30T03:28:00 EDT" duration-ms="6216" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- rgstrWthDffrntCnfrmtnPswrd -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.RegisterTest@604c5de8]" started-at="2023-05-30T01:48:31 EDT" name="afterEachTestMethod" finished-at="2023-05-30T01:48:35 EDT" duration-ms="4728" status="PASS">
+        </test-method> <!-- addItmsTWhshLstWthtLogin -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.WishListTest@6127a7e]" started-at="2023-05-30T03:28:00 EDT" name="afterEachTestMethod" finished-at="2023-05-30T03:28:05 EDT" duration-ms="4576" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=rgstrWthDffrntCnfrmtnPswrd status=SUCCESS method=RegisterTest.rgstrWthDffrntCnfrmtnPswrd()[pri:7, instance:tutorialsNinja.RegisterTest@604c5de8] output={null}]]]>
+                <![CDATA[[TestResult name=addItmsTWhshLstWthtLogin status=SUCCESS method=WishListTest.addItmsTWhshLstWthtLogin()[pri:2, instance:tutorialsNinja.WishListTest@6127a7e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.RegisterTest@604c5de8]" started-at="2023-05-30T01:48:35 EDT" name="tearDownR" finished-at="2023-05-30T01:48:35 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.WishListTest@6127a7e]" started-at="2023-05-30T03:28:05 EDT" name="tearDownR" finished-at="2023-05-30T03:28:05 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownR -->
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:tutorialsNinja.RegisterTest@604c5de8]" started-at="2023-05-30T01:48:35 EDT" name="generateReport" finished-at="2023-05-30T01:48:36 EDT" duration-ms="72" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.WishListTest@6127a7e]" started-at="2023-05-30T03:28:05 EDT" name="setUp" finished-at="2023-05-30T03:28:15 EDT" duration-ms="9848" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[110]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://tutorialsninja.com/demo/index.php?route=account/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.WishListTest@6127a7e]" started-at="2023-05-30T03:28:15 EDT" name="startExtent" finished-at="2023-05-30T03:28:15 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tutorialsNinja.WishListTest.vrfyaddItmsTWshListfrmThShppngCrt()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method signature="vrfyaddItmsTWshListfrmThShppngCrt()[pri:2, instance:tutorialsNinja.WishListTest@6127a7e]" started-at="2023-05-30T03:28:15 EDT" name="vrfyaddItmsTWshListfrmThShppngCrt" finished-at="2023-05-30T03:28:21 EDT" duration-ms="5996" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- vrfyaddItmsTWshListfrmThShppngCrt -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.WishListTest@6127a7e]" started-at="2023-05-30T03:28:21 EDT" name="afterEachTestMethod" finished-at="2023-05-30T03:28:24 EDT" duration-ms="3419" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=vrfyaddItmsTWshListfrmThShppngCrt status=SUCCESS method=WishListTest.vrfyaddItmsTWshListfrmThShppngCrt()[pri:2, instance:tutorialsNinja.WishListTest@6127a7e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.WishListTest@6127a7e]" started-at="2023-05-30T03:28:24 EDT" name="tearDownR" finished-at="2023-05-30T03:28:24 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownR -->
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:tutorialsNinja.WishListTest@6127a7e]" started-at="2023-05-30T03:28:24 EDT" name="generateReport" finished-at="2023-05-30T03:28:24 EDT" duration-ms="44" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-      </class> <!-- tutorialsNinja.RegisterTest -->
-    </test> <!--  RegisterTest -->
+      </class> <!-- tutorialsNinja.WishListTest -->
+    </test> <!--  WishListTest -->
   </suite> <!-- tutorialsNinja test -->
 </testng-results>

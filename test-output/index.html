@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-tutorialsNinja_test" class="navigator-link ">
-                    <span>1 group</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,12 @@
                     <div class="method-list-content passed suite-tutorialsNinja_test">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.RegisterTest" class="method navigator-link" hash-for-method="rgstrWthDffrntCnfrmtnPswrd">rgstrWthDffrntCnfrmtnPswrd</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.WishListTest" class="method navigator-link" hash-for-method="addItmsTWhshLstWthtLogin">addItmsTWhshLstWthtLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tutorialsNinja_test" title="tutorialsNinja.WishListTest" class="method navigator-link" hash-for-method="vrfyaddItmsTWshListfrmThShppngCrt">vrfyaddItmsTWshListfrmThShppngCrt</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-tutorialsNinja_test -->
@@ -121,14 +126,21 @@
           <div class="suite-tutorialsNinja_test-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tutorialsNinja.RegisterTest</span>
+              <span class="class-name">tutorialsNinja.WishListTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="rgstrWthDffrntCnfrmtnPswrd">
-                  </a> <!-- rgstrWthDffrntCnfrmtnPswrd -->
-                  <span class="method-name">rgstrWthDffrntCnfrmtnPswrd</span>
+                  <a name="addItmsTWhshLstWthtLogin">
+                  </a> <!-- addItmsTWhshLstWthtLogin -->
+                  <span class="method-name">addItmsTWhshLstWthtLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="vrfyaddItmsTWshListfrmThShppngCrt">
+                  </a> <!-- vrfyaddItmsTWshListfrmThShppngCrt -->
+                  <span class="method-name">vrfyaddItmsTWshListfrmThShppngCrt</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -150,11 +162,11 @@
   &lt;parameter name=&quot;browserVersion&quot; value=&quot;110&quot;/&gt;
   &lt;parameter name=&quot;browserName&quot; value=&quot;firefox&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;https://tutorialsninja.com/demo/index.php?route=account/login&quot;/&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot; RegisterTest&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot; WishListTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tutorialsNinja.RegisterTest&quot;/&gt;
+      &lt;class name=&quot;tutorialsNinja.WishListTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!--  RegisterTest --&gt;
+  &lt;/test&gt; &lt;!--  WishListTest --&gt;
 &lt;/suite&gt; &lt;!-- tutorialsNinja test --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -166,7 +178,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name"> RegisterTest (1 class)</span>
+                <span class="test-name"> WishListTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -177,10 +189,18 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">invalidCnfrmtnPswrdTest</span>
+              <span class="test-group-name">addItmsFrmShppngCrtTest</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">rgstrWthDffrntCnfrmtnPswrd</span>
+                <span class="method-in-group-name">vrfyaddItmsTWshListfrmThShppngCrt</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">addItmsToWishListPageTest</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">addItmsTWhshLstWthtLogin</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -200,16 +220,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'rgstrWthDffrntCnfrmtnPswrd')
-data.setCell(0, 2, 'tutorialsNinja.RegisterTest')
-data.setCell(0, 3, 2874);
+data.setCell(0, 1, 'addItmsTWhshLstWthtLogin')
+data.setCell(0, 2, 'tutorialsNinja.WishListTest')
+data.setCell(0, 3, 6216);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'vrfyaddItmsTWshListfrmThShppngCrt')
+data.setCell(1, 2, 'tutorialsNinja.WishListTest')
+data.setCell(1, 3, 5996);
 window.suiteTableData['tutorialsNinja_test']= { tableData: data, tableDiv: 'times-div-tutorialsNinja_test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-tutorialsNinja_test">
               </div> <!-- times-div-tutorialsNinja_test -->
             </div> <!-- times-div -->
@@ -235,34 +259,54 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tutorialsNinja.RegisterTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tutorialsNinja.WishListTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">extentSetup(org.testng.TestRunner@7e1ffe70)</span>
+                <span class="method-name">extentSetup(org.testng.TestRunner@420a8042)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(false, browserstack, windows, 10, firefox, 110, https://tutorialsninja.com/demo/index.php?route=acco...)</span>
-                <span class="method-start">302 ms</span>
+                <span class="method-start">343 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">startExtent(public void tutorialsNinja.RegisterTest.rgstrWthDffrntCnfrmtnPswrd())</span>
-                <span class="method-start">14789 ms</span>
+                <span class="method-name">startExtent(public void tutorialsNinja.WishListTest.addItmsTWhshLstWthtLogin())</span>
+                <span class="method-start">25841 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">rgstrWthDffrntCnfrmtnPswrd</span>
-                <span class="method-start">14798 ms</span>
+                <span class="method-name">addItmsTWhshLstWthtLogin</span>
+                <span class="method-start">25860 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterEachTestMethod([TestResult name=rgstrWthDffrntCnfrmtnPswrd status=SUCCESS method=RegisterTest.rgstrWthDffrntCnfrmtn...)</span>
-                <span class="method-start">17680 ms</span>
+                <span class="method-name">afterEachTestMethod([TestResult name=addItmsTWhshLstWthtLogin status=SUCCESS method=WishListTest.addItmsTWhshLstWthtLogi...)</span>
+                <span class="method-start">32078 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownR</span>
-                <span class="method-start">22409 ms</span>
+                <span class="method-start">36654 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserstack, windows, 10, firefox, 110, https://tutorialsninja.com/demo/index.php?route=acco...)</span>
+                <span class="method-start">36661 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void tutorialsNinja.WishListTest.vrfyaddItmsTWshListfrmThShppngCrt())</span>
+                <span class="method-start">46510 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">vrfyaddItmsTWshListfrmThShppngCrt</span>
+                <span class="method-start">46512 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=vrfyaddItmsTWshListfrmThShppngCrt status=SUCCESS method=WishListTest.vrfyaddItmsTWs...)</span>
+                <span class="method-start">52509 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownR</span>
+                <span class="method-start">55928 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">generateReport</span>
-                <span class="method-start">22443 ms</span>
+                <span class="method-start">55948 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
