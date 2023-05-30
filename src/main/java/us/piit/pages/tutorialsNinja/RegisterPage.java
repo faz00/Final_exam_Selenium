@@ -68,7 +68,7 @@ public class RegisterPage extends CommonAPI {
     @FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")
     WebElement alertMessage;
 
-    @FindBy(xpath = "//*[@id=\"content\"]/form/fieldset[2]/div[2]/div/div")
+    @FindBy(xpath = "//input[@name='confirm']/following-sibling::div")
 WebElement pswrdNtMtchngMsg;
 
 
@@ -234,9 +234,9 @@ public void htmlScrenShot(WebDriver driver) {
 
 }
 
-public boolean isPswrdErrMsgDsp(){
+public String getPswrdErrMsg(){
         log.info("the password not matching error message is displayed");
-        return pswrdNtMtchngMsg.isDisplayed();
+        return pswrdNtMtchngMsg.getText();
 }
 
 

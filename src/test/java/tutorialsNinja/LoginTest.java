@@ -128,6 +128,8 @@ Assert.assertTrue(loginHomePage.isAccountLinkDisplayed(),"the link is not displa
 // Assert if the password is visible to the page source
         takeScreenshot("TutorialsNinja","checkPswrdVisibility");
 
+        loginPage.htmlScrenShot(getDriver());
+
      Assert.assertTrue(loginPage.isPasswordFieldVisible(password), "Password is visible to the page source");
 
     }
