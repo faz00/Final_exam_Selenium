@@ -2,14 +2,17 @@ package us.piit.pages.luma;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import us.piit.base.CommonAPI;
 import us.piit.utility.Utility;
 
+import java.util.List;
 import java.util.Properties;
 
 public class RegisterPage extends CommonAPI {
@@ -70,6 +73,38 @@ public class RegisterPage extends CommonAPI {
                 PasswordInput.sendKeys(validPassword);
                 ConfirmPassword.sendKeys(validPassword);
                 waitFor(1);
+                break;
+            case "With Out First Name":
+                Assert.assertTrue(LastName.isDisplayed());
+                LastName.sendKeys("Luma");
+                EmailInput.sendKeys(ValidEmail);
+                PasswordInput.sendKeys(validPassword);
+                ConfirmPassword.sendKeys(validPassword);
+                waitFor(1);
+                break;
+            case "With Out Last Name":
+                Assert.assertTrue(FirstName.isDisplayed());
+                FirstName.sendKeys("Luma");
+                EmailInput.sendKeys(ValidEmail);
+                PasswordInput.sendKeys(validPassword);
+                ConfirmPassword.sendKeys(validPassword);
+                waitFor(1);
+                break;
+            case "With Out Email":
+                Assert.assertTrue(FirstName.isDisplayed());
+                FirstName.sendKeys("luma");
+                LastName.sendKeys(".");
+                PasswordInput.sendKeys(validPassword);
+                ConfirmPassword.sendKeys(validPassword);
+                waitFor(1);
+                break;
+            case "With Out Password":
+                Assert.assertTrue(FirstName.isDisplayed());
+                FirstName.sendKeys("luma");
+                LastName.sendKeys(".");
+                EmailInput.sendKeys(ValidEmail);
+                waitFor(1);
+                break;
         }
     }
 
@@ -83,5 +118,21 @@ public class RegisterPage extends CommonAPI {
         Assert.assertTrue(UserInfo.getText().contains(ValidEmail));
         Assert.assertTrue(WelcomeMessage.isDisplayed());
         return WelcomeMessage.getText().contains("Thank you for registering with Main Website Store.");
+    }
+
+    public boolean verifyThatFiedlErrorAppears(){
+        List<WebElement> field_errors = driver.findElements(By.xpath("//*[text()='This is a required field.']"));
+        for (WebElement error : field_errors){
+            hoverOver(error);
+            waitFor(1);
+            Assert.assertTrue(error.isDisplayed());
+            Assert.assertTrue(error.getText().contains("This is a required field."));
+        }
+        return true;
+    }
+
+    public void hoverOver(WebElement element){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).build().perform();
     }
 }

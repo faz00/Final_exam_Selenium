@@ -3,7 +3,6 @@ package us.piit.pages.tutorialsNinja;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -40,7 +39,6 @@ public class SearchProductsHomePage extends CommonAPI {
         return searchResultsTitle.isDisplayed();
     }
 
-
     public boolean areSearchResultsDisplayed() {
         boolean searchResultsDisplayed = productItems.size() > 0;
         log.info("the user is able to see the search results ");
@@ -67,11 +65,9 @@ public class SearchProductsHomePage extends CommonAPI {
         return productTitles.size();
     }
 
-    }
 
 
-
-
+}
 
 
 

@@ -95,7 +95,7 @@ public class ExcelReader {
 
         String path = "C:\\Users\\My Pc\\eclipse-workspace\\Final_exam_Selenium\\manualTestCases\\tutorialsNinja-TestCases.xlsx";
         ExcelReader excelReader = new ExcelReader(path);
-        System.out.println(excelReader.getDataFromCell("TutorialsNinjaWebSite-TestCases",7,3));
+        System.out.println(excelReader.getDataFromCell("TutorialsNinjaWebSite-TestCases",1,1));
 
 //        List<String> items = excelReader.getEntireColumnForGivenHeader("Sheet1", "id");
 //        //String items = excelReader.getValueForGivenHeaderAndKey("Sheet1", "id", "id004");
