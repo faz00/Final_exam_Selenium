@@ -218,25 +218,7 @@ public class CommonAPI {
 
 
 
-    public boolean isInteractable(String locator) {
-        try {
-            return  driver.findElement(By.cssSelector(locator)).isEnabled();
-        } catch (Exception e) {
-            return driver.findElement(By.xpath(locator)).isEnabled();
 
-        }
-
-    }
-
-    public boolean checkCheckBoxIsCh(String locator) {
-        try {
-            return  driver.findElement(By.cssSelector(locator)).isDisplayed();
-        } catch (Exception e) {
-            return driver.findElement(By.xpath(locator)).isDisplayed();
-
-        }
-
-    }
 
     public String generateTestEmail(){
         Random rn = new Random();

@@ -7,7 +7,7 @@
     <parameter name="osVersion" value="10"></parameter>
     <parameter name="browserVersion" value="110"></parameter>
 
-    <parameter name="browserName" value="chrome"></parameter>
+    <parameter name="browserName" value="edge"></parameter>
     <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"></parameter>
     <test name="OrangeHRM tests">
         <classes>
@@ -20,7 +20,7 @@
             <class name="orangeHRM.MaintenanceSection"></class>
             <class name="orangeHRM.PIMSection"></class>
             <class name="orangeHRM.TimeSection"></class>
-               <class name="orangeHRM.MyInfoSection"></class>
+            <class name="orangeHRM.MyInfoSection"></class>
             <class name="orangeHRM.Recruitment"></class>
             <class name="orangeHRM.AdminSection"></class>
 
