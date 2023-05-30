@@ -36,7 +36,7 @@ public class SearchProductsPage extends CommonAPI {
 
     public boolean isErrorMessageDisplayed() {
         // Assert a non-existing product error message is displayed
-        log.info("searching for a non existing product creates an error msg");
+        log.info("an error message is displayed when searching for non existing products");
         return getElementText(nonExistingSearchErrMsg).equals("There is no product that matches the search criteria.");
 
     }

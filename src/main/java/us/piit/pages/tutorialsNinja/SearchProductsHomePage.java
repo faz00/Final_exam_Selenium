@@ -42,7 +42,6 @@ public class SearchProductsHomePage extends CommonAPI {
     public boolean areSearchResultsDisplayed() {
         boolean searchResultsDisplayed = productItems.size() > 0;
         log.info("the user is able to see the search results ");
-        log.info("the search displays many products");
 
         return searchResultsDisplayed;
     }
