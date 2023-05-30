@@ -2,6 +2,7 @@ package us.piit.pages.luma;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,10 +10,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import us.piit.base.CommonAPI;
 
+import java.util.List;
+
 public class LoginPage extends CommonAPI {
 
     Logger log = LogManager.getLogger(LoginPage.class.getName());
     public LoginPage(WebDriver driver){
+        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
@@ -36,6 +40,10 @@ public class LoginPage extends CommonAPI {
 
     @FindBy(xpath = "(//a[@href=\"https://magento.softwaretestingboard.com/customer/account/logout/\"])[1]")
     WebElement SignOutButton;
+
+    @FindBy(css = "[data-ui-id=\"message-error\"]")
+    WebElement loginErrorMessage;
+
 
 
     public void goToLoginPage(){
@@ -77,5 +85,21 @@ public class LoginPage extends CommonAPI {
         SignInButton.click();
         waitFor(2);
         Assert.assertTrue(WelcomeGreetMessage.getText().contains("Welcome"));
+    }
+
+    public boolean  verifyValidationError(){
+        waitFor(2);
+        loginErrorMessage.isDisplayed();
+        return loginErrorMessage.getText().contains("Incorrect CAPTCHA");
+    }
+
+    public boolean verifyFieldErros(){
+        waitFor(2);
+        List<WebElement> fieldErrors = driver.findElements(By.xpath("//*[text()='This is a required field.']"));
+        for(WebElement error : fieldErrors){
+            error.isDisplayed();
+            return error.getText().contains("This is a required field.");
+        }
+        return true;
     }
 }

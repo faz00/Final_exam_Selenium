@@ -49,4 +49,61 @@ public class CartTest extends CommonAPI {
         // verify that cart has 1 item
         Assert.assertTrue(cartPage.VerifyThatCartHasProduct("1"));
     }
+
+    @Test
+    public void ViewCart(){
+        CartPage cartPage = new CartPage(getDriver());
+        // Verify Page title
+        String actualTitle = getCurrentTitle();
+        Assert.assertEquals(actualTitle, "nopCommerce demo store");
+
+        // Go to product page
+        cartPage.goToProductPage();
+
+        // Add product to cart
+        cartPage.AddProductToCart();
+
+        // view cart
+        cartPage.viewCart();
+    }
+
+    @Test
+    public void SeeEstimatedShippingCost(){
+        CartPage cartPage = new CartPage(getDriver());
+        // Verify Page title
+        String actualTitle = getCurrentTitle();
+        Assert.assertEquals(actualTitle, "nopCommerce demo store");
+
+        // Go to product page
+        cartPage.goToProductPage();
+
+        // Add product to cart
+        cartPage.AddProductToCart();
+
+        // view cart
+        cartPage.viewCart();
+
+        // see estimated shipping cost
+        cartPage.seeEstimatedShippingCost();
+    }
+
+    @Test
+    public void RemoveProductsFromCart(){
+        CartPage cartPage = new CartPage(getDriver());
+        // Verify Page title
+        String actualTitle = getCurrentTitle();
+        Assert.assertEquals(actualTitle, "nopCommerce demo store");
+
+        // Go to product page
+        cartPage.goToProductPage();
+
+        // Add product to cart
+        cartPage.AddProductToCart();
+
+        // view cart
+        cartPage.viewCart();
+
+        // Remove product from cart
+        cartPage.removeProductFromCart();
+    }
 }

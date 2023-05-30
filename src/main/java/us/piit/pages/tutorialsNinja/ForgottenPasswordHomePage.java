@@ -33,6 +33,7 @@ public class ForgottenPasswordHomePage extends CommonAPI {
 
 
     public String getForgPassHeaderTitle() {
+        log.info("the user is able to see the forget password header title  which is :"+forgetPassHeader.getText());
         return forgetPassHeader.getText();
     }
     public String getEmailInput(){
@@ -40,6 +41,12 @@ public class ForgottenPasswordHomePage extends CommonAPI {
         return emailInput.getAttribute("placeholder");
 
     }
+    public boolean isEmailInputDisplayed() {
+        log.info("the email input field is displayed");
+        return emailInput.isDisplayed();
+    }
+
+
     public void resetUserPassword(String email) {
         type(emailInput,email);
         log.info("the user enters email successfully");
@@ -48,13 +55,14 @@ public class ForgottenPasswordHomePage extends CommonAPI {
 
     }
     public void clickContinueButton(){
+        log.info(" the continue button of reset password is clicked successfully");
         clickOn(continueButton);
     }
-    public String getResetPasswordSuccessMessage() {
-        log.info("a success message is displayed");
-        return successMessage.getText() ;
+    public boolean isContinuBttnDisp(){
 
+        return continueButton.isDisplayed();
     }
+
 
     public String getResetPasswordErrorMessage() {
         log.info("an error message is displayed");
@@ -65,11 +73,20 @@ public class ForgottenPasswordHomePage extends CommonAPI {
         backButton.click();
         log.info("the back button clicked successfully");
     }
+    public boolean isBackButtonDisp(){
+        return  backButton.isDisplayed();
+    }
 
     public String getURL(WebDriver driver) {
         log.info("the URL of the page is :"+driver.getCurrentUrl());
         return driver.getCurrentUrl();
     }
+    public boolean isUrlDisp(String expectedUrl,WebDriver driver) {
+        String currentUrl = driver.getCurrentUrl();
+        log.info("Current URL: " + currentUrl);
+        return currentUrl.equals(expectedUrl);
+    }
+
     public String getEmailValue() {
 
         return  emailInput.getAttribute("value");

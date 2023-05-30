@@ -146,4 +146,41 @@ public class SearchPage extends CommonAPI {
         Assert.assertTrue(LatestProductSection.isDisplayed());
         Assert.assertTrue(LatestProductSection.getText().contains("Luma's Latest"));
     }
+
+    public void SortProductsBy(String sortBy){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        switch (sortBy){
+            case "Product Name":
+                js.executeScript("document.querySelector('#sorter').options[0].selected = true");
+                waitFor(2);
+                break;
+            case "Relevance":
+                js.executeScript("document.querySelector('#sorter').options[2].selected = true");
+                waitFor(2);
+                break;
+            case "Price":
+                js.executeScript("document.querySelector('#sorter').options[1].selected = true");
+                waitFor(2);
+                break;
+        }
+    }
+
+    public boolean VerifyProductsSortedBy(String sortedBy){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        switch (sortedBy){
+            case "Product Name":
+                js.executeScript("document.querySelector('#sorter').options[0].selected = true");
+                waitFor(2);
+                break;
+            case "Relevance":
+                js.executeScript("document.querySelector('#sorter').options[2].selected = true");
+                waitFor(2);
+                break;
+            case "Price":
+                js.executeScript("document.querySelector('#sorter').options[1].selected = true");
+                waitFor(2);
+                break;
+        }
+        return true;
+    }
 }

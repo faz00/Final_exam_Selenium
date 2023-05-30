@@ -22,8 +22,9 @@ public class ForgottenPasswordPage extends CommonAPI {
     WebElement forgetPasswordLink;
 
     public void navigateToForgotPasswordPage() {
-
+          log.info("the user navigates to thr forgot password page successfully");
         clickOn(forgetPasswordLink);
+        log.info("the forget password link is clicked successfully");
 
     }
 }

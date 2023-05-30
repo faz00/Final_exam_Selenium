@@ -38,7 +38,11 @@ public class AdminPage extends CommonAPI {
 
     @FindBy(xpath = "(//h5[normalize-space()='System Users'])[1]")
     WebElement actualCreatedUser;
+    @FindBy(xpath = "//span[normalize-space()='User Management']")
+    WebElement userMAnagementBtn;
 
+    @FindBy(xpath = "(//li)[14]")
+    WebElement userOption;
 
     public void clickOnUserRoleDropDownList(){
         clickOn(userRoleDropDownList);
@@ -89,6 +93,13 @@ public class AdminPage extends CommonAPI {
         return getElementText(actualCreatedUser);
     }
     public void clickOnAddBtn(){
+
         clickOn(addBtn);
+    }
+    public void clickOnUserManagementBtn(){
+        clickOn(userMAnagementBtn);
+    }
+    public void clickOnUserOption(){
+        clickOn(userOption);
     }
 }

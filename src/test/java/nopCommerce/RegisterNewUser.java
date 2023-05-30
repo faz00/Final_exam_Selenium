@@ -39,4 +39,48 @@ public class RegisterNewUser extends CommonAPI {
         registerPage.goToRegisterPage();
         registerPage.registerNewUser("Empty details");
     }
+
+    @Test
+    public void registerUserWithoutFirstName(){
+        RegisterPage registerPage = new RegisterPage(getDriver());
+        // Verify page title
+        Assert.assertEquals(getCurrentTitle(), "nopCommerce demo store");
+
+        // Fill the user form and register
+        registerPage.goToRegisterPage();
+        registerPage.registerNewUser("Without First Name");
+    }
+
+    @Test
+    public void registerUserWithoutLastName(){
+        RegisterPage registerPage = new RegisterPage(getDriver());
+        // Verify page title
+        Assert.assertEquals(getCurrentTitle(), "nopCommerce demo store");
+
+        // Fill the user form and register
+        registerPage.goToRegisterPage();
+        registerPage.registerNewUser("Without Last Name");
+    }
+
+    @Test
+    public void registerUserWithoutEmail(){
+        RegisterPage registerPage = new RegisterPage(getDriver());
+        // Verify page title
+        Assert.assertEquals(getCurrentTitle(), "nopCommerce demo store");
+
+        // Fill the user form and register
+        registerPage.goToRegisterPage();
+        registerPage.registerNewUser("Without Email");
+    }
+
+    @Test
+    public void registerUserWithoutPassword(){
+        RegisterPage registerPage = new RegisterPage(getDriver());
+        // Verify page title
+        Assert.assertEquals(getCurrentTitle(), "nopCommerce demo store");
+
+        // Fill the user form and register
+        registerPage.goToRegisterPage();
+        registerPage.registerNewUser("Without Password");
+    }
 }
