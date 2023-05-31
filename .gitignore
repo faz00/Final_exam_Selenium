@@ -2,6 +2,8 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+!**/Extent-Report
+!**/test-output
 
 ### IntelliJ IDEA ###
 *.iws
