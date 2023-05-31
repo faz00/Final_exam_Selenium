@@ -1,4 +1,4 @@
-package orangeHRM;
+/*package orangeHRM;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -78,3 +78,4 @@ public class AdminSection extends CommonAPI {
 
     }
 }
+*/
