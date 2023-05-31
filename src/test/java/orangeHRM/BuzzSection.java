@@ -29,7 +29,7 @@ public class BuzzSection extends CommonAPI {
         String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
         String textPost="Hi, this is just a test";
 
-        String pathScreenPackage="orangeHRMScreenshots";
+        String pathScreenPackage="orangeHRM";
 
 
         return new Object[][]{
@@ -206,7 +206,7 @@ public class BuzzSection extends CommonAPI {
         String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
         String textPost="Hi, this is just a test";
 
-        String pathScreenPackage="orangeHRMScreenshots";
+        String pathScreenPackage="orangeHRM";
         return new Object[][]{
                 {validUsername, validPassword,textPost,pathScreenPackage}
 
@@ -289,7 +289,7 @@ public class BuzzSection extends CommonAPI {
         String textPost="Hello Word";
 
 
-        String pathScreenPackage="orangeHRMScreenshots";
+        String pathScreenPackage="orangeHRM";
 
 
 

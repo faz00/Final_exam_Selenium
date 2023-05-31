@@ -20,7 +20,7 @@ public class AdminSection extends CommonAPI {
         String validUsername = Utility.decode(excelReader.getDataFromCell("DataProvider",1,0));
         String validPassword = Utility.decode(excelReader.getDataFromCell("DataProvider",1,1));
 
-        @Test
+        @Test(priority = 1,groups = "Admin")
     public void addUser(){
 
         LoginPage loginPage = new LoginPage(getDriver());
@@ -65,7 +65,7 @@ public class AdminSection extends CommonAPI {
         adminPage.typePassword("123qwerty");
         adminPage.typeConfirmPassword("123qwerty");
 
-        adminPage.clickOnSubmitJobTitle();
+        adminPage.clickOnSubmitBtn();
 
         adminPage.clickOnUserManagementBtn();
         adminPage.clickOnUserOption();
@@ -77,4 +77,107 @@ public class AdminSection extends CommonAPI {
         Assert.assertEquals(expectedCreatedUser,actualCreatedUser);
 
     }
+
+    @Test(priority = 2,groups = "Admin")
+    public void addQualification(){
+
+        LoginPage loginPage = new LoginPage(getDriver());
+        DashbordPage dashbordPage = new DashbordPage(getDriver());
+        AdminPage adminPage =new AdminPage(getDriver());
+
+
+        String expectedTitle = "OrangeHRM";
+        String actualTitle = driver.getTitle();
+        Assert.assertEquals(expectedTitle,actualTitle);
+
+
+        //enter username,enter password, and click on login button
+
+        loginPage.enterUsername(validUsername);
+
+
+        loginPage.enterPassword(validPassword);
+
+        loginPage.clickOnLoginBtn();
+
+        //check user is logged in
+        String expectedHomePage = "Dashboard";
+        String actualHomePage = dashbordPage.getHraderText();
+        Assert.assertEquals(expectedHomePage,actualHomePage);
+
+        //Maintenance
+        dashbordPage.searchOptionOnSearchBar("Admin");
+
+        waitFor(5);
+
+        dashbordPage.clickOnAdminOption();
+
+        adminPage.clickOnQualificationBtn();
+
+        adminPage.clickOnSkillsBtn();
+
+        adminPage.clickOnAddSkillBtn();
+
+        adminPage.typeSkillName("CAMEL44");
+        adminPage.typeDescriptionOfSkill("Programming Language");
+
+        adminPage.clickOnSubmitBtn();
+
+        waitFor(5);
+
+        String expectedPage="Skills";
+        String actualPage= adminPage.getActualAddedSkill();
+
+        Assert.assertEquals(expectedPage,actualPage);
+
+
+    }
+    @Test(priority = 3,groups = "Admin")
+    public void DeleteSkillInQualification(){
+
+        LoginPage loginPage = new LoginPage(getDriver());
+        DashbordPage dashbordPage = new DashbordPage(getDriver());
+        AdminPage adminPage =new AdminPage(getDriver());
+
+
+        String expectedTitle = "OrangeHRM";
+        String actualTitle = driver.getTitle();
+        Assert.assertEquals(expectedTitle,actualTitle);
+
+
+        //enter username,enter password, and click on login button
+
+        loginPage.enterUsername(validUsername);
+
+
+        loginPage.enterPassword(validPassword);
+
+        loginPage.clickOnLoginBtn();
+
+        //check user is logged in
+        String expectedHomePage = "Dashboard";
+        String actualHomePage = dashbordPage.getHraderText();
+        Assert.assertEquals(expectedHomePage,actualHomePage);
+
+        //Maintenance
+        dashbordPage.searchOptionOnSearchBar("Admin");
+
+        waitFor(5);
+
+        dashbordPage.clickOnAdminOption();
+
+        adminPage.clickOnQualificationBtn();
+
+        adminPage.clickOnSkillsBtn();
+
+        adminPage.clickOnDeleteSkillBtn();
+
+
+        adminPage.clickOnYesDeleteBtn();
+
+        takeScreenshot("orangeHRM","DeleteSkillFromQualificationSection");
+
+    }
+
+
 }

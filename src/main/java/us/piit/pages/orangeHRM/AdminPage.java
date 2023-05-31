@@ -33,8 +33,9 @@ public class AdminPage extends CommonAPI {
     @FindBy(xpath ="(//input[@type='password'])[2]" )
     WebElement confirmPasswordField;
 
+
     @FindBy(css = "button[type='submit']")
-    WebElement submitJobBtn;
+    WebElement submitBtn;
 
     @FindBy(xpath = "(//h5[normalize-space()='System Users'])[1]")
     WebElement actualCreatedUser;
@@ -43,6 +44,27 @@ public class AdminPage extends CommonAPI {
 
     @FindBy(xpath = "(//li)[14]")
     WebElement userOption;
+
+    @FindBy(xpath="//span[normalize-space()='Qualifications']")
+    WebElement qualificationBtn;
+
+    @FindBy(css = "header[class='oxd-topbar'] li:nth-child(1) a:nth-child(1)")
+    WebElement skillsOption;
+    @FindBy(xpath = "//i[@class='oxd-icon bi-plus oxd-button-icon']")
+    WebElement addSkillBtn;
+
+    @FindBy(xpath = "//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@class='oxd-input oxd-input--active']")
+    WebElement nameOfSkillField;
+    @FindBy(css = "textarea[placeholder='Type description here']")
+    WebElement descriptionOsSkillField;
+    @FindBy(xpath = "(//h6[normalize-space()='Skills'])[1]")
+    WebElement actualAddedSkill;
+
+    @FindBy(xpath = "(//i[@class='oxd-icon bi-trash'])[1]")
+    WebElement deleteBtn;
+
+    @FindBy(xpath = "//button[normalize-space()='Yes, Delete']")
+    WebElement yesDelete;
 
     public void clickOnUserRoleDropDownList(){
         clickOn(userRoleDropDownList);
@@ -76,16 +98,16 @@ public class AdminPage extends CommonAPI {
     }
 
     public void typePassword(String password){
-        type(passwordField,"password");
+        type(passwordField,password);
         log.info("Password added successfully");
     }
 
     public void typeConfirmPassword(String password){
-        type(confirmPasswordField,"password");
+        type(confirmPasswordField,password);
         log.info("Password added successfully");
     }
-    public void clickOnSubmitJobTitle(){
-        clickOn(submitJobBtn);
+    public void clickOnSubmitBtn(){
+        clickOn(submitBtn);
         log.info("button clicked on success");
     }
 
@@ -101,5 +123,39 @@ public class AdminPage extends CommonAPI {
     }
     public void clickOnUserOption(){
         clickOn(userOption);
+    }
+    public void clickOnQualificationBtn(){
+        clickOn(qualificationBtn);
+        log.info("qualification Button clicked on success");
+    }
+    public void clickOnSkillsBtn(){
+        clickOn(skillsOption);
+        log.info("Skills option clicked on success");
+    }
+    public void clickOnAddSkillBtn(){
+        clickOn(addSkillBtn);
+        log.info("Add Skill Btn clicked on ssuccess");
+    }
+    public void typeSkillName(String skillName){
+        type(nameOfSkillField,skillName);
+        log.info("Skill name added successfully");
+    }
+    public void typeDescriptionOfSkill(String descriptionOfSkill){
+        type(descriptionOsSkillField,descriptionOfSkill);
+        log.info("description of Skill added successfully");
+    }
+
+    public String getActualAddedSkill(){
+        return getElementText(actualAddedSkill);
+    }
+
+    public void clickOnDeleteSkillBtn(){
+        clickOn(deleteBtn);
+        log.info("Delete button clicked on success");
+    }
+    public void clickOnYesDeleteBtn(){
+        clickOn(yesDelete);
+        log.info("yes Delete Button clicked on success");
+
     }
 }
