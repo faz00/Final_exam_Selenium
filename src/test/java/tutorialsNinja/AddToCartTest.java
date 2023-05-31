@@ -23,7 +23,7 @@ public class AddToCartTest extends CommonAPI {
         String search = Utility.decode(prop.getProperty("tutorialsninja.search"));
         String validPassword = Utility.decode(prop.getProperty("tutorialsninja.validPassword"));
 
-        // @Test(priority=1,groups="navigationTests")
+         @Test(priority=1,groups="navigationTest")
         public void verifyUserNavigateTShoppingCartHmPge(){
 
         AddToCartPage adtcrtpge=new AddToCartPage(getDriver());
@@ -54,7 +54,7 @@ public class AddToCartTest extends CommonAPI {
         assertEquals(expURL,actURL,"the URL is not the same");
     }
 
-@Test(priority=3,groups="removeItemsTest")
+@Test(priority=3,groups="removeProductsTest")
 
         public void VerifyRemoveAnItemFromCartWhnOnePrdctAdded() {
 
@@ -89,7 +89,7 @@ public class AddToCartTest extends CommonAPI {
         assertTrue(adtcrthmpge.isEmptyShpCrtmsgDisp(),"no message displayed");
 
     }
-    @Test(priority = 4,groups = "updateItemsTest")
+    @Test(priority = 4,groups = "updateProductsTest")
         public void verifyUpdateAnItem(){
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
@@ -130,7 +130,7 @@ public class AddToCartTest extends CommonAPI {
 
         };
     }
-    @Test(priority = 5,groups = "updatePrdctQntTest",dataProvider = "quantityUpdate")
+    @Test(priority = 5,groups = "updateProductTest",dataProvider = "quantityUpdate")
         public void verifyPrdctUpdtQunt(String qnt) {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
@@ -170,7 +170,7 @@ public class AddToCartTest extends CommonAPI {
     }
 
         //verify adding items to cart from 'product comparison home page'
-       @Test(priority=7,groups ="addPrdctsFrmFrmPrdctCmprsnHmPgetest")
+       @Test(priority=7,groups ="addProductTest")
         public void addPrdctsFrmPrdctCmprsnHmPge(){
 
         AddToCartPage adtcrtpge=new AddToCartPage(getDriver());

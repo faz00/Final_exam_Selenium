@@ -18,10 +18,14 @@ public class LoginHomePage extends CommonAPI {
 
     @FindBy(xpath ="//*[@id=\"content\"]/h2[1]" )
     WebElement accountHeaderPage;
-    @FindBy(xpath = "//*[@id='content']/h2[1]")
-    WebElement myAccoubtLoginHompage;
+    @FindBy(xpath = "//h2[normalize-space()='My Account']")
+    WebElement myAccountLoginHompage;
     @FindBy(xpath =" //a[normalize-space()='Account']")
     WebElement accountLink;
+    @FindBy(linkText = "Edit your account information")
+    WebElement editAccountLink;
+
+
     public String homePageHeader(){
 
         log.info("the page header title is:"+accountHeaderPage.getText());
@@ -29,7 +33,8 @@ public class LoginHomePage extends CommonAPI {
         return accountHeaderPage.getText();
     }
 
-    public String getLoginURL(){
+    public String getLoginURL(WebDriver driver){
+           log.info("the url of the page is displayed");
         return driver.getCurrentUrl();
     }
     public boolean isHomePagHeaderDisplayed(){
@@ -37,11 +42,18 @@ public class LoginHomePage extends CommonAPI {
         return accountHeaderPage.isDisplayed();
     }
     public boolean isAccountLinkDisplayed(){
-
+       log.info("the account link is displayed");
         return accountLink.isDisplayed();
     }
 
-
+public String getLgnHmPgHdr(){
+        log.info("the login home page header is displayed");
+        return myAccountLoginHompage.getText();
+}
+public boolean IsEditAccountLinkDsp(){
+        log.info("Edit your account information link is displayed");
+        return editAccountLink.isDisplayed();
+}
 }
 
 
