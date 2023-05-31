@@ -12,7 +12,10 @@ import us.piit.pages.orangeHRM.DashbordPage;
 import us.piit.pages.orangeHRM.LoginPage;
 
 
+import java.io.File;
 import java.util.Properties;
+
+import static us.piit.utility.Utility.currentDir;
 
 
 public class BuzzSection extends CommonAPI {
@@ -44,8 +47,8 @@ public class BuzzSection extends CommonAPI {
         String validPassword = Utility.decode(prop.getProperty("orangeHRM.password"));
         String textPost="Hi, this is just a test";
 
-        String pathScreenPackage="orangeHRMScreenshots";
-        String imagePath = "C:\\Users\\DELL G5\\IdeaProjects\\Final_exam_Selenium\\screenShots\\orangeHRMScreenshots\\analysis.png";
+        String pathScreenPackage="orangeHRM";
+        String imagePath = currentDir+ File.separator+"screenShots\\orangeHRM\\analysis.png";
 
 
 

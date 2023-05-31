@@ -20,27 +20,25 @@ import static us.piit.utility.ConnectDB.getTableColumnData;
 public class ChangePassword extends CommonAPI {
 
 
-    Properties prop = Utility.loadProperties();
-
-    List<String> username = getTableColumnData("select * from orangeHRM;","validCodedUsername");
-    List<String> newPassword = getTableColumnData("select * from orangeHRM;","validCodedNewPassword");
-    List<String> password = getTableColumnData("select * from orangeHRM;","validCodedPassword");
-
-
-    String pathScreenPackage = "orangeHRMScreenshots";
-
     @DataProvider(name = "passwordData")
     public Object[][] providePasswordData() {
+        List<String> username = getTableColumnData("select * from orangeHRM;","validCodedUsername");
+        List<String> newPassword = getTableColumnData("select * from orangeHRM;","validCodedNewPassword");
+        List<String> password = getTableColumnData("select * from orangeHRM;","validCodedPassword");
+
+        String pathScreenPackage = "orangeHRM";
+
         return new Object[][] {
                 { Utility.decode(username.get(0)),
                         Utility.decode(password.get(0)),
-                        Utility.decode(newPassword.get(0)) }
+                        Utility.decode(newPassword.get(0)),
+                        pathScreenPackage                    }
 
         };
     }
 
     @Test(dataProvider = "passwordData", priority = 1, groups = "ChangePassword")
-    public void ChangePassword(String validUsername, String validPassword, String newPassword) {
+    public void ChangePassword(String validUsername, String validPassword, String newPassword,String pathScreenPackage) {
         LoginPage loginPage = new LoginPage(getDriver());
         DashbordPage dashbordPage = new DashbordPage(getDriver());
         PIMPage pimPage = new PIMPage(getDriver());
