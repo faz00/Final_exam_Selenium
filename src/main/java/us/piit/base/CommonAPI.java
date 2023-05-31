@@ -50,7 +50,7 @@ public class CommonAPI {
 
     String implicitWait = prop.getProperty("implicit.Wait","10");
     String windowMaximize = prop.getProperty("browser.maximize","true");
-    String takeScreenshots = prop.getProperty("take.screenshosts","false");
+    String takeScreenshots = prop.getProperty("take.screenshots","false");
 
 
     protected WebDriver driver;
@@ -223,25 +223,7 @@ public class CommonAPI {
 
 
 
-    public boolean isInteractable(String locator) {
-        try {
-            return  driver.findElement(By.cssSelector(locator)).isEnabled();
-        } catch (Exception e) {
-            return driver.findElement(By.xpath(locator)).isEnabled();
 
-        }
-
-    }
-
-    public boolean checkCheckBoxIsCh(String locator) {
-        try {
-            return  driver.findElement(By.cssSelector(locator)).isDisplayed();
-        } catch (Exception e) {
-            return driver.findElement(By.xpath(locator)).isDisplayed();
-
-        }
-
-    }
 
     public String generateTestEmail(){
         Random rn = new Random();
