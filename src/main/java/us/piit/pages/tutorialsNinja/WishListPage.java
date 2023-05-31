@@ -22,12 +22,16 @@ public class WishListPage extends CommonAPI {
     WebElement searchButton;
     @FindBy(css = "#input-email")
     WebElement emailField;
-
     @FindBy(xpath = "//input[@id='input-password']")
     WebElement passwordField;
 
     @FindBy(xpath = "//input[@class='btn btn-primary']")
     WebElement loginButton;
+    @FindBy(xpath = "//*[@title='Shopping Cart']")
+    WebElement shopngCrticon;
+
+    @FindBy(xpath = "//*[@id='wishlist-total']")
+    WebElement wishlistIcon;
 
     public void SearchField(String search) {
         type(searchField, search);
@@ -52,9 +56,15 @@ public class WishListPage extends CommonAPI {
         log.info("Clicked login button success");
     }
 
+public void clickOnshpngCrtLnk(){
+        log.info("the shopping cart link is clicked successfully");
+        clickOn(shopngCrticon);
+}
 
-
-
+public void clickOnwshLstIcn(){
+        log.info("the wishList icon is clicked successfully");
+        clickOn(wishlistIcon);
+}
 
 
 

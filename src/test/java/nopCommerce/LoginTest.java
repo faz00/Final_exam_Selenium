@@ -9,22 +9,28 @@ import org.testng.annotations.Test;
 import us.piit.base.CommonAPI;
 import us.piit.pages.nopCommerce.HomePage;
 import us.piit.pages.nopCommerce.LoginPage;
+import us.piit.utility.ExcelReader;
 import us.piit.utility.Utility;
 
+import java.io.File;
 import java.util.Properties;
+
+import static us.piit.utility.Utility.currentDir;
 
 public class LoginTest extends CommonAPI{
     Logger log = LogManager.getLogger(LoginTest.class.getName());
 
     Properties prop = Utility.loadProperties();
-    String ValidEmail = Utility.decode(prop.getProperty("nopCommerce.username"));
-    String validPassword = Utility.decode(prop.getProperty("nopCommerce.password"));
+    String path=currentDir+ File.separator+"manualTestCases\\FinalnopCommerce_Manual_Tests.xlsx";
+    ExcelReader excelReader =new ExcelReader(path);
+    String validEmail = Utility.decode(excelReader.getDataFromCell("credentials",1,0));
+    String validPassword = Utility.decode(excelReader.getDataFromCell("credentials",1,1));
 
     // Data provider is to manipulate the data in test cases.
     @DataProvider(name = "validLoginData")
     public Object[][] getValidLoginData(){
         return new Object[][]{
-                {ValidEmail, validPassword}
+                {validEmail, validPassword}
         };
     }
 
@@ -57,7 +63,7 @@ public class LoginTest extends CommonAPI{
         takeScreenshot("nopCommerce", "validCredentialstestcase");
     }
 
-    @Test(priority = 0, groups = "login", dataProvider = "inValidLoginData")
+   @Test(priority = 0, groups = "login", dataProvider = "inValidLoginData")
     public void invalidEmail(String inValidEmail, String inValidPass){
         LoginPage loginPage = new LoginPage(getDriver());
         HomePage homePage = new HomePage(getDriver());

@@ -62,7 +62,7 @@ import static org.testng.AssertJUnit.assertTrue;
         }
 
         //verify resetting password for non-registered users
-        @Test(priority = 3, groups = {"resetPasswordTests"}, dataProvider = "emailData")
+        @Test(priority = 3, groups = {"resetPasswordTest"}, dataProvider = "emailData")
         public void resetPassForNonRegistredUsers(String validEmail, String invalidEmail) {
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -91,7 +91,7 @@ import static org.testng.AssertJUnit.assertTrue;
         }
 
         //verify the resetting password without providing an email
-        @Test(priority = 4, groups = {"resetPasswordTests"})
+        @Test(priority = 4, groups = {"resetPasswordTest"})
         public void resetPasswordWithoutEmail() {
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -112,7 +112,7 @@ import static org.testng.AssertJUnit.assertTrue;
 
 
         //verify placehold text of email address is displayed
-        @Test(priority = 5, groups = {"placeHolderTests"})
+        @Test(priority = 5, groups = {"placeHolderTest"})
         public void verifyThePlaceHoldTextEmailAddress() {
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
@@ -133,7 +133,7 @@ import static org.testng.AssertJUnit.assertTrue;
 
         //verify the back button of the reset password page
 
-        @Test(priority = 2, groups = {"FrgtPaswrdNavigationTests"})
+        @Test(priority = 2, groups = {"navigationTest"})
         public void verifyLgnPgeAftrBackBtnClkOnFrgtPaswrd() {
 
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
@@ -160,7 +160,7 @@ import static org.testng.AssertJUnit.assertTrue;
         }
 
 // verify the "UI" of the forgotten password page
-        @Test(priority =6, groups = "ForgottenPasswordPageUITest")
+        @Test(priority =6, groups = "UITest")
         public void verifyForgottenPasswordPageUI() {
 
             // Navigate to the forgotten password page

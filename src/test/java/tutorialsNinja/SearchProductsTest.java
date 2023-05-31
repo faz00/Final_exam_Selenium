@@ -29,7 +29,7 @@ public class SearchProductsTest extends CommonAPI {
     String nonExissearch = Utility.decode(prop.getProperty("tutorialsninja.nonExisSearch"));//"Headphones"
 
 
-    @Test(priority = 4, groups = {"searchTests"})
+    @Test(priority = 1, groups = {"navigationTests"})
 
     public void verifyUsernavigatedToTHeSearchHomePage() {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
@@ -50,7 +50,7 @@ public class SearchProductsTest extends CommonAPI {
 
     }
 
-    @Test(priority = 2, groups = {"searchTests"})
+    @Test(priority = 2, groups = {"searchProductTest"})
     public void verifySearchWithAnExistingProduct() {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
@@ -67,7 +67,7 @@ public class SearchProductsTest extends CommonAPI {
         // Verify that the search results contain at least one product
         assertTrue(searchprhomePage.areSearchResultsDisplayed(), "Search results do not contain any products");
     }
-    @Test(priority = 1, groups = {"searchTests"})
+    @Test(priority = 3, groups = {"searchProductTest"})
     public void verifySearchWithANonExistingProduct() {
         SearchProductsPage searchProductsPage = new SearchProductsPage(getDriver());
         SearchProductsHomePage searchprhomePage = new SearchProductsHomePage(getDriver());
@@ -84,7 +84,7 @@ public class SearchProductsTest extends CommonAPI {
 
 
     //verify the user able to select how many products to be displayed
-    @Test(priority = 3, groups = {"searchTests"})
+    @Test(priority = 4, groups = {"ProductDisplayCountTests"})
     public void verifyProductDisplayCount() {
 
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
