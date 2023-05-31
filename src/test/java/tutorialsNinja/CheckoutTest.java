@@ -23,7 +23,8 @@ public class CheckoutTest extends CommonAPI {
     Properties prop = Utility.loadProperties();
     String CouponCode = Utility.decode(prop.getProperty("tutorialsninja.CouponCode"));
     String search = Utility.decode(prop.getProperty("tutorialsninja.search"));
-@Test
+
+    @Test(priority=1,groups={"navigationTest"})
     public void verfyUsrNvgtChcktHmPge(){
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
@@ -41,7 +42,7 @@ public class CheckoutTest extends CommonAPI {
 
     }
 
-    @Test(priority = 1, groups = "checkoutNavTest")
+    @Test(priority = 2, groups = {"navigationTest"})
     public void verifyUserNavigateToCheckoutHomePgeWthNoPrdcts() {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
@@ -65,7 +66,7 @@ public class CheckoutTest extends CommonAPI {
     }
 
     //Verify without entering any fields in the Billing Section of the Checkout Page
-    @Test(priority = 2, groups = "couponFonctionalityTest", dataProvider = "couponCodes")
+    @Test(priority = 3, groups = "couponFonctionalityTest", dataProvider = "couponCodes")
     public void verifyCouponfonctionality(String CouponCode) {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
@@ -105,7 +106,7 @@ public class CheckoutTest extends CommonAPI {
     }
 
     //verify the coupon fonctionality havng the placeholder
-    @Test(priority = 3, groups = "couponFieldPlaceHolderTest")
+    @Test(priority = 4, groups = "PlaceHolderTest")
     public void verifycouponFieldPlaceHolder() {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));

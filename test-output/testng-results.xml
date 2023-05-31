@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Extent Report DirectoryC:\Users\My Pc\eclipse-workspace\Final_exam_Selenium\test-output\html]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2023-05-30T16:37:41 EDT" name="tutorialsNinja test" finished-at="2023-05-30T16:38:13 EDT" duration-ms="32020">
+    <groups>
+      <group name="addProductTest">
+        <method signature="WishListTest.vrfyaddItmsTWshListfrmThShppngCrt()[pri:1, instance:tutorialsNinja.WishListTest@4b6690c0]" name="vrfyaddItmsTWshListfrmThShppngCrt" class="tutorialsNinja.WishListTest"/>
+        <method signature="WishListTest.addItmsTWhshLstWthtLogin()[pri:2, instance:tutorialsNinja.WishListTest@4b6690c0]" name="addItmsTWhshLstWthtLogin" class="tutorialsNinja.WishListTest"/>
+      </group> <!-- addProductTest -->
+    </groups>
+    <test started-at="2023-05-30T16:37:41 EDT" name=" WishListTest" finished-at="2023-05-30T16:38:13 EDT" duration-ms="32020">
+      <class name="tutorialsNinja.WishListTest">
+        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:tutorialsNinja.WishListTest@4b6690c0]" started-at="2023-05-30T16:37:41 EDT" name="extentSetup" finished-at="2023-05-30T16:37:41 EDT" duration-ms="286" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6c977dcf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Extent Report DirectoryC:\Users\My Pc\eclipse-workspace\Final_exam_Selenium\test-output\html]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- extentSetup -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.WishListTest@4b6690c0]" started-at="2023-05-30T16:37:41 EDT" name="setUp" finished-at="2023-05-30T16:37:50 EDT" duration-ms="9395" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[110]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://tutorialsninja.com/demo/index.php?route=account/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.WishListTest@4b6690c0]" started-at="2023-05-30T16:37:50 EDT" name="startExtent" finished-at="2023-05-30T16:37:50 EDT" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tutorialsNinja.WishListTest.vrfyaddItmsTWshListfrmThShppngCrt()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method signature="vrfyaddItmsTWshListfrmThShppngCrt()[pri:1, instance:tutorialsNinja.WishListTest@4b6690c0]" started-at="2023-05-30T16:37:50 EDT" name="vrfyaddItmsTWshListfrmThShppngCrt" finished-at="2023-05-30T16:37:57 EDT" duration-ms="6278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- vrfyaddItmsTWshListfrmThShppngCrt -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.WishListTest@4b6690c0]" started-at="2023-05-30T16:37:57 EDT" name="afterEachTestMethod" finished-at="2023-05-30T16:37:58 EDT" duration-ms="831" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=vrfyaddItmsTWshListfrmThShppngCrt status=SUCCESS method=WishListTest.vrfyaddItmsTWshListfrmThShppngCrt()[pri:1, instance:tutorialsNinja.WishListTest@4b6690c0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.WishListTest@4b6690c0]" started-at="2023-05-30T16:37:58 EDT" name="tearDownR" finished-at="2023-05-30T16:37:58 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownR -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tutorialsNinja.WishListTest@4b6690c0]" started-at="2023-05-30T16:37:58 EDT" name="setUp" finished-at="2023-05-30T16:38:07 EDT" duration-ms="8915" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[110]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://tutorialsninja.com/demo/index.php?route=account/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:tutorialsNinja.WishListTest@4b6690c0]" started-at="2023-05-30T16:38:07 EDT" name="startExtent" finished-at="2023-05-30T16:38:07 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tutorialsNinja.WishListTest.addItmsTWhshLstWthtLogin()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method signature="addItmsTWhshLstWthtLogin()[pri:2, instance:tutorialsNinja.WishListTest@4b6690c0]" started-at="2023-05-30T16:38:07 EDT" name="addItmsTWhshLstWthtLogin" finished-at="2023-05-30T16:38:12 EDT" duration-ms="5974" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addItmsTWhshLstWthtLogin -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:tutorialsNinja.WishListTest@4b6690c0]" started-at="2023-05-30T16:38:12 EDT" name="afterEachTestMethod" finished-at="2023-05-30T16:38:13 EDT" duration-ms="546" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addItmsTWhshLstWthtLogin status=SUCCESS method=WishListTest.addItmsTWhshLstWthtLogin()[pri:2, instance:tutorialsNinja.WishListTest@4b6690c0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="tearDownR()[pri:0, instance:tutorialsNinja.WishListTest@4b6690c0]" started-at="2023-05-30T16:38:13 EDT" name="tearDownR" finished-at="2023-05-30T16:38:13 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownR -->
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:tutorialsNinja.WishListTest@4b6690c0]" started-at="2023-05-30T16:38:13 EDT" name="generateReport" finished-at="2023-05-30T16:38:13 EDT" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+      </class> <!-- tutorialsNinja.WishListTest -->
+    </test> <!--  WishListTest -->
+  </suite> <!-- tutorialsNinja test -->
+</testng-results>

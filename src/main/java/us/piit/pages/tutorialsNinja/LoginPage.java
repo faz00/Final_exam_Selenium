@@ -8,6 +8,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import us.piit.base.CommonAPI;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class LoginPage extends CommonAPI {
     Logger log = LogManager.getLogger(LoginPage.class.getName());
 
@@ -103,8 +107,24 @@ public class LoginPage extends CommonAPI {
         }
 
     }
-}
 
+    public void htmlScrenShot(WebDriver driver) {
+        // Get the page source HTML
+        String pageSource = driver.getPageSource();
+
+        // Define the file path for saving the screenshot
+        String filePath = "C:\\Users\\My Pc\\eclipse-workspace\\Final_exam_Selenium\\screenShots\\tutorialsNinja/page_source.html";
+
+        // Save the page source as a file
+        File htmlFile = new File(filePath);
+        try (FileWriter writer = new FileWriter(htmlFile)) {
+            writer.write(pageSource);
+            System.out.println("Page source saved: " + htmlFile.getAbsolutePath());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
 
 
 
