@@ -7,8 +7,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import us.piit.base.CommonAPI;
+
+import java.time.Duration;
 
 public class CheckOutPage extends CommonAPI {
     protected WebDriver driver;
@@ -128,5 +132,15 @@ public class CheckOutPage extends CommonAPI {
         waitFor(1);
         Assert.assertTrue(OrderDetailsPage.isDisplayed());
         Assert.assertTrue(order_Details.isDisplayed());
+    }
+
+    public void waitForElementToBeVisible(WebElement element) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+            wait.until(ExpectedConditions.visibilityOf(element));
+            Assert.assertTrue(element.isDisplayed());
+        } catch (Exception e) {
+            log.info(e);
+        }
     }
 }
