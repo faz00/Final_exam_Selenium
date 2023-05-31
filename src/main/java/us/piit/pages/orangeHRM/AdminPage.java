@@ -1,4 +1,4 @@
-package us.piit.pages.orangeHRM;
+/*package us.piit.pages.orangeHRM;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -92,3 +92,4 @@ public class AdminPage extends CommonAPI {
         clickOn(addBtn);
     }
 }
+*/
