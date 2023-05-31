@@ -20,7 +20,7 @@
                 <class name="tutorialsNinja.RegisterTest"></class>
             </classes>
         </test>-->
-  <!-- <test name=" ForgottenPasswordTest">
+      <test name=" ForgottenPasswordTest">
                <classes>
                    <class name="tutorialsNinja.ForgottenPasswordTest"></class>
                </classes>
